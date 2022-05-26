@@ -15,23 +15,23 @@ class ProductSeeder extends Seeder
     public function run()
     {
         $users = User::all();
-        // $usersId = $users->pluck('id')->all();
-
+        $usersId = $users->pluck('id')->all();
         $restaurants = config('restaurants');
         foreach ($restaurants as $r ) {
             $products = $r['products'];
-            foreach ($products as $p) {
+            
+                foreach ($products as $p) {
 
                 $product = new Product();
-    
+                
                 $product -> name = $p['name'];
                 $product -> cover = $p['cover'];
                 $product -> description = $p['description'];
                 $product -> price = $p['price'];
                 $product -> visibility = $p['visibility'];
                 $product -> category = $p['category'];
-
-                // $product -> user_id = $usersId;
+                $product -> user_id = $p['user_id'];
+                
     
                 $product -> save();
             }
