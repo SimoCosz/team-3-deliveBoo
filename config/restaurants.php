@@ -1284,7 +1284,7 @@ return[
         'cover' => 'https://rs-menus-api.roocdn.com/images/719cf55b-6f22-4aa0-9693-2bf4b0da2e9b/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
         'name' => 'Triple Tartare',
         'description' => 'Tre strati di Gusto, Salmone, Ricciola e Tonno! All\'interno Mayo Wasabi e Yuzu Mayo. Sopra Ikura ed Edamame.',
-        'price' => 1290,
+        'price' => 12.90,
         'visibility' => true,
         'category' => 'Le Tartare'
       ],
