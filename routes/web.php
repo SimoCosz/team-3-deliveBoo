@@ -19,8 +19,14 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::middleware('verified')
+    // ->namespace('Admin')
+    ->prefix('admin')
+    ->name('admin.')
+    ->group(function() {
+        
+        Route::get('/home', 'HomeController@index')->name('home');
+        
+        Route::resource('products', 'ProductController');
+    });
+    
