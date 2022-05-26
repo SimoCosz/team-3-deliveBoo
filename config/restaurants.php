@@ -2699,6 +2699,7 @@ return[
     ],
     'products' => [
       [
+        'user_id' => 21,
         'cover' => '',
         'name' => 'Pappardelle al cinghiale',
         'description' => 'Pappardelle fatte in casa con sugo di cinghiale e spezie orientali',
@@ -2707,6 +2708,7 @@ return[
         'category' => 'primo',
       ],
       [
+        'user_id' => 21,
         'cover' => '',
         'name' => 'Paccheri all\'astice',
         'description' => 'Paccheri al sugo di astice , con astice fresco di pescata',
@@ -2715,6 +2717,7 @@ return[
         'category' => 'primo'
       ],
       [
+        'user_id' => 21,
         'cover' => '',
         'name' => 'Pasta al forno',
         'description' => 'Pasta al forno con mozzarella dadini di prosciutto e besciamell',
@@ -2723,6 +2726,7 @@ return[
         'category' => 'primo'
       ],
       [
+        'user_id' => 21,
         'cover' => '',
         'name' => 'Bistecca di Tomahawk',
         'description' => 'Bistecca di tomahawk cotta su pietra e condita con olio di oliva e sale',
@@ -2731,6 +2735,7 @@ return[
         'category' => 'secondo'
       ],
       [
+        'user_id' => 21,
         'cover' => '',
         'name' => 'Filetto di baccalà',
         'description' => 'Filetto di baccalà sotto sale',
@@ -2739,6 +2744,7 @@ return[
         'category' => 'secondo'
       ],
       [
+        'user_id' => 21,
         'cover' => '',
         'name' => 'Broccoletti ripassati',
         'description' => 'Broccoletti ripassati con olio di oliva e peproncino',
@@ -2747,6 +2753,7 @@ return[
         'category' => 'secondo'
       ],
       [
+        'user_id' => 21,
         'cover' => '',
         'name' => 'Insalata',
         'description' => 'Insalata di rucola e carote',
@@ -2755,6 +2762,7 @@ return[
         'category' => 'secondo'
       ],
       [
+        'user_id' => 21,
         'cover' => '',
         'name' => 'Torta al cioccolato',
         'description' => 'Torta al cioccolato con nutella e scaglie di cioccolato bianco',
@@ -2781,6 +2789,7 @@ return[
     ],
     'products' => [
       [
+        'user_id' => 22,
         'cover' => '',
         'name' => 'Supplì',
         'description' => 'Supplì fatto in casa',
@@ -2789,6 +2798,7 @@ return[
         'category' => 'antipasti'
       ],
       [
+        'user_id' => 22,
         'cover' => '',
         'name' => 'Fiore di zucca ',
         'description' => 'Fiore di zucca ripieno',
@@ -2797,6 +2807,7 @@ return[
         'category' => 'antipasto'
       ],
       [
+        'user_id' => 22,
         'cover' => '',
         'name' => 'Margherita',
         'description' => 'Pizza margherita impasto alla romana',
@@ -2805,6 +2816,7 @@ return[
         'category' => 'primo'
       ],
       [
+        'user_id' => 22,
         'cover' => '',
         'name' => 'Boscaiola',
         'description' => 'Pizza boscaiola con funghi di montagna e salciccia di coccodrillo',
@@ -2813,6 +2825,7 @@ return[
         'category' => 'primo'
       ],
       [
+        'user_id' => 22,
         'cover' => '',
         'name' => 'Diavolaccia',
         'description' => 'Pizza con salame piccante, nduja e olio di abanero',
@@ -2821,6 +2834,7 @@ return[
         'category' => 'primo'
       ],
       [
+        'user_id' => 22,
         'cover' => '',
         'name' => 'Patate e wrustel',
         'description' => 'Pizza patate e wrustel ',
@@ -2829,6 +2843,7 @@ return[
         'category' => 'primo'
       ],
       [
+        'user_id' => 22,
         'cover' => '',
         'name' => 'Valtellina',
         'description' => 'Fiori di zucca, alici e mozzarella',
@@ -2837,6 +2852,7 @@ return[
         'category' => 'primo'
       ],
       [
+        'user_id' => 22,
         'cover' => '',
         'name' => 'Pizza nutella',
         'description' => 'Pizza con nutella',
@@ -2865,6 +2881,7 @@ return[
     ],
     'products' => [
       [
+        'user_id' => 23,
         'cover' => '',
         'name' => 'Pork Burger',
         'description' => 'Hamburger di pulletpork con scamorza ',
@@ -2873,6 +2890,7 @@ return[
         'category' => 'primo'
       ],
       [
+        'user_id' => 23,
         'cover' => '',
         'name' => 'Mega Porchetta',
         'description' => 'Panino con 700gr di porchetta di ariccia con peproni e cicoria',
@@ -2881,6 +2899,7 @@ return[
         'category' => 'primo'
       ],
       [
+        'user_id' => 23,
         'cover' => '',
         'name' => 'Hamburger di scottona',
         'description' => 'Hamburger di scottona con pomodori secchi e maionese',
@@ -2889,6 +2908,7 @@ return[
         'category' => 'primo'
       ],
       [
+        'user_id' => 23,
         'cover' => '',
         'name' => 'Pank Burger',
         'description' => 'Panino con pancetta di maiale con bacon , cheddar e salsa barbecue',
@@ -2897,6 +2917,7 @@ return[
         'category' => 'primo'
       ],
       [
+        'user_id' => 23,
         'cover' => '',
         'name' => 'Arrosticini di pecora',
         'description' => '600gr di arrosticini di pecora',
@@ -2922,6 +2943,7 @@ return[
     ],
     'products' => [
       [
+        'user_id' => 24,
         'cover' => '',
         'name' => 'Ravioli di carne',
         'description' => '4pz di ravioli di carne',
@@ -2930,6 +2952,7 @@ return[
         'category' => 'antipasto'
       ],
       [
+        'user_id' => 24,
         'cover' => '',
         'name' => 'Ravioli di pesce',
         'description' => '4pz di ravioli di pesce',
@@ -2938,6 +2961,7 @@ return[
         'category' => 'antipasto'
       ],
       [
+        'user_id' => 24,
         'cover' => '',
         'name' => 'Uramaki di tonno',
         'description' => '6pz di Uramaki di tonno e avocado',
@@ -2946,6 +2970,7 @@ return[
         'category' => 'primo'
       ],
       [
+        'user_id' => 24,
         'cover' => '',
         'name' => 'Uramaki di salmone e avocado',
         'description' => '6pz di Uramaki di salmone e avocado',
@@ -2954,6 +2979,7 @@ return[
         'category' => 'primo'
       ],
       [
+        'user_id' => 24,
         'cover' => '',
         'name' => 'Uramaki di cetriolo e philadelfia ',
         'description' => '6pz di Uramaki di cetriolo e philadelfia',
@@ -2962,6 +2988,7 @@ return[
         'category' => 'primo'
       ],
       [
+        'user_id' => 24,
         'cover' => '',
         'name' => 'sashimi',
         'description' => '5pz di sashimi di salmone',
@@ -2970,6 +2997,7 @@ return[
         'category' => 'secondo'
       ],
       [
+        'user_id' => 24,
         'cover' => '',
         'name' => 'doraiaki',
         'description' => 'doraiaki giapponese con marmellata di fagioli rossi',
@@ -2994,6 +3022,7 @@ return[
     ],
     'products' => [
       [
+        'user_id' => 25,
         'cover' => '',
         'name' => 'Spaghetti alla carbonara',
         'description' => 'Spaghetti alla carbonara con uova e guanciale',
@@ -3002,6 +3031,7 @@ return[
         'category' => 'primo',
       ],
       [
+        'user_id' => 25,
         'cover' => '',
         'name' => 'Buactini alla matriciana',
         'description' => 'Bucatini alla matriciana con sugo e guanciale',
@@ -3010,6 +3040,7 @@ return[
         'category' => 'primo'
       ],
       [
+        'user_id' => 25,
         'cover' => '',
         'name' => 'Spaghettoni alla gricia',
         'description' => 'Spaghettoni alla gricia con pancetta pistacchio e pecorino',
@@ -3018,6 +3049,7 @@ return[
         'category' => 'primo'
       ],
       [
+        'user_id' => 25,
         'cover' => '',
         'name' => 'Spaghetti cacio e pepe',
         'description' => 'Spaghetti cacio e pepe con caciocavallo e pepe',
@@ -3026,6 +3058,7 @@ return[
         'category' => 'primo'
       ],
       [
+        'user_id' => 25,
         'cover' => '',
         'name' => 'Filetto di baccalà fritto',
         'description' => 'Filetto di baccalà in pastella',
@@ -3034,6 +3067,7 @@ return[
         'category' => 'secondo'
       ],
       [
+        'user_id' => 25,
         'cover' => '',
         'name' => 'Insalata',
         'description' => 'Insalata verde e cipolla di tropea',
@@ -3042,6 +3076,7 @@ return[
         'category' => 'secondo'
       ],
       [
+        'user_id' => 25,
         'cover' => '',
         'name' => 'Torta della nonna',
         'description' => 'Torta alle mele con scaglie di cioccolato',
