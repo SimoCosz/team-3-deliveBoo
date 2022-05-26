@@ -22,6 +22,7 @@ class OrderSeeder extends Seeder
         $order -> client_email = 'ciccio@gmail.com';
         $order -> payment_state = true;
         $order -> total_price = 34.50;
+        $order -> user_id = 1;
 
         $order -> save();
     }
