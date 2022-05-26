@@ -953,7 +953,7 @@ return[
     'products' => [
       [
         'user_id' => 7,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Exotic salmon',
         'description' => 'Riso bianco, salmone crudo con marinatura hawaiiana, pomodorini, edamame, avocado, sesamo e salsa teriyaki.',
         'price' => 10.90,
@@ -962,7 +962,7 @@ return[
       ],
       [
         'user_id' => 7,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Poke love',
         'description' => 'Riso nero, salmone crudo , tonno crudo, pomodorini, edamame, avocado, mango, wakame, sesamo e salsa ponzu.',
         'price' => 11.50,
@@ -971,7 +971,7 @@ return[
       ],
       [
         'user_id' => 7,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Classic tartar salmone',
         'description' => 'Riso bianco, tartare salmone(tartare salmone, philadelphia, tobiko, erba cipollina), avocado, pomodorini, tobiko, salsa teriyaki, salsa mayo wasabi e mandorle.',
         'price' => 11.50,
@@ -980,7 +980,7 @@ return[
       ],
       [
         'user_id' => 7,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Tartare Tonno',        
         'description' => 'Riso bianco, tartar tonno certificato MSC (condito con sedano, olio e soya), carote, cetrioli, ananas, alghe wakame, salsa spicy mayo e semi di sesamo.',
         'price' => 10.90,
@@ -989,7 +989,7 @@ return[
       ],
       [
         'user_id' => 7,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Squid game Bowl',
         'description' => 'Riso bianco, tencacoli al vapore conditi con limone e prezzemolo, pomodorini, cetrioli, edamame, ananas, avocado, alghe nori e salsa teriyaki.',
         'price' => 11.50,
@@ -998,7 +998,7 @@ return[
       ],
       [
         'user_id' => 7,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Pollo mediterraneo',
         'description' => 'Cous Cous, bocconcini di pollo, pomodorini, mais, cetrioli, hummus, feta, mandorle, salsa yogurt.',
         'price' => 10.90,
@@ -1007,7 +1007,7 @@ return[
       ],
       [
         'user_id' => 7,
-        'cover' => 'img copertina',        
+        'cover' => '',        
         'name' => 'Vegan hummus',
         'description' => 'Riso integrale, tofu, hummus, pomodorini, cavolo rosso, zucchine limone e menta, avocado, mango, sesamo e salsa ponzu.',
         'price' => 9.90,
@@ -1016,7 +1016,7 @@ return[
       ],
       [
         'user_id' => 7,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Hawaiian macedonia',
         'description' => 'Mix mango e ananas',
         'price' => 3.00,        
@@ -1025,7 +1025,7 @@ return[
       ],
       [
         'user_id' => 7,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Acqua naturale in brick 500ml',
         'description' => '',
         'price' => 1.50,
@@ -1034,7 +1034,7 @@ return[
       ],
       [        
         'user_id' => 7,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Acqua frizzante 500 ml PET',
         'description' => '',
         'price' => 1.50,
@@ -1043,7 +1043,7 @@ return[
       ],
       [
         'user_id' => 7,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Coca cola 45cl PET',
         'description' => '',
         'price' => 3.50,
@@ -1052,7 +1052,7 @@ return[
       ],
       [
         'user_id' => 7,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Birra Poretti 3 Luppoli 33cl',
         'description' => '',
         'price' => 4.00,
@@ -1079,7 +1079,7 @@ return[
       [
 
         'user_id' => 8,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Rossa',
         'description' => 'Pomodoro pugliese rosso Gargano, olio evo',
         'price' => 5.50,
@@ -1088,7 +1088,7 @@ return[
       ],
       [        
         'user_id' => 8,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Margherita',
         'description' => 'Pomodoro pugliese rosso Gargano e mozzarella fior di latte',
         'price' => 6.50,
@@ -1097,7 +1097,7 @@ return[
       ],
       [
         'user_id' => 8,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Margherita Wrustel e Patatine',
         'description' => 'Pomodoro pugliese rosso Gargano,mozzarella fior di latte, würstel, patatine fritte',
         'price' => 8.50,
@@ -1106,7 +1106,7 @@ return[
       ],
       [
         'user_id' => 8,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Margherita con Olive Nere di Gaeta, Speck Provola e Cariofi Arrosto',
         'description' => 'Pomodoro pugliese rosso Gargano, mozzarella fior di latte, olive nere di Gaeta, speck, Provola e carciofi arrosto.',
         'price'=> 10.50,
@@ -1115,7 +1115,7 @@ return[
       ],
       [
         'user_id' => 8,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Margherita con Prosciutto di Parma',
         'description' => 'Pomodoro pugliese rosso Gargano, mozzarella fior di latte, prosciutto di Parma',
         'price' => 9.50,
@@ -1124,7 +1124,7 @@ return[
       ],
       [
         'user_id' => 8,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Margherita con Bufala Olive Nere di Gaeta e Carciofi Arrosto',
         'description' => 'Pomodoro pugliese rosso Gargano, bufala campana, olive nere di Gaeta e carciofi arrosto',
         'price' => 9.50,
@@ -1133,7 +1133,7 @@ return[
       ],
       [
         'user_id' => 8,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Friarelli e Salsiccia di Maialino Nero Casertano',
         'description' => 'Mozzarella fior di latte, friarelli e salsiccia di maialino nero casertano',
         'price' => 9.50,
@@ -1142,7 +1142,7 @@ return[
       ],
       [
         'user_id' => 8,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => '4 Funghi (Porcini Chiodini Champignon e Tartufo)',
         'description' => 'Mozzarella fior di latte, funghi porcini, chiodini, champignon e tartufo',
         'price' => 12.50,
@@ -1151,7 +1151,7 @@ return[
       ],
       [
         'user_id' => 8,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Focaccia Caprese',
         'description' => 'Pomodorino ciliegino, mozzarella di bufala, origano, basilico ed olio evo',
         'price' => 10.00,
@@ -1160,7 +1160,7 @@ return[
       ],
       [
         'user_id' => 8,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Focaccia Rucola Bresaola e Grana',
         'description' => 'Rucola, bresaola e Grana Padano.',
         'price' => 11.00,
@@ -1169,7 +1169,7 @@ return[
       ],
       [
         'user_id' => 8,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Focaccia con Melanzane Grigliate Marinate Bufala e Crudo di Parma',
         'description' => 'Melanzane grigliate e marinate, Mozzarella di Bufala e prosciutto crudo di Parma.',
         'price' => 12.50,
@@ -1178,7 +1178,7 @@ return[
       ],
       [
         'user_id' => 8,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Fiore di Zucca',
         'description' => '',
         'price' => 3.50,
@@ -1187,7 +1187,7 @@ return[
       ],
       [
         'user_id' => 8,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Suppli Classico',
         'description' => '',
         'price' => 2.50,
@@ -1196,7 +1196,7 @@ return[
       ],
       [
         'user_id' => 8,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Filetto di Baccala',
         'description' => '',
         'price' => 2.00,
@@ -1205,7 +1205,7 @@ return[
       ],
       [
         'user_id' => 8,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Chicken Nuggets',
         'description' => '5 pezz',
         'price' => 3.50,
@@ -1214,7 +1214,7 @@ return[
       ],
       [
       'user_id' => 8,
-      'cover' => 'img copertina',
+      'cover' => '',
       'name' => 'Acqua naturale 500ml',
       'description' => '',
       'price' => 1.50,
@@ -1223,7 +1223,7 @@ return[
       ],
       [
         'user_id' => 8,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Acqua frizzante 500 ml PET',
         'description' => '',
         'price' => 1.50,
@@ -1232,7 +1232,7 @@ return[
       ],
       [
         'user_id' => 8,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Coca cola 45cl PET',
         'description' => '',
         'price' => 3.00,
@@ -1241,7 +1241,7 @@ return[
       ],
       [
         'user_id' => 8,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Riverside - Pale ALE (5.2%)',
         'description' => 'Birrificio Hammer',
         'price' => 6.00,
@@ -1250,7 +1250,7 @@ return[
       ],
       [
         'user_id' => 8,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'DESAPARECIPA - IPA (6,2%))',
         'description' => 'Birrificio Babylon',
         'price' => 6.00,
@@ -1866,7 +1866,7 @@ return[
     'products' => [
       [
         'user_id' => 14,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Pagnottella cotoletta, bacon, insalata e salsa rosa',
         'description' => '',
         'price' => 6.00,
@@ -1875,7 +1875,7 @@ return[
       ],
       [
         'user_id' => 14,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Pagnottella nduja, scamorza affumicata e zucchine',
         'description' => '',
         'price' => 6.00,
@@ -1884,7 +1884,7 @@ return[
       ],
       [
         'user_id' => 14,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Pagnottella salmone affumicato, rucola e maionese',
         'description' => '',
         'price' => 6.00,
@@ -1893,7 +1893,7 @@ return[
       ],
       [
         'user_id' => 14,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Pagnottella prosciutto crudo, pomodorini, mozzarella di bufala',
         'description' => '',
         'price' => 6.00,
@@ -1902,7 +1902,7 @@ return[
       ],
       [
         'user_id' => 14,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Pagnottella salsiccia, maionese tartufata, grana a scaglie e rucola',
         'description' => '',
         'price' => 6.00,
@@ -1911,7 +1911,7 @@ return[
       ],
       [
         'user_id' => 14,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Pagnottella salsiccia, provola affumicata e friarielli',
         'description' => '',
         'price' => 6.00,
@@ -1920,7 +1920,7 @@ return[
       ],
       [
         'user_id' => 14,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Pagnottella prosciutto cotto, pomodoro a fette, insalata e salsa rosa',
         'description' => '',
         'price' => 6.00,
@@ -1929,7 +1929,7 @@ return[
       ],
       [
         'user_id' => 14,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Toast spalmato di Nutella abbrustolito',
         'description' => '',
         'price' => 4.00,
@@ -1938,7 +1938,7 @@ return[
       ],
       [
         'user_id' => 14,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Toast con marmellata scura e burro d\'arachidi',
         'description' => '',
         'price' => 4.00,
@@ -1947,7 +1947,7 @@ return[
       ],
       [
         'user_id' => 14,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Toast con burro di arachidi e marmellata chiara',
         'description' => '',
         'price' => 4.50,
@@ -1956,7 +1956,7 @@ return[
       ],
       [
         'user_id' => 14,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Piadina con nutella',
         'description' => '',
         'price' => 4.00,
@@ -1965,7 +1965,7 @@ return[
       ],
       [
         'user_id' => 14,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Cornetto con marmellata chiara e burro d\'arachidi',
         'description' => '',
         'price' => 4.50,
@@ -1974,7 +1974,7 @@ return[
       ],
       [
         'user_id' => 14,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Acqua frizzante 50cl',
         'description' => '',
         'price' => 1.50,
@@ -1983,7 +1983,7 @@ return[
       ],
       [
         'user_id' => 14,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Acqua naturale 50cl',
         'description' => '',
         'price' => 1.50,
@@ -1992,7 +1992,7 @@ return[
       ],
       [
         'user_id' => 14,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Pepsi 33cl',
         'description' => '',
         'price' => 3.50,
@@ -2001,7 +2001,7 @@ return[
       ],
       [
         'user_id' => 14,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Ceres 33cl',
         'description' => '',
         'price' => 3.50,
@@ -2010,7 +2010,7 @@ return[
       ],
       [
         'user_id' => 14,
-        'cover' => 'img copertina',
+        'cover' => '',
         'name' => 'Peroni 4,7% 66cl',
         'description' => '',
         'price' => 4.50,
@@ -2677,6 +2677,377 @@ return[
         'price' => 2.20,
         'visibility' => true,
         'category' => 'Bevande'
+      ],
+    ],
+  ],
+
+   // <!-- trattoria da gino -->
+
+  [
+    'name' => 'Trattoria da Gino',
+    'address' => 'Via II maggio 33',
+    'city' => 'Roma', 
+    'telephone_number' => '3334659872',
+    'p_iva' => '7484903833',
+    'cover' => '',
+    'email' => 'trattoriadagino@gmail.com',
+    'password' => 'trattoriagino',
+    'categories' => [
+      'Italiano',
+      'Pesce',
+      'Carne'
+    ],
+    'products' => [
+      [
+        'cover' => '',
+        'name' => 'Pappardelle al cinghiale',
+        'description' => 'Pappardelle fatte in casa con sugo di cinghiale e spezie orientali',
+        'price' => 11.50,
+        'visibility' => true,
+        'category' => 'primo',
+      ],
+      [
+        'cover' => '',
+        'name' => 'Paccheri all\'astice',
+        'description' => 'Paccheri al sugo di astice , con astice fresco di pescata',
+        'price' => 14.00,
+        'visibility' => true,
+        'category' => 'primo'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Pasta al forno',
+        'description' => 'Pasta al forno con mozzarella dadini di prosciutto e besciamell',
+        'price' => 12.00,
+        'visibility' => true,
+        'category' => 'primo'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Bistecca di Tomahawk',
+        'description' => 'Bistecca di tomahawk cotta su pietra e condita con olio di oliva e sale',
+        'price' => 30.00,
+        'visibility' => true,
+        'category' => 'secondo'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Filetto di baccalà',
+        'description' => 'Filetto di baccalà sotto sale',
+        'price' => 25.00,
+        'visibility' => true,
+        'category' => 'secondo'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Broccoletti ripassati',
+        'description' => 'Broccoletti ripassati con olio di oliva e peproncino',
+        'price' => 8.00,
+        'visibility' => true,
+        'category' => 'secondo'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Insalata',
+        'description' => 'Insalata di rucola e carote',
+        'price' => 6.00,
+        'visibility' => true,
+        'category' => 'secondo'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Torta al cioccolato',
+        'description' => 'Torta al cioccolato con nutella e scaglie di cioccolato bianco',
+        'price' => 5.00,
+        'visibility' => true,
+        'category' => 'secondo'
+      ],
+    ],
+  ],
+
+
+  // <!-- Pinseria Romana -->
+  [
+    'name' => 'Pinseria Romana',
+    'address' => 'Via armando ventura 16',
+    'city' => 'Roma', 
+    'telephone_number' => '0772453729',
+    'p_iva' => '3946538202',
+    'cover' => '',
+    'email' => 'pinseriarom@gmail.com',
+    'password' => 'pineriaromana',
+    'categories' => [
+      'pizza',
+    ],
+    'products' => [
+      [
+        'cover' => '',
+        'name' => 'Supplì',
+        'description' => 'Supplì fatto in casa',
+        'price' => 1.50,
+        'visibility' => true,
+        'category' => 'antipasti'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Fiore di zucca ',
+        'description' => 'Fiore di zucca ripieno',
+        'price' => 1.50,
+        'visibility' => true,
+        'category' => 'antipasto'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Margherita',
+        'description' => 'Pizza margherita impasto alla romana',
+        'price' => 8.00,
+        'visibility' => true,
+        'category' => 'primo'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Boscaiola',
+        'description' => 'Pizza boscaiola con funghi di montagna e salciccia di coccodrillo',
+        'price' => 9.00,
+        'visibility' => true,
+        'category' => 'primo'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Diavolaccia',
+        'description' => 'Pizza con salame piccante, nduja e olio di abanero',
+        'price' => 8.50,
+        'visibility' => true,
+        'category' => 'primo'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Patate e wrustel',
+        'description' => 'Pizza patate e wrustel ',
+        'price' => 8.00,
+        'visibility' => true,
+        'category' => 'primo'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Valtellina',
+        'description' => 'Fiori di zucca, alici e mozzarella',
+        'price' => 9.50,
+        'visibility' => true,
+        'category' => 'primo'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Pizza nutella',
+        'description' => 'Pizza con nutella',
+        'price' => 9.50,
+        'visibility' => true,
+        'category' => 'primo'
+      ],
+    ],
+  ],
+
+ // <!-- big burger -->
+
+  [
+    'name' => 'BigBurger',
+    'address' => 'Via San Francesco 23',
+    'city' => 'Roma', 
+    'telephone_number' => '3946372976',
+    'p_iva' => '29465383027',
+    'cover' => '',
+    'email' => 'bigburger@alice.it',
+    'password' => 'bigburger69',
+    'categories' => [
+      'americano',
+      'paninoteca',
+      'italiano'
+    ],
+    'products' => [
+      [
+        'cover' => '',
+        'name' => 'Pork Burger',
+        'description' => 'Hamburger di pulletpork con scamorza ',
+        'price' => 18.50,
+        'visibility' => true,
+        'category' => 'primo'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Mega Porchetta',
+        'description' => 'Panino con 700gr di porchetta di ariccia con peproni e cicoria',
+        'price' => 10.50,
+        'visibility' => true,
+        'category' => 'primo'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Hamburger di scottona',
+        'description' => 'Hamburger di scottona con pomodori secchi e maionese',
+        'price' => 8.50,
+        'visibility' => true,
+        'category' => 'primo'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Pank Burger',
+        'description' => 'Panino con pancetta di maiale con bacon , cheddar e salsa barbecue',
+        'price' => 7.00,
+        'visibility' => true,
+        'category' => 'primo'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Arrosticini di pecora',
+        'description' => '600gr di arrosticini di pecora',
+        'price' => 12.00,
+        'visibility' => true,
+        'category' => 'primo'
+      ],
+    ],
+  ],
+// <!-- jin feng -->
+  [
+    'name' => 'JinFeng',
+    'address' => 'Via Colli Romani 335',
+    'city' => 'Roma', 
+    'telephone_number' => '3945893923',
+    'p_iva' => '384648302',
+    'cover' => '',
+    'email' => 'feng@gmail.com',
+    'password' => 'fengfeng',
+    'categories' => [
+      'cinese',
+      'giapponese',
+    ],
+    'products' => [
+      [
+        'cover' => '',
+        'name' => 'Ravioli di carne',
+        'description' => '4pz di ravioli di carne',
+        'price' => 4.50,
+        'visibility' => true,
+        'category' => 'antipasto'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Ravioli di pesce',
+        'description' => '4pz di ravioli di pesce',
+        'price' => 6.00,
+        'visibility' => true,
+        'category' => 'antipasto'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Uramaki di tonno',
+        'description' => '6pz di Uramaki di tonno e avocado',
+        'price' => 6.50,
+        'visibility' => true,
+        'category' => 'primo'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Uramaki di salmone e avocado',
+        'description' => '6pz di Uramaki di salmone e avocado',
+        'price' => 6.50,
+        'visibility' => true,
+        'category' => 'primo'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Uramaki di cetriolo e philadelfia ',
+        'description' => '6pz di Uramaki di cetriolo e philadelfia',
+        'price' => 6.50,
+        'visibility' => true,
+        'category' => 'primo'
+      ],
+      [
+        'cover' => '',
+        'name' => 'sashimi',
+        'description' => '5pz di sashimi di salmone',
+        'price' => 7.00,
+        'visibility' => true,
+        'category' => 'secondo'
+      ],
+      [
+        'cover' => '',
+        'name' => 'doraiaki',
+        'description' => 'doraiaki giapponese con marmellata di fagioli rossi',
+        'price' => 5.00,
+        'visibility' => true,
+        'category' => 'dessert'
+      ],
+    ],
+  ],
+// <!-- panza piena -->
+  [
+    'name' => 'Panza piena',
+    'address' => 'Via alberto XV 748/a',
+    'city' => 'Roma', 
+    'telephone_number' => '3334399872',
+    'p_iva' => '74839462233',
+    'cover' => '',
+    'email' => 'panzapiena@gmail.com',
+    'password' => 'panzapiena',
+    'categories' => [
+      'Italiano'
+    ],
+    'products' => [
+      [
+        'cover' => '',
+        'name' => 'Spaghetti alla carbonara',
+        'description' => 'Spaghetti alla carbonara con uova e guanciale',
+        'price' => 7.50,
+        'visibility' => true,
+        'category' => 'primo',
+      ],
+      [
+        'cover' => '',
+        'name' => 'Buactini alla matriciana',
+        'description' => 'Bucatini alla matriciana con sugo e guanciale',
+        'price' => 9.00,
+        'visibility' => true,
+        'category' => 'primo'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Spaghettoni alla gricia',
+        'description' => 'Spaghettoni alla gricia con pancetta pistacchio e pecorino',
+        'price' => 9.00,
+        'visibility' => true,
+        'category' => 'primo'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Spaghetti cacio e pepe',
+        'description' => 'Spaghetti cacio e pepe con caciocavallo e pepe',
+        'price' => 7.00,
+        'visibility' => true,
+        'category' => 'primo'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Filetto di baccalà fritto',
+        'description' => 'Filetto di baccalà in pastella',
+        'price' => 9.00,
+        'visibility' => true,
+        'category' => 'secondo'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Insalata',
+        'description' => 'Insalata verde e cipolla di tropea',
+        'price' => 6.00,
+        'visibility' => true,
+        'category' => 'secondo'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Torta della nonna',
+        'description' => 'Torta alle mele con scaglie di cioccolato',
+        'price' => 5.00,
+        'visibility' => true,
+        'category' => 'dessert'
       ],
     ],
   ],
