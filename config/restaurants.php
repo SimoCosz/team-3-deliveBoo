@@ -964,8 +964,6 @@ return[
     ],
   ],
   // <!-- LIEVITO MADRE 00 -->
-return [
-  //La Casa De Los Burritos
   [
     'name' => 'Lievito Madre 00',
     'address' => 'IndirizzoRistorante',
@@ -981,7 +979,6 @@ return [
     ],
     'products' => [
       [
-<<<<<<< HEAD
         'cover' => 'img copertina',
         'name' => 'Rossa',
         'description' => 'Pomodoro pugliese rosso Gargano, olio evo',
@@ -1141,7 +1138,24 @@ return [
         'visibility' => true,
         'category' => 'Birre artigianali'
       ],
-=======
+    ],
+  ],
+  //Casa de los Burritos
+  [
+    'name' => 'Casa de los Burritos',
+    'address' => 'IndirizzoRistorante',
+    'city' => 'Via Bellinzona 21', 
+    'telephone_number' => '0645615924',
+    'p_iva' => '00000000000',
+    'cover' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt8HM12ZJp9Nu2Ei4iZFO01f_0p6c_5lWH4w&usqp=CAU',
+    'email' => 'lievito00@gmail.com',
+    'password' => 'Password',
+    'categories' => [      
+      'Pizza',
+      'Italiano',
+    ],
+    'products' => [
+      [
         'cover' => 'https://tb-static.uber.com/prod/image-proc/processed_images/e63210fc71e5c8ce4c5d3363a6469a83/859baff1d76042a45e319d1de80aec7a.jpeg',
         'name' => 'El burrito de Berlino',
         'description' => 'Burrito con Rucola, Prosciutto crudo, Mozzarella, Pomodorini datterini, Olio extravergine di Oliva',
@@ -1651,7 +1665,6 @@ return [
         'visibility' => true,
         'category' => 'Dolci Giapponesi'
       ],
->>>>>>> add-restourant
     ],
   ],
   // <!-- ER MEJO PANINO -->
