@@ -14,8 +14,6 @@ class ProductSeeder extends Seeder
      */
     public function run()
     {
-        $users = User::all();
-        $usersId = $users->pluck('id')->all();
         $restaurants = config('restaurants');
         foreach ($restaurants as $r ) {
             $products = $r['products'];
