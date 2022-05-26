@@ -69,7 +69,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        
     }
 
     /**
@@ -81,7 +81,15 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|max:100',
+            'cover' => 'url|image',
+            'description' => 'string',
+            'price' => 'numeric',
+            'visibility' => 'boolean',
+            'category' => 'string|required',
+            'user_id' => 'numeric',
+        ]);
     }
 
     /**
@@ -92,6 +100,8 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        $product->delete();
+
+        return redirect()->route('admin.products.index');
     }
 }
