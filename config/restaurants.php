@@ -850,7 +850,7 @@ return[
       ],
     ],
   ],
-// <!-- I LOVE POKE -->
+  // <!-- I LOVE POKE -->
   [
     'name' => 'I Love Poke',
     'address' => 'Via Leonina 68',
@@ -1006,7 +1006,7 @@ return[
         'cover' => 'img copertina',
         'name' => 'Margherita con Olive Nere di Gaeta, Speck Provola e Cariofi Arrosto',
         'description' => 'Pomodoro pugliese rosso Gargano, mozzarella fior di latte, olive nere di Gaeta, speck, Provola e carciofi arrosto.',
-        'prie'.=>10.50,
+        'price'=> 10.50,
         'visibility' => true,
         'category' => 'Pinse rosse'
       ],
@@ -1140,7 +1140,7 @@ return[
       ],
     ],
   ],
-// <!-- ER MEJO PANINO -->
+  // <!-- ER MEJO PANINO -->
   [
     'name' => 'Er Mejo Panino',
     'address' => 'Via Tiburtina 180',
@@ -1285,6 +1285,605 @@ return[
         'name' => 'Peroni 4,7% 66cl',
         'description' => '',
         'price' => 4.50,
+        'visibility' => true,
+        'category' => 'Bevande'
+      ],
+    ],
+  ],
+  // Al forno della Soffitta
+  [
+    'name' => 'Al Forno Della Soffitta',
+    'address' => 'Piave 62/64',
+    'city' => 'Roma', 
+    'telephone_number' => '0642011164',
+    'p_iva' => '05253501000',
+    'cover' => 'https://rs-menus-api.roocdn.com/images/4c80c423-6fc4-448a-bc62-4344aa52f5a9/image.jpeg?width=533&height=300&auto=webp&format=jpg&fit=crop',
+    'email' => 'direzione.soffitta@gmail.com',
+    'password' => 'soffitta111',
+    'categories' => [
+      'pizza',
+      'italiano'
+    ],
+    'products' => [
+      [
+        'cover' => '',
+        'name' => 'Margherita',
+        'description' => 'Pomodoro, mozzarella e basilico',
+        'price' => 8.50,
+        'visibility' => true,
+        'category' => 'Pizze'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Margherita con bufala',
+        'description' => 'Pomodoro, mozzarella di bufala e basilico',
+        'price' => 10.00,
+        'visibility' => true,
+        'category' => 'Pizze'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Capricciosa',
+        'description' => 'Pomodoro, mozzarella, funghi, carciofi, olive e prosciutto',
+        'price' => 9.50,
+        'visibility' => true,
+        'category' => 'Pizze'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Verace',
+        'description' => 'Provola, pomodorini pachino, basilico, pecorino e origano',
+        'price' => 9.50,
+        'visibility' => true,
+        'category' => 'Pizze'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Diavoletto',
+        'description' => 'Provola, pomodoro, salame piccante, peperoncino',
+        'price' => 10.00,
+        'visibility' => true,
+        'category' => 'Pizze'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Crema di formaggi e champignon',
+        'description' => 'Crema ai quattro formaggi e funghi champignon',
+        'price' => 9.50,
+        'visibility' => true,
+        'category' => 'Pizze'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Datterina',
+        'description' => 'Mozzarella, guanciale, patate viola, Datterino giallo, pepe, pecorino, stracciatella e prezzemolo',
+        'price' => 12.00,
+        'visibility' => true,
+        'category' => 'Pizze gourmet'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Cottissima',
+        'description' => 'Mozzarella, prosciutto cotto, fiori di zucca, pesto e burrata',
+        'price' => 12.00,
+        'visibility' => true,
+        'category' => 'Pizze gourmet'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Calzone crema di formaggi e spinaci',
+        'description' => 'Crema di formaggi e spinaci',
+        'price' => 9.00,
+        'visibility' => true,
+        'category' => 'Calzoni'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Scomposto di millefoglie con frutti di bosco freschi',
+        'description' => '',
+        'price' => 7.00,
+        'visibility' => true,
+        'category' => 'Dolci'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Coca Cola 33cl',
+        'description' => '',
+        'price' => 2.50,
+        'visibility' => true,
+        'category' => 'Bevande'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Peroni 33cl',
+        'description' => '',
+        'price' => 3.50,
+        'visibility' => true,
+        'category' => 'Birre'
+      ],
+    ],
+  ],
+  // TRAPIZZINO
+  [
+    'name' => 'TRAPIZZINO',
+    'address' => 'Via Giovanni Branca 88',
+    'city' => 'Roma', 
+    'telephone_number' => '0643419624',
+    'p_iva' => '05253501000',
+    'cover' => 'https://rs-menus-api.roocdn.com/images/550bc094-9ba1-4542-8a72-467fba974242/image.jpeg?width=533&height=300&auto=webp&format=jpg&fit=crop',
+    'email' => 'trapizzino@gmail.com',
+    'password' => 'trapizzino111',
+    'categories' => [
+      'pizza',
+      'italiano'
+    ],
+    'products' => [
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/8cc585fa-c21a-4f38-85c8-1200a6276c60/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Pollo alla cacciatora',
+        'description' => 'Il primo nato! Con pollo, olio evo, sale, pepe, rosmarino, aglio, aceto e vino bianco',
+        'price' => 5.00,
+        'visibility' => true,
+        'category' => 'Trapizzini classici'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/31dbed05-8c86-4535-8b0b-3496b33d5cff/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Parmigiana di melanzane',
+        'description' => 'Con melanzane cotte al forno, olio evo, cipolla, basilico, sale, pomodoro, parmigiano e mozzarella',
+        'price' => 5.00,
+        'visibility' => true,
+        'category' => 'Trapizzini classici'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/138389dc-785d-4b4f-b3f5-d0b91e4c7782/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Doppia panna',
+        'description' => 'Panna sotto-sopra come il gelato a Roma con stracciatella di burrata e alici',
+        'price' => 5.00,
+        'visibility' => true,
+        'category' => 'Trapizzini classici'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/fa7f8e0e-30c1-4b06-908a-e6d02457fbcf/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Supplì classico',
+        'description' => 'Il classico supplì al telefono, ragù di manzo e mozzarella con macinato di manzo, pomodoro, mozzarella, olio evo, sedano, carota, cipolla, sale, pepe, prezzemolo, basilico, noce moscata, vino rosso, parmigiano, salvia, alloro, bacche di ginepro, riso, uovo e pangrattato',
+        'price' => 2.00,
+        'visibility' => true,
+        'category' => 'Supplì con carne'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/138389dc-785d-4b4f-b3f5-d0b91e4c7782/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Doppia panna',
+        'description' => 'Panna sotto-sopra come il gelato a Roma con stracciatella di burrata e alici',
+        'price' => 5.00,
+        'visibility' => true,
+        'category' => 'Trapizzini classici'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/a6bf8237-4ba0-44ff-a701-407992c32435/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Lino',
+        'description' => '6 tortellini realizzati a mano con farine e uova biologiche, uniti da una crema di parmigiano, panati e fritti, da una collaborazione con Retropasta by Retrobottega Roma',
+        'price' => 3.00,
+        'visibility' => true,
+        'category' => 'Specialità'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Birra del Borgo Duchessa 33cl',
+        'description' => 'Birra artigianale - Season birra di farro 5.8%',
+        'price' => 4.50,
+        'visibility' => true,
+        'category' => 'Birre'
+      ],
+    ],
+  ],
+  // Mangiafuoco
+  [
+    'name' => 'Mangiafuoco',
+    'address' => 'Via Chiana 37',
+    'city' => 'Roma', 
+    'telephone_number' => '0685357255',
+    'p_iva' => '05253501123',
+    'cover' => 'https://rs-menus-api.roocdn.com/images/75ffd6ca-94be-401e-9ee0-74aaf04a7e18/image.jpeg?width=533&height=300&auto=webp&format=jpg&fit=crop',
+    'email' => 'ristorante.mangiafuoco@3gdynamics.it',
+    'password' => 'mangiafuoco111',
+    'categories' => [
+      'pizza',
+      'italiano'
+    ],
+    'products' => [
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/6dac5f19-9295-4dbd-90d8-845ac813d757/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Suprema di Mortadella "Favola" alla brace',
+        'description' => 'Con riduzione di aceto balsamico',
+        'price' => 9.00,
+        'visibility' => true,
+        'category' => 'Le fantasie di Mangiafuoco'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/184b66ba-862e-4861-8c75-9920721bb4ce/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Selezione di Pecorini del Lazio',
+        'description' => 'Serviti con mostarde artigianali',
+        'price' => 14.00,
+        'visibility' => true,
+        'category' => 'Le fantasie di Mangiafuoco'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/d2ca7a68-a6ab-4fe6-a761-dc55bde6912f/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Polpettine della "nonna" al sugo',
+        'description' => 'con purè di patate',
+        'price' => 15.00,
+        'visibility' => true,
+        'category' => 'La "Tradizione Romana" di Mangiafuoco'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/1aa69a1d-f487-4b3d-88e8-4c77be1d4d2e/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Saltimbocca alla Romana',
+        'description' => 'Fettine di vitello rivestite di prosciutto crudo e salvia',
+        'price' => 15.00,
+        'visibility' => true,
+        'category' => 'Tradizione Romana" di Mangiafuoco'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/71c2ee71-a77f-4914-9307-090b4c0cee80/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Arancino Napoletano',
+        'description' => 'piselli, provola, salame napoletano con cuore di pomodoro e pecorino',
+        'price' => 3.00,
+        'visibility' => true,
+        'category' => 'I fritti'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/f1ffcb73-0510-4699-b3e1-a63c07a49259/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Chips Mangiafuoco',
+        'description' => 'Cacio e pepe',
+        'price' => 6.00,
+        'visibility' => true,
+        'category' => 'I fritti'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/03357b1f-5b67-483b-a665-b30ed6d2f7f5/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'La "Vesuviana"',
+        'description' => 'Pomodoro, mozzarella di Bufala con spunzillo "e pacchetelle" Gustarosso e datterino giallo "lucariello" Gustarosso e basilico con impasto napoletano',
+        'price' => 13.00,
+        'visibility' => true,
+        'category' => 'Pizze rosse'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/c438ecc4-c256-4835-bb94-35d8318654df/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'La Sarnese',
+        'description' => 'Mozzarella di Bufala, datterino giallo di Sarno e alici di Cetara',
+        'price' => 13.50,
+        'visibility' => true,
+        'category' => 'Pizze bianche'
+      ],
+    ],
+  ],
+  // Dar Poeta
+  [
+    'name' => 'Dar Poeta',
+    'address' => 'Vicolo del Bologna 45',
+    'city' => 'Roma', 
+    'telephone_number' => '065880516',
+    'p_iva' => '01642890568',
+    'cover' => 'https://rs-menus-api.roocdn.com/images/79646a04-8459-475e-96f1-93edac4fa9f7/image.jpeg?width=538&height=302&auto=webp&format=jpg&fit=crop',
+    'email' => 'marco@darpoeta.com',
+    'password' => 'darpoeta111',
+    'categories' => [
+      'pizza',
+      'italiano'
+    ],
+    'products' => [
+      [
+        'cover' => '',
+        'name' => 'Bufala e prosciutto crudo',
+        'description' => '',
+        'price' => 9.50,
+        'visibility' => true,
+        'category' => 'Antipasti'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Boscaiola',
+        'description' => 'Mozzarella, funghi e salsiccia',
+        'price' => 8.50,
+        'visibility' => true,
+        'category' => 'Pizze'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Lingua de foco',
+        'description' => 'Pomodoro, mozzarella, salame piccante, peperoncino',
+        'price' => 8.50,
+        'visibility' => true,
+        'category' => 'Pizze'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Patataccia',
+        'description' => 'Mozzarella, patate e salsiccia',
+        'price' => 9.00,
+        'visibility' => true,
+        'category' => 'Pizze'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Bruschetta stracchino e ciauscolo',
+        'description' => '',
+        'price' => 3.00,
+        'visibility' => true,
+        'category' => 'Bruschette'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Bruschetta pomodoro e salsa tonnata',
+        'description' => '',
+        'price' => 3.00,
+        'visibility' => true,
+        'category' => 'Bruschette'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Insalata Poeta',
+        'description' => 'Rucola,salmone,stracchino.',
+        'price' => 7.50,
+        'visibility' => true,
+        'category' => 'Insalate'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Calzone nutella - grande',
+        'description' => '',
+        'price' => 13.00,
+        'visibility' => true,
+        'category' => 'Dolci'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Acqua naturale 1lt',
+        'description' => '',
+        'price' => 2.50,
+        'visibility' => true,
+        'category' => 'Bevande'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Acqua frizzante 1lt',
+        'description' => '',
+        'price' => 2.50,
+        'visibility' => true,
+        'category' => 'Bevande'
+      ],
+    ],
+  ],
+  // La Panetteria Ristorante
+  [
+    'name' => 'La Panetteria Ristorante',
+    'address' => 'Via della Panetteria, 13a/14',
+    'city' => 'Roma', 
+    'telephone_number' => '066785595',
+    'p_iva' => '05253598507',
+    'cover' => 'https://rs-menus-api.roocdn.com/images/a426dceb-cb59-4a47-bca3-fa2c1bef9b13/image.jpeg?width=533&height=300&auto=webp&format=jpg&fit=crop',
+    'email' => 'lapanetteria@gmail.com',
+    'password' => 'lapanetteria111',
+    'categories' => [
+      'pizza',
+      'italiano'
+    ],
+    'products' => [
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/81b14781-3f00-4dcb-951b-2f703e1e58ba/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Mediterranea',
+        'description' => 'Con Lattuga, Rughetta, Pomodorini, Mais, Uovo, Tonno e Olive',
+        'price' => 8.00,
+        'visibility' => true,
+        'category' => 'Insalate'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/f87e24c7-d219-4dcd-a47e-681dfd1881fb/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Capricciosa',
+        'description' => 'Con Lattuga, Rughetta, Pomodorini, Cetriolo, Mozzarella di Bufala',
+        'price' => 8.00,
+        'visibility' => true,
+        'category' => 'Insalate'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/85cc4737-14b8-4a02-af79-d65e55f04bd1/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Rigatoni all\'Amatriciana',
+        'description' => 'Rigatoni con Salsa di Pomodoro, Guanciale, Pecorino e Pepe Nero',
+        'price' => 8.00,
+        'visibility' => true,
+        'category' => 'Primi'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/e6904fc8-637e-4cf6-9d7b-a0c27fde611d/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Spaghetti alla Carbonara',
+        'description' => 'Spaghetti con uovo, pecorino e parmigiano, pancetta, pepe nero',
+        'price' => 8.00,
+        'visibility' => true,
+        'category' => 'Primi'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/e7ae6a7b-8dea-4839-ab84-f4f5f0f8e16a/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Margherita',
+        'description' => 'Mozzarella Fior di Latte, Salsa di Pomodoro, Basilico in uscita',
+        'price' => 6.00,
+        'visibility' => true,
+        'category' => 'Pizze'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/ace8ef2c-53ac-4c94-a8d8-9f79f2a11374/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Focaccia con Prosciutto di Parma, Mozzarella di Bufala e Noci di Sorrento',
+        'description' => 'Focaccia con condimenti aggiunti in uscita: Prosciutto di Parma, Mozzarella di Bufala e Noci di Sorrento',
+        'price' => 8.00,
+        'visibility' => true,
+        'category' => 'Pizze'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/2bc49da6-7d63-4af1-82d5-efb3898ad6bd/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Bolognese',
+        'description' => 'Mortadella, Stracciatella, Granella di Pistacchio',
+        'price' => 8.00,
+        'visibility' => true,
+        'category' => 'Pizze'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/8a3ebe2e-0507-49ea-b4fa-074cbeab8bf0/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Filetto di Branzino al Pepe Rosa e Verdure',
+        'description' => 'Filetto di Branzino aromatizzato al Vino Bianco, Pepe Rosa e Contorno di Verdure',
+        'price' => 9.00,
+        'visibility' => true,
+        'category' => 'Secondi'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/016b9d17-6369-46ca-a998-f0b5531b9c6b/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Petto di Pollo ai Limoni di Sicilia con Patate',
+        'description' => 'Petto di Pollo ai Limoni di Sicilia con Contorno di Patate Rustiche aromatizzate alle Erbe',
+        'price' => 9.00,
+        'visibility' => true,
+        'category' => 'Secondi'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/9fac5548-7e97-4737-adfc-79ce351a2a5d/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Straccetti con Funghi Misti e Porcini',
+        'description' => 'Straccetti di Manzo con Funghi Misti e Porcini, Olive, Prezzemolo',
+        'price' => 9.00,
+        'visibility' => true,
+        'category' => 'Secondi'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/6944ede4-c2ef-493a-bfd9-db9c2566b022/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Coppa Ciliegia e Frutti di Bosco',
+        'description' => 'Coppa Gelato con Panna, Amarena e Ciliegie Amarenate',
+        'price' => 5.00,
+        'visibility' => true,
+        'category' => 'Dessert'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/79b24716-2afa-41e1-b25e-d257034ba1c2/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Fragole con Panna',
+        'description' => 'Fragole e Panna',
+        'price' => 8.00,
+        'visibility' => true,
+        'category' => 'Dessert'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/3901dbf4-dfc3-4f4b-9b7d-21f28cffe7fc/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Coca Cola 33cl',
+        'description' => 'In lattina',
+        'price' => 2.00,
+        'visibility' => true,
+        'category' => 'Bevande'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/4595aea2-28c7-4efc-bbfc-925c66db9d39/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Acqua Leggermente Frizzante 50cl',
+        'description' => 'Acqua Leggermente Frizzante "Vera"',
+        'price' => 1.00,
+        'visibility' => true,
+        'category' => 'Bevande'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/1c9fca20-d05f-4572-a112-c7245168c1aa/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Amarone della Valpolicella DOCG',
+        'description' => 'Colore rosso rubino tendente al granato. Gusto pieno, avvolgente, morbido 15%',
+        'price' => 55.00,
+        'visibility' => true,
+        'category' => 'Vini rossi'
+      ],
+    ],
+  ],
+  // Lo Sfilatino - pane pizza e dolci
+  [
+    'name' => 'Lo Sfilatino - pane pizza e dolci',
+    'address' => '8 Via Raffaele Caverni',
+    'city' => 'Roma', 
+    'telephone_number' => '0692599256',
+    'p_iva' => '05253577752',
+    'cover' => 'https://rs-menus-api.roocdn.com/images/120d8fc0-d9a2-4912-9eed-ff7acbf07651/image.jpeg?width=533&height=300&auto=webp&format=jpg&fit=crop',
+    'email' => 'losfilatino@gmail.com',
+    'password' => 'losfilatino111',
+    'categories' => [
+      'pizza',
+      'dessert',
+      'bakery'
+    ],
+    'products' => [
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/15f6d6cc-c4db-4b42-a829-cb66fe6c1c01/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Pizza bianca 100gr',
+        'description' => '',
+        'price' => 1.10,
+        'visibility' => true,
+        'category' => 'Pizze'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/71516960-d265-4d0e-9e13-bfc35bb0501b/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Bottoncini olive – 5 pezzi',
+        'description' => '',
+        'price' => 2.00,
+        'visibility' => true,
+        'category' => 'Specialità'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/39bea150-1e47-4d74-a944-7bff2680b219/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Pomodoro ripieno di riso - una porzione',
+        'description' => '',
+        'price' => 5.00,
+        'visibility' => true,
+        'category' => 'Specialità'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/526431dd-8475-4c79-b41d-bc19b48689b9/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Cicioria ripassata - una porzione',
+        'description' => '',
+        'price' => 5.00,
+        'visibility' => true,
+        'category' => 'Specialità'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/94a3263d-4b72-4c5f-ab9b-b46fbcc82436/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Buondì',
+        'description' => '',
+        'price' => 1.20,
+        'visibility' => true,
+        'category' => 'Dolci'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/35d93369-114b-4187-aa7b-2817b9b10c52/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Pasta mandorle 300gr',
+        'description' => '',
+        'price' => 9.00,
+        'visibility' => true,
+        'category' => 'Dolci'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/1f85e416-e5f0-4e8b-adcc-e2ac1f0ff7fd/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Crostata visciole - grande',
+        'description' => '',
+        'price' => 21.00,
+        'visibility' => true,
+        'category' => 'Dolci'
+      ],
+      [
+        'cover' => '',
+        'name' => 'Caffè',
+        'description' => '',
+        'price' => 1.20,
+        'visibility' => true,
+        'category' => 'Caffetteria'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/b0785fe7-2832-45d9-bf62-4c9604f69f8f/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'Succo di frutta Yoga mirtillo 20cl',
+        'description' => '',
+        'price' => 2.00,
+        'visibility' => true,
+        'category' => 'Bevande'
+      ],
+      [
+        'cover' => 'https://rs-menus-api.roocdn.com/images/0a107bea-4abd-433f-9a2c-fa01d3920b47/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'name' => 'The pesca 0,5L',
+        'description' => '',
+        'price' => 2.20,
         'visibility' => true,
         'category' => 'Bevande'
       ],
