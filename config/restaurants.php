@@ -10,12 +10,6 @@ return[
     'cover' => 'https://rs-menus-api.roocdn.com/images/5370ed30-4c43-4a80-99ee-beaaec29408c/image.jpeg?width=602&height=300&auto=webp&format=jpg&fit=crop&v=1629357961',
     'email' => 'info@donninoroma.it',
     'password' => 'DonNinoTheBest000',
-    'categories' => [
-      'Passticceria',
-      'Fornaio',
-      'Italiano',
-      'Siciliano'
-    ],
     'products' => [
       [
         'cover' => 'https://www.don-nino.it/wp-content/uploads/2019/02/Prodotto_punta_1-1.png',
@@ -136,17 +130,11 @@ return[
     'name' => 'Five guys',
     'address' => 'Piazza dei Cinquecento',
     'city' => 'Roma',
-    'telephone_number' => '06 482 3949',
+    'telephone_number' => '064823949',
     'p_iva' => '74495728007',
     'cover' => 'https://rs-menus-api.roocdn.com/images/c428b227-6fdd-41e6-b58c-bf9329368a2c/image.jpeg?width=386&height=217&auto=webp&format=jpg&fit=crop',
     'email' => 'info@fiveguysroma.it',
     'password' => 'FiveGuys000',
-    'categories' => [
-      'hamburger',
-      'hot dog',
-      'fritto',
-      'americano'
-    ],
     'products' => [
       [
         'cover' => 'https://rs-menus-api.roocdn.com/images/7659239f-7b74-4a47-9d95-a1874f8dca9e/image.jpeg?width=98&height=98&auto=webp&format=jpg&fit=crop',
@@ -256,13 +244,6 @@ return[
     'cover' => 'https://rs-menus-api.roocdn.com/images/8b64aa1d-28cc-4806-bb74-c9efd23f744e/image.jpeg?width=533&height=300&auto=webp&format=jpg&fit=crop',
     'email' => 'info@hosteriadelmercato.it',
     'password' => 'HosteriaTheOldest000',
-    'categories' => [
-      'Healty',
-      'Fornaio',
-      'Burger',
-      'Frutta',
-      'Estratti'
-    ],
     'products' => [
       [
         'cover' => 'https://rs-menus-api.roocdn.com/images/9d409f96-0acf-4150-8100-74782a205629/image.jpeg?width=98&height=98&auto=webp&format=jpg&fit=crop',
@@ -376,17 +357,10 @@ return[
     'address' => 'Piazza dei Vespri Siciliani, 13',
     'city' => 'Roma',
     'telephone_number' => '3338570289',
-    'p_iva' => '038489759084',
+    'p_iva' => '03848975908',
     'cover' => 'https://rs-menus-api.roocdn.com/images/63af147b-c0b4-4f87-8586-a7e8ef580b39/image.jpeg?width=386&height=217&auto=webp&format=jpg&fit=crop',
     'email' => 'info@ilcaseificiopugliese.it',
     'password' => 'CaseificioPugliese00',
-    'categories' => [
-        'Latticini',
-        'Salumi',
-        'Confetture',
-        'Taralli',
-        'Pasta fatta in casa Barese'
-    ],
     'products' => [
       [
         'cover' => '',
@@ -536,12 +510,6 @@ return[
     'cover' => 'https://rs-menus-api.roocdn.com/images/a4a3841d-644a-43b5-9e11-82cc8a58f4d8/image.jpeg?width=386&height=217&auto=webp&format=jpg&fit=crop&v=1629357808',
     'email' => 'info@mrkebabturco.it',
     'password' => 'KebabBonoKebab00',
-    'categories' => [
-        'Kebab',
-        'Sandwich',
-        'Arabo',
-        'Pizza'
-    ],
     'products' => [
       [
         'cover' => 'https://rs-menus-api.roocdn.com/images/531f4d17-6bee-49d7-a93e-a8a639db9a66/image.jpeg?width=98&height=98&auto=webp&format=jpg&v=1629357808&fit=crop',
@@ -691,10 +659,6 @@ return[
     'cover' => 'https://res.cloudinary.com/glovoapp/h_225,f_auto,q_auto/Stores/ufgotgxvuwmdwyqy1ruu',
     'email' => 'billy_tacos@gmail.com',
     'password' => 'Password',
-    'categories' => [
-      'Tacos',
-      'Burritos',
-    ],
     'products' => [
       [
         'cover' => 'https://tb-static.uber.com/prod/image-proc/processed_images/c6323c41c42821e7b30476160e0acf68/b4facf495c22df52f3ca635379ebe613.jpeg',
@@ -860,10 +824,6 @@ return[
     'cover' => 'https://ilovepoke.it/wp-content/uploads/2020/06/i-love-poke6970_-scaled.jpg',
     'email' => 'pokeLeonina@gmail.com',
     'password' => 'Password',
-    'categories' => [
-      'Poke',
-      'Hawaiano',
-    ],
     'products' => [
       [
         'cover' => 'img copertina',
@@ -973,10 +933,6 @@ return[
     'cover' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt8HM12ZJp9Nu2Ei4iZFO01f_0p6c_5lWH4w&usqp=CAU',
     'email' => 'lievito00@gmail.com',
     'password' => 'Password',
-    'categories' => [      
-      'Pizza',
-      'Italiano',
-    ],
     'products' => [
       [
         'cover' => 'img copertina',
@@ -1148,12 +1104,8 @@ return[
     'telephone_number' => '0645615924',
     'p_iva' => '00000000000',
     'cover' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt8HM12ZJp9Nu2Ei4iZFO01f_0p6c_5lWH4w&usqp=CAU',
-    'email' => 'lievito00@gmail.com',
+    'email' => 'burritos@gmail.com',
     'password' => 'Password',
-    'categories' => [      
-      'Pizza',
-      'Italiano',
-    ],
     'products' => [
       [
         'cover' => 'https://tb-static.uber.com/prod/image-proc/processed_images/e63210fc71e5c8ce4c5d3363a6469a83/859baff1d76042a45e319d1de80aec7a.jpeg',
@@ -1247,9 +1199,6 @@ return[
     'cover' => 'https://rs-menus-api.roocdn.com/images/a0137f24-ca32-4d1d-be6e-e40a6e24ac4c/image.jpeg?width=379&height=213&auto=webp&format=jpg&fit=crop',
     'email' => 'darumasushi@hotmail.com',
     'password' => 'darumasushi',
-    'categories' => [
-      'Sushi','Giapponese'
-    ],
     'products' => [
       [
         'cover' => 'https://rs-menus-api.roocdn.com/images/f06fbb16-eb9b-4cdd-9c9c-8962a5b9277a/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
@@ -1351,11 +1300,6 @@ return[
     'cover' => 'https://rs-menus-api.roocdn.com/images/c97954e6-cec5-43c6-9cfd-a9451ba2feb6/image.jpeg?width=447&height=251&auto=webp&format=jpg&fit=crop',
     'email' => 'sushikatio@live.it',
     'password' => 'sushi',
-    'categories' => [
-      'Sushi',
-      'Giappones',
-      'Cinese'
-    ],
     'products' => [
       [
         'cover' => 'https://rs-menus-api.roocdn.com/images/01477b6b-a25c-404e-b399-a0f1c84bc825/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
@@ -1449,11 +1393,6 @@ return[
     'cover' => 'https://rs-menus-api.roocdn.com/images/73f0fd45-f5d1-4c4f-9ca1-969e1faed832/image.jpeg?width=533&height=300&auto=webp&format=jpg&fit=crop',
     'email' => 'temakinho@gmail.com',
     'password' => 'temakinho',
-    'categories' => [
-      'Sushi',
-      'Poke',
-      'Giapponese'
-    ],
     'products' => [
       [
         'cover' => 'https://rs-menus-api.roocdn.com/images/20cae2d9-1aeb-484f-9592-762484f4dd2f/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
@@ -1547,11 +1486,6 @@ return[
     'cover' => 'https://rs-menus-api.roocdn.com/images/9789f58a-ca02-4398-a3c7-d341df1a2f96/image.jpeg?width=372&height=209&auto=webp&format=jpg&fit=crop',
     'email' => 'cody@hotmail.it',
     'password' => 'cody',
-    'categories' => [
-      'Sushi',
-      'Giapponese',
-      'Poke',
-    ],
     'products' => [
       [
         'cover' => 'https://rs-menus-api.roocdn.com/images/7b59190f-4a25-438a-9f0c-beee622694d6/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
@@ -1677,7 +1611,6 @@ return[
     'cover' => 'https://www.dissapore.com/wp-content/uploads/2015/11/panini-milano.jpg',
     'email' => 'reMejo_panino@libero.it',
     'password' => 'Password',
-    'categories' => 'Sandwich',
     'products' => [
       [
         'cover' => 'img copertina',
@@ -1827,10 +1760,6 @@ return[
     'cover' => 'https://rs-menus-api.roocdn.com/images/4c80c423-6fc4-448a-bc62-4344aa52f5a9/image.jpeg?width=533&height=300&auto=webp&format=jpg&fit=crop',
     'email' => 'direzione.soffitta@gmail.com',
     'password' => 'soffitta111',
-    'categories' => [
-      'pizza',
-      'italiano'
-    ],
     'products' => [
       [
         'cover' => '',
@@ -1940,10 +1869,6 @@ return[
     'cover' => 'https://rs-menus-api.roocdn.com/images/550bc094-9ba1-4542-8a72-467fba974242/image.jpeg?width=533&height=300&auto=webp&format=jpg&fit=crop',
     'email' => 'trapizzino@gmail.com',
     'password' => 'trapizzino111',
-    'categories' => [
-      'pizza',
-      'italiano'
-    ],
     'products' => [
       [
         'cover' => 'https://rs-menus-api.roocdn.com/images/8cc585fa-c21a-4f38-85c8-1200a6276c60/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
@@ -2013,10 +1938,6 @@ return[
     'cover' => 'https://rs-menus-api.roocdn.com/images/75ffd6ca-94be-401e-9ee0-74aaf04a7e18/image.jpeg?width=533&height=300&auto=webp&format=jpg&fit=crop',
     'email' => 'ristorante.mangiafuoco@3gdynamics.it',
     'password' => 'mangiafuoco111',
-    'categories' => [
-      'pizza',
-      'italiano'
-    ],
     'products' => [
       [
         'cover' => 'https://rs-menus-api.roocdn.com/images/6dac5f19-9295-4dbd-90d8-845ac813d757/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
@@ -2094,10 +2015,6 @@ return[
     'cover' => 'https://rs-menus-api.roocdn.com/images/79646a04-8459-475e-96f1-93edac4fa9f7/image.jpeg?width=538&height=302&auto=webp&format=jpg&fit=crop',
     'email' => 'marco@darpoeta.com',
     'password' => 'darpoeta111',
-    'categories' => [
-      'pizza',
-      'italiano'
-    ],
     'products' => [
       [
         'cover' => '',
@@ -2191,10 +2108,6 @@ return[
     'cover' => 'https://rs-menus-api.roocdn.com/images/a426dceb-cb59-4a47-bca3-fa2c1bef9b13/image.jpeg?width=533&height=300&auto=webp&format=jpg&fit=crop',
     'email' => 'lapanetteria@gmail.com',
     'password' => 'lapanetteria111',
-    'categories' => [
-      'pizza',
-      'italiano'
-    ],
     'products' => [
       [
         'cover' => 'https://rs-menus-api.roocdn.com/images/81b14781-3f00-4dcb-951b-2f703e1e58ba/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
@@ -2328,11 +2241,6 @@ return[
     'cover' => 'https://rs-menus-api.roocdn.com/images/120d8fc0-d9a2-4912-9eed-ff7acbf07651/image.jpeg?width=533&height=300&auto=webp&format=jpg&fit=crop',
     'email' => 'losfilatino@gmail.com',
     'password' => 'losfilatino111',
-    'categories' => [
-      'pizza',
-      'dessert',
-      'bakery'
-    ],
     'products' => [
       [
         'cover' => 'https://rs-menus-api.roocdn.com/images/15f6d6cc-c4db-4b42-a829-cb66fe6c1c01/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
