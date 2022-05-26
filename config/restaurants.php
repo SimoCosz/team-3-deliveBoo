@@ -1,5 +1,6 @@
 <?php
 return[
+  // Don Nino
   [
     'name' => 'Don Nino',
     'address' => 'Piazza di Spagna 65',
@@ -130,6 +131,7 @@ return[
       ],
     ],
   ],
+  // Five guys
   [
     'name' => 'Five guys',
     'address' => 'Piazza dei Cinquecento',
@@ -244,6 +246,7 @@ return[
       ],
     ]
   ],
+  // Hosteria del Mercato
   [
     'name' => 'Hosteria del Mercato',
     'address' => 'Via Bocca di Leone, 46',
@@ -367,6 +370,7 @@ return[
       ],
     ],
   ],
+  // Il caseificio Pugliese
   [
     'name' => 'Il Caseificio Pugliese',
     'address' => 'Piazza dei Vespri Siciliani, 13',
@@ -522,6 +526,7 @@ return[
       ],
     ],
   ],
+  // Mr Kebab Turco
   [
     'name' => 'Mr. Kebab Turco',
     'address' => ' Viale di Trastevere, 51',
