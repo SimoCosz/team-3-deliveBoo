@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -23,7 +24,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        // return view('admin.products.create', compact('categories'));
     }
 
     /**
