@@ -8,12 +8,12 @@
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Cover</th>
-                <th scope="col">Category</th>
-                <th scope="col">Description</th>
-                <th scope="col">Visibility</th>
-                <th scope="col">Price</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Image</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Descrizione</th>
+                <th scope="col">Visibilità</th>
+                <th scope="col">Prezzo</th>
             </tr>
         </thead>
         <tbody>

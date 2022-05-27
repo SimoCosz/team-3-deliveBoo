@@ -3,6 +3,7 @@
 use App\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
 {
@@ -24,7 +25,7 @@ class UserSeeder extends Seeder
             $user -> p_iva = $u['p_iva'];
             $user -> cover = $u['cover'];
             $user -> email = $u['email'];
-            $user -> password = $u['password'];
+            $user -> password = Hash::make($u['password']);
             $user -> slug = Str::slug($u['name'], '-');
 
             $user->save();
