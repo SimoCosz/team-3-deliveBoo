@@ -35,11 +35,11 @@
                       <td>{{ $product->visibility }}</td>
                       <td>€ {{ $product->price }}</td>
   
-                      {{-- <td>
-                          <div class="btn btn-small" href="{{ route('admin.products.edit') }}">Modifica</div>
+                      <td>
+                          <div class="btn btn-small border rounded" href="{{ route('admin.products.edit', $product) }}">Modifica</div>
                       </td>
   
-                      <td>
+                      {{-- <td>
                           <form action="{{ route('admin.products.destroy', $product) }}" method="POST">
                           @csrf
                           @method('DELETE')

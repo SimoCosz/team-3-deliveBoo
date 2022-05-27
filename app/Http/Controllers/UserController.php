@@ -61,7 +61,9 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $categories = Category::all();
+        $user = Auth::user();
+        return view('admin.products.edit', compact(['user', 'categories']));
     }
 
     /**
