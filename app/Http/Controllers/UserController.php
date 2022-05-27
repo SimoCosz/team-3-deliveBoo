@@ -6,6 +6,7 @@ use App\Category;
 use App\Product;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -16,7 +17,7 @@ class UserController extends Controller
      */
     public function index(User $user)
     {
-        $user = User::where('id', auth()->id())->first();
+        $user = Auth::user();
         return view('admin.users.index', compact('user'));
     }
 
