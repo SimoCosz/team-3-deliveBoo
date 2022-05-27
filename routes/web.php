@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,14 +20,14 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::middleware('verified')
-    // ->namespace('Admin')
-    ->prefix('admin')
-    ->name('admin.')
-    ->group(function() {
+// Route::middleware('verified')
+//     // ->namespace('Admin')
+//     ->prefix('admin')
+//     ->name('admin.')
+//     ->group(function() {
         
-        Route::get('/home', 'HomeController@index')->name('home');
-        
-        Route::resource('products', 'ProductController');
-    });
+    //     });
     
+    Route::get('/home', 'HomeController@index')->name('home');
+    
+    Route::resource('products', 'ProductController');

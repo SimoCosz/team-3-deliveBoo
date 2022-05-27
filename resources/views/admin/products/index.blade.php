@@ -7,13 +7,13 @@
     <table class="table">
         <thead>
             <tr>
-                <th class="col">#</th>
-                <th class="col">Name</th>
-                <th class="col">Cover</th>
-                <th class="col">Category</th>
-                <th class="col">Description</th>
-                <th class="col">Visibility</th>
-                <th class="col">Price</th>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Cover</th>
+                <th scope="col">Category</th>
+                <th scope="col">Description</th>
+                <th scope="col">Visibility</th>
+                <th scope="col">Price</th>
             </tr>
         </thead>
         <tbody>
@@ -27,7 +27,7 @@
                     <td>{{ $product->visibility }}</td>
                     <td>€ {{ $product->price }}</td>
 
-                    <td>
+                    {{-- <td>
                         <div class="btn btn-small" href="{{ route('admin.products.edit') }}">Modifica</div>
                     </td>
 
@@ -37,7 +37,7 @@
                         @method('DELETE')
                             <div type="submit" class="btn btn-danger" onclick="return confirm('Sei sicuro di voler cancellare {{$product->title}}?'>Elimina</div>                        
                         </form>
-                    </td>
+                    </td> --}}
                 </tr>
             @endforeach
         </tbody>
