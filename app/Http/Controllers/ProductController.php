@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Product;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
@@ -69,7 +72,9 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        
+        $categories = Category::all();
+        $user = Auth::user();
+        return view('admin.products.edit', compact('product', 'categories'));
     }
 
     /**
@@ -81,15 +86,24 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        // $request->validate([
-        //     'name' => 'required|string|max:100',
-        //     'cover' => 'url|image',
-        //     'description' => 'string',
-        //     'price' => 'numeric',
-        //     'visibility' => 'boolean',
-        //     'category' => 'string|required',
-        //     'user_id' => 'numeric',
-        // ]);
+        $request->validate([
+            'name' => 'required|string|max:100',
+            'cover' => 'url|image|nullable',
+            'description' => 'string',
+            'price' => 'numeric',
+            'visibility' => 'boolean',
+        ]);
+        
+        // dd($product);
+        $data = $request->all();
+
+        if( $product->name != $data['name'] ){
+            $slug = Product::getUniqueSlug($data['name']);
+            $data['slug'] = $slug;
+        };
+        
+        $product->update($data);
+        return redirect()->route('admin.users.index');
     }
 
     /**

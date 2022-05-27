@@ -36,7 +36,7 @@
                       <td>€ {{ $product->price }}</td>
   
                       <td>
-                          <div class="btn btn-small border rounded" href="{{ route('admin.products.edit', $product) }}">Modifica</div>
+                          <a class="btn btn-small border rounded" type='submit' href="{{ route('admin.products.edit', $product->id) }}">Modifica</a>
                       </td>
   
                       {{-- <td>
