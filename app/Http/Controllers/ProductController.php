@@ -14,7 +14,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $products = Product::orderBy('created_at','desc')->limit(20)->get();
+
+        return view('admin.products.index', compact('products'));
     }
 
     /**
@@ -24,7 +26,9 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        // $products = Product::all();
+
+        // return view('admin.products.create', compact('products'));
     }
 
     /**
@@ -35,7 +39,15 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // $request->validate([
+        //     'name' => 'required|string|max:100',
+        //     'cover' => 'url|image',
+        //     'description' => 'string',
+        //     'price' => 'numeric',
+        //     'visibility' => 'boolean',
+        //     'category' => 'string|required',
+        //     'user_id' => 'numeric',
+        // ]);
     }
 
     /**
@@ -57,7 +69,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        
     }
 
     /**
@@ -69,7 +81,15 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+        // $request->validate([
+        //     'name' => 'required|string|max:100',
+        //     'cover' => 'url|image',
+        //     'description' => 'string',
+        //     'price' => 'numeric',
+        //     'visibility' => 'boolean',
+        //     'category' => 'string|required',
+        //     'user_id' => 'numeric',
+        // ]);
     }
 
     /**
@@ -80,6 +100,8 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        // $product->delete();
+
+        // return redirect()->route('admin.products.index');
     }
 }
