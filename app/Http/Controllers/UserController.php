@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Product;
+use App\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -12,9 +14,10 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(User $user)
     {
-        //
+        $user = User::where('id', auth()->id())->first();
+        return view('admin.users.index', compact('user'));
     }
 
     /**
