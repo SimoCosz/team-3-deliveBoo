@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -20,13 +21,13 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::
-    // middleware('verified')
-    // ->namespace('Admin')
-    prefix('admin')
+Route::middleware('auth')
+    ->prefix('admin')
     ->name('admin.')
     ->group(function() {
         Route::get('/home', 'HomeController@index')->name('home');
+
+        Route::resource('users', 'UserController');
         
         Route::resource('products', 'ProductController');        
     });

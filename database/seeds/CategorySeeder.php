@@ -35,7 +35,6 @@ class CategorySeeder extends Seeder
             'cinese',
             'paninoteca',
             'bakery'
-
         ];
 
         foreach ($categories as $cat) {
