@@ -4,6 +4,7 @@ use App\Product;
 use App\User;
 use Illuminate\Database\Seeder;
 use phpDocumentor\Reflection\Element;
+use Illuminate\Support\Str;
 
 class ProductSeeder extends Seeder
 {

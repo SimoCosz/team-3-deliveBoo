@@ -17,7 +17,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::orderBy('created_at','asc')->limit(20)->get();
+        $products = Product::orderBy('created_at','asc')->limit(25)->get();
 
         return view('admin.products.index', compact('products'));
     }
@@ -27,11 +27,11 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Product $product)
     {
-        // $products = Product::all();
+        $user = Auth::user();
 
-        // return view('admin.products.create', compact('products'));
+        return view('admin.products.create', compact('user', 'product'));
     }
 
     /**
@@ -42,15 +42,20 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        // $request->validate([
-        //     'name' => 'required|string|max:100',
-        //     'cover' => 'url|image',
-        //     'description' => 'string',
-        //     'price' => 'numeric',
-        //     'visibility' => 'boolean',
-        //     'category' => 'string|required',
-        //     'user_id' => 'numeric',
-        // ]);
+        $product = new Product();
+        $request->validate([
+            'name' => 'required|string|max:100|min:3',
+            'cover' => 'url|image|nullable',
+            'description' => 'string|nullable',
+            'price' => 'required|numeric',
+            // 'visibility' => 'required|boolean',
+        ]);
+        
+        $data = $request->all();
+        
+        $product->fill($data);
+
+        return redirect()->route('admin.users.index');
     }
 
     /**
@@ -87,11 +92,11 @@ class ProductController extends Controller
     public function update(Request $request, Product $product)
     {
         $request->validate([
-            'name' => 'required|string|max:100',
+            'name' => 'required|string|max:100|min:3',
             'cover' => 'url|image|nullable',
-            'description' => 'string',
-            'price' => 'numeric',
-            'visibility' => 'boolean',
+            'description' => 'string|nullable',
+            'price' => 'required|numeric',
+            'visibility' => 'required|boolean',
         ]);
         
         // dd($product);

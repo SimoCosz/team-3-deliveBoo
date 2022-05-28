@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('name', 100);
             $table->text('description')->nullable();
             $table->double('price', 5,2);
-            $table->boolean('visibility');
+            $table->boolean('visibility')->default(1);
             $table->string('category');
             $table->timestamps();
         });
