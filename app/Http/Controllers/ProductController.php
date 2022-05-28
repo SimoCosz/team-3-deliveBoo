@@ -29,9 +29,9 @@ class ProductController extends Controller
      */
     public function create()
     {
-        // $products = Product::all();
+        $user = Auth::user();
 
-        // return view('admin.products.create', compact('products'));
+        return view('admin.products.create', compact('user'));
     }
 
     /**
@@ -42,15 +42,25 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        // $request->validate([
-        //     'name' => 'required|string|max:100',
-        //     'cover' => 'url|image',
-        //     'description' => 'string',
-        //     'price' => 'numeric',
-        //     'visibility' => 'boolean',
-        //     'category' => 'string|required',
-        //     'user_id' => 'numeric',
-        // ]);
+        $request->validate([
+            'name' => 'required|string|max:100|min:3',
+            'cover' => 'url|image|nullable',
+            'description' => 'string|nullable',
+            'price' => 'required|numeric',
+            'visibility' => 'required|boolean',
+        ]);
+
+        $data = $request->all();
+
+        $product = new Product();
+
+        if( $product->name != $data['name'] ){
+            $slug = Product::getUniqueSlug($data['name']);
+            $data['slug'] = $slug;
+        };
+        
+        $product->fill($data);
+        return redirect()->route('admin.users.index');
     }
 
     /**
