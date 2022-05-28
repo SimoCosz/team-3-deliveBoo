@@ -9,6 +9,9 @@
     </div>
   </div>
   <div class="container">
+    <a class="btn btn-success my-3" href="{{route('admin.products.create')}}">Aggiungi un nuovo piatto</a>
+  </div>
+  <div class="container">
     <div class="container">
       <table class="table">
           <thead>
