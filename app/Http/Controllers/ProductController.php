@@ -87,11 +87,11 @@ class ProductController extends Controller
     public function update(Request $request, Product $product)
     {
         $request->validate([
-            'name' => 'required|string|max:100',
+            'name' => 'required|string|max:100|min:3',
             'cover' => 'url|image|nullable',
-            'description' => 'string',
-            'price' => 'numeric',
-            'visibility' => 'boolean',
+            'description' => 'string|nullable',
+            'price' => 'required|numeric',
+            'visibility' => 'required|boolean',
         ]);
         
         // dd($product);
