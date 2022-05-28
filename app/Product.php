@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Product extends Model
 {
@@ -11,7 +12,7 @@ class Product extends Model
         'description',
         'price',
         'visibility',
-        'cover'
+        'cover',
     ];
 
     public function users(){
@@ -20,5 +21,22 @@ class Product extends Model
 
     public function orders(){
         return $this->belongsToMany('App\Order');
+    }
+
+    public static function getUniqueSlug($name) {
+        $slug = Str::slug($name);
+        $slug_base = $slug;
+    
+        $counter = 1;
+    
+        $product_present = Product::where('slug',$slug)->first();
+    
+        while ($product_present) {
+            $slug = $slug_base . '-' . $counter;
+            $counter++;
+            $product_present = Product::where('slug',$slug)->first();
+        }
+    
+        return $slug;
     }
 }

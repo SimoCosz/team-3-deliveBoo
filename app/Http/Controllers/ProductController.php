@@ -17,7 +17,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::orderBy('created_at','asc')->limit(20)->get();
+        $products = Product::orderBy('created_at','asc')->limit(25)->get();
 
         return view('admin.products.index', compact('products'));
     }
@@ -27,11 +27,11 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Product $product)
     {
         $user = Auth::user();
 
-        return view('admin.products.create', compact('user'));
+        return view('admin.products.create', compact('user', 'product'));
     }
 
     /**
@@ -42,24 +42,19 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        $product = new Product();
         $request->validate([
             'name' => 'required|string|max:100|min:3',
             'cover' => 'url|image|nullable',
             'description' => 'string|nullable',
             'price' => 'required|numeric',
-            'visibility' => 'required|boolean',
+            // 'visibility' => 'required|boolean',
         ]);
-
+        
         $data = $request->all();
-
-        $product = new Product();
-
-        if( $product->name != $data['name'] ){
-            $slug = Product::getUniqueSlug($data['name']);
-            $data['slug'] = $slug;
-        };
         
         $product->fill($data);
+
         return redirect()->route('admin.users.index');
     }
 
