@@ -3,9 +3,9 @@
 @section('content')
 
 <div class="container">
-    <form action="{{route('admin.products.update', $product->id)}}" method="POST">
+    <form action="{{route('admin.products.store', $product->id)}}" method="POST">
       @csrf
-      @method('PUT')
+
       {{-- VISIBILITY --}}
       <div class="form-group">
         <label for="visibility">Visibilità</label>
@@ -56,10 +56,10 @@
           @endforeach
       </div>
       @error('categories')
-          <span class="text-danger">{{ $message . 'min 1' }}</span>
+          <span class="text-danger">{{ $message . 'min: 1' | 'max: 4' }}</span>
       @enderror --}}
-      <button class="btn btn-primary d-inline" type="submit">Conferma Modifica</button>
-      <a class="btn btn-small border rounded d-inline" type='submit' href="{{ route('admin.users.index') }}">Torna alla lista prodotti</a>
+      <button class="btn btn-primary d-inline" type="submit">Aggiungi Piatto</button>
+      <a class="btn btn-small border rounded d-inline" type='submit' href="{{ route('admin.users.index') }}">Annulla</a>
     </form>
 
 @endsection
