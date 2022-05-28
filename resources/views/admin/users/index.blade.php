@@ -29,7 +29,7 @@
                   <tr>
                       <td>{{ $product->id }}</td>
                       <td>{{ $product->name }}</td>
-                      <td>{{ $product->cover }}</td>
+                      <td><img class="w-75 rounded" style="aspect-ratio:1/1" src="{{ $product->cover }}" alt=""></td>
                       <td>{{ $product->category }}</td>
                       <td>{{ $product->description }}</td>
                       <td>{{ $product->visibility }}</td>
