@@ -11,8 +11,8 @@
         <label for="visibility">Visibilità*</label>
           <select class="form-control" name="visibility" id="visibility">
             <option value="">-- Nessuna --</option>
-            <option {{ old('visibility') == true ? 'selected' : '' }} value="true" selected>Visibile</option>
-            <option {{ old('visibility') == false ? 'selected' : '' }} value="false">Non visibile</option>
+            <option {{ old('visibility') == 1 ? 'selected' : '' }} value="1" selected>Visibile</option>
+            <option {{ old('visibility') == 0 ? 'selected' : '' }} value="0">Non visibile</option>
           </select>
       </div>
       @error('visibility')

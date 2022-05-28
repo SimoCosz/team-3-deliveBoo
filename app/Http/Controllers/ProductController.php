@@ -30,8 +30,9 @@ class ProductController extends Controller
     public function create(Product $product)
     {
         $user = Auth::user();
+        $categories = Category::all();
 
-        return view('admin.products.create', compact('user', 'product'));
+        return view('admin.products.create', compact('user', 'product', 'categories'));
     }
 
     /**
@@ -42,18 +43,20 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $product = new Product();
         $request->validate([
             'name' => 'required|string|max:100|min:3',
             'cover' => 'url|image|nullable',
             'description' => 'string|nullable',
             'price' => 'required|numeric',
-            // 'visibility' => 'required|boolean',
+            'visibility' => 'required|boolean',
         ]);
         
         $data = $request->all();
+        $product = new Product();
         
         $product->fill($data);
+
+        $product->save();
 
         return redirect()->route('admin.users.index');
     }
