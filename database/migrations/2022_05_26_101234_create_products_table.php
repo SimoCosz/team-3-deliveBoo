@@ -21,6 +21,7 @@ class CreateProductsTable extends Migration
             $table->double('price', 5,2);
             $table->boolean('visibility');
             $table->string('category');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -3,9 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Product extends Model
 {
+    use SoftDeletes;
+    
     protected $fillable = [
         'name',
         'description',
@@ -13,6 +16,8 @@ class Product extends Model
         'visibility',
         'cover'
     ];
+
+    protected $dates = ['deleted_at'];
 
     public function users(){
         return $this->belongsTo('App\User');

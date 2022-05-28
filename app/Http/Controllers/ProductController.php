@@ -116,6 +116,22 @@ class ProductController extends Controller
     {
         // $product->delete();
 
-        // return redirect()->route('admin.products.index');
+        if($product->trashed()){
+            $product->forceDelete();
+        }else{
+            $product->delete();
+        }
+
+        return redirect()->route('admin.users.index');
+    }
+
+    public function forceDestroy(Product $product){
+
+        // $product = Product::where('id', $id)->withTrashed()->first();
+
+        //eliminazione forzata
+        $product->forceDelete();
+
+        return redirect()->route('admin.users.index');
     }
 }

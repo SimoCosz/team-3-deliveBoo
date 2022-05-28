@@ -29,6 +29,8 @@ Route::middleware('auth')
 
         Route::resource('users', 'UserController');
         
-        Route::resource('products', 'ProductController');        
+        Route::resource('products', 'ProductController');
+
+        Route::delete('admin/products/{product}/force', 'ProductController@forceDestroy')->name('products.destroy.force');  
     });
     
