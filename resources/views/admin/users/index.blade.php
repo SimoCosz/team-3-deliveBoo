@@ -50,7 +50,7 @@
                 @csrf
                 @method('DELETE')
                   <button type="submit" class="btn btn-small border-rounder btn-outline-danger">
-                    Elimina
+                    {{$product->trashed() ? 'Elimina definitivamente' : 'Elimina'}}
                   </button>  
                 </form>
               </td>
