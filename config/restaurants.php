@@ -20,7 +20,7 @@ return[
         'user_id' => 1,
         'cover' => 'https://www.don-nino.it/wp-content/uploads/2019/02/Prodotto_punta_1-1.png',
         'name' => 'Cannolo siciliano di Don Nino',
-        'description' => 'Ricotta con pere, cioccolata e pistacchio',
+        'description' => 'Cannolo all ricotta con pere, cioccolata e pistacchio',
         'price' => 5.50,
         'visibility' => true,
         'category' => 'Pasticceria'
@@ -30,7 +30,7 @@ return[
         'user_id' => 1,
         'cover' => 'https://www.don-nino.it/wp-content/uploads/2019/02/Prodotto_punta_2-1.png',
         'name' => 'La Monoporzione di Don Nino',
-        'description' => 'Bavarese alla nocciola, croccatino alle mandorle e mmousse al cioccolato, racchiusi da una glassa di cacao',
+        'description' => 'Bavarese alla nocciola, croccatino alle mandorle e mousse al cioccolato, racchiusi da una glassa di cacao',
         'price' => 5.50,
         'visibility' => true,
         'category' => 'Pasticceria'
@@ -2947,7 +2947,7 @@ return[
         'cover' => '',
         'name' => 'Ravioli di carne',
         'description' => '4pz di ravioli di carne',
-        'price' => 4.50,
+        'price' => 4.00,
         'visibility' => true,
         'category' => 'antipasto'
       ],

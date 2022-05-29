@@ -4,7 +4,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12 text-center">
-        <h1>{{$user->name}}</h1>
+        <h1 class="display-4">{{$user->name}}</h1>
       </div>
     </div>
   </div>
@@ -31,14 +31,20 @@
             <tr>
               <td class="text-center">{{ $product->id }}</td>
               <td>{{ $product->name }}</td>
-              <td><img class="w-75 rounded" style="aspect-ratio:1/1" src="{{ $product->cover }}" alt=""></td>
+              <td class="d-flex align-items-center justify-content-center">
+                @if ($product->cover)
+                  <img class="w-75 h-75 rounded-circle" style="aspect-ratio:1/1" src="{{ $product->cover }}" alt=""> 
+                @else
+                  <img class="w-50 h-25 rounded-circle mx-auto d-block" style="aspect-ratio:1/1" src="https://m.media-amazon.com/images/G/29/prime/ellis/cobrandedOfferPages/client/deliveroo/Deliveroo-SignIn._CB626766752_.png" alt="">  
+                @endif
+              </td>
               <td class="text-capitalize">
                 <span class="badge badge-pill badge-info p-2">
                   {{ $product->category }}
                 </span>
               </td>
               <td>{{ $product->description }}</td>
-              <td>{{ $product->visibility }}</td>
+              <td class="text-center">{{ $product->visibility }}</td>
               <td>€ {{ $product->price }}</td>
 
               <td>
@@ -46,7 +52,7 @@
               </td>
 
               <td>
-                <form action="{{ route('admin.products.destroy', $product)}}" method="POST">
+                <form action="{{ route('admin.products.destroy.force', $product)}}" method="POST">
                 @csrf
                 @method('DELETE')
                   <button type="submit" class="btn btn-small border-rounder btn-outline-danger">
@@ -54,14 +60,6 @@
                   </button>  
                 </form>
               </td>
-
-              {{-- <td>
-                  <form action="{{ route('admin.products.destroy', $product) }}" method="POST">
-                  @csrf
-                  @method('DELETE')
-                      <div type="submit" class="btn btn-danger" onclick="return confirm('Sei sicuro di voler cancellare {{$product->title}}?'>Elimina</div>                        
-                  </form>
-              </td> --}}
             </tr>
           @endforeach
       </tbody>
