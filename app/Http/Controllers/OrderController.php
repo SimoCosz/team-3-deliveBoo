@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Order;
+use App\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
@@ -14,7 +16,12 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        $orders = Order::with('products')
+        ->where('user_id', Auth::id())
+        ->orderBy('created_at', 'desc')
+        ->get();
+
+        return view('admin.orders.index', compact('orders'));
     }
 
     /**
