@@ -10981,3 +10981,8 @@ img {
   width: 300px;
 }
 
+.underline {
+  text-decoration: underline;
+  font-weight: bold;
+}
+

@@ -5,7 +5,6 @@
     <div class="row">
       <div class="col-12 text-center">
         <h1 class="display-4">{{$user->name}}</h1>
-        @dump($user->categories)
       </div>
     </div>
   </div>

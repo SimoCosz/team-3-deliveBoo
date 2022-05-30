@@ -32,6 +32,8 @@ Route::middleware('auth')
         Route::resource('products', 'ProductController');
 
         Route::resource('orders', 'OrderController');
+
+        Route::get('logout', 'loginController@logout');
         
         Route::delete('admin/products/{post}/force', 'ProductController@forceDestroy')->name('products.destroy.force');
     });
