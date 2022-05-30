@@ -32,9 +32,9 @@ class UserSeeder extends Seeder
             $user -> slug = Str::slug($u['name'], '-');
 
             $user->save();
-            foreach ($u['categories'] as $category) {
-                $user -> categories()->attach($category);
-            }
+            // foreach ($u['categories'] as $category) {
+            //     $user -> categories()->attach($category);
+            // }
         }
     }
 }
