@@ -11,9 +11,9 @@ return[
     'email' => 'info@donninoroma.it',
     'password' => 'DonNinoTheBest000',
     'categories' => [
-      'italiano',
-      'dessert',
-      'siciliano'
+      2,
+      3,
+      4
     ],
     'products' => [
       [
@@ -156,8 +156,8 @@ return[
     'email' => 'info@fiveguysroma.it',
     'password' => 'FiveGuys000',
     'categories' => [
-      'fast-food',
-      'americano',
+      5,
+      6,
     ],
     'products' => [
       [
@@ -281,9 +281,9 @@ return[
     'email' => 'info@hosteriadelmercato.it',
     'password' => 'HosteriaTheOldest000',
     'categories' => [
-      'healty-food',
-      'italiano',
-      'vegetariano'
+      7,
+      2,
+      8
     ],
     'products' => [
       [
@@ -416,8 +416,8 @@ return[
     'email' => 'info@ilcaseificiopugliese.it',
     'password' => 'CaseificioPugliese00',
     'categories' => [
-      'italiano',
-      'caseificio'
+      2,
+      9
     ],
     'products' => [
       [
@@ -586,10 +586,10 @@ return[
     'email' => 'info@mrkebabturco.it',
     'password' => 'KebabBonoKebab00',
     'categories' => [
-      'turco',
-      'arabo',
-      'fast-food',
-      'dessert'
+      10,
+      11,
+      5,
+      3
     ],
     'products' => [
       [
@@ -758,8 +758,8 @@ return[
     'email' => 'billy_tacos@gmail.com',
     'password' => 'Password',
     'categories' => [
-      'messicano',
-      'fast-food',
+      12,
+      5,
     ],
     'products' => [
       [
@@ -946,9 +946,9 @@ return[
     'email' => 'pokeLeonina@gmail.com',
     'password' => 'Password',
     'categories' => [
-      'hawaiiano',
-      'healty-food',
-      'poke'
+      13,
+      7,
+      14
     ],
     'products' => [
       [
@@ -1072,8 +1072,8 @@ return[
     'email' => 'lievito00@gmail.com',
     'password' => 'Password',
     'categories' => [
-      'italiano',
-      'pizza',
+      2,
+      1,
     ],
     'products' => [
       [
@@ -1270,8 +1270,8 @@ return[
     'email' => 'burritos@gmail.com',
     'password' => 'Password',
     'categories' => [
-      'messicano',
-      'fast-food',
+      12,
+      5,
     ],
     'products' => [
       [
@@ -1377,10 +1377,10 @@ return[
     'email' => 'darumasushi@hotmail.com',
     'password' => 'darumasushi',
     'categories' => [
-      'giapponese',
-      'pesce',
-      'sushi',
-      'healty-food'
+      15,
+      16,
+      17,
+      7
     ],
     'products' => [
       [
@@ -1495,11 +1495,10 @@ return[
     'email' => 'sushikatio@live.it',
     'password' => 'sushi',
     'categories' => [
-      'giapponese',
-      'cinese',
-      'pesce',
-      'sushi',
-      'healty-food'
+      15,
+      19,
+      17,
+      16,
     ],
     'products' => [
       [
@@ -1605,10 +1604,9 @@ return[
     'email' => 'temakinho@gmail.com',
     'password' => 'temakinho',
     'categories' => [
-      'brasiliano',
-      'sushi',
-      'pesce',
-      'healty-food'
+      17,
+      16,
+      7
     ],
     'products' => [
       [
@@ -1714,10 +1712,10 @@ return[
     'email' => 'cody@hotmail.it',
     'password' => 'cody',
     'categories' => [
-      'cinese',
-      'sushi',
-      'pesce',
-      'healty-food'
+      19,
+      17,
+      16,
+      7
     ],
     'products' => [
       [
@@ -1859,9 +1857,9 @@ return[
     'email' => 'reMejo_panino@libero.it',
     'password' => 'Password',
     'categories' => [
-      'paninoteca',
-      'italiano',
-      'fast-food'
+      20,
+      2,
+      5
     ],
     'products' => [
       [
@@ -2030,8 +2028,8 @@ return[
     'email' => 'direzione.soffitta@gmail.com',
     'password' => 'soffitta111',
     'categories' => [
-      'italiano',
-      'pizza'
+      2,
+      1
     ],
     'products' => [
       [
@@ -2155,8 +2153,8 @@ return[
     'email' => 'trapizzino@gmail.com',
     'password' => 'trapizzino111',
     'categories' => [
-      'italiano',
-      'pizza',
+      1,
+      2,
     ],
     'products' => [
       [
@@ -2235,8 +2233,8 @@ return[
     'email' => 'ristorante.mangiafuoco@3gdynamics.it',
     'password' => 'mangiafuoco111',
     'categories' => [
-      'italiano',
-      'pizza'
+      1,
+      2,
     ],
     'products' => [
       [
@@ -2324,8 +2322,8 @@ return[
     'email' => 'marco@darpoeta.com',
     'password' => 'darpoeta111',
     'categories' => [
-      'italiano',
-      'pizza'
+      1,
+      2,
     ],
     'products' => [
       [
@@ -2431,8 +2429,8 @@ return[
     'email' => 'lapanetteria@gmail.com',
     'password' => 'lapanetteria111',
     'categories' => [
-      'bakery',
-      'pizza'
+      21,
+      1
     ],
     'products' => [
       [
@@ -2583,9 +2581,9 @@ return[
     'email' => 'losfilatino@gmail.com',
     'password' => 'losfilatino111',
     'categories' => [
-      'bakery',
-      'pizza',
-      'dessert'
+      21,
+      1,
+      3
     ],
     'products' => [
       [
@@ -2680,9 +2678,7 @@ return[
       ],
     ],
   ],
-
    // <!-- trattoria da gino -->
-
   [
     'name' => 'Trattoria da Gino',
     'address' => 'Via II maggio 33',
@@ -2693,9 +2689,9 @@ return[
     'email' => 'trattoriadagino@gmail.com',
     'password' => 'trattoriagino',
     'categories' => [
-      'Italiano',
-      'Pesce',
-      'Carne'
+      2,
+      16,
+      18
     ],
     'products' => [
       [
@@ -2772,8 +2768,6 @@ return[
       ],
     ],
   ],
-
-
   // <!-- Pinseria Romana -->
   [
     'name' => 'Pinseria Romana',
@@ -2785,7 +2779,7 @@ return[
     'email' => 'pinseriarom@gmail.com',
     'password' => 'pineriaromana',
     'categories' => [
-      'pizza',
+      1,
     ],
     'products' => [
       [
@@ -2862,9 +2856,7 @@ return[
       ],
     ],
   ],
-
- // <!-- big burger -->
-
+  // <!-- big burger -->
   [
     'name' => 'BigBurger',
     'address' => 'Via San Francesco 23',
@@ -2875,9 +2867,9 @@ return[
     'email' => 'bigburger@alice.it',
     'password' => 'bigburger69',
     'categories' => [
-      'americano',
-      'paninoteca',
-      'italiano'
+      6,
+      20,
+      2
     ],
     'products' => [
       [
@@ -2927,7 +2919,7 @@ return[
       ],
     ],
   ],
-// <!-- jin feng -->
+  // <!-- jin feng -->
   [
     'name' => 'JinFeng',
     'address' => 'Via Colli Romani 335',
@@ -2938,8 +2930,8 @@ return[
     'email' => 'feng@gmail.com',
     'password' => 'fengfeng',
     'categories' => [
-      'cinese',
-      'giapponese',
+      19,
+      15,
     ],
     'products' => [
       [
@@ -3018,7 +3010,7 @@ return[
     'email' => 'panzapiena@gmail.com',
     'password' => 'panzapiena',
     'categories' => [
-      'Italiano'
+      2
     ],
     'products' => [
       [
