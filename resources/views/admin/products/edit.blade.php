@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-  <figure class="edit_cover">
+  <figure class="edit__cover">
     <img src="{{$product->cover}}" alt="">
   </figure>
   <form action="{{route('admin.products.update', $product->id)}}" method="POST">

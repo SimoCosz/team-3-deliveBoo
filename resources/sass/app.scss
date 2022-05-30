@@ -7,7 +7,7 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-// Preset
+// Reset
 
 *{
   margin: 0;
@@ -23,3 +23,4 @@ img{
 // nostri stili
 
 @import 'navbar';
+@import 'edit';
