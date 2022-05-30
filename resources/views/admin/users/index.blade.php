@@ -11,7 +11,7 @@
   <div class="container">
     <a class="btn btn-success my-3" href="{{route('admin.products.create')}}">Aggiungi un nuovo piatto</a>
   </div>
-  <div class="container">
+  <div class="container table-responsive">
     <table class="table table-bordered table-hover table-striped">
       <thead class="thead-dark">
         <tr>
@@ -35,7 +35,7 @@
                 @if ($product->cover)
                   <img class="w-75 h-75 rounded-circle" style="aspect-ratio:1/1" src="{{ $product->cover }}" alt=""> 
                 @else
-                  <img class="w-50 h-25 rounded-circle mx-auto d-block" style="aspect-ratio:1/1" src="https://m.media-amazon.com/images/G/29/prime/ellis/cobrandedOfferPages/client/deliveroo/Deliveroo-SignIn._CB626766752_.png" alt="">  
+                  <img class="w-100 h-100 rounded-circle mx-auto d-block" style="aspect-ratio:1/1" src="{{URL::asset('img/logo-segnaposto.jpg')}}" alt="">  
                 @endif
               </td>
               <td class="text-capitalize">
