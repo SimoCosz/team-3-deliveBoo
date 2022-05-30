@@ -5,11 +5,13 @@
     <div class="row">
       <div class="col-12 text-center">
         <h1 class="display-4">{{$user->name}}</h1>
+        @dump($user->categories)
       </div>
     </div>
   </div>
   <div class="container">
     <a class="btn btn-success my-3" href="{{route('admin.products.create')}}">Aggiungi un nuovo piatto</a>
+    <a class="btn btn-success my-3" href="{{route('admin.orders.index')}}">Vedi ordini</a>
   </div>
   <div class="container table-responsive">
     <table class="table table-bordered table-hover table-striped">
