@@ -18,7 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('css/front.css')}}">
+    <link rel="icon" href="{{ URL::asset('/img/logo-favicon.jpg') }}" type="image/x-icon">
 </head>
 <body>
     <div id="app">
