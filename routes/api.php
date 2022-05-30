@@ -17,3 +17,16 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::namespace('Api')->group(function(){
+    Route::resource('users', 'UserController')->only([
+        'index',
+        'show'
+    ]);
+    // ->parameters([
+    //     'posts' => 'post:slug'
+    // ]);
+
+    // Route::get('/categories', 'CategoryController@index');
+    // Route::get('/categories/{category}/posts', 'CategoryController@archive');
+});
