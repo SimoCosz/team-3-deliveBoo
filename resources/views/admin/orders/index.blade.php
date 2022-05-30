@@ -22,7 +22,7 @@
           @endif
         </td>
         <td class="text-center">
-          <a class="btn btn-success" href="{{-- {{route('admin.orders.show')}} --}}">Visualizza Ordine</a> 
+          <a class="btn btn-success" href="{{route('admin.orders.show', $order)}}">Visualizza Ordine</a> 
         </td>
       </tr>
       @endforeach
