@@ -18,7 +18,8 @@ class AddForeignUserOrdersTable extends Migration
 
             $table->foreign('user_id')
             ->references('id')
-            ->on('users')->onDelete('no action');
+            ->on('users')
+            ->onDelete('no action');
         });
     }
 

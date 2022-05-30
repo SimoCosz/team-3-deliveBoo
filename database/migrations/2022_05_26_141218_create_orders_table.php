@@ -19,7 +19,7 @@ class CreateOrdersTable extends Migration
             $table->string('client_surname', 100);
             $table->string('client_address', 200);
             $table->string('client_city', 80);
-            $table->string('client_phone', 10);
+            $table->string('client_phone');
             $table->string('client_email', 150);
             $table->boolean('payment_state');
             $table->double('total_price', 6,2);

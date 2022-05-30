@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('welcome');
 });
 
@@ -25,7 +25,7 @@ Route::middleware('auth')
     ->prefix('admin')
     ->name('admin.')
     ->group(function() {
-        Route::get('/home', 'HomeController@index')->name('home');
+        // Route::get('/home', 'HomeController@index')->name('home');
 
         Route::resource('users', 'UserController');
         
