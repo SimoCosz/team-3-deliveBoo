@@ -19,13 +19,13 @@ class CreateCategoryUserTable extends Migration
 
             $table->foreign('category_id')
             ->references('id')
-            ->on('categories');
-            // ->onDelete('set null');
+            ->on('categories')
+            ->onDelete('no action');
             
             $table->foreign('user_id')
             ->references('id')
-            ->on('users');
-            // ->onDelete('set null');
+            ->on('users')
+            ->onDelete('no action');
 
             $table->primary(['category_id', 'user_id']);
         });

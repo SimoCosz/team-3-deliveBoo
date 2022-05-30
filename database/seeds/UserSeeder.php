@@ -1,7 +1,9 @@
 <?php
 
+use App\Category;
 use App\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Hash;
 
@@ -14,6 +16,7 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
+
         $users = config('restaurants');
         foreach ($users as $u) {
             $user = new User();
@@ -29,6 +32,9 @@ class UserSeeder extends Seeder
             $user -> slug = Str::slug($u['name'], '-');
 
             $user->save();
+            foreach ($u['categories'] as $category) {
+                $user -> categories()->attach($category);
+            }
         }
     }
 }

@@ -53,6 +53,8 @@ class ProductController extends Controller
         
         $data = $request->all();
         $product = new Product();
+        $userId = Auth::id();
+        $product->user_id = $userId;
         
         $product->fill($data);
 
