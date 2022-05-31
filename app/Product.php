@@ -16,6 +16,7 @@ class Product extends Model
         'price',
         'visibility',
         'cover',
+        'slug'
     ];
 
     public function users(){
