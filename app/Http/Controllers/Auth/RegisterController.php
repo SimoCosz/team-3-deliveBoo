@@ -60,11 +60,11 @@ class RegisterController extends Controller
             'address' => ['required', 'string', 'max:100'],
             'city' => ['required', 'string', 'max:100'],
             'telephone_number' => ['string', 'numeric'],
-            'p_iva' => ['required', 'string', 'digits:11', 'unique:p_iva'],
+            'p_iva' => ['required', 'string', 'digits:11'],
             'cover' => ['nullable', 'string', 'image'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'categories' => ['required', 'exist:types,id']
+            'categories' => ['required', 'exists:categories,id']
         ]);
     }
 
