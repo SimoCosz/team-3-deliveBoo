@@ -58,6 +58,11 @@ class ProductController extends Controller
         $userId = Auth::id();
         $product->user_id = $userId;
         
+        if( $product->name != $data['name'] ){
+            $slug = Product::getUniqueSlug($data['name']);
+            $data['slug'] = $slug;
+        };
+        
         $product->fill($data);
 
         $product->save();
