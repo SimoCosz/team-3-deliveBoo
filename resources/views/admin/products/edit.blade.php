@@ -5,7 +5,7 @@
   <figure class="edit__cover">
     <img src="{{$product->cover}}" alt="">
   </figure>
-  <form action="{{route('admin.products.update', $product->id)}}" method="POST">
+  <form action="{{route('admin.products.update', $product->id)}}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('PUT')
     {{-- VISIBILITY --}}
@@ -46,7 +46,10 @@
     </div>
     {{-- COVER --}}
     <label class="d-block" for="cover">Inserisci immagine piatto</label>
-    <input class="d-block my-3" type="file" name="cover">
+    <input class="d-block my-3 @error('cover') is-invalid @enderror" type="file" name="cover" id="cover">
+    @error('cover')
+        <div class="invalid-feedback"> {{$message}} </div>
+    @enderror
     {{-- CATEGORIES --}}
     {{-- <label class="text-center container">Categorie</label>
     <div class="d-flex flex-wrap container align-items-center" style="gap:1rem">

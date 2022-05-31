@@ -7,6 +7,7 @@ use App\Product;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -45,13 +46,14 @@ class ProductController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:100|min:3',
-            'cover' => 'url|image|nullable',
+            'cover' => 'image|nullable|file|max:4096|mimetypes: image/jpeg, image/png',
             'description' => 'string|nullable',
             'price' => 'required|numeric',
             'visibility' => 'required|boolean',
         ]);
-        
+
         $data = $request->all();
+        
         $product = new Product();
         $userId = Auth::id();
         $product->user_id = $userId;
@@ -98,7 +100,7 @@ class ProductController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:100|min:3',
-            'cover' => 'url|image|nullable',
+            'cover' => 'image|nullable|file|max:4096',
             'description' => 'string|nullable',
             'price' => 'required|numeric',
             'visibility' => 'required|boolean',
@@ -106,6 +108,15 @@ class ProductController extends Controller
         
         // dd($product);
         $data = $request->all();
+
+        if(array_key_exists('cover', $data)){
+            $cover_path = Storage::put('uploads', $data['cover']);
+
+            $data['cover'] = $cover_path;
+        } else {
+            $cover_path = $product['cover'];
+            $data['cover'] = $cover_path;
+        }
 
         if( $product->name != $data['name'] ){
             $slug = Product::getUniqueSlug($data['name']);
