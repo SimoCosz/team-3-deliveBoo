@@ -46,13 +46,19 @@ class ProductController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:100|min:3',
-            'cover' => 'image|nullable|file|max:4096|mimetypes: image/jpeg, image/png',
+            'cover' => 'image|nullable|file|max:4096',
             'description' => 'string|nullable',
             'price' => 'required|numeric|min:0',
             'visibility' => 'required|boolean',
         ]);
 
         $data = $request->all();
+
+        if(array_key_exists('cover', $data)){
+            $cover_path = Storage::put('uploads', $data['cover']);
+
+            $data['cover'] = $cover_path;
+        } 
         
         $product = new Product();
         $userId = Auth::id();
