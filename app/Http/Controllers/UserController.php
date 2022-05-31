@@ -17,9 +17,12 @@ class UserController extends Controller
      */
     public function index(User $user)
     {
-        $user = Auth::user();
-        $categories = Category::all();
-        return view('admin.users.index', compact('user', 'categories'));
+        $user_id = Auth::id();
+        $products = Product::where('user_id', '=' ,$user_id)->orderBy('name')->get();
+
+        $user = User::where('id', '=', $user_id)->first();
+        // $categories = Category::all();
+        return view('admin.users.index', compact('user', 'products'));
     }
 
     /**

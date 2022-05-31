@@ -18,7 +18,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::orderBy('created_at','asc')->limit(25)->get();
+        $products = Product::orderBy('name','asc')->limit(25)->get();
 
         return view('admin.products.index', compact('products'));
     }
