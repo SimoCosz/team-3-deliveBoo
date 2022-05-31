@@ -18,7 +18,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::orderBy('name','asc')->limit(25)->get();
+        $products = Product::orderBy('name','asc')->withTrashed()->limit(25)->get();
 
         return view('admin.products.index', compact('products'));
     }
@@ -155,7 +155,7 @@ class ProductController extends Controller
     }
 
     public function forceDestroy($id){
-        $product = Product::where('id', $id)->withTrashed()->first();
+        $product = Product::withTrashed()->where('id', $id)->first();
         $product->forceDelete();
 
         return redirect()->route('admin.users.index');

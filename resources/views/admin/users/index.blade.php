@@ -53,11 +53,11 @@
               </td>
 
               <td>
-                <form action="{{ route('admin.products.destroy.force', $product)}}" method="POST">
+                <form action="{{ route('admin.products.destroy', $product)}}" method="POST">
                 @csrf
                 @method('DELETE')
                   <button type="submit" class="btn btn-small border-rounder btn-outline-danger">
-                    {{$product->trashed() ? 'Elimina definitivamente' : 'Elimina'}}
+                    {{$product->deleted_at ? 'Elimina definitivamente' : 'Elimina'}}
                   </button>  
                 </form>
               </td>
