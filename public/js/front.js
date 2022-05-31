@@ -14722,7 +14722,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/simonecoszach/Developer/Boolean/Corso/Projects/team-3-deliveBoo/resources/js/front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\Andrea\Desktop\progeto-finale\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })
