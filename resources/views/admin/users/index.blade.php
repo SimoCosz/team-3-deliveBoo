@@ -12,6 +12,9 @@
     <a class="btn btn-success my-3" href="{{route('admin.products.create')}}">Aggiungi un nuovo piatto</a>
     <a class="btn btn-success my-3" href="{{route('admin.orders.index')}}">Vedi ordini</a>
   </div>
+  <div class="container d-flex justify-content-center">
+      {{$products->links()}}
+  </div>
   <div class="container table-responsive">
     <table class="table table-bordered table-hover table-striped">
       <thead class="thead-dark">
@@ -67,5 +70,8 @@
           @endforeach
       </tbody>
     </table>
+    <div class="container d-flex justify-content-center">
+      {{$products->links()}}
+    </div>
   </div>
 @endsection
