@@ -18,7 +18,7 @@ class UserController extends Controller
     public function index(User $user)
     {
         $user_id = Auth::id();
-        $products = Product::where('user_id', '=' ,$user_id)->orderBy('name')->get();
+        $products = Product::where('user_id', '=' ,$user_id)->orderBy('name')->paginate(5);
 
         $user = User::where('id', '=', $user_id)->first();
         // $categories = Category::all();
