@@ -18,7 +18,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::orderBy('created_at','asc')->limit(25)->get();
+        $products = Product::orderBy('name','asc')->limit(25)->get();
 
         return view('admin.products.index', compact('products'));
     }
@@ -57,6 +57,11 @@ class ProductController extends Controller
         $product = new Product();
         $userId = Auth::id();
         $product->user_id = $userId;
+        
+        if( $product->name != $data['name'] ){
+            $slug = Product::getUniqueSlug($data['name']);
+            $data['slug'] = $slug;
+        };
         
         $product->fill($data);
 

@@ -28,7 +28,7 @@
         </tr>
       </thead>
       <tbody>
-          @foreach($user->products as $key => $product)
+          @foreach($products as $key => $product)
             <tr>
               <td class="text-center">{{ $product->id }}</td>
               <td>{{ $product->name }}</td>

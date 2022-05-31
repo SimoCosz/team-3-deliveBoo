@@ -30,6 +30,7 @@ class ProductSeeder extends Seeder
                 $product -> visibility = $p['visibility'];
                 $product -> category = $p['category'];
                 $product -> user_id = $p['user_id'];
+                $product -> slug = Str::slug($p['name'], '-');
                 
     
                 $product -> save();
