@@ -1,10 +1,15 @@
 <template>
-  <router-view></router-view>
+    
+    <router-view></router-view>
+
 </template>
 
 <script>
+  import Layout from '../layouts/Layout.vue'
   export default {
-    
+    components:{
+      Layout
+    }
   }
 </script>
 
