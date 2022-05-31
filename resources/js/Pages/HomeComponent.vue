@@ -1,16 +1,18 @@
 <template>
-<layout>
+<Layout>
   <div>
-    <img src="../../../public/img/logo-home.jpg" alt="">
+    <Users/>
   </div>
-</layout>
+</Layout>
 </template>
 
 <script>
-import Layout from '../layouts/Layout.vue'
+  import Users from '../components/UsersIndex.vue'
+  import Layout from '../layouts/Layout.vue'
   export default {
     components: { 
-      Layout
+      Layout,
+      Users
     },
     
   }

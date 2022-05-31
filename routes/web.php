@@ -40,3 +40,7 @@ Route::middleware('auth')
     Route::namespace('Auth')->group(function(){
        Route::get('logout', 'loginController@logout');
     });
+
+    Route::fallback(function(){
+        return view('guest.home');
+    });

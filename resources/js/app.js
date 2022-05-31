@@ -4,6 +4,6 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
- const { functionsIn } = require('lodash');
+ //const { functionsIn } = require('lodash');
 
 require('./bootstrap');

@@ -30,3 +30,4 @@ Route::namespace('Api')->group(function(){
     // Route::get('/categories', 'CategoryController@index');
     // Route::get('/categories/{category}/posts', 'CategoryController@archive');
 });
+

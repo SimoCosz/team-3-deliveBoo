@@ -1,6 +1,10 @@
 <template>
   <div>
-    <h1>hello word</h1>
+    <header>HEADER</header>
+    <main>
+      <slot/>
+    </main>
+    <footer>FOOTER</footer>
   </div>
 </template>
 
