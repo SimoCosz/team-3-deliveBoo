@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container">
-    <form action="{{route('admin.products.store', $product->id)}}" method="POST">
+    <form action="{{route('admin.products.store', $product->id)}}" method="POST" enctype="multipart/form-data">
       @csrf
 
       {{-- VISIBILITY --}}
@@ -36,7 +36,7 @@
       </div>
       {{-- PRICE --}}
       <div class="mb-3">
-        <label for="price" class="form-label"> Prezzo* </label>
+        <label for="price" class="form-label"> Prezzo </label>
         <input type="number" step=".01" required min="0.01" max="999.99" class="form-control @error('price') is-invalid @enderror" value=" {{old('price')?: $product->price}} " name="price" id="price">
         @error('price')
             <div class="invalid-feedback"> {{$message}} </div>
@@ -44,7 +44,10 @@
       </div>
       {{-- COVER --}}
       <label class="d-block" for="cover">Inserisci immagine piatto</label>
-      <input class="d-block my-3" accept="image/*" type="file" name="cover">
+      <input class="d-block my-3 @error('cover') is-invalid @enderror" type="file" accept="image/*" name="cover" id="cover">
+      @error('cover')
+          <div class="invalid-feedback"> {{$message}} </div>
+      @enderror
       {{-- CATEGORIES --}}
       {{-- <label class="text-center container">Categorie (Selezionarne solo 1)</label>
       <div class="d-flex flex-wrap container align-items-center" style="gap:1rem">
