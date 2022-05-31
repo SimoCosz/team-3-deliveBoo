@@ -32,9 +32,8 @@ Route::middleware('auth')
         Route::resource('products', 'ProductController');
 
         Route::resource('orders', 'OrderController');
-
         
-        Route::delete('admin/products/{post}/force', 'ProductController@forceDestroy')->name('products.destroy.force');
+        Route::delete('/products/{product}/force', 'ProductController@forceDestroy')->name('products.destroy.force');
     });
     
     Route::namespace('Auth')->group(function(){
