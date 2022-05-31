@@ -8,8 +8,8 @@ return[
     'telephone_number' => '066797497',
     'p_iva' => '04872434812',
     'cover' => 'https://rs-menus-api.roocdn.com/images/5370ed30-4c43-4a80-99ee-beaaec29408c/image.jpeg?width=602&height=300&auto=webp&format=jpg&fit=crop&v=1629357961',
-    'email' => 'info@donninoroma.it',
-    'password' => 'DonNinoTheBest000',
+    'email' => 'info@don.it',
+    'password' => 'password',
     'categories' => [
       2,
       3,

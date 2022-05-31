@@ -84,7 +84,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                   <img src="{{asset('img/logo-segnaposto.jpg')}}" alt="">
+                   <img src="{{asset('img/logo-home.jpg')}}" alt="">
                 </div>
             </div>
         </div>
