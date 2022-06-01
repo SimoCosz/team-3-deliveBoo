@@ -10986,3 +10986,26 @@ img {
   font-weight: bold;
 }
 
+.not-found {
+  height: calc(100vh - 125px);
+  position: relative;
+}
+
+.not-found .error {
+  color: #97CDB4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.not-found .error h1 {
+  font-size: 100px;
+}
+
+.not-found .error p {
+  font-size: 50px;
+  text-transform: capitalize;
+}
+
