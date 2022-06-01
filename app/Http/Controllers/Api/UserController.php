@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Product;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -41,7 +42,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
@@ -50,9 +51,20 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        $user = User::with('products')->where('slug',$slug)->first();
+        if($user){
+            return response()->json([
+                'user' => $user,
+                'succes' => true
+            ]);
+        }
+        return response()->json([
+            'message' => 'User not found',
+            'success' => false,
+        ],404);
+        
     }
 
     /**
