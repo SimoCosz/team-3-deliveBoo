@@ -18,11 +18,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-<<<<<<< HEAD
-        $products = Product::orderBy('name','asc')->withTrashed()->limit(25)->get();
-=======
         $products = Product::orderBy('name','asc')->paginate(5);
->>>>>>> 317fb9705f9c317952f76bbea0b7d3a4ab7431c9
 
         return view('admin.products.index', compact('products'));
     }
