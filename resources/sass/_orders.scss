@@ -2,3 +2,26 @@
   text-decoration: underline;
   font-weight: bold;
 }
+
+.not-found{
+  height: calc(100vh - 125px);
+  position: relative;
+
+  .error{
+    color: #97CDB4;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    h1{
+      font-size: 100px;
+    }
+
+    p{
+      font-size: 50px;
+      text-transform: capitalize;
+    }
+  }
+}

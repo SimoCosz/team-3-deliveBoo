@@ -66,6 +66,13 @@
       <button class="btn btn-primary d-inline" type="submit">Conferma Modifica</button>
       <a class="btn btn-small border rounded d-inline" type='submit' href="{{ route('admin.users.index') }}">Torna alla lista prodotti</a>
     </form>
+    @else
+    <div class="not-found container">
+      <div class="error">
+        <h1>404</h1>
+        <p>--page not found--</p>
+      </div>
+    </div>
   @endif
 
 @endsection
