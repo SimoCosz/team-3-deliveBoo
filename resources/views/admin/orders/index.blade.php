@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container table-responsive">
+  <a class="btn btn-success my-3" href="{{route('admin.users.index')}}">Torna alla lista prodotti</a>
   <table class="table table-bordered table-hover table-striped">
     <thead class="thead-dark">
       <th scope="col" class="text-center"> Nome e Cognome </th>
