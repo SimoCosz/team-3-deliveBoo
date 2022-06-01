@@ -2249,7 +2249,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "ul[data-v-153bfd55], li[data-v-153bfd55] {\n  list-style: none;\n}\nul[data-v-153bfd55] {\n  display: contents;\n}\na[data-v-153bfd55] {\n  text-decoration: none;\n  color: currentColor;\n}\nnav[data-v-153bfd55] {\n  padding: 10px 0;\n}\nnav .cover[data-v-153bfd55] {\n  width: 150px;\n}\nnav .items-menu[data-v-153bfd55] {\n  display: flex;\n  gap: 10px;\n}\nnav .items-menu .item[data-v-153bfd55] {\n  border: 2px solid #E9EBEB;\n  padding: 5px 10px;\n  border-radius: 5px;\n}\nnav .items-menu .dropdown[data-v-153bfd55] {\n  position: relative;\n}\nnav .items-menu .dropdown[data-v-153bfd55]:hover {\n  border: 2px solid #97CDB4;\n}\nnav .items-menu .dropdown .dropbtn[data-v-153bfd55] {\n  cursor: pointer;\n}\nnav .items-menu .dropdown .dropdown-content[data-v-153bfd55] {\n  display: none;\n  position: absolute;\n  top: 105%;\n  left: 0;\n  border-radius: 5px;\n  width: 200px;\n  font-size: 12px;\n  background-color: #F8FAFC;\n  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);\n  z-index: 999;\n}\nnav .items-menu .dropdown .dropdown-content.show[data-v-153bfd55] {\n  display: block;\n}\nnav .items-menu .dropdown .dropdown-content li[data-v-153bfd55] {\n  padding: 5px;\n  border-radius: 5px;\n}\nnav .items-menu .dropdown .dropdown-content li a[data-v-153bfd55] {\n  padding: 10px;\n}\nnav .items-menu .dropdown .dropdown-content li[data-v-153bfd55]:hover {\n  background-color: #dddddd;\n}", ""]);
+exports.push([module.i, "@media screen and (max-width: 768px) {\nbody[data-v-153bfd55] {\n    background-color: blue;\n}\n}\nul[data-v-153bfd55], li[data-v-153bfd55] {\n  list-style: none;\n}\nul[data-v-153bfd55] {\n  display: contents;\n}\na[data-v-153bfd55] {\n  text-decoration: none;\n  color: currentColor;\n}\nnav[data-v-153bfd55] {\n  padding: 10px 0;\n}\nnav .cover[data-v-153bfd55] {\n  max-width: 150px;\n}\nnav .items-menu[data-v-153bfd55] {\n  display: flex;\n  gap: 10px;\n}\nnav .items-menu .item[data-v-153bfd55] {\n  border: 2px solid #E9EBEB;\n  padding: 5px 10px;\n  border-radius: 5px;\n  white-space: nowrap;\n}\nnav .items-menu .item[data-v-153bfd55]:hover {\n  border: 2px solid #97CDB4;\n}\nnav .items-menu .item.ghost[data-v-153bfd55] {\n  display: none;\n}\nnav .items-menu .dropdown[data-v-153bfd55] {\n  position: relative;\n}\nnav .items-menu .dropdown[data-v-153bfd55]:hover {\n  border: 2px solid #97CDB4;\n}\nnav .items-menu .dropdown .dropbtn[data-v-153bfd55] {\n  cursor: pointer;\n}\nnav .items-menu .dropdown .dropdown-content[data-v-153bfd55] {\n  display: none;\n  position: absolute;\n  top: 105%;\n  left: 0;\n  border-radius: 5px;\n  width: 200px;\n  font-size: 12px;\n  background-color: #F8FAFC;\n  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);\n  z-index: 999;\n}\nnav .items-menu .dropdown .dropdown-content.show[data-v-153bfd55] {\n  display: block;\n}\nnav .items-menu .dropdown .dropdown-content li[data-v-153bfd55] {\n  padding: 5px;\n  border-radius: 5px;\n}\nnav .items-menu .dropdown .dropdown-content li a[data-v-153bfd55] {\n  padding: 10px;\n}\nnav .items-menu .dropdown .dropdown-content li[data-v-153bfd55]:hover {\n  background-color: #dddddd;\n}", ""]);
 
 // exports
 
@@ -3648,7 +3648,7 @@ var render = function () {
             [
               _vm._m(0),
               _vm._v(" "),
-              _c("div", { staticClass: "items-menu col-6" }, [
+              _c("div", { staticClass: "items-menu" }, [
                 _c("ul", [
                   _c(
                     "li",
@@ -3682,10 +3682,10 @@ var render = function () {
                   _vm._m(3),
                   _vm._v(" "),
                   _vm._m(4),
-                  _vm._v(" "),
-                  _vm._m(5),
                 ]),
               ]),
+              _vm._v(" "),
+              _vm._m(5),
             ]
           ),
         ]),
@@ -3698,15 +3698,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-3" }, [
-      _c("figure", { staticClass: "cover" }, [
-        _c("img", {
-          attrs: {
-            src: __webpack_require__(/*! ../../../public/img/logo-navbar.png */ "./public/img/logo-navbar.png"),
-            alt: "",
-          },
-        }),
-      ]),
+    return _c("figure", { staticClass: "cover" }, [
+      _c("img", {
+        attrs: { src: __webpack_require__(/*! ../../../public/img/logo-navbar.png */ "./public/img/logo-navbar.png"), alt: "" },
+      }),
     ])
   },
   function () {
@@ -3714,8 +3709,8 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "dropbtn" }, [
-      _c("i", { attrs: { cldivss: "bi bi-chevron-compact-down p-1" } }),
-      _vm._v("\n                    Collabora con noi\n                  "),
+      _c("i", { attrs: { cldivss: "bi bi-chevron-compact-down" } }),
+      _vm._v(" Collabora con noi\n                  "),
     ])
   },
   function () {
@@ -3760,7 +3755,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "item" }, [
+    return _c("li", { staticClass: "item ghost" }, [
       _c("a", { attrs: { href: "" } }, [
         _c("i", { staticClass: "bi bi-list p-1" }),
         _vm._v("Menu"),
@@ -19243,7 +19238,7 @@ module.exports = "/images/ios-badge.png?2566899de2c3663e0250b22d1a160aa7";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/logo-navbar.png?04c1a274b88d4359408bc93a19083700";
+module.exports = "/images/logo-navbar.png?bede070bbfa82074466bd1ed6c31fe17";
 
 /***/ }),
 
