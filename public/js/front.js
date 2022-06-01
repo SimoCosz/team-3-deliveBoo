@@ -2110,7 +2110,6 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     dropdown: function dropdown() {
       this.dropdown1 = !this.dropdown1;
-      console.log(this.dropdown1);
     }
   }
 });
@@ -2231,7 +2230,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "ul[data-v-abfbddf2], li[data-v-abfbddf2] {\n  list-style: none;\n}\nul[data-v-abfbddf2] {\n  display: contents;\n}\na[data-v-abfbddf2] {\n  text-decoration: none;\n  color: currentColor;\n}\n.footer[data-v-abfbddf2] {\n  background-color: #2E3333;\n  padding: 20px 0;\n}\n.footer .card-wrapper[data-v-abfbddf2] {\n  gap: 10px;\n}\n.footer .card-wrapper .card-footer[data-v-abfbddf2] {\n  flex-grow: 1;\n  color: white;\n  padding: 20px;\n  background-color: #434848;\n}\n.footer .card-wrapper .card-footer h6[data-v-abfbddf2] {\n  font-weight: bold;\n}\n.footer .card-wrapper .card-footer li[data-v-abfbddf2] {\n  font-size: 12px;\n  width: -webkit-max-content;\n  width: -moz-max-content;\n  width: max-content;\n}\n.footer .card-wrapper .card-footer li[data-v-abfbddf2]:hover {\n  text-decoration: underline;\n}\n.footer .card-wrapper .card-footer li .badge-app[data-v-abfbddf2] {\n  width: 100px;\n  margin: 0;\n}", ""]);
+exports.push([module.i, "ul[data-v-abfbddf2], li[data-v-abfbddf2] {\n  list-style: none;\n}\nul[data-v-abfbddf2] {\n  display: contents;\n}\na[data-v-abfbddf2] {\n  text-decoration: none;\n  color: currentColor;\n}\n.footer[data-v-abfbddf2] {\n  background-color: #2E3333;\n  padding: 20px 0 0 0;\n}\n.footer .card-wrapper[data-v-abfbddf2] {\n  gap: 10px;\n}\n.footer .card-wrapper .card-footer[data-v-abfbddf2] {\n  flex-grow: 1;\n  color: white;\n  padding: 20px;\n  background-color: #434848;\n}\n.footer .card-wrapper .card-footer h6[data-v-abfbddf2] {\n  font-weight: bold;\n}\n.footer .card-wrapper .card-footer li[data-v-abfbddf2] {\n  font-size: 12px;\n  width: -webkit-max-content;\n  width: -moz-max-content;\n  width: max-content;\n}\n.footer .card-wrapper .card-footer li[data-v-abfbddf2]:hover {\n  text-decoration: underline;\n}\n.footer .card-wrapper .card-footer li .badge-app[data-v-abfbddf2] {\n  width: 100px;\n  margin: 0;\n}\n.footer .icon[data-v-abfbddf2] {\n  gap: 15px;\n  color: white;\n  padding: 10px;\n}\n.footer .icon[data-v-abfbddf2]:hover {\n  color: rgb(74, 74, 196);\n}\n.footer .copy[data-v-abfbddf2] {\n  color: white;\n}", ""]);
 
 // exports
 
@@ -2250,7 +2249,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "ul[data-v-153bfd55], li[data-v-153bfd55] {\n  list-style: none;\n}\nul[data-v-153bfd55] {\n  display: contents;\n}\na[data-v-153bfd55] {\n  text-decoration: none;\n  color: currentColor;\n}\nnav[data-v-153bfd55] {\n  padding: 10px 0;\n}\nnav .cover[data-v-153bfd55] {\n  width: 150px;\n}\nnav .items-menu[data-v-153bfd55] {\n  display: flex;\n  gap: 10px;\n}\nnav .items-menu .item[data-v-153bfd55] {\n  border: 2px solid #E9EBEB;\n  padding: 5px 10px;\n  border-radius: 5px;\n}\nnav .items-menu .dropdown[data-v-153bfd55] {\n  position: relative;\n}\nnav .items-menu .dropdown[data-v-153bfd55]:hover {\n  border: 2px solid #97CDB4;\n}\nnav .items-menu .dropdown .dropbtn[data-v-153bfd55] {\n  cursor: pointer;\n}\nnav .items-menu .dropdown .dropdown-content[data-v-153bfd55] {\n  display: none;\n  position: absolute;\n  top: 110%;\n  left: 0;\n  border-radius: 5px;\n  width: 200px;\n  font-size: 12px;\n  background-color: #F8FAFC;\n  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);\n  z-index: 999;\n}\nnav .items-menu .dropdown .dropdown-content.show[data-v-153bfd55] {\n  display: block;\n}\nnav .items-menu .dropdown .dropdown-content li[data-v-153bfd55] {\n  padding: 5px;\n  border-radius: 5px;\n}\nnav .items-menu .dropdown .dropdown-content li[data-v-153bfd55]:hover {\n  background-color: #b8b8b8;\n}", ""]);
+exports.push([module.i, "ul[data-v-153bfd55], li[data-v-153bfd55] {\n  list-style: none;\n}\nul[data-v-153bfd55] {\n  display: contents;\n}\na[data-v-153bfd55] {\n  text-decoration: none;\n  color: currentColor;\n}\nnav[data-v-153bfd55] {\n  padding: 10px 0;\n}\nnav .cover[data-v-153bfd55] {\n  width: 150px;\n}\nnav .items-menu[data-v-153bfd55] {\n  display: flex;\n  gap: 10px;\n}\nnav .items-menu .item[data-v-153bfd55] {\n  border: 2px solid #E9EBEB;\n  padding: 5px 10px;\n  border-radius: 5px;\n}\nnav .items-menu .dropdown[data-v-153bfd55] {\n  position: relative;\n}\nnav .items-menu .dropdown[data-v-153bfd55]:hover {\n  border: 2px solid #97CDB4;\n}\nnav .items-menu .dropdown .dropbtn[data-v-153bfd55] {\n  cursor: pointer;\n}\nnav .items-menu .dropdown .dropdown-content[data-v-153bfd55] {\n  display: none;\n  position: absolute;\n  top: 105%;\n  left: 0;\n  border-radius: 5px;\n  width: 200px;\n  font-size: 12px;\n  background-color: #F8FAFC;\n  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);\n  z-index: 999;\n}\nnav .items-menu .dropdown .dropdown-content.show[data-v-153bfd55] {\n  display: block;\n}\nnav .items-menu .dropdown .dropdown-content li[data-v-153bfd55] {\n  padding: 5px;\n  border-radius: 5px;\n}\nnav .items-menu .dropdown .dropdown-content li a[data-v-153bfd55] {\n  padding: 10px;\n}\nnav .items-menu .dropdown .dropdown-content li[data-v-153bfd55]:hover {\n  background-color: #dddddd;\n}", ""]);
 
 // exports
 
@@ -3587,8 +3586,8 @@ var staticRenderFns = [
           ]),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "row justify-content-between" }, [
-          _c("div", { staticClass: "col-2 d-flex" }, [
+        _c("div", { staticClass: "row justify-content-between p-2" }, [
+          _c("div", { staticClass: "col-2 d-flex icon" }, [
             _c("ul", [
               _c("li", [
                 _c("a", { attrs: { href: "#" } }, [
@@ -3610,7 +3609,7 @@ var staticRenderFns = [
             ]),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-2" }, [
+          _c("div", { staticClass: "col-2 copy" }, [
             _c("span", [_vm._v("© 2022 Deliveboo")]),
           ]),
         ]),
@@ -3656,7 +3655,10 @@ var render = function () {
                     {
                       staticClass: "item dropdown",
                       on: {
-                        click: function ($event) {
+                        mouseenter: function ($event) {
+                          return _vm.dropdown()
+                        },
+                        mouseleave: function ($event) {
                           return _vm.dropdown()
                         },
                       },
@@ -3721,7 +3723,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("ul", [
-      _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Ristoranti")])]),
+      _c("li", [
+        _c("a", { attrs: { href: "/register" } }, [_vm._v("Ristoranti")]),
+      ]),
       _vm._v(" "),
       _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Lavora con noi")])]),
       _vm._v(" "),

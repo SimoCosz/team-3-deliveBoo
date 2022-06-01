@@ -11,7 +11,7 @@
               </div>
               <div class="items-menu col-6">
                 <ul>
-                  <li class="item dropdown" @click="dropdown()">
+                  <li class="item dropdown" @mouseenter="dropdown()" @mouseleave="dropdown()">
                     <div class="dropbtn">
                       <i cldivss="bi bi-chevron-compact-down p-1"></i>
                       Collabora con noi
@@ -19,7 +19,7 @@
                     <div :class="['dropdown-content', dropdown1 == true? 'show' : '']">
                       <ul>
                         <li>
-                          <a href="#">Ristoranti</a>
+                          <a href="/register">Ristoranti</a>
                         </li>
                         <li>
                           <a href="#">Lavora con noi</a>
@@ -53,7 +53,6 @@
     methods: {
       dropdown(){
         this.dropdown1 = !this.dropdown1
-        console.log(this.dropdown1)
       }
     }
     
@@ -104,7 +103,7 @@ nav{
       .dropdown-content{
         display: none;
         position: absolute;
-        top: 110%;
+        top: 105%;
         left: 0;
         border-radius: 5px;
         width: 200px;
@@ -121,8 +120,12 @@ nav{
           padding: 5px;
           border-radius: 5px;
 
+          a{
+            padding: 10px;
+          }
+
           &:hover{
-            background-color: #b8b8b8;
+            background-color: #dddddd;
           }
         }
       }

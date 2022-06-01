@@ -54,8 +54,8 @@
         </div>
       </div>
 
-      <div class="row justify-content-between">
-        <div class="col-2 d-flex">
+      <div class="row justify-content-between p-2">
+        <div class="col-2 d-flex icon">
           <ul>
             <li>
               <a href="#">
@@ -74,7 +74,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-2">
+        <div class="col-2 copy">
           <span>&copy; 2022 Deliveboo</span>
         </div>
       </div>
@@ -104,7 +104,7 @@ a{
 
 .footer{
   background-color: #2E3333;
-  padding: 20px 0;
+  padding: 20px 0 0 0;
 
   .card-wrapper{
     gap: 10px;
@@ -134,6 +134,17 @@ a{
       }
     }
   }
+  .icon{
+    gap:15px;
+    color: white;
+    padding: 10px;
 
+    &:hover{
+      color: rgb(74, 74, 196);
+    }
+  }
+  .copy{
+    color: white;
+  }
 }
 </style>
