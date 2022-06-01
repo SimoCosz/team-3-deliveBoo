@@ -37273,9 +37273,7 @@ module.exports = function(module) {
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
-var _require = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js"),
-    functionsIn = _require.functionsIn;
-
+//const { functionsIn } = require('lodash');
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 /***/ }),

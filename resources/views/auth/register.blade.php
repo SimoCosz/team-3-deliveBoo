@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                         @csrf
                         {{-- NAME --}}
                         <div class="form-group row">
@@ -70,27 +70,15 @@
                                 @enderror
                             </div>
                         </div>
-                        {{-- COVER --}}
-                        <div class="form-group row">
-                            <label for="cover" class="col-md-4 col-form-label text-md-right">{{ __('Immagine di copertina') }}</label>
-                            <div class="col-md-6">
-                                <input id="cover" type="file" accept="image/*" class=" @error('cover') is-invalid @enderror" name="cover" value="{{ old('cover') }}" autocomplete="cover" autofocus>
-                                @error('cover')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
                         {{-- EMAIL --}}
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}*</label>
                             <div class="col-md-6">
                                 <input id="email" required type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email">
                                 @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                         </div>
@@ -100,9 +88,9 @@
                             <div class="col-md-6">
                                 <input id="password" required minlength="8" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="new-password">
                                 @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                         </div>
@@ -111,6 +99,18 @@
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
                             <div class="col-md-6">
                                 <input id="password-confirm" required minlength="8" type="password" class="form-control" name="password_confirmation" autocomplete="new-password">
+                            </div>
+                        </div>
+                        {{-- COVER --}}
+                        <div class="form-group row">
+                            <label for="cover" class="col-md-4 col-form-label text-md-right">{{ __('Immagine di copertina') }}</label>
+                            <div class="col-md-6">
+                                <input class="d-block my-3 @error('cover') is-invalid @enderror" type="file" accept="image/*" name="cover" id="cover">
+                                @error('cover')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                         </div>
                         {{-- CATEGORIES --}}

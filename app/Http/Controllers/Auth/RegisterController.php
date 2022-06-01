@@ -8,6 +8,7 @@ use App\User;
 use App\Category;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
@@ -61,7 +62,7 @@ class RegisterController extends Controller
             'city' => ['required', 'string', 'max:100'],
             'telephone_number' => ['string', 'numeric'],
             'p_iva' => ['required', 'string', 'digits:11'],
-            'cover' => ['nullable', 'string', 'image'],
+            'cover' => ['nullable', 'file', 'image', 'max:4096'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'categories' => ['required', 'exists:categories,id']
@@ -78,6 +79,12 @@ class RegisterController extends Controller
     {
         $data['slug'] = User::getUniqueSlug($data['name']);
         $categories = Category::all();
+
+        if(array_key_exists('cover', $data)){
+            $cover_path = Storage::put('uploads', $data['cover']);
+
+            $data['cover'] = $cover_path;
+        } 
         
         $user_data = [
             'name' => $data['name'],
@@ -87,7 +94,8 @@ class RegisterController extends Controller
             'p_iva' => $data['p_iva'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'slug' => $data['slug']
+            'slug' => $data['slug'],
+            'cover' => $data['cover']
         ];
 
         $user = User::create($user_data);

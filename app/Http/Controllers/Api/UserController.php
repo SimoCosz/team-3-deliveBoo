@@ -15,7 +15,12 @@ class UserController extends Controller
      */
     public function index()
     {
-       //
+       $users = User::with('products')->get();
+
+       return response()->json([
+           'users' => $users,
+           'succes' => true
+       ]);
     }
 
     /**

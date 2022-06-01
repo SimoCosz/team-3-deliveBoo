@@ -12,6 +12,9 @@
     <a class="btn btn-success my-3" href="{{route('admin.products.create')}}">Aggiungi un nuovo piatto</a>
     <a class="btn btn-success my-3" href="{{route('admin.orders.index')}}">Vedi ordini</a>
   </div>
+  <div class="container d-flex justify-content-center">
+      {{$products->links()}}
+  </div>
   <div class="container table-responsive">
     <table class="table table-bordered table-hover table-striped">
       <thead class="thead-dark">
@@ -34,7 +37,9 @@
               <td>{{ $product->name }}</td>
               <td class="d-flex align-items-center justify-content-center">
                 @if ($product->cover)
-                  <img class="w-75 h-75 rounded-circle" style="aspect-ratio:1/1" src="{{ asset('storage/'.$product->cover)}}" alt="">   
+                <img class="w-75 h-75 rounded-circle" style="aspect-ratio:1/1" src="{{ asset('storage/'.$product->cover)}}" alt="">   
+                {{-- @elseif($product->cover)
+                <img class="w-75 h-75 rounded-circle" style="aspect-ratio:1/1" src="{{ $product->cover }}" alt="">    --}}
                 @else
                   <img class="w-100 h-100 rounded-circle mx-auto d-block" style="aspect-ratio:1/1" src="{{URL::asset('img/segna-posto.jpg')}}" alt="">  
                 @endif
@@ -65,5 +70,8 @@
           @endforeach
       </tbody>
     </table>
+    <div class="container d-flex justify-content-center">
+      {{$products->links()}}
+    </div>
   </div>
 @endsection
