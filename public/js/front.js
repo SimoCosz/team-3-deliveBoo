@@ -2181,7 +2181,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".selection-container[data-v-ad426298] {\n  width: 100vw;\n  display: flex;\n  justify-content: center;\n}\n.selection-container .selection-sub-container[data-v-ad426298] {\n  width: 1024px;\n  display: flex;\n  flex-direction: column;\n  position: relative;\n  margin-top: 50px;\n}\n.selection-container .selection-sub-container .selection-title[data-v-ad426298] {\n  font-weight: 700;\n  margin-bottom: 30px;\n}\n.selection-container .selection-sub-container .selection-card-container[data-v-ad426298] {\n  margin-bottom: 50px;\n  display: flex;\n  flex-wrap: wrap;\n  gap: 4%;\n}\n.selection-container .selection-sub-container .selection-card-container .selection-link-small[data-v-ad426298] {\n  text-decoration: none;\n  color: currentColor;\n  margin-bottom: 20px;\n  width: 32%;\n}\n.selection-container .selection-sub-container .selection-card-container .selection-link-big[data-v-ad426298] {\n  text-decoration: none;\n  color: currentColor;\n  margin-bottom: 40px;\n  width: 64%;\n}\n.selection-container .selection-img-container[data-v-ad426298] {\n  position: relative;\n}\n.selection-container .selection-img-container .selection-img[data-v-ad426298] {\n  height: 150px;\n  width: 100%;\n  margin-bottom: 13px;\n}\n.selection-container .selection-img-container .selection-img-title[data-v-ad426298] {\n  position: absolute;\n  font-weight: 700;\n  font-size: 34px;\n  color: white;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.selection-container .selection-card-description[data-v-ad426298] {\n  font-size: 16px;\n  margin-bottom: 3px;\n}\n.selection-container .selection-card-discover[data-v-ad426298] {\n  font-size: 16px;\n  color: #00CCBC;\n}", ""]);
+exports.push([module.i, ".selection-container[data-v-ad426298] {\n  width: 100vw;\n  display: flex;\n  justify-content: center;\n}\n.selection-container .selection-sub-container[data-v-ad426298] {\n  width: 1024px;\n  display: flex;\n  flex-direction: column;\n  position: relative;\n  margin-top: 50px;\n  margin-bottom: 30px;\n}\n.selection-container .selection-sub-container .selection-title[data-v-ad426298] {\n  font-weight: 700;\n  margin-bottom: 30px;\n}\n.selection-container .selection-sub-container .selection-card-container[data-v-ad426298] {\n  margin-bottom: 50px;\n  display: flex;\n  flex-wrap: wrap;\n  gap: 3%;\n}\n.selection-container .selection-sub-container .selection-card-container .selection-link-small[data-v-ad426298] {\n  text-decoration: none;\n  color: currentColor;\n  margin-bottom: 20px;\n  width: 38%;\n}\n.selection-container .selection-sub-container .selection-card-container .selection-link-big[data-v-ad426298] {\n  text-decoration: none;\n  color: currentColor;\n  margin-bottom: 40px;\n  width: 59%;\n}\n.selection-container .selection-img-container[data-v-ad426298] {\n  position: relative;\n}\n.selection-container .selection-img-container .selection-img[data-v-ad426298] {\n  height: 150px;\n  width: 100%;\n  margin-bottom: 13px;\n}\n.selection-container .selection-img-container .selection-img-title[data-v-ad426298] {\n  position: absolute;\n  font-weight: 700;\n  font-size: 34px;\n  color: white;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.selection-container .selection-card-description[data-v-ad426298] {\n  font-size: 16px;\n  padding-right: 10px;\n  margin-bottom: 3px;\n}\n.selection-container .selection-card-discover[data-v-ad426298] {\n  font-size: 16px;\n  color: #00CCBC;\n}", ""]);
 
 // exports
 
@@ -3491,7 +3491,10 @@ var render = function () {
             _c("div", { staticClass: "selection-img-container" }, [
               _c("img", {
                 staticClass: "selection-img",
-                attrs: { src: "", alt: "" },
+                attrs: {
+                  src: "https://f.roocdn.com/images/menu_tags/288/menu-tag-image.jpg?width=430&height=150&auto=webp&format=jpg&fit=crop&v=1648802301",
+                  alt: "",
+                },
               }),
               _vm._v(" "),
               _c(
@@ -3519,7 +3522,10 @@ var render = function () {
             _c("div", { staticClass: "selection-img-container" }, [
               _c("img", {
                 staticClass: "selection-img",
-                attrs: { src: "", alt: "" },
+                attrs: {
+                  src: "https://f.roocdn.com/images/menu_tags/328/menu-tag-image.jpg?width=660&height=150&auto=webp&format=jpg&fit=crop&v=1548761261",
+                  alt: "",
+                },
               }),
               _vm._v(" "),
               _c(
@@ -3547,7 +3553,10 @@ var render = function () {
             _c("div", { staticClass: "selection-img-container" }, [
               _c("img", {
                 staticClass: "selection-img",
-                attrs: { src: "", alt: "" },
+                attrs: {
+                  src: "https://f.roocdn.com/images/menu_tags/291/menu-tag-image.jpg?width=660&height=150&auto=webp&format=jpg&fit=crop&v=1547125828",
+                  alt: "",
+                },
               }),
               _vm._v(" "),
               _c(
@@ -3575,7 +3584,10 @@ var render = function () {
             _c("div", { staticClass: "selection-img-container" }, [
               _c("img", {
                 staticClass: "selection-img",
-                attrs: { src: "", alt: "" },
+                attrs: {
+                  src: "https://f.roocdn.com/images/menu_tags/293/menu-tag-image.jpg?width=430&height=150&auto=webp&format=jpg&fit=crop&v=1547125827",
+                  alt: "",
+                },
               }),
               _vm._v(" "),
               _c(
