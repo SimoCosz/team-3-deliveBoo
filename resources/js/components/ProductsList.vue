@@ -41,6 +41,12 @@
             <p class="description">{{selectedProduct.description}}</p>
           </div>
           <div class="product-show-add p-4">
+            <div class="d-flex justify-content-center m-gap pb-3">
+              <i class="bi bi-dash-circle"></i>
+              <span class="quantity">0</span>
+              <i class="bi bi-plus-circle"></i>
+            </div>
+            
             <button class="btn btn-success btn-block">
               Aggiungi per &#8364;{{selectedProduct.price}}
             </button>
@@ -67,7 +73,6 @@ methods : {
   showModal: function(product) {
     this.show=true;
     this.selectedProduct=product;
-    console.log(product)
   }
 }
 }
@@ -162,7 +167,23 @@ methods : {
     }
     .product-show-add{
       box-shadow: 0 1px 4px rgb(0 0 0 / 20%);
+      .m-gap{
+        gap: 20px;
+      }
+      .bi.bi-plus-circle, .bi.bi-dash-circle{
+        color:#00CCBC;
+        font-size: 24px;
+        font-weight: bold;
+        &::before{
+          cursor: pointer;
+          line-height: 48px;
+        }
+      }
+      .quantity{
+       font-size: 30px 
+      }
     }
+      
 
     .bi.bi-x{
       color:#00CCBC;
@@ -183,7 +204,7 @@ methods : {
 }
 
 .slide-fade-enter-active,.slide-fade-leave-active {
-  transition: opacity 0.3s ease;
+  transition: opacity 0.1s ease;
 }
 
 
