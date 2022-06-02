@@ -4,7 +4,7 @@
       <div class="products-cart row">
         <div class="col-12 col-lg-8">
           <div class="row">
-            <div class="product col-12 col-sm-6" v-for="product in user.products" :key="product.id" @click="showModal(product)">
+            <div class="product col-12 col-md-6" v-for="product in user.products" :key="product.id" @click="showModal(product)">
               <div class="d-flex align-items-center single-card p-3">
                 <div class="product_info flex-grow-1">
                   <h5 class="title">{{product.name}}</h5>

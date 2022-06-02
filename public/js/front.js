@@ -3515,7 +3515,7 @@ var render = function () {
                   "div",
                   {
                     key: product.id,
-                    staticClass: "product col-12 col-sm-6",
+                    staticClass: "product col-12 col-md-6",
                     on: {
                       click: function ($event) {
                         return _vm.showModal(product)
