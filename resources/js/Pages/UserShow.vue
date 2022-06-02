@@ -6,7 +6,7 @@
           <div class="row">
             <div class="col-12 col-md-4">
               <figure>
-                <img :src=user.cover alt="">
+                <img class="restourant-image" :src=user.cover alt="">
               </figure>
             </div>
             <div class="col-12 col-md-8">
@@ -41,7 +41,6 @@
           </div>
         </div>
       </section>
-
     </div>
   </Layout>
 </template>
@@ -61,13 +60,8 @@ export default {
   beforeMount(){
     axios.get(`/api/users/${ this.$route.params.slug }`)
     .then(res => {
-      
       const { user } = res.data
       this.user = user
-      console.log(user.products)
-      user.products.forEach(element => {
-        console.log(element.category)
-      });
       this.loading = false;
     })
     
@@ -85,10 +79,8 @@ export default {
     max-width: 1500px;
     margin: 0 auto;
     padding: 0 20px;
-    .my-card-wrapper{
-      .my-card{
-        border: 1px solid black;
-      }
+    .restourant-image{
+      border-radius: 4px;
     }
   }
 }
@@ -138,14 +130,8 @@ export default {
         }
       }
     }
-    
-      
-    
   }
-
 }
-  
-    
 
-</style>>
+</style>
 

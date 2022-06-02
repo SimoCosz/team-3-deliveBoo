@@ -2008,7 +2008,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -2026,10 +2025,6 @@ __webpack_require__.r(__webpack_exports__);
     axios.get("/api/users/".concat(this.$route.params.slug)).then(function (res) {
       var user = res.data.user;
       _this.user = user;
-      console.log(user.products);
-      user.products.forEach(function (element) {
-        console.log(element.category);
-      });
       _this.loading = false;
     });
   }
@@ -2142,7 +2137,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".info-users[data-v-703f9fde] {\n  border-bottom: 1px solid rgba(0, 0, 0, 0.08);\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n}\n.info-users .my-container[data-v-703f9fde] {\n  max-width: 1500px;\n  margin: 0 auto;\n  padding: 0 20px;\n}\n.info-users .my-container .my-card-wrapper .my-card[data-v-703f9fde] {\n  border: 1px solid black;\n}\n.products .my-container[data-v-703f9fde] {\n  max-width: 1500px;\n  margin: 0 auto;\n  padding: 0 20px;\n}\n.products .my-container .my-card-wrapper .row .product .single-card[data-v-703f9fde] {\n  border-radius: 5px;\n  margin-bottom: 30px;\n  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\n  gap: 20px;\n  min-height: 180px;\n  cursor: pointer;\n}\n.products .my-container .my-card-wrapper .row .product .single-card[data-v-703f9fde]:hover {\n  box-shadow: 0px 17px 43px -5px lightgrey;\n}\n.products .my-container .my-card-wrapper .row .product .single-card .product_info .title[data-v-703f9fde] {\n  font-weight: bold;\n  margin-bottom: 0.2rem;\n}\n.products .my-container .my-card-wrapper .row .product .single-card .product_info .description[data-v-703f9fde] {\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  -webkit-box-orient: vertical;\n  overflow: hidden;\n  font-size: 0.9rem;\n  color: #585c5c;\n  margin-bottom: 0.2rem;\n}\n.products .my-container .my-card-wrapper .row .product .single-card .image[data-v-703f9fde] {\n  width: 100px;\n  height: 100px;\n  background-size: cover;\n  background-position: center;\n  border-radius: 4px;\n}", ""]);
+exports.push([module.i, ".info-users[data-v-703f9fde] {\n  border-bottom: 1px solid rgba(0, 0, 0, 0.08);\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n}\n.info-users .my-container[data-v-703f9fde] {\n  max-width: 1500px;\n  margin: 0 auto;\n  padding: 0 20px;\n}\n.info-users .my-container .restourant-image[data-v-703f9fde] {\n  border-radius: 4px;\n}\n.products .my-container[data-v-703f9fde] {\n  max-width: 1500px;\n  margin: 0 auto;\n  padding: 0 20px;\n}\n.products .my-container .my-card-wrapper .row .product .single-card[data-v-703f9fde] {\n  border-radius: 5px;\n  margin-bottom: 30px;\n  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\n  gap: 20px;\n  min-height: 180px;\n  cursor: pointer;\n}\n.products .my-container .my-card-wrapper .row .product .single-card[data-v-703f9fde]:hover {\n  box-shadow: 0px 17px 43px -5px lightgrey;\n}\n.products .my-container .my-card-wrapper .row .product .single-card .product_info .title[data-v-703f9fde] {\n  font-weight: bold;\n  margin-bottom: 0.2rem;\n}\n.products .my-container .my-card-wrapper .row .product .single-card .product_info .description[data-v-703f9fde] {\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  -webkit-box-orient: vertical;\n  overflow: hidden;\n  font-size: 0.9rem;\n  color: #585c5c;\n  margin-bottom: 0.2rem;\n}\n.products .my-container .my-card-wrapper .row .product .single-card .image[data-v-703f9fde] {\n  width: 100px;\n  height: 100px;\n  background-size: cover;\n  background-position: center;\n  border-radius: 4px;\n}", ""]);
 
 // exports
 
@@ -3332,7 +3327,10 @@ var render = function () {
               _c("div", { staticClass: "row" }, [
                 _c("div", { staticClass: "col-12 col-md-4" }, [
                   _c("figure", [
-                    _c("img", { attrs: { src: _vm.user.cover, alt: "" } }),
+                    _c("img", {
+                      staticClass: "restourant-image",
+                      attrs: { src: _vm.user.cover, alt: "" },
+                    }),
                   ]),
                 ]),
                 _vm._v(" "),
