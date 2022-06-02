@@ -2077,6 +2077,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     user: Object
@@ -2222,7 +2224,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".products[data-v-1d3d91e6] {\n  background-color: #F9FAFA;\n}\n.products .my-container[data-v-1d3d91e6] {\n  max-width: 1500px;\n  margin: 0 auto;\n  padding: 0 20px;\n}\n.products .my-container .products-cart .cart[data-v-1d3d91e6] {\n  width: 100%;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 30px;\n  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\n  color: #abadad;\n}\n.products .my-container .products-cart .cart .btn-secondary[data-v-1d3d91e6] {\n  background-color: #e2e5e5;\n  border: none;\n  font-weight: bold;\n  color: #abadad;\n  cursor: not-allowed;\n}\n.products .my-container .products-cart .row .product .single-card[data-v-1d3d91e6] {\n  border-radius: 5px;\n  margin-bottom: 30px;\n  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\n  gap: 20px;\n  min-height: 180px;\n  cursor: pointer;\n}\n.products .my-container .products-cart .row .product .single-card[data-v-1d3d91e6]:hover {\n  box-shadow: 0px 17px 43px -5px lightgrey;\n}\n.products .my-container .products-cart .row .product .single-card .product_info .title[data-v-1d3d91e6] {\n  font-weight: bold;\n  margin-bottom: 0.2rem;\n}\n.products .my-container .products-cart .row .product .single-card .product_info .description[data-v-1d3d91e6] {\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  -webkit-box-orient: vertical;\n  overflow: hidden;\n  font-size: 0.9rem;\n  color: #585c5c;\n  margin-bottom: 0.2rem;\n}\n.products .my-container .products-cart .row .product .single-card .image[data-v-1d3d91e6] {\n  width: 100px;\n  height: 100px;\n  background-size: cover;\n  background-position: center;\n  border-radius: 4px;\n}\n.slide-fade-enter-active[data-v-1d3d91e6] {\n  transition: all 0.3s ease-out;\n}\n.slide-fade-leave-active[data-v-1d3d91e6] {\n  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);\n}\n.slide-fade-enter-from[data-v-1d3d91e6],\n.slide-fade-leave-to[data-v-1d3d91e6] {\n  transform: translateX(20px);\n  opacity: 0;\n}\n.my-modal[data-v-1d3d91e6] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  content: \"\";\n  background-color: rgba(0, 0, 0, 0.5);\n  overflow: hidden;\n}\n.my-modal .product-show[data-v-1d3d91e6] {\n  background-color: white;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  max-width: 500px;\n  max-height: 800px;\n}\n.my-modal .product-show .product-show_img[data-v-1d3d91e6] {\n  max-width: 100%;\n}\n.my-modal .product-show .product-show-add[data-v-1d3d91e6] {\n  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\n}", ""]);
+exports.push([module.i, ".products[data-v-1d3d91e6] {\n  background-color: #F9FAFA;\n}\n.products .my-container[data-v-1d3d91e6] {\n  max-width: 1500px;\n  margin: 0 auto;\n  padding: 0 20px;\n}\n.products .my-container .products-cart .cart[data-v-1d3d91e6] {\n  width: 100%;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 30px;\n  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\n  color: #abadad;\n}\n.products .my-container .products-cart .cart .btn-secondary[data-v-1d3d91e6] {\n  background-color: #e2e5e5;\n  border: none;\n  font-weight: bold;\n  color: #abadad;\n  cursor: not-allowed;\n}\n.products .my-container .products-cart .row .product .single-card[data-v-1d3d91e6] {\n  border-radius: 5px;\n  margin-bottom: 30px;\n  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\n  gap: 20px;\n  min-height: 180px;\n  cursor: pointer;\n}\n.products .my-container .products-cart .row .product .single-card[data-v-1d3d91e6]:hover {\n  box-shadow: 0px 17px 43px -5px lightgrey;\n}\n.products .my-container .products-cart .row .product .single-card .product_info .title[data-v-1d3d91e6] {\n  font-weight: bold;\n  margin-bottom: 0.2rem;\n}\n.products .my-container .products-cart .row .product .single-card .product_info .description[data-v-1d3d91e6] {\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  -webkit-box-orient: vertical;\n  overflow: hidden;\n  font-size: 0.9rem;\n  color: #585c5c;\n  margin-bottom: 0.2rem;\n}\n.products .my-container .products-cart .row .product .single-card .image[data-v-1d3d91e6] {\n  width: 100px;\n  height: 100px;\n  background-size: cover;\n  background-position: center;\n  border-radius: 4px;\n}\n.my-modal[data-v-1d3d91e6] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  content: \"\";\n  background-color: rgba(0, 0, 0, 0.5);\n  overflow: hidden;\n}\n.my-modal .product-show[data-v-1d3d91e6] {\n  background-color: white;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  max-width: 500px;\n  max-height: 800px;\n}\n.my-modal .product-show .product-show_img[data-v-1d3d91e6] {\n  max-width: 100%;\n}\n.my-modal .product-show .product-show-add[data-v-1d3d91e6] {\n  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\n}\n.my-modal .product-show .bi.bi-x[data-v-1d3d91e6] {\n  color: #00CCBC;\n  position: absolute;\n  top: -10px;\n  right: 10px;\n  font-size: 40px;\n  font-weight: bold;\n}\n.my-modal .product-show .bi.bi-x[data-v-1d3d91e6]::before {\n  background: white;\n  border-radius: 100%;\n  cursor: pointer;\n}\n.slide-fade-enter-active[data-v-1d3d91e6], .slide-fade-leave-active[data-v-1d3d91e6] {\n  transition: opacity 0.3s ease;\n}\n.slide-fade-enter-from[data-v-1d3d91e6],\n.slide-fade-leave-to[data-v-1d3d91e6] {\n  opacity: 0;\n}", ""]);
 
 // exports
 
@@ -3581,6 +3583,15 @@ var render = function () {
                       },
                     },
                     [
+                      _c("i", {
+                        staticClass: "bi bi-x",
+                        on: {
+                          click: function ($event) {
+                            _vm.show = false
+                          },
+                        },
+                      }),
+                      _vm._v(" "),
                       _c("img", {
                         staticClass: "product-show_img",
                         attrs: { src: _vm.selectedProduct.cover, alt: "" },

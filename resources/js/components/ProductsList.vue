@@ -29,10 +29,12 @@
       </div>
     </div>
 
+    <!-- Transition ancora non funzionante -->
     <Transition name="slide-fade" appear>
     <div v-if="show">
       <div class="my-modal" @click="show=false">
         <div class="product-show" @click.stop>
+          <i class="bi bi-x" @click="show=false"></i>
           <img class="product-show_img" :src=selectedProduct.cover alt="">
           <div class="product-show_info p-4">
             <h4 class="title">{{selectedProduct.name}}</h4>
@@ -136,19 +138,8 @@ methods : {
   }
 }
 
-.slide-fade-enter-active {
-  transition: all 0.3s ease-out;
-}
 
-.slide-fade-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
-}
 
-.slide-fade-enter-from,
-.slide-fade-leave-to {
-  transform: translateX(20px);
-  opacity: 0;
-}
 .my-modal{
   position: fixed;
   top: 0;
@@ -172,6 +163,32 @@ methods : {
     .product-show-add{
       box-shadow: 0 1px 4px rgb(0 0 0 / 20%);
     }
+
+    .bi.bi-x{
+      color:#00CCBC;
+      position: absolute;
+      top:-10px;
+      right: 10px;
+      font-size: 40px;
+      font-weight: bold;
+      &::before{
+        background: white;
+        border-radius: 100%;
+        cursor:pointer;
+      }
+
+    }
+
   }
+}
+
+.slide-fade-enter-active,.slide-fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  opacity: 0;
 }
 </style>
