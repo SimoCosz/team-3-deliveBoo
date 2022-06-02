@@ -12,7 +12,7 @@
             <div class="col-12 col-md-8">
               <h1>{{user.name}}</h1>
               <p>{{user.category}}</p>
-              <p>{{user.city}}</p>
+              <p>Roma</p>
               <p>{{user.telephone_number}}</p>
             </div>
           </div>
@@ -61,26 +61,30 @@ export default {
   beforeMount(){
     axios.get(`/api/users/${ this.$route.params.slug }`)
     .then(res => {
-      console.log(res.data)
+      
       const { user } = res.data
       this.user = user
+      console.log(user.products)
+      user.products.forEach(element => {
+        console.log(element.category)
+      });
       this.loading = false;
     })
     
   },
-  mounted(){
-    console.log(this.user)
-  }
+  
 }
 </script>
 
 <style lang="scss" scoped>
+
 .info-users{
   border-bottom: 1px solid rgba(0,0,0,.08);
-  box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
   .my-container{
     max-width: 1500px;
     margin: 0 auto;
+    padding: 0 20px;
     .my-card-wrapper{
       .my-card{
         border: 1px solid black;
@@ -93,6 +97,7 @@ export default {
   .my-container{
     max-width: 1500px;
     margin: 0 auto;
+    padding: 0 20px;
     .my-card-wrapper{
       .row{
         .product{
@@ -103,6 +108,10 @@ export default {
             box-shadow: 0 1px 4px rgb(0 0 0 / 20%);
             gap: 20px;
             min-height: 180px;
+            cursor: pointer;
+            &:hover{
+              box-shadow: 0px 17px 43px -5px lightgrey;
+            }
             .product_info{
               .title{
                 font-weight: bold;
