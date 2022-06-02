@@ -4,7 +4,7 @@
       <div class="products-cart row">
         <div class="col-12 col-lg-8">
           <div class="row">
-            <div class="product col-12 col-sm-6" v-for="product in user.products" :key="product.id">
+            <div class="product col-12 col-sm-6" v-for="product in user.products" :key="product.id" @click="showModal(product)">
               <div class="d-flex align-items-center single-card p-3">
                 <div class="product_info flex-grow-1">
                   <h5 class="title">{{product.name}}</h5>
@@ -28,6 +28,25 @@
 
       </div>
     </div>
+
+    <Transition name="slide-fade" appear>
+    <div v-if="show">
+      <div class="my-modal" @click="show=false">
+        <div class="product-show" @click.stop>
+          <img class="product-show_img" :src=selectedProduct.cover alt="">
+          <div class="product-show_info p-4">
+            <h4 class="title">{{selectedProduct.name}}</h4>
+            <p class="description">{{selectedProduct.description}}</p>
+          </div>
+          <div class="product-show-add p-4">
+            <button class="btn btn-success btn-block">
+              Aggiungi per &#8364;{{selectedProduct.price}}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </Transition>
   </section>
 </template>
 
@@ -35,6 +54,19 @@
 export default {
 props: {
   user: Object,
+},
+data(){
+  return {
+    show:false,
+    selectedProduct:null,
+  }
+},
+methods : {
+  showModal: function(product) {
+    this.show=true;
+    this.selectedProduct=product;
+    console.log(product)
+  }
 }
 }
 </script>
@@ -100,6 +132,45 @@ props: {
           } 
         }
       }
+    }
+  }
+}
+
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
+.my-modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  overflow: hidden;
+  .product-show{
+    background-color: white;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    max-width: 500px;
+    max-height: 800px;
+    .product-show_img{
+      max-width: 100%;
+    }
+    .product-show-add{
+      box-shadow: 0 1px 4px rgb(0 0 0 / 20%);
     }
   }
 }
