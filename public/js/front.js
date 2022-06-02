@@ -1979,6 +1979,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -2089,7 +2091,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".jumbo-container[data-v-1f7dee9c] {\n  background-image: url(" + escape(__webpack_require__(/*! ../../../public/img/background-jumbo.png */ "./public/img/background-jumbo.png")) + ");\n  background-position: center;\n  background-repeat: no-repeat;\n  height: 400px;\n  width: 100vw;\n  display: flex;\n  justify-content: center;\n}\n.jumbo-container .jumbo-sub-container[data-v-1f7dee9c] {\n  width: 1024px;\n  display: flex;\n  position: relative;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left[data-v-1f7dee9c] {\n  width: 50%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left h1[data-v-1f7dee9c] {\n  color: #440063;\n  font-weight: 700;\n}\n.jumbo-container .jumbo-sub-container .jumbo-right[data-v-1f7dee9c] {\n  width: 50%;\n  position: relative;\n}\n.jumbo-container .jumbo-sub-container .jumbo-right .img-svg[data-v-1f7dee9c] {\n  height: 350px;\n  position: absolute;\n  bottom: 0;\n  left: 50%;\n  transform: translateX(-50%);\n}", ""]);
+exports.push([module.i, ".jumbo-container[data-v-1f7dee9c] {\n  background-image: url(" + escape(__webpack_require__(/*! ../../../public/img/background-jumbo.png */ "./public/img/background-jumbo.png")) + ");\n  background-position: center;\n  background-repeat: no-repeat;\n  height: 400px;\n  width: 100vw;\n  display: flex;\n  justify-content: center;\n}\n.jumbo-container .jumbo-sub-container[data-v-1f7dee9c] {\n  width: 1024px;\n  display: flex;\n  position: relative;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left[data-v-1f7dee9c] {\n  width: 50%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  color: #440063;\n  font-weight: 900;\n}\n.jumbo-container .jumbo-sub-container .jumbo-right[data-v-1f7dee9c] {\n  width: 50%;\n  position: relative;\n}\n.jumbo-container .jumbo-sub-container .jumbo-right .img-jumbo-svg-first[data-v-1f7dee9c] {\n  z-index: 1;\n  position: absolute;\n  bottom: 0;\n  left: 50%;\n  transform: translateX(-50%);\n}\n.jumbo-container .jumbo-sub-container .jumbo-right .img-jumbo-svg-second[data-v-1f7dee9c] {\n  height: 350px;\n  position: absolute;\n  bottom: 0;\n  left: 50%;\n  transform: translateX(-50%);\n}", ""]);
 
 // exports
 
@@ -3309,11 +3311,21 @@ var staticRenderFns = [
       _c("div", { staticClass: "jumbo-sub-container" }, [
         _c("div", { staticClass: "jumbo-left" }, [
           _c("h1", [_vm._v("I piatti che ami, a domicilio.")]),
+          _vm._v(" "),
+          _c("h2", [_vm._v("Quando vuoi tu!")]),
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "jumbo-right" }, [
           _c("img", {
-            staticClass: "img-svg",
+            staticClass: "img-jumbo-svg-first",
+            attrs: {
+              src: __webpack_require__(/*! ../../../public/img/at_home_with_deliveboo.png */ "./public/img/at_home_with_deliveboo.png"),
+              alt: "",
+            },
+          }),
+          _vm._v(" "),
+          _c("img", {
+            staticClass: "img-jumbo-svg-second",
             attrs: {
               src: __webpack_require__(/*! ../../../public/img/jumbo-bkg.svg */ "./public/img/jumbo-bkg.svg"),
               alt: "",
@@ -18763,6 +18775,17 @@ try {
 
 module.exports = g;
 
+
+/***/ }),
+
+/***/ "./public/img/at_home_with_deliveboo.png":
+/*!***********************************************!*\
+  !*** ./public/img/at_home_with_deliveboo.png ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/at_home_with_deliveboo.png?c0f3970248ab6c9af16f6393caaad115";
 
 /***/ }),
 

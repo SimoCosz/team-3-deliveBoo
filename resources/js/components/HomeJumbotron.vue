@@ -4,10 +4,12 @@
 
             <div class="jumbo-left">
                 <h1>I piatti che ami, a domicilio.</h1>
+                <h2>Quando vuoi tu!</h2>
             </div>
 
             <div class="jumbo-right">
-                <img class="img-svg" src="../../../public/img/jumbo-bkg.svg" alt="">
+                <img class="img-jumbo-svg-first" src="../../../public/img/at_home_with_deliveboo.png" alt="">
+                <img class="img-jumbo-svg-second" src="../../../public/img/jumbo-bkg.svg" alt="">
             </div>
         </div>
         
@@ -38,20 +40,27 @@ export default {
         .jumbo-left{
             width: 50%;
             display: flex;
+            flex-direction: column;
             justify-content: center;
-            align-items: center;
+            color: #440063;
+            font-weight: 900;
 
-            h1{
-                color: #440063;
-                font-weight: 700;
-            }
+
         }
     
         .jumbo-right{
             width: 50%;
             position: relative;
+
+            .img-jumbo-svg-first{
+                z-index: 1;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
             
-            .img-svg{
+            .img-jumbo-svg-second{
                 height: 350px;
                 position: absolute;
                 bottom: 0;
