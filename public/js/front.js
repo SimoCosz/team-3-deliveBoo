@@ -2049,6 +2049,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     user: Object
@@ -2181,7 +2190,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".products .my-container[data-v-1d3d91e6] {\n  max-width: 1500px;\n  margin: 0 auto;\n  padding: 0 20px;\n}\n.products .my-container .my-card-wrapper .row .product .single-card[data-v-1d3d91e6] {\n  border-radius: 5px;\n  margin-bottom: 30px;\n  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\n  gap: 20px;\n  min-height: 180px;\n  cursor: pointer;\n}\n.products .my-container .my-card-wrapper .row .product .single-card[data-v-1d3d91e6]:hover {\n  box-shadow: 0px 17px 43px -5px lightgrey;\n}\n.products .my-container .my-card-wrapper .row .product .single-card .product_info .title[data-v-1d3d91e6] {\n  font-weight: bold;\n  margin-bottom: 0.2rem;\n}\n.products .my-container .my-card-wrapper .row .product .single-card .product_info .description[data-v-1d3d91e6] {\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  -webkit-box-orient: vertical;\n  overflow: hidden;\n  font-size: 0.9rem;\n  color: #585c5c;\n  margin-bottom: 0.2rem;\n}\n.products .my-container .my-card-wrapper .row .product .single-card .image[data-v-1d3d91e6] {\n  width: 100px;\n  height: 100px;\n  background-size: cover;\n  background-position: center;\n  border-radius: 4px;\n}", ""]);
+exports.push([module.i, ".products[data-v-1d3d91e6] {\n  background-color: #F9FAFA;\n}\n.products .my-container[data-v-1d3d91e6] {\n  max-width: 1500px;\n  margin: 0 auto;\n  padding: 0 20px;\n}\n.products .my-container .products-cart .cart[data-v-1d3d91e6] {\n  width: 100%;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 30px;\n  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\n  color: #abadad;\n}\n.products .my-container .products-cart .cart .btn-secondary[data-v-1d3d91e6] {\n  background-color: #e2e5e5;\n  border: none;\n  font-weight: bold;\n  color: #abadad;\n  cursor: not-allowed;\n}\n.products .my-container .products-cart .row .product .single-card[data-v-1d3d91e6] {\n  border-radius: 5px;\n  margin-bottom: 30px;\n  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\n  gap: 20px;\n  min-height: 180px;\n  cursor: pointer;\n}\n.products .my-container .products-cart .row .product .single-card[data-v-1d3d91e6]:hover {\n  box-shadow: 0px 17px 43px -5px lightgrey;\n}\n.products .my-container .products-cart .row .product .single-card .product_info .title[data-v-1d3d91e6] {\n  font-weight: bold;\n  margin-bottom: 0.2rem;\n}\n.products .my-container .products-cart .row .product .single-card .product_info .description[data-v-1d3d91e6] {\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  -webkit-box-orient: vertical;\n  overflow: hidden;\n  font-size: 0.9rem;\n  color: #585c5c;\n  margin-bottom: 0.2rem;\n}\n.products .my-container .products-cart .row .product .single-card .image[data-v-1d3d91e6] {\n  width: 100px;\n  height: 100px;\n  background-size: cover;\n  background-position: center;\n  border-radius: 4px;\n}", ""]);
 
 // exports
 
@@ -3454,54 +3463,74 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c("section", { staticClass: "products py-5" }, [
     _c("div", { staticClass: "my-container" }, [
-      _c("div", { staticClass: "my-card-wrapper" }, [
-        _c(
-          "div",
-          { staticClass: "row" },
-          _vm._l(_vm.user.products, function (product) {
-            return _c(
-              "div",
-              {
-                key: product.id,
-                staticClass: "product col-12 col-sm-6 col-lg-4",
-              },
-              [
-                _c(
-                  "div",
-                  { staticClass: "d-flex align-items-center single-card p-3" },
-                  [
-                    _c("div", { staticClass: "product_info flex-grow-1" }, [
-                      _c("h5", { staticClass: "title" }, [
-                        _vm._v(_vm._s(product.name)),
+      _c("div", { staticClass: "products-cart row" }, [
+        _c("div", { staticClass: "col-12 col-lg-8" }, [
+          _c(
+            "div",
+            { staticClass: "row" },
+            _vm._l(_vm.user.products, function (product) {
+              return _c(
+                "div",
+                { key: product.id, staticClass: "product col-12 col-sm-6" },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "d-flex align-items-center single-card p-3",
+                    },
+                    [
+                      _c("div", { staticClass: "product_info flex-grow-1" }, [
+                        _c("h5", { staticClass: "title" }, [
+                          _vm._v(_vm._s(product.name)),
+                        ]),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "description" }, [
+                          _vm._v(_vm._s(product.description)),
+                        ]),
+                        _vm._v(" "),
+                        _c("p", [_vm._v(_vm._s(product.price) + " €")]),
                       ]),
                       _vm._v(" "),
-                      _c("p", { staticClass: "description" }, [
-                        _vm._v(_vm._s(product.description)),
+                      _c("div", [
+                        _c("div", {
+                          staticClass: "image",
+                          style: {
+                            backgroundImage: "url(" + product.cover + ")",
+                          },
+                        }),
                       ]),
-                      _vm._v(" "),
-                      _c("p", [_vm._v(_vm._s(product.price) + " €")]),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c("div", {
-                        staticClass: "image",
-                        style: {
-                          backgroundImage: "url(" + product.cover + ")",
-                        },
-                      }),
-                    ]),
-                  ]
-                ),
-              ]
-            )
-          }),
-          0
-        ),
+                    ]
+                  ),
+                ]
+              )
+            }),
+            0
+          ),
+        ]),
+        _vm._v(" "),
+        _vm._m(0),
       ]),
     ]),
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-12 col-lg-4" }, [
+      _c("div", { staticClass: "cart p-3" }, [
+        _c("p", { staticClass: "text-center py-5" }, [
+          _vm._v("Il carrello è vuoto"),
+        ]),
+        _vm._v(" "),
+        _c("button", { staticClass: "btn btn-secondary btn-block" }, [
+          _vm._v(" Vai al Pagamento"),
+        ]),
+      ]),
+    ])
+  },
+]
 render._withStripped = true
 
 
