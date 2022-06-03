@@ -1996,7 +1996,7 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
-    fetchPosts: function fetchPosts() {
+    fetchUsers: function fetchUsers() {
       var _this = this;
 
       axios.get('/api/users').then(function (res) {
@@ -2008,7 +2008,7 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   mounted: function mounted() {
-    this.fetchPosts();
+    this.fetchUsers();
   }
 });
 
@@ -2023,6 +2023,19 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2237,7 +2250,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".jumbo-container[data-v-1f7dee9c] {\n  background-image: url(" + escape(__webpack_require__(/*! ../../../public/img/background-jumbo.png */ "./public/img/background-jumbo.png")) + ");\n  background-position: center;\n  background-repeat: no-repeat;\n  height: 400px;\n  width: 100vw;\n  display: flex;\n  justify-content: center;\n}\n.jumbo-container .jumbo-sub-container[data-v-1f7dee9c] {\n  width: 1024px;\n  display: flex;\n  position: relative;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left[data-v-1f7dee9c] {\n  width: 50%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  color: #440063;\n  font-weight: 900;\n}\n.jumbo-container .jumbo-sub-container .jumbo-right[data-v-1f7dee9c] {\n  width: 50%;\n  position: relative;\n}\n.jumbo-container .jumbo-sub-container .jumbo-right .img-jumbo-svg-first[data-v-1f7dee9c] {\n  z-index: 1;\n  position: absolute;\n  bottom: 0;\n  left: 50%;\n  transform: translateX(-50%);\n}\n.jumbo-container .jumbo-sub-container .jumbo-right .img-jumbo-svg-second[data-v-1f7dee9c] {\n  height: 350px;\n  position: absolute;\n  bottom: 0;\n  left: 50%;\n  transform: translateX(-50%);\n}", ""]);
+exports.push([module.i, ".jumbo-container[data-v-1f7dee9c] {\n  background-image: url(" + escape(__webpack_require__(/*! ../../../public/img/background-jumbo.png */ "./public/img/background-jumbo.png")) + ");\n  background-position: center;\n  background-repeat: no-repeat;\n  height: 400px;\n  width: 100vw;\n  display: flex;\n  justify-content: center;\n}\n.jumbo-container .jumbo-sub-container[data-v-1f7dee9c] {\n  width: 1024px;\n  display: flex;\n  position: relative;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left[data-v-1f7dee9c] {\n  width: 50%;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-end;\n  color: #440063;\n  font-weight: 900;\n  margin-bottom: 30px;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left .jumbo-left-title[data-v-1f7dee9c] {\n  margin-bottom: 25px;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left .jumbo-search-container[data-v-1f7dee9c] {\n  padding: 22px 30px;\n  background-color: white;\n  border-radius: 5px;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left .jumbo-search-container .jumbo-search-title[data-v-1f7dee9c] {\n  color: black;\n  font-size: 16px;\n  font-weight: 500;\n  margin-bottom: 5px;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left .jumbo-search-container .jumbo-search[data-v-1f7dee9c] {\n  display: flex;\n  gap: 15px;\n  margin-bottom: 8px;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left .jumbo-search-container .jumbo-search .jumbo-search-bar-container[data-v-1f7dee9c] {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  flex-grow: 1;\n  position: relative;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left .jumbo-search-container .jumbo-search .jumbo-search-bar-container .jumbo-search-bar[data-v-1f7dee9c] {\n  color: rgba(0, 0, 0, 0.315);\n  border-color: rgba(0, 0, 0, 0.314);\n  border-radius: 5px;\n  font-size: 16px;\n  font-weight: 600;\n  padding-left: 15px;\n  padding-right: 15px;\n  flex-grow: 1;\n  height: 100%;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left .jumbo-search-container .jumbo-search .jumbo-search-bar-container .fa-location-arrow[data-v-1f7dee9c] {\n  position: absolute;\n  z-index: 1;\n  right: 15px;\n  top: 50%;\n  transform: translateY(-50%);\n}\n.jumbo-container .jumbo-sub-container .jumbo-left .jumbo-search-container .jumbo-search .jumbo-button-search[data-v-1f7dee9c] {\n  padding: 15px 25px;\n  font-weight: 600;\n  color: white;\n  background-color: #00CCBC;\n  border: none;\n  border-radius: 5px;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left .jumbo-search-container .jumbo-search-text[data-v-1f7dee9c] {\n  color: black;\n  font-size: 14px;\n  font-weight: 500;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left .jumbo-search-container .jumbo-search-text a[data-v-1f7dee9c] {\n  color: #00CCBC;\n  font-weight: 600;\n}\n.jumbo-container .jumbo-sub-container .jumbo-right[data-v-1f7dee9c] {\n  width: 50%;\n  position: relative;\n}\n.jumbo-container .jumbo-sub-container .jumbo-right .img-jumbo-svg-first[data-v-1f7dee9c] {\n  z-index: 1;\n  position: absolute;\n  bottom: 0;\n  left: 50%;\n  transform: translateX(-50%);\n}\n.jumbo-container .jumbo-sub-container .jumbo-right .img-jumbo-svg-second[data-v-1f7dee9c] {\n  height: 420px;\n  overflow: hidden;\n  position: absolute;\n  bottom: -70px;\n  left: 50%;\n  transform: translateX(-50%);\n}", ""]);
 
 // exports
 
@@ -3599,9 +3612,40 @@ var staticRenderFns = [
     return _c("section", { staticClass: "jumbo-container" }, [
       _c("div", { staticClass: "jumbo-sub-container" }, [
         _c("div", { staticClass: "jumbo-left" }, [
-          _c("h1", [_vm._v("I piatti che ami, a domicilio.")]),
+          _c("h1", { staticClass: "jumbo-left-title" }, [
+            _vm._v("I piatti che ami, a domicilio."),
+          ]),
           _vm._v(" "),
-          _c("h2", [_vm._v("Quando vuoi tu!")]),
+          _c("div", { staticClass: "jumbo-search-container" }, [
+            _c("p", { staticClass: "jumbo-search-title" }, [
+              _vm._v(
+                "Inserisci la tua città per trovare ristoranti nei dintorni"
+              ),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "jumbo-search" }, [
+              _c("div", { staticClass: "jumbo-search-bar-container" }, [
+                _c("input", {
+                  staticClass: "jumbo-search-bar",
+                  attrs: {
+                    placeholder: "Inserisci il tuo indirizzo completo",
+                    type: "text",
+                  },
+                }),
+                _vm._v(" "),
+                _c("i", { staticClass: "fa-solid fa-location-arrow" }),
+              ]),
+              _vm._v(" "),
+              _c("button", { staticClass: "jumbo-button-search" }, [
+                _vm._v("Cerca"),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "jumbo-search-text" }, [
+              _c("a", { attrs: { href: "" } }, [_vm._v("Accedi")]),
+              _vm._v(" per visualizzare i tuoi indirizzi recenti."),
+            ]),
+          ]),
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "jumbo-right" }, [

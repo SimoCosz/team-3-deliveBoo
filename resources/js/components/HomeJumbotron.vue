@@ -2,11 +2,24 @@
     <section class="jumbo-container">
         <div class="jumbo-sub-container">
 
+            <!-- CONTAINER LEFT -->
             <div class="jumbo-left">
-                <h1>I piatti che ami, a domicilio.</h1>
-                <h2>Quando vuoi tu!</h2>
+                <h1 class="jumbo-left-title">I piatti che ami, a domicilio.</h1>
+                <!-- <h2>Quando vuoi tu!</h2> -->
+                <div class="jumbo-search-container">
+                    <p class="jumbo-search-title">Inserisci la tua città per trovare ristoranti nei dintorni</p>
+                    <div class="jumbo-search">
+                        <div class="jumbo-search-bar-container">
+                            <input class="jumbo-search-bar" placeholder="Inserisci il tuo indirizzo completo" type="text">
+                            <i class="fa-solid fa-location-arrow"></i>
+                        </div>
+                        <button class="jumbo-button-search">Cerca</button>
+                    </div>
+                    <p class="jumbo-search-text"><a href="">Accedi</a> per visualizzare i tuoi indirizzi recenti.</p>
+                </div>
             </div>
 
+            <!-- CONTAINER RIGHT -->
             <div class="jumbo-right">
                 <img class="img-jumbo-svg-first" src="../../../public/img/at_home_with_deliveboo.png" alt="">
                 <img class="img-jumbo-svg-second" src="../../../public/img/jumbo-bkg.svg" alt="">
@@ -41,11 +54,81 @@ export default {
             width: 50%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-end;
             color: #440063;
             font-weight: 900;
+            margin-bottom: 30px;
 
+            .jumbo-left-title{
+                margin-bottom: 25px;
+            }
 
+            .jumbo-search-container{
+                padding: 22px 30px;
+                background-color: white;
+                border-radius: 5px;
+
+                .jumbo-search-title{
+                    color: black;
+                    font-size: 16px;
+                    font-weight: 500;
+                    margin-bottom: 5px;
+                }
+
+                .jumbo-search{
+                    display: flex;
+                    gap: 15px;
+                    margin-bottom: 8px;
+
+                    .jumbo-search-bar-container{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        flex-grow: 1;
+                        position: relative;
+
+                        .jumbo-search-bar{
+                            color: rgba(0, 0, 0, 0.315);
+                            border-color: rgba(0, 0, 0, 0.314);
+                            border-radius: 5px;
+                            font-size: 16px;
+                            font-weight: 600;
+                            padding-left: 15px;
+                            padding-right: 15px;
+                            flex-grow: 1;
+                            height: 100%;
+                        }
+
+                        .fa-location-arrow{
+                            position: absolute;
+                            z-index: 1;
+                            right: 15px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                    }
+
+                    .jumbo-button-search{
+                        padding: 15px 25px;
+                        font-weight: 600;
+                        color: white;
+                        background-color: #00CCBC;
+                        border: none;
+                        border-radius: 5px;
+                    }
+                }
+
+                .jumbo-search-text{
+                    color: black;
+                    font-size: 14px;
+                    font-weight: 500;
+
+                    a{
+                        color: #00CCBC;
+                        font-weight: 600;
+                    }
+                }
+            }
         }
     
         .jumbo-right{
@@ -61,9 +144,10 @@ export default {
             }
             
             .img-jumbo-svg-second{
-                height: 350px;
+                height: 420px;
+                overflow: hidden;
                 position: absolute;
-                bottom: 0;
+                bottom: -70px;
                 left: 50%;
                 transform: translateX(-50%);
             }
