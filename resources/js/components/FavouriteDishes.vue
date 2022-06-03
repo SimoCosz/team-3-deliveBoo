@@ -24,7 +24,7 @@ export default {
     }
   },
   methods: {
-    fetchPosts(){
+    fetchUsers(){
       axios.get('/api/users')
       .then(res =>{
         const {users} = res.data
@@ -36,7 +36,7 @@ export default {
     }
   },
   mounted(){
-  this.fetchPosts();
+  this.fetchUsers();
   }
 }
 </script>
