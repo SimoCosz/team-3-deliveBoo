@@ -3642,11 +3642,7 @@ var render = function () {
                                   _c("i", {
                                     staticClass:
                                       "bi bi-dash-circle primary-color",
-                                    on: {
-                                      click: function ($event) {
-                                        _vm.quantity--
-                                      },
-                                    },
+                                    on: { click: _vm.decrement },
                                   }),
                                   _vm._v(" "),
                                   _c("span", { staticClass: "quantity px-2" }, [
@@ -3656,15 +3652,14 @@ var render = function () {
                                   _c("i", {
                                     staticClass:
                                       "bi bi-plus-circle primary-color",
-                                    on: {
-                                      click: function ($event) {
-                                        _vm.quantity++
-                                      },
-                                    },
+                                    on: { click: _vm.increment },
                                   }),
                                   _vm._v(" "),
                                   _c("span", { staticClass: "px-2" }, [
-                                    _vm._v(_vm._s(element.price) + " €"),
+                                    _vm._v(
+                                      _vm._s(element.price * _vm.quantity) +
+                                        " €"
+                                    ),
                                   ]),
                                 ]
                               ),

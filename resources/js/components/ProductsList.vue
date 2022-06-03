@@ -34,10 +34,10 @@
                 <div class="d-flex justify-content-between">
                   <span>{{element.name}}</span>
                   <div class="d-flex justify-content-center">
-                    <i class="bi bi-dash-circle primary-color" @click="quantity--"></i>
+                    <i class="bi bi-dash-circle primary-color" @click="decrement"></i>
                     <span class="quantity px-2">{{quantity}}</span>
-                    <i class="bi bi-plus-circle primary-color" @click="quantity++"></i>
-                    <span class="px-2">{{element.price}} &#8364;</span>
+                    <i class="bi bi-plus-circle primary-color" @click="increment"></i>
+                    <span class="px-2">{{element.price*quantity}} &#8364;</span>
                   </div>
                 </div>
               </div>
