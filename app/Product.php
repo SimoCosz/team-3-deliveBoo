@@ -23,6 +23,10 @@ class Product extends Model
         return $this->belongsTo('App\User');
     }
 
+    public function tipologies(){
+        return $this->belongsTo('App\Tipology');
+    }
+
     public function orders(){
         return $this->belongsToMany('App\Order');
     }
