@@ -1,14 +1,11 @@
 <?php
 
 namespace App\Http\Controllers\Api;
-
-use App\Http\Controllers\Controller;
 use App\Order;
-use App\Product;
-use App\User;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class OrderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,12 +14,11 @@ class UserController extends Controller
      */
     public function index()
     {
-       $users = User::with('products')->get();
-
-       return response()->json([
-           'users' => $users,
-           'succes' => true
-       ]);
+        $orders = Order::with('products')->get();
+        return response()->json([
+            'orders' => $orders,
+            'succes'=> true
+        ]);
     }
 
     /**
@@ -43,7 +39,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        
+        //
     }
 
     /**
@@ -52,20 +48,14 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($slug)
+    public function show($id)
     {
-        $user = User::with('products')->where('slug',$slug)->first();
-        if($user){
-            return response()->json([
-                'user' => $user,
-                'succes' => true
-            ]);
-        }
-        return response()->json([
-            'message' => 'User not found',
-            'success' => false,
-        ],404);
+        $orders = Order::with('products')->where('id',$id)->first();
         
+        return response()->json([
+            'orders' => $orders,
+            'succes' => true
+        ]);
     }
 
     /**
