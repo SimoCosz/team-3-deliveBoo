@@ -37,7 +37,6 @@ export default {
     return {
       user: null,
       loading: true,
-      cart: [],
     }
   },
   beforeMount(){

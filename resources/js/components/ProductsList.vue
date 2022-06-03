@@ -1,5 +1,6 @@
 <template>
   <section class="products py-5">
+    <!-- LISTA PRODOTTI -->
     <div class="my-container">
       <div class="products-cart row">
         <div class="col-12 col-lg-8">
@@ -9,7 +10,7 @@
                 <div class="product_info flex-grow-1">
                   <h5 class="title">{{product.name}}</h5>
                   <p class="description">{{product.description}}</p>
-                  <p>{{product.price}} &#8364;</p>
+                  <p class="r-color">{{product.price}} &#8364;</p>
                 </div>
                 <div>
                   <div class="image" :style="{ backgroundImage: `url(${product.cover})` }"></div>
@@ -18,18 +19,42 @@
             </div>
           </div>
         </div>
-        
+
+        <!-- CART -->
         <div class="col-12 col-lg-4">
           <div class="cart p-3">
-            <p class="text-center py-5">Il carrello è vuoto</p>
-            <button class="btn btn-secondary btn-block"> Vai al Pagamento</button>
+            <div v-if="this.cart.length==0">
+              <p class="text-center py-5">Il carrello è vuoto</p>
+              <button class="btn btn-secondary btn-block"> Vai al Pagamento</button>
+            </div>
+
+            <div class="text-dark" v-else>
+              <h4 class="font-weight-bold">I tuoi ordini</h4>
+              <div v-for="element in this.cart" :key="element.id">
+                <div class="d-flex justify-content-between">
+                  <span>{{element.name}}</span>
+                  <div class="d-flex justify-content-center">
+                    <i class="bi bi-dash-circle primary-color" @click="quantity--"></i>
+                    <span class="quantity px-2">{{quantity}}</span>
+                    <i class="bi bi-plus-circle primary-color" @click="quantity++"></i>
+                    <span class="px-2">{{element.price}} &#8364;</span>
+                  </div>
+                </div>
+              </div>
+              <div class="total d-flex justify-content-between">
+                <h5 class="font-weight-bold">Totale:</h5>
+                <h5 class="font-weight-bold">{{totalPrice}}&#8364;</h5>
+              </div>
+               <button class="btn btn-bg-color btn-block"> Vai al Pagamento</button>
+            </div>
+
           </div>
         </div>
-
       </div>
     </div>
 
-    <!-- Transition ancora non funzionante -->
+    <!-- MODALE DEL PRODOTTO -->
+    <!--FIXME: Transition ancora non funzionante -->
     <Transition name="slide-fade" appear>
     <div v-if="show">
       <div class="my-modal" @click="show=false">
@@ -41,14 +66,14 @@
             <p class="description">{{selectedProduct.description}}</p>
           </div>
           <div class="product-show-add p-4">
-            <div class="d-flex justify-content-center m-gap pb-3">
-              <i class="bi bi-dash-circle"></i>
-              <span class="quantity">0</span>
-              <i class="bi bi-plus-circle"></i>
+            <div class="d-flex justify-content-center pb-3">
+              <i class="bi bi-dash-circle" @click="quantity--"></i>
+              <span class="quantity px-2">{{quantity}}</span>
+              <i class="bi bi-plus-circle" @click="quantity++"></i>
             </div>
             
-            <button class="btn btn-success btn-block">
-              Aggiungi per &#8364;{{selectedProduct.price}}
+            <button class="btn btn-block btn-bg-color" @click="addProduct(selectedProduct)">
+              Aggiungi per &#8364;{{selectedProduct.price*quantity}}
             </button>
           </div>
         </div>
@@ -67,18 +92,46 @@ data(){
   return {
     show:false,
     selectedProduct:null,
+    quantity: 1, //FIXME: quantità al momento gestita con questa variabile (Da eliminare)
+    cart:[],
+    totalPrice: 0,
   }
 },
 methods : {
   showModal: function(product) {
     this.show=true;
     this.selectedProduct=product;
+  },
+  addProduct: function(selectedProduct) {
+    if(!this.cart.includes(selectedProduct)){
+      this.cart.push(selectedProduct);
+      this.totalPrice+=selectedProduct.price; //TODO: da moltiplicare per la quantita del selectedProduct 
+    }
+    
   }
+},
+updated(){
+  console.log(this.cart)
 }
 }
 </script>
 
 <style lang="scss" scoped>
+
+.btn-bg-color{
+  background-color:  #00C2B3;
+  color: white;
+  font-weight: 700;
+}
+
+.r-color{
+  color: #FB5058;
+}
+
+.primary-color{
+  color: #14AA9E!important;
+}
+
 .products{
   background-color: #F9FAFA;
   .my-container{
@@ -100,16 +153,22 @@ methods : {
           color:#abadad;
           cursor: not-allowed;
         }
+        .bi.bi-dash-circle,.bi.bi-plus-circle{
+          &::before{
+            line-height: 23.05px;
+            cursor:pointer;
+          }
+        }
       }
+
       .row{
         .product{
-          
           .single-card{
             border-radius: 5px;
             margin-bottom: 30px;
             box-shadow: 0 1px 4px rgb(0 0 0 / 20%);
             gap: 20px;
-            min-height: 180px;
+            min-height: 150px;
             cursor: pointer;
             &:hover{
               box-shadow: 0px 17px 43px -5px lightgrey;
