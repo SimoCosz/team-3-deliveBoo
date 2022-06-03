@@ -22,7 +22,7 @@
             <!-- CONTAINER RIGHT -->
             <div class="jumbo-right">
                 <img class="img-jumbo-svg-first" src="../../../public/img/at_home_with_deliveboo.png" alt="">
-                <img class="img-jumbo-svg-second" src="../../../public/img/jumbo-bkg.svg" alt="">
+                <img class="img-jumbo-svg-second" src="../../../public/img/jumbo-bkg-svg2.svg" alt="">
             </div>
         </div>
         
@@ -88,11 +88,9 @@ export default {
                         position: relative;
 
                         .jumbo-search-bar{
-                            color: rgba(0, 0, 0, 0.315);
-                            border-color: rgba(0, 0, 0, 0.314);
+                            color: black;
                             border-radius: 5px;
                             font-size: 16px;
-                            font-weight: 600;
                             padding-left: 15px;
                             padding-right: 15px;
                             flex-grow: 1;
@@ -109,7 +107,7 @@ export default {
                     }
 
                     .jumbo-button-search{
-                        padding: 15px 25px;
+                        padding: 15px 27px;
                         font-weight: 600;
                         color: white;
                         background-color: #00CCBC;
@@ -125,6 +123,7 @@ export default {
 
                     a{
                         color: #00CCBC;
+                        text-decoration: none;
                         font-weight: 600;
                     }
                 }
@@ -138,16 +137,16 @@ export default {
             .img-jumbo-svg-first{
                 z-index: 1;
                 position: absolute;
-                bottom: 0;
+                bottom: -1px;
                 left: 50%;
                 transform: translateX(-50%);
             }
             
             .img-jumbo-svg-second{
-                height: 420px;
+                height: 350px;
                 overflow: hidden;
                 position: absolute;
-                bottom: -70px;
+                bottom: 0;
                 left: 50%;
                 transform: translateX(-50%);
             }
