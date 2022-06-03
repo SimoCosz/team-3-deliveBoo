@@ -2133,10 +2133,15 @@ __webpack_require__.r(__webpack_exports__);
         this.cart.push(selectedProduct);
         this.totalPrice += selectedProduct.price; //TODO: da moltiplicare per la quantita del selectedProduct 
       }
+    },
+    increment: function increment() {
+      this.quantity += 1;
+    },
+    decrement: function decrement() {
+      if (this.quantity != 1) {
+        this.quantity -= 1;
+      }
     }
-  },
-  updated: function updated() {
-    console.log(this.cart);
   }
 });
 
@@ -3751,11 +3756,7 @@ var render = function () {
                           [
                             _c("i", {
                               staticClass: "bi bi-dash-circle",
-                              on: {
-                                click: function ($event) {
-                                  _vm.quantity--
-                                },
-                              },
+                              on: { click: _vm.decrement },
                             }),
                             _vm._v(" "),
                             _c("span", { staticClass: "quantity px-2" }, [
@@ -3764,11 +3765,7 @@ var render = function () {
                             _vm._v(" "),
                             _c("i", {
                               staticClass: "bi bi-plus-circle",
-                              on: {
-                                click: function ($event) {
-                                  _vm.quantity++
-                                },
-                              },
+                              on: { click: _vm.increment },
                             }),
                           ]
                         ),

@@ -67,9 +67,9 @@
           </div>
           <div class="product-show-add p-4">
             <div class="d-flex justify-content-center pb-3">
-              <i class="bi bi-dash-circle" @click="quantity--"></i>
+              <i class="bi bi-dash-circle" @click="decrement"></i>
               <span class="quantity px-2">{{quantity}}</span>
-              <i class="bi bi-plus-circle" @click="quantity++"></i>
+              <i class="bi bi-plus-circle" @click="increment"></i>
             </div>
             
             <button class="btn btn-block btn-bg-color" @click="addProduct(selectedProduct)">
@@ -97,22 +97,30 @@ data(){
     totalPrice: 0,
   }
 },
+
 methods : {
   showModal: function(product) {
     this.show=true;
     this.selectedProduct=product;
   },
+
   addProduct: function(selectedProduct) {
     if(!this.cart.includes(selectedProduct)){
       this.cart.push(selectedProduct);
       this.totalPrice+=selectedProduct.price; //TODO: da moltiplicare per la quantita del selectedProduct 
     }
-    
+  },
+
+  increment: function(){
+    this.quantity +=1;
+  },
+  decrement: function(){
+    if(this.quantity!=1){
+      this.quantity -=1;
+    }
   }
+
 },
-updated(){
-  console.log(this.cart)
-}
 }
 </script>
 
