@@ -19,6 +19,7 @@ class TipologySeeder extends Seeder
             $tipology = new Tipology();
             $tipology -> name = $t;
             $tipology -> slug = Str::slug($t, '-');
+            $tipology -> product_id = $t['product_id'];
             $tipology -> save();
         }
     }

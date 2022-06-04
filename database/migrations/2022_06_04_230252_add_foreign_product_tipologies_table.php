@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddForeignTipologyProductsTable extends Migration
+class AddForeignProductTipologiesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class AddForeignTipologyProductsTable extends Migration
      */
     public function up()
     {
-        Schema::table('products', function (Blueprint $table) {
-            $table->unsignedBigInteger('tipology_id')->nullable()->after('id');
-            $table->foreign('tipology_id')
+        Schema::table('tipologies', function (Blueprint $table) {
+            $table->unsignedBigInteger('product_id')->nullable()->after('id');
+            $table->foreign('product_id')
                 ->references('id')
-                ->on('tipologies')
+                ->on('products')
                 ->onDelate('set null');
         });
     }
@@ -29,9 +29,9 @@ class AddForeignTipologyProductsTable extends Migration
      */
     public function down()
     {
-        Schema::table('products', function (Blueprint $table) {
-            $table->dropForeign(['tipology_id']);
-            $table->dropColumn('tipology_id');
+        Schema::table('tipologies', function (Blueprint $table) {
+            $table->dropForeign(['product_id']);
+            $table->dropColumn('product_id');
         });
     }
 }

@@ -24,7 +24,7 @@ class Product extends Model
     }
 
     public function tipologies(){
-        return $this->belongsTo('App\Tipology');
+        return $this->hasMany('App\Tipology');
     }
 
     public function orders(){
