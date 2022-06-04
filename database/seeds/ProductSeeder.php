@@ -29,6 +29,7 @@ class ProductSeeder extends Seeder
                 $product -> price = $p['price'];
                 $product -> visibility = $p['visibility'];
                 $product -> category = $p['category'];
+                $product -> tipology = $p['tipology'];
                 $product -> user_id = $p['user_id'];
                 $product -> slug = Str::slug($p['name'], '-');
                 

@@ -10,6 +10,7 @@
                 <th scope="col">#</th>
                 <th scope="col">Nome</th>
                 <th scope="col">Image</th>
+                <th scope="col">Portata</th>
                 <th scope="col">Categoria</th>
                 <th scope="col">Descrizione</th>
                 <th scope="col">Visibilità</th>
@@ -22,6 +23,7 @@
                     <td>{{ $product->id }}</td>
                     <td>{{ $product->name }}</td>
                     <td>{{ $product->cover }}</td>
+                    <td>{{ $product->tipology ? $product->tipology->name : ' - ' }}</td>
                     <td>{{ $product->category }}</td>
                     <td>{{ $product->description }}</td>
                     <td>{{ $product->visibility }}</td>

@@ -33,7 +33,7 @@ class ProductController extends Controller
         $user = Auth::user();
         $categories = Category::all();
 
-        return view('admin.products.create', compact('user', 'product', 'categories'));
+        return view('admin.products.create', compact('user', 'product', 'categories', 'tipologies'));
     }
 
     /**
