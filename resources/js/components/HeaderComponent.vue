@@ -5,7 +5,9 @@
           <div class="container">
             <div class="row justify-content-between align-items-center">
               <figure class="cover">
-                <img src="../../../public/img/logo-navbar.png" alt="">
+                <a href="/">
+                  <img src="../../../public/img/logo-navbar.png" alt="">
+                </a>
               </figure>
               <div class="items-menu">
                 <ul>

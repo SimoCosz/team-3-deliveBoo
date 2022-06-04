@@ -2102,6 +2102,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -3705,9 +3707,14 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("figure", { staticClass: "cover" }, [
-      _c("img", {
-        attrs: { src: __webpack_require__(/*! ../../../public/img/logo-navbar.png */ "./public/img/logo-navbar.png"), alt: "" },
-      }),
+      _c("a", { attrs: { href: "/" } }, [
+        _c("img", {
+          attrs: {
+            src: __webpack_require__(/*! ../../../public/img/logo-navbar.png */ "./public/img/logo-navbar.png"),
+            alt: "",
+          },
+        }),
+      ]),
     ])
   },
   function () {
