@@ -28,7 +28,7 @@
                     </div>
                   </li>
                     <li class="item"><a href="#"><i class="bi bi-cart4 p-1"></i>0,00 &euro;</a></li>
-                    <li class="item"><a href=""><i class="bi bi-house-door p-1"></i>Registrati o accedi</a></li>
+                    <li class="item"><a href="/home"><i class="bi bi-house-door p-1"></i>Registrati o accedi</a></li>
                 </ul>
               </div>
 
@@ -40,6 +40,7 @@
         </div>
       </nav>
   </header>
+
 </template>
 
 <script>
@@ -60,11 +61,6 @@
 </script>
 
 <style lang="scss" scoped>
-@media screen and (max-width: 768px) {
-  body{
-    background-color: blue;
-  }
-}
 
 ul, li{
   list-style: none;
@@ -88,7 +84,6 @@ nav{
 
   .items-menu{
     display: flex;
-    // flex-grow: 1;
     gap: 10px;
 
     .item{
@@ -101,10 +96,8 @@ nav{
         border: 2px solid #97CDB4;
       }
 
-      &.ghost{
-        display: none;
-      }
     }
+
     .dropdown{
       position: relative;
 
@@ -147,6 +140,24 @@ nav{
       }
     }
   }
+
+  @media (max-width: 768px) {
+    .items-menu{
+      display: none;
+    }
+
+    .item.ghost{
+      display: block;
+      border: 2px solid #E9EBEB;
+      padding: 5px 10px;
+      border-radius: 5px;
+      white-space: nowrap;
+    }
+  }
+}
+
+.item.ghost{
+  display: none;
 }
 
 

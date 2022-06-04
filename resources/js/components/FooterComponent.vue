@@ -55,7 +55,7 @@
       </div>
 
       <div class="row justify-content-between p-2">
-        <div class="col-2 d-flex icon">
+        <div class="col-6 d-flex icon flex-wrap">
           <ul>
             <li>
               <a href="#">
@@ -74,7 +74,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-2 copy">
+        <div class="col-6 copy d-flex justify-content-end align-items-center">
           <span>&copy; 2022 Deliveboo</span>
         </div>
       </div>
