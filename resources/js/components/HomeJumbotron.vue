@@ -155,6 +155,22 @@ export default {
             }
         }
     }
+    @media (max-width: 1024px){
+        .jumbo-sub-container{
+            justify-content: center;
 
+            .jumbo-left{
+                width: 80%;
+
+                .jumbo-left-title{
+                    text-align: center;
+                }
+            }
+        }
+        
+        .jumbo-right{
+            display: none;
+        }
+    }
 }
 </style>

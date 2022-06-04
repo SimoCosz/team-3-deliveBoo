@@ -95,6 +95,18 @@ export default {
       }
     }
   }
+  @media (max-width: 1024px){
+    .favourite-title{
+      text-align: center;
+    }
 
+    .favourite-card-container{
+      justify-content: center;
+
+      .favourite-link{
+        width: 39%;
+      }
+    }
+  }
 }
 </style>
