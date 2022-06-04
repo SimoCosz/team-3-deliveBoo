@@ -89,6 +89,7 @@ export default {
 
                         .jumbo-search-bar{
                             color: black;
+                            border-color: rgba(0, 0, 0, 0.299);
                             border-radius: 5px;
                             font-size: 16px;
                             padding-left: 15px;
@@ -98,6 +99,8 @@ export default {
                         }
 
                         .fa-location-arrow{
+                            height: 16px;
+                            color: #00CCBC;
                             position: absolute;
                             z-index: 1;
                             right: 15px;

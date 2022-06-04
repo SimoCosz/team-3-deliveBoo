@@ -71,6 +71,12 @@ export default {
         color: currentColor;
         margin-bottom: 20px;
         width: 32%;
+        transition: 0.3s ease-in-out;
+
+        &:hover{
+          box-shadow: black;
+          transform: scale(1.1);
+        }
 
         .favourite-card{
 

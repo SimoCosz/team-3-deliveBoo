@@ -59,6 +59,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .selection-container{
     width: 100vw;
     display: flex;
@@ -88,6 +89,12 @@ export default {
                 color: currentColor;
                 margin-bottom: 20px;
                 width: 38%;
+
+                &:hover .selection-img{
+                    box-shadow: 0px 0px 33px -5px;
+                    transition: 0.2s ease-in;
+                    border-radius: 5px;
+                }
     
                 .selection-card{
 
@@ -100,10 +107,22 @@ export default {
                 margin-bottom: 40px;
                 width: 59%;
 
+                &:hover .selection-img{
+                    box-shadow: 0px 0px 33px -5px;
+                    transition: 0.2s ease-in;
+                    border-radius: 5px;
+                }
+
                 .selection-card{
 
                 }
             }
+            @media (max-width: 1024px) {
+                
+                .selection-link-small, .selection-link-big{
+                    width: 80%;
+                }
+            }   
         }
     }
 
@@ -138,5 +157,21 @@ export default {
         font-size: 16px;
         color: #00CCBC;
     }
+     @media (max-width: 1024px) {
+        .selection-title{
+            text-align: center;
+        }
+
+        .selection-card-container{
+            justify-content: center;
+            gap: 0;
+        }
+
+        .selection-img{
+            border-radius: 5px;
+            object-fit: cover;
+            object-position: center;
+        }
+    }     
 }
 </style>
