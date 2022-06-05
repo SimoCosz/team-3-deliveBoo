@@ -77,6 +77,8 @@ export default {
 
                 .jumbo-search{
                     display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
                     gap: 15px;
                     margin-bottom: 8px;
 
@@ -170,6 +172,28 @@ export default {
         
         .jumbo-right{
             display: none;
+        }
+    }
+
+    @media (max-width: 650px){
+        .jumbo-left-title{
+            font-size: 22px;
+            margin-bottom: 15px !important;
+        }
+
+        .jumbo-search-title{
+            font-size: 14px !important;
+            text-align: center;
+        }
+
+        .jumbo-search-bar{
+            width: 100%;
+            height: 36px !important;
+            font-size: 14px !important;
+        }
+
+        .jumbo-button-search{
+            padding: 8px 15px !important;
         }
     }
 }
