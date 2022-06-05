@@ -42,9 +42,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .favourite-section{
   background-color: #FFEAE4;
-  width: 100vw;
+  max-width: 100vw;
   display: flex;
   justify-content: center;
 
@@ -93,19 +94,21 @@ export default {
           }
         }
       }
+      @media (max-width: 1024px){
+        .favourite-link{
+          width: 38%;
+        }
+      }
     }
   }
   @media (max-width: 1024px){
-    .favourite-title{
-      text-align: center;
-    }
-
     .favourite-card-container{
       justify-content: center;
+      gap: 4%!important;
+    }
 
-      .favourite-link{
-        width: 39%;
-      }
+    .favourite-title{
+      text-align: center;
     }
   }
 }

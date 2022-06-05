@@ -41,7 +41,7 @@ export default {
     background-position: center;
     background-repeat: no-repeat;
     height: 400px;
-    width: 100vw;
+    max-width: 100vw;
     display: flex;
     justify-content: center;
 

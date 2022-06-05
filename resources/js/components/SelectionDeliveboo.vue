@@ -61,7 +61,7 @@ export default {
 <style lang="scss" scoped>
 
 .selection-container{
-    width: 100vw;
+    max-width: 100vw;
     display: flex;
     justify-content: center;
 
