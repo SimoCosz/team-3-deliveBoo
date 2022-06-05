@@ -168,6 +168,7 @@ export default {
     @media (max-width: 1024px) {
         .selection-title{
             text-align: center;
+            padding: 0 10% 0 10%;
         }
 
         .selection-card-container{

@@ -61,6 +61,7 @@ export default {
 
             .jumbo-left-title{
                 margin-bottom: 25px;
+                font-weight: 700;
             }
 
             .jumbo-search-container{
