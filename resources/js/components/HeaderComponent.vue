@@ -11,7 +11,7 @@
               </figure>
               <div class="items-menu">
                 <ul>
-                  <li class="item dropdown" @mouseenter="dropdown()" @mouseleave="dropdown()">
+                  <li class="item dropdown" @mouseenter="dropdown()" @mouseleave="dropdown()" @click="dropdown()">
                     <div class="dropbtn">
                       <i cldivss="bi bi-chevron-compact-down"></i> Collabora con noi
                     </div>
@@ -33,10 +33,7 @@
                     <li class="item"><a href="/home"><i class="bi bi-house-door p-1"></i>Registrati o accedi</a></li>
                 </ul>
               </div>
-
-
-              <li class="item ghost"><a href=""><i class="bi bi-list p-1"></i>Menu</a></li>
-
+              <HeaderHamburger class="ghost" />
             </div>
           </div>
         </div>
@@ -46,7 +43,12 @@
 </template>
 
 <script>
+import HeaderHamburger from '../components/HeaderHamburgerMenu.vue'
+
   export default {
+    components: {
+      HeaderHamburger
+    },
     data() {
       return{
         dropdown1: false,
@@ -148,17 +150,14 @@ nav{
       display: none;
     }
 
-    .item.ghost{
+    .ghost{
       display: block;
-      border: 2px solid #E9EBEB;
-      padding: 5px 10px;
-      border-radius: 5px;
       white-space: nowrap;
     }
   }
 }
 
-.item.ghost{
+.ghost{
   display: none;
 }
 
