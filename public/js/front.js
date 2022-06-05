@@ -19296,7 +19296,7 @@ module.exports = "/images/background-jumbo.png?64e7b277d4188e0683d14ba208c6e0dc"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/jumbo-bkg-svg2.svg?ece43a1805da9c592135a025ae78cca8";
+module.exports = "/images/jumbo-bkg-svg2.svg?8de0ecba9e591757458db25a3d02de10";
 
 /***/ }),
 
