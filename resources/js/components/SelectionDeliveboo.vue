@@ -123,6 +123,13 @@ export default {
                     width: 80%;
                 }
             }   
+
+            @media (max-width: 650px) {
+
+                .selection-img-title{
+                    font-size: 22px;
+                }
+            } 
         }
     }
 
@@ -157,7 +164,8 @@ export default {
         font-size: 16px;
         color: #00CCBC;
     }
-     @media (max-width: 1024px) {
+
+    @media (max-width: 1024px) {
         .selection-title{
             text-align: center;
         }
@@ -173,5 +181,11 @@ export default {
             object-position: center;
         }
     }     
+
+    @media (max-width: 650px) {
+        .selection-title{
+            font-size: 22px;
+        }
+    } 
 }
 </style>
