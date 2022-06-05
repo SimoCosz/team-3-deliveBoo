@@ -99,6 +99,12 @@ export default {
           width: 38%;
         }
       }
+
+      @media (max-width: 650px){
+        .favourite-link{
+          width: 80%;
+        }
+      }
     }
   }
   @media (max-width: 1024px){
@@ -108,6 +114,17 @@ export default {
     }
 
     .favourite-title{
+      padding: 0 10% 0 10%;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 650px){
+    .favourite-title{
+      font-size: 22px;
+    }
+
+    .favourite-name{
       text-align: center;
     }
   }
