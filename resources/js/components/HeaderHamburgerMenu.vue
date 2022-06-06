@@ -92,7 +92,6 @@ a{
         top: 105%;
         right: 0;
         border-radius: 5px;
-        // width: max-content;
         font-size: 12px;
         background-color: #F8FAFC;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -116,5 +115,18 @@ a{
         }
       }
     }
+    @media (max-width: 312px) {
+      .dropdown{
+        margin-top: 10px;
+      }
+
+      .dropdown-content{
+        position: absolute;
+        top: 105%;
+        transform: translatex(25%);
+        width: max-content;
+        text-align: center;
+      }
+  }
   }
 </style>

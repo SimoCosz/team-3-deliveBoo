@@ -11,7 +11,7 @@
               </figure>
               <div class="items-menu">
                 <ul>
-                  <li class="item dropdown" @mouseenter="dropdown()" @mouseleave="dropdown()" @click="dropdown()">
+                  <li class="item dropdown" @mouseenter="dropdown()" @mouseleave="dropdown()">
                     <div class="dropbtn">
                       <i cldivss="bi bi-chevron-compact-down"></i> Collabora con noi
                     </div>
@@ -157,6 +157,14 @@ nav{
       white-space: nowrap;
     }
   }
+
+  @media (max-width: 312px) {
+    .hamburger-menu{
+      display: flex !important;
+      justify-content: center !important;
+      width: 100% !important;
+    }
+  }  
 }
 
 .ghost{
