@@ -1,7 +1,7 @@
 <template>
     <div class="news">
         <section class="news_section container">
-            <h1>
+            <h1 class="pt-5 pb-2">
             {{titoloNews}}
             </h1>
             <ul class="container news_items_list">
@@ -157,24 +157,24 @@ export default {
                                 display: flex;
                                 align-items: center;
                                 gap: 2px;
-                                    @media(max-width: 476px){
-                                        display: flex;
-                                        flex-direction: column;
-                                        height: 85%;
-                                        position: relative;
-                                    }
-                                .download_badge{
-                                // border: 1px solid red;
-                                background-position: center;
-                                background-size: cover;
-                                width: 30%;
-                                height: 60%;
-                                border-radius: 5px;
-                                cursor: pointer;
-                                @media(max-width: 876px){
-                                    height: 60%;
-                                    width: 45%;
+                                @media(max-width: 525px){
+                                    display: flex;
+                                    flex-direction: column;
+                                    height: 50%;
+                                    position: relative;
                                 }
+                                .download_badge{
+                                    // border: 1px solid red;
+                                    background-position: center;
+                                    background-size: cover;
+                                    width: 29%;
+                                    height: 60%;
+                                    border-radius: 5px;
+                                    cursor: pointer;
+                                    @media(max-width: 993px){
+                                        height: 60%;
+                                        width: 38%;
+                                    }                               
                                 }
                                 @media(max-width: 765px){
                                     .download_advice{
@@ -187,12 +187,9 @@ export default {
                                         width: 49%;
                                     }
                                 }
-                                @media(max-width: 500px){
-                                    .download{
-                                        width: 100%;
-                                    }
+                                @media(max-width: 525px){
                                     .download_badge{
-                                        width: 100%;
+                                        width: 60%;
                                         height: 30%;
                                     }
                                 }

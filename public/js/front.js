@@ -2600,9 +2600,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2710,7 +2707,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".categories {\n  padding: 0px;\n}\n.categories h1 {\n  font-size: 30px;\n  font-weight: 700;\n  padding-bottom: 15px;\n}\n.categories .categories_list {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  list-style: none;\n  gap: 10px;\n  padding: 20px 0px;\n}\n.categories .categories_list .category_name {\n  padding: 0px 5px;\n  font-size: 22px;\n  font-weight: 700;\n  background-color: #f6f6f6;\n  border-radius: 5px;\n  text-transform: capitalize;\n  cursor: pointer;\n}\n.categories .categories_list .category_name a {\n  font-style: none;\n  color: currentColor;\n  text-decoration: none;\n}", ""]);
+exports.push([module.i, ".categories {\n  padding: 0px;\n}\n.categories h1 {\n  font-size: 30px;\n  font-weight: 700;\n}\n.categories .categories_list {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  list-style: none;\n  gap: 15px;\n  padding: 20px 0px;\n}\n.categories .categories_list .category_name {\n  padding: 0px 5px;\n  font-size: 22px;\n  font-weight: 700;\n  background-color: #f6f6f6;\n  border-radius: 5px;\n  text-transform: capitalize;\n  cursor: pointer;\n}\n.categories .categories_list .category_name:hover {\n  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;\n}\n.categories .categories_list .category_name a {\n  font-style: none;\n  color: currentColor;\n  text-decoration: none;\n}", ""]);
 
 // exports
 
@@ -2825,7 +2822,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".news {\n  background-color: #f6f6f6;\n}\n.news .news_section {\n  display: flex;\n  flex-direction: column;\n  align-content: flex-start;\n  padding: 20px 0px 30px 0px;\n}\n.news .news_section h1 {\n  font-size: 30px;\n  font-weight: 700;\n  padding: 10px 0px;\n}\n.news .news_section .news_items_list {\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  list-style: none;\n  gap: 40px;\n  padding: 0;\n}\n.news .news_section .news_items_list .news_item {\n  width: 100%;\n  height: 225px;\n  display: flex;\n  padding: 0;\n  position: relative;\n}\n.news .news_section .news_items_list .news_item .news_img {\n  background-position: center;\n  background-size: cover;\n  height: 100%;\n  width: 50%;\n}\n.news .news_section .news_items_list .news_item .news_text {\n  height: 100%;\n  width: 50%;\n  background-color: white;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding-left: 15px;\n}\n.news .news_section .news_items_list .news_item .news_text .contact {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n@media screen and (max-width: 766px) {\n.news .news_section .news_items_list .news_item .news_text .contact .download_advice {\n    display: none;\n}\n.news .news_section .news_items_list .news_item .news_text .contact .download_badge {\n    width: 300px;\n    height: 50%;\n    justify-content: flex-start;\n    left: 0;\n}\n}\n.news .news_section .news_items_list .news_item .news_text .contact h3 {\n  font-weight: 700;\n  font-size: 24px;\n}\n.news .news_section .news_items_list .news_item .news_text .contact p {\n  font-weight: 500;\n  font-size: 16px;\n}\n.news .news_section .news_items_list .news_item .news_text .contact button {\n  font-weight: 700;\n  color: white;\n  font-size: 14px;\n  padding: 10px;\n  background-color: #00c1b2;\n  width: 125px;\n  border: none;\n  border-radius: 5px;\n  opacity: 0.8;\n}\n.news .news_section .news_items_list .news_item .news_text .contact button:hover {\n  transition: ease-in-out 0.5s;\n  opacity: 1;\n}\n.news .news_section .news_items_list .news_item .news_text .contact .download {\n  width: 100%;\n  height: 27%;\n  display: flex;\n  align-items: center;\n  gap: 2px;\n}\n@media (max-width: 476px) {\n.news .news_section .news_items_list .news_item .news_text .contact .download {\n    display: flex;\n    flex-direction: column;\n    height: 85%;\n    position: relative;\n}\n}\n.news .news_section .news_items_list .news_item .news_text .contact .download .download_badge {\n  background-position: center;\n  background-size: cover;\n  width: 30%;\n  height: 60%;\n  border-radius: 5px;\n  cursor: pointer;\n}\n@media (max-width: 876px) {\n.news .news_section .news_items_list .news_item .news_text .contact .download .download_badge {\n    height: 60%;\n    width: 45%;\n}\n}\n@media (max-width: 765px) {\n.news .news_section .news_items_list .news_item .news_text .contact .download .download_advice {\n    display: none;\n}\n.news .news_section .news_items_list .news_item .news_text .contact .download .download {\n    height: 20%;\n}\n.news .news_section .news_items_list .news_item .news_text .contact .download .download_badge {\n    width: 49%;\n}\n}\n@media (max-width: 500px) {\n.news .news_section .news_items_list .news_item .news_text .contact .download .download {\n    width: 100%;\n}\n.news .news_section .news_items_list .news_item .news_text .contact .download .download_badge {\n    width: 100%;\n    height: 30%;\n}\n}\n@media (max-width: 765px) {\n.news .news_section .news_items_list .news_item .deliveroo_for_work .contact {\n    padding-left: 30px;\n}\n}\n.news .news_section .news_items_list .news_item .deliveroo_for_work::after {\n  content: \"\";\n  width: 40px;\n  height: 102%;\n  background: white;\n  transform: rotate(5.5deg);\n  position: absolute;\n  left: 48%;\n}\n.news .news_section .news_items_list .news_item .download_app::after {\n  content: \"\";\n  width: 40px;\n  height: 102%;\n  background: white;\n  transform: rotate(4deg);\n  position: absolute;\n  left: 48%;\n}\n@media (max-width: 767px) {\n.news .news_section .news_items_list .news_item .deliveroo_for_work::after {\n    content: \"\";\n    width: 15px;\n    height: 102%;\n    background: white;\n    transform: rotate(3.5deg);\n    position: absolute;\n    left: 49%;\n}\n.news .news_section .news_items_list .news_item .download_app::after {\n    content: \"\";\n    width: 15px;\n    height: 102%;\n    background: white;\n    transform: rotate(3deg);\n    position: absolute;\n    left: 49%;\n}\n.news .news_section .news_items_list .news_item .deliveroo_for_work {\n    padding-left: 10px;\n}\n.news .news_section .news_items_list .news_item .deliveroo_for_work h3 {\n    font-size: 20px;\n}\n.news .news_section .news_items_list .news_item .deliveroo_for_work p {\n    font-size: 16px;\n}\n.news .news_section .news_items_list .news_item .deliveroo_for_work button {\n    padding: 5px;\n    font-size: 10px;\n    height: 40px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    margin-bottom: 10px;\n}\n}\n@media (max-width: 476px) {\n.news .news_section .news_items_list .news_item .deliveroo_for_work::after {\n    content: \"\";\n    width: 25px;\n    height: 102%;\n    background: white;\n    transform: rotate(4deg);\n    position: absolute;\n    left: 48%;\n}\n.news .news_section .news_items_list .news_item .download_app::after {\n    content: \"\";\n    width: 25px;\n    height: 102%;\n    background: white;\n    transform: rotate(4deg);\n    position: absolute;\n    left: 48%;\n}\n.news .news_section .news_items_list .news_item .deliveroo_for_work h3 {\n    font-size: 20px;\n}\n.news .news_section .news_items_list .news_item .deliveroo_for_work p {\n    font-size: 16px;\n}\n.news .news_section .news_items_list .news_item .deliveroo_for_work button {\n    padding: 5px;\n    font-size: 10px;\n    height: 40px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    margin-bottom: 10px;\n}\n}\n@media (max-width: 390px) {\n.news .news_section .news_items_list .news_item .deliveroo_for_work {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n.news .news_section .news_items_list .news_item .deliveroo_for_work h3 {\n    max-height: 20%;\n    font-size: 12px;\n}\n.news .news_section .news_items_list .news_item .deliveroo_for_work p {\n    max-height: 30%;\n    font-size: 8px;\n}\n.news .news_section .news_items_list .news_item .deliveroo_for_work .deliveroo_for_work button {\n    padding: 5px;\n    font-size: 10px;\n    max-height: 30%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n}\n.news .deliveroo_for_work {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: 100%;\n}", ""]);
+exports.push([module.i, ".news {\n  background-color: #f6f6f6;\n}\n.news .news_section {\n  display: flex;\n  flex-direction: column;\n  align-content: flex-start;\n  padding: 20px 0px 30px 0px;\n}\n.news .news_section h1 {\n  font-size: 30px;\n  font-weight: 700;\n  padding: 10px 0px;\n}\n.news .news_section .news_items_list {\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  list-style: none;\n  gap: 40px;\n  padding: 0;\n}\n.news .news_section .news_items_list .news_item {\n  width: 100%;\n  height: 225px;\n  display: flex;\n  padding: 0;\n  position: relative;\n}\n.news .news_section .news_items_list .news_item .news_img {\n  background-position: center;\n  background-size: cover;\n  height: 100%;\n  width: 50%;\n}\n.news .news_section .news_items_list .news_item .news_text {\n  height: 100%;\n  width: 50%;\n  background-color: white;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding-left: 15px;\n}\n.news .news_section .news_items_list .news_item .news_text .contact {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n@media screen and (max-width: 766px) {\n.news .news_section .news_items_list .news_item .news_text .contact .download_advice {\n    display: none;\n}\n.news .news_section .news_items_list .news_item .news_text .contact .download_badge {\n    width: 300px;\n    height: 50%;\n    justify-content: flex-start;\n    left: 0;\n}\n}\n.news .news_section .news_items_list .news_item .news_text .contact h3 {\n  font-weight: 700;\n  font-size: 24px;\n}\n.news .news_section .news_items_list .news_item .news_text .contact p {\n  font-weight: 500;\n  font-size: 16px;\n}\n.news .news_section .news_items_list .news_item .news_text .contact button {\n  font-weight: 700;\n  color: white;\n  font-size: 14px;\n  padding: 10px;\n  background-color: #00c1b2;\n  width: 125px;\n  border: none;\n  border-radius: 5px;\n  opacity: 0.8;\n}\n.news .news_section .news_items_list .news_item .news_text .contact button:hover {\n  transition: ease-in-out 0.5s;\n  opacity: 1;\n}\n.news .news_section .news_items_list .news_item .news_text .contact .download {\n  width: 100%;\n  height: 27%;\n  display: flex;\n  align-items: center;\n  gap: 2px;\n}\n@media (max-width: 525px) {\n.news .news_section .news_items_list .news_item .news_text .contact .download {\n    display: flex;\n    flex-direction: column;\n    height: 50%;\n    position: relative;\n}\n}\n.news .news_section .news_items_list .news_item .news_text .contact .download .download_badge {\n  background-position: center;\n  background-size: cover;\n  width: 29%;\n  height: 60%;\n  border-radius: 5px;\n  cursor: pointer;\n}\n@media (max-width: 993px) {\n.news .news_section .news_items_list .news_item .news_text .contact .download .download_badge {\n    height: 60%;\n    width: 38%;\n}\n}\n@media (max-width: 765px) {\n.news .news_section .news_items_list .news_item .news_text .contact .download .download_advice {\n    display: none;\n}\n.news .news_section .news_items_list .news_item .news_text .contact .download .download {\n    height: 20%;\n}\n.news .news_section .news_items_list .news_item .news_text .contact .download .download_badge {\n    width: 49%;\n}\n}\n@media (max-width: 525px) {\n.news .news_section .news_items_list .news_item .news_text .contact .download .download_badge {\n    width: 60%;\n    height: 30%;\n}\n}\n@media (max-width: 765px) {\n.news .news_section .news_items_list .news_item .deliveroo_for_work .contact {\n    padding-left: 30px;\n}\n}\n.news .news_section .news_items_list .news_item .deliveroo_for_work::after {\n  content: \"\";\n  width: 40px;\n  height: 102%;\n  background: white;\n  transform: rotate(5.5deg);\n  position: absolute;\n  left: 48%;\n}\n.news .news_section .news_items_list .news_item .download_app::after {\n  content: \"\";\n  width: 40px;\n  height: 102%;\n  background: white;\n  transform: rotate(4deg);\n  position: absolute;\n  left: 48%;\n}\n@media (max-width: 767px) {\n.news .news_section .news_items_list .news_item .deliveroo_for_work::after {\n    content: \"\";\n    width: 15px;\n    height: 102%;\n    background: white;\n    transform: rotate(3.5deg);\n    position: absolute;\n    left: 49%;\n}\n.news .news_section .news_items_list .news_item .download_app::after {\n    content: \"\";\n    width: 15px;\n    height: 102%;\n    background: white;\n    transform: rotate(3deg);\n    position: absolute;\n    left: 49%;\n}\n.news .news_section .news_items_list .news_item .deliveroo_for_work {\n    padding-left: 10px;\n}\n.news .news_section .news_items_list .news_item .deliveroo_for_work h3 {\n    font-size: 20px;\n}\n.news .news_section .news_items_list .news_item .deliveroo_for_work p {\n    font-size: 16px;\n}\n.news .news_section .news_items_list .news_item .deliveroo_for_work button {\n    padding: 5px;\n    font-size: 10px;\n    height: 40px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    margin-bottom: 10px;\n}\n}\n@media (max-width: 476px) {\n.news .news_section .news_items_list .news_item .deliveroo_for_work::after {\n    content: \"\";\n    width: 25px;\n    height: 102%;\n    background: white;\n    transform: rotate(4deg);\n    position: absolute;\n    left: 48%;\n}\n.news .news_section .news_items_list .news_item .download_app::after {\n    content: \"\";\n    width: 25px;\n    height: 102%;\n    background: white;\n    transform: rotate(4deg);\n    position: absolute;\n    left: 48%;\n}\n.news .news_section .news_items_list .news_item .deliveroo_for_work h3 {\n    font-size: 20px;\n}\n.news .news_section .news_items_list .news_item .deliveroo_for_work p {\n    font-size: 16px;\n}\n.news .news_section .news_items_list .news_item .deliveroo_for_work button {\n    padding: 5px;\n    font-size: 10px;\n    height: 40px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    margin-bottom: 10px;\n}\n}\n@media (max-width: 390px) {\n.news .news_section .news_items_list .news_item .deliveroo_for_work {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n.news .news_section .news_items_list .news_item .deliveroo_for_work h3 {\n    max-height: 20%;\n    font-size: 12px;\n}\n.news .news_section .news_items_list .news_item .deliveroo_for_work p {\n    max-height: 30%;\n    font-size: 8px;\n}\n.news .news_section .news_items_list .news_item .deliveroo_for_work .deliveroo_for_work button {\n    padding: 5px;\n    font-size: 10px;\n    max-height: 30%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n}\n.news .deliveroo_for_work {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: 100%;\n}", ""]);
 
 // exports
 
@@ -2863,7 +2860,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".card-container {\n  height: 650px;\n}\n.card-container .card {\n  width: 32%;\n  height: 98%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  color: white;\n  padding: 0px;\n}\n@media screen and (max-width: 767px) {\n.card-container .card .card {\n    width: 100%;\n    height: 33%;\n}\n.card-container .card .card .card_text {\n    height: 30%;\n}\n.card-container .card .card .card_text h1 {\n    font-size: 36px;\n    font-weight: 700;\n}\n.card-container .card .card .card_pic {\n    height: 70%;\n}\n}\n.card-container .card .card_pic {\n  height: 50%;\n  width: 100%;\n  background-position: center;\n  background-size: cover;\n  overflow: hidden;\n}\n@media screen and (max-width: 767px) {\n.card-container .card .card_pic .card_pic {\n    height: 70%;\n}\n}\n.card-container .card .card_text {\n  width: 100%;\n  height: 50%;\n  padding: 40px 5px 0px 5px;\n}\n.card-container .card .card_text h1 {\n  font-size: 42px;\n}\n.card-container .card .card_text p {\n  font-size: 16px;\n  font-weight: 500;\n}\n.card-container .card .card_text button {\n  font-weight: 700;\n  color: white;\n  font-size: 14px;\n  padding: 10px;\n  background-color: #00c1b2;\n  border: none;\n  border-radius: 5px;\n  opacity: 1;\n}\n.card-container .card .card_text button:hover {\n  transition: ease-in-out 0.5s;\n  opacity: 0.8;\n}\n@media screen and (max-width: 957px) {\n.card-container .card .card_text h1 {\n    font-size: 36px;\n}\n.card-container .card .card_text p {\n    font-size: 14px;\n    font-weight: 500;\n}\n.card-container .card .card_text button {\n    font-size: 14px;\n}\n}\n.card-container #card_1 {\n  background-color: #FF483B;\n}\n.card-container #card_2 {\n  background-color: #FF8100;\n}\n.card-container #card_3 {\n  background-color: #BAC3C3;\n}\n@media screen and (max-width: 767px) {\n.card-container {\n    height: 2250px;\n    display: flex;\n    flex-direction: column;\n    gap: 10px;\n}\n.card-container .card {\n    width: 100%;\n    height: 33.3333333333%;\n}\n.card-container .card .card_text {\n    height: 30%;\n}\n.card-container .card .card_text h1 {\n    font-size: 22px;\n}\n.card-container .card .card_text p {\n    font-size: 14px;\n}\n.card-container .card .card_text button {\n    padding: 6px;\n}\n.card-container .card .card_pic {\n    height: 70%;\n}\n}", ""]);
+exports.push([module.i, ".cardBox {\n  width: 33%;\n  height: 400px;\n  position: relative;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n  border-radius: 20px;\n  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 10px 0px, rgba(0, 0, 0, 0.5) 0px 2px 25px 0px;\n}\n.cardBox .card {\n  position: absolute;\n  width: 95%;\n  height: 95%;\n  background: #000814;\n  border-radius: 20px;\n  z-index: 5;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n  text-align: center;\n  color: black;\n  overflow: hidden;\n  cursor: pointer;\n  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.5) 0px 18px 36px -18px inset;\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n.cardBox .card h2, .cardBox .card span {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  font-size: 3rem;\n  font-weight: 800;\n  pointer-events: none;\n  opacity: 0.9;\n  color: #00c1b2;\n  border-radius: 15px;\n}\n.cardBox .card:hover h2 {\n  display: none;\n}\n.cardBox .card .content p {\n  font-size: 1.6rem;\n  line-height: 25px;\n  color: #40E0D0;\n  padding: 0px 10px;\n}\n.cardBox .card .content {\n  transform: translateY(100%);\n  opacity: 0;\n  transition: 0.3s ease-in-out;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n}\n.cardBox .card .content button {\n  font-weight: 700;\n  color: white;\n  font-size: 14px;\n  padding: 10px;\n  background-color: #00c1b2;\n  border: none;\n  border-radius: 5px;\n  opacity: 1;\n}\n.cardBox .card .content button:hover {\n  transition: ease-in-out 0.5s;\n  opacity: 0.8;\n}\n.cardBox .card:hover .content {\n  transform: translateY(0);\n  opacity: 1;\n  background-color: rgba(0, 0, 0, 0.6);\n}\n.cardBox span {\n  top: 75%;\n}\n@media screen and (max-width: 767px) {\n.cardBox .cardBox {\n    width: 100%;\n}\n}\n.cardBox::before {\n  content: \"\";\n  position: absolute;\n  width: 40%;\n  height: 150%;\n  background: #40E0D0;\n  background: linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);\n  -webkit-animation: glowing01 5s linear infinite;\n          animation: glowing01 5s linear infinite;\n  transform-origin: center;\n  -webkit-animation: glowing 5s linear infinite;\n          animation: glowing 5s linear infinite;\n}\n@-webkit-keyframes glowing {\n0% {\n    transform: rotate(0);\n}\n100% {\n    transform: rotate(360deg);\n}\n}\n@keyframes glowing {\n0% {\n    transform: rotate(0);\n}\n100% {\n    transform: rotate(360deg);\n}\n}", ""]);
 
 // exports
 
@@ -4370,7 +4367,9 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container categories" }, [
-    _c("h1", [_vm._v(_vm._s(_vm.categoriesTitle))]),
+    _c("h1", { staticClass: "pt-5 pb-1" }, [
+      _vm._v(_vm._s(_vm.categoriesTitle)),
+    ]),
     _vm._v(" "),
     _c(
       "ul",
@@ -4972,7 +4971,9 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "news" }, [
     _c("section", { staticClass: "news_section container" }, [
-      _c("h1", [_vm._v("\n        " + _vm._s(_vm.titoloNews) + "\n        ")]),
+      _c("h1", { staticClass: "pt-5 pb-2" }, [
+        _vm._v("\n        " + _vm._s(_vm.titoloNews) + "\n        "),
+      ]),
       _vm._v(" "),
       _c("ul", { staticClass: "container news_items_list" }, [
         _c("li", { staticClass: "news_item" }, [
@@ -5262,7 +5263,7 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c("h1", { staticClass: "py-5" }, [
+    _c("h1", { staticClass: "py-3" }, [
       _vm._v("\n        " + _vm._s(_vm.lavoraConDelivebooTitle) + "\n    "),
     ]),
     _vm._v(" "),
@@ -5273,22 +5274,28 @@ var render = function () {
           "card-container w-100 d-flex align-items-center justify-content-between",
       },
       [
-        _c("li", { staticClass: "card" }, [
-          _c("div", { staticClass: "card_pic", style: _vm.rider }),
-          _vm._v(" "),
-          _vm._m(0),
+        _c("li", { staticClass: "cardBox" }, [
+          _c("div", { staticClass: "card", style: _vm.rider }, [
+            _c("h2", [_vm._v("Rider")]),
+            _vm._v(" "),
+            _vm._m(0),
+          ]),
         ]),
         _vm._v(" "),
-        _c("li", { staticClass: "card" }, [
-          _c("div", { staticClass: "card_pic", style: _vm.ristorante }),
-          _vm._v(" "),
-          _vm._m(1),
+        _c("li", { staticClass: "cardBox" }, [
+          _c("div", { staticClass: "card", style: _vm.ristorante }, [
+            _c("h2", [_vm._v("Ristorante")]),
+            _vm._v(" "),
+            _vm._m(1),
+          ]),
         ]),
         _vm._v(" "),
-        _c("li", { staticClass: "card" }, [
-          _c("div", { staticClass: "card_pic", style: _vm.lavoraConNoi }),
-          _vm._v(" "),
-          _vm._m(2),
+        _c("li", { staticClass: "cardBox" }, [
+          _c("div", { staticClass: "card", style: _vm.lavoraConNoi }, [
+            _c("h2", [_vm._v("Lavora con noi")]),
+            _vm._v(" "),
+            _vm._m(2),
+          ]),
         ]),
       ]
     ),
@@ -5299,36 +5306,16 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card_text", attrs: { id: "card_1" } }, [
-      _c("h1", [_vm._v("\n                    Rider\n                ")]),
-      _vm._v(" "),
+    return _c("div", { staticClass: "content", attrs: { id: "card_1" } }, [
       _c("p", [
         _vm._v(
-          "\n                    Diventa un rider: flessibità, ottimi guadagni e un mondo di vantaggi per te.\n                "
-        ),
-      ]),
-      _vm._v(" "),
-      _c("button", [
-        _vm._v("\n                    Unisciti a noi\n                "),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card_text", attrs: { id: "card_2" } }, [
-      _c("h1", [_vm._v("\n                    Ristoranti\n                ")]),
-      _vm._v(" "),
-      _c("p", [
-        _vm._v(
-          "\n                    Diventa partner di Deliveroo e raggiungi sempre più clienti. Ci occupiamo noi della consegna,\n                    così che la tua unica preoccupazione sia continuare a preparare il miglior cibo.\n                "
+          "\n                        Diventa un rider: flessibità, ottimi guadagni e un mondo di vantaggi per te.\n                    "
         ),
       ]),
       _vm._v(" "),
       _c("button", [
         _vm._v(
-          "\n                    Diventa nostro partner\n                "
+          "\n                        Unisciti a noi\n                    "
         ),
       ]),
     ])
@@ -5337,19 +5324,33 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card_text", attrs: { id: "card_3" } }, [
-      _c("h1", [
-        _vm._v("\n                    Lavora con noi\n                "),
-      ]),
-      _vm._v(" "),
+    return _c("div", { staticClass: "content", attrs: { id: "card_1" } }, [
       _c("p", [
         _vm._v(
-          "\n                    La nostra missione è trasformare il modo in cui le persone mangiano.\n                    E' un obbiettivo molto ambizioso, come noi, e ci servono persone che ci aiutino a raggiungerlo.\n                "
+          "\n                        Diventa partner di Deliveroo e raggiungi sempre più clienti. Ci occupiamo noi della consegna,\n                        così che la tua unica preoccupazione sia continuare a preparare il miglior cibo.\n                    "
         ),
       ]),
       _vm._v(" "),
       _c("button", [
-        _vm._v("\n                    Scopri di più\n                "),
+        _vm._v(
+          "\n                        Diventa nostro partner\n                    "
+        ),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "content", attrs: { id: "card_1" } }, [
+      _c("p", [
+        _vm._v(
+          "\n                        La nostra missione è trasformare il modo in cui le persone mangiano.\n                        E' un obbiettivo molto ambizioso, come noi, e ci servono persone che ci aiutino a raggiungerlo.\n                    "
+        ),
+      ]),
+      _vm._v(" "),
+      _c("button", [
+        _vm._v("\n                        Scopri di più\n                    "),
       ]),
     ])
   },
@@ -22091,7 +22092,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\black\Project\Hub Project\LARAVEL\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\casa\OneDrive\Desktop\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })
