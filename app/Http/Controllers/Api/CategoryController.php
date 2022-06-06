@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Category;
 use App\Http\Controllers\Controller;
-use App\User;
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,12 +15,11 @@ class UserController extends Controller
      */
     public function index()
     {
-       $users = User::with('products', 'categories')->get();
-
-       return response()->json([
-           'users' => $users,
-           'succes' => true
-       ]);
+        $categories = Category::with('users')->orderBy('name', 'asc')->get();
+        return response()->json([
+            'categories' => $categories,
+            'success' => true
+        ]);
     }
 
     /**

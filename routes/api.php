@@ -23,6 +23,10 @@ Route::namespace('Api')->group(function(){
         'index',
         'show'
     ]);
+    Route::resource('categories', 'CategoryController')->only([
+        'index',
+        'show'
+    ]);
     // ->parameters([
     //     'posts' => 'post:slug'
     // ]);
