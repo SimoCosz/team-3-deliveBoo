@@ -4,12 +4,12 @@
         <h1 class="favourite-title">I tuoi piatti preferiti, consegnati da noi</h1>
         <div class="favourite-card-container">
           <!-- CARD CICLE -->
-          <a class="favourite-link" v-for="user in users" :key="user.id" href="">
+          <router-link tag="a" :to="{name:'menu.restaurant', params:{slug:user.slug} }" class="favourite-link" v-for="user in users" :key="user.id" href="">
             <div class="favourite-card">
               <img class="favourite-img" :src="user.cover" alt="">
               <h2 class="favourite-name">{{user.name}}</h2>
             </div>
-          </a>
+          </router-link>
           <!-- END CARD CICLE -->
         </div>
     </div>

@@ -12,15 +12,18 @@
           <!-- after -->
             <h5 class="my-3">Categorie</h5>
           <div class="check my-2" v-for="category in categories" :key="category.id">
-            <input type="checkbox" :id="category.name" :name="category.name" :value="category.name" @click="checkCategories">
+            <input type="checkbox" v-model="categoryFiltered" :id="category.name" :name="category.name" :value="category.name">
             <label :for="category.name">{{category.name}}</label>
           </div>
         </div>
         <div class="col-9 restaurants">
           <h2>Ristoranti che consegnano a Roma</h2>
-          <div class="container-card">
+          <div class="container-card" v-if="this.filteredRestaurants.length == 0">
+            <h3>Nessun ristorante trovato</h3>
             <!-- card -->
-            <RestaurantCard v-for="user in users" :key="user.id" :element="user" />
+          </div>
+          <div class="container-card" v-else>
+            <RestaurantCard :element="user" v-for="user in filteredUsers" :key="user.id"/>
           </div>
         </div>
       </div>
@@ -73,6 +76,11 @@ import RestaurantCard from '../components/RestaurantCard.vue'
             this.$router.push("/404");
         });
       },
+
+      // checkCategories(){
+      //   console.log(this.categoryFiltered);
+      // },
+
       checkCategoriesContain(user){
         let userCategories = user.categories.map((c)=>{
           return c.name;

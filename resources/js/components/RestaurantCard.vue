@@ -1,19 +1,19 @@
 <template>
-  <router-link class="card" tag="a" :to="{name:'menu.restaurant', params:{slug:element.slug} }">
-    <div class="cover-wrapper">
-      <figure>
-        <img class="cover" :src="element.cover" alt="">
-      </figure>
-      <div class="delivery">
-        <p class="p-0 m-0">Consegna gratuita</p>
+    <router-link class="card" tag="a" :to="{name:'menu.restaurant', params:{slug:element.slug} }">
+      <div class="cover-wrapper">
+        <figure>
+          <img class="cover" :src="element.cover" alt="">
+        </figure>
+        <div class="delivery">
+          <p class="p-0 m-0">Consegna gratuita</p>
+        </div>
       </div>
-    </div>
-    <div class="descritpion p-2">
-      <h5 class="title">{{element.name}}</h5>
-      <p class="p-0 m-0">{{element.address}}, {{element.city}} </p>
-      <p class="p-0 m-0">{{element.telephone_number}}</p>
-    </div>
-  </router-link>
+      <div class="descritpion p-2">
+        <h5 class="title">{{element.name}}</h5>
+        <p class="p-0 m-0">{{element.address}}, {{element.city}} </p>
+        <p class="p-0 m-0">{{element.telephone_number}}</p>
+      </div>
+    </router-link>
 </template>
 
 <script>

@@ -2074,6 +2074,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 
@@ -2117,6 +2120,9 @@ __webpack_require__.r(__webpack_exports__);
         _this2.$router.push("/404");
       });
     },
+    // checkCategories(){
+    //   console.log(this.categoryFiltered);
+    // },
     checkCategoriesContain: function checkCategoriesContain(user) {
       var userCategories = user.categories.map(function (c) {
         return c.name;
@@ -4737,13 +4743,47 @@ var render = function () {
                 { key: category.id, staticClass: "check my-2" },
                 [
                   _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.categoryFiltered,
+                        expression: "categoryFiltered",
+                      },
+                    ],
                     attrs: {
                       type: "checkbox",
                       id: category.name,
                       name: category.name,
                     },
-                    domProps: { value: category.name },
-                    on: { click: _vm.checkCategories },
+                    domProps: {
+                      value: category.name,
+                      checked: Array.isArray(_vm.categoryFiltered)
+                        ? _vm._i(_vm.categoryFiltered, category.name) > -1
+                        : _vm.categoryFiltered,
+                    },
+                    on: {
+                      change: function ($event) {
+                        var $$a = _vm.categoryFiltered,
+                          $$el = $event.target,
+                          $$c = $$el.checked ? true : false
+                        if (Array.isArray($$a)) {
+                          var $$v = category.name,
+                            $$i = _vm._i($$a, $$v)
+                          if ($$el.checked) {
+                            $$i < 0 &&
+                              (_vm.categoryFiltered = $$a.concat([$$v]))
+                          } else {
+                            $$i > -1 &&
+                              (_vm.categoryFiltered = $$a
+                                .slice(0, $$i)
+                                .concat($$a.slice($$i + 1)))
+                          }
+                        } else {
+                          _vm.categoryFiltered = $$c
+                        }
+                      },
+                    },
                   }),
                   _vm._v(" "),
                   _c("label", { attrs: { for: category.name } }, [
@@ -4759,17 +4799,21 @@ var render = function () {
         _c("div", { staticClass: "col-9 restaurants" }, [
           _c("h2", [_vm._v("Ristoranti che consegnano a Roma")]),
           _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "container-card" },
-            _vm._l(_vm.users, function (user) {
-              return _c("RestaurantCard", {
-                key: user.id,
-                attrs: { element: user },
-              })
-            }),
-            1
-          ),
+          this.filteredRestaurants.length == 0
+            ? _c("div", { staticClass: "container-card" }, [
+                _c("h3", [_vm._v("Nessun ristorante trovato")]),
+              ])
+            : _c(
+                "div",
+                { staticClass: "container-card" },
+                _vm._l(_vm.filteredUsers, function (user) {
+                  return _c("RestaurantCard", {
+                    key: user.id,
+                    attrs: { element: user },
+                  })
+                }),
+                1
+              ),
         ]),
       ]),
     ]),
@@ -4847,11 +4891,15 @@ var render = function () {
         { staticClass: "favourite-card-container" },
         _vm._l(_vm.users, function (user) {
           return _c(
-            "a",
+            "router-link",
             {
               key: user.id,
               staticClass: "favourite-link",
-              attrs: { href: "" },
+              attrs: {
+                tag: "a",
+                to: { name: "menu.restaurant", params: { slug: user.slug } },
+                href: "",
+              },
             },
             [
               _c("div", { staticClass: "favourite-card" }, [
@@ -4867,7 +4915,7 @@ var render = function () {
             ]
           )
         }),
-        0
+        1
       ),
     ]),
   ])
