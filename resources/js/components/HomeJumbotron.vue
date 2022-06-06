@@ -11,7 +11,7 @@
                     <div class="jumbo-search">
                         <div class="jumbo-search-bar-container">
                             <input class="jumbo-search-bar" placeholder="Inserisci il tuo indirizzo completo" type="text">
-                            <i class="fa-solid fa-location-arrow"></i>
+                            <i class="bi bi-geo-alt"></i>
                         </div>
                         <button class="jumbo-button-search">Cerca</button>
                     </div>
@@ -38,12 +38,14 @@ export default {
 <style lang="scss" scoped>
 .jumbo-container{
     background-image: url('../../../public/img/background-jumbo.png');
+    background-color: #00CCBC;
     background-position: center;
     background-repeat: no-repeat;
-    height: 400px;
+    height: 396px;
     max-width: 100vw;
     display: flex;
     justify-content: center;
+
 
     .jumbo-sub-container{
         width: 1024px;
@@ -101,8 +103,8 @@ export default {
                             height: 100%;
                         }
 
-                        .fa-location-arrow{
-                            height: 16px;
+                        .bi-geo-alt{
+                            font-size: 20px;
                             color: #00CCBC;
                             position: absolute;
                             z-index: 1;
@@ -161,6 +163,7 @@ export default {
     @media (max-width: 1024px){
         .jumbo-sub-container{
             justify-content: center;
+            align-items: center;
 
             .jumbo-left{
                 width: 80%;
@@ -196,6 +199,14 @@ export default {
         .jumbo-button-search{
             padding: 8px 15px !important;
         }
+
+    }
+    @media (max-width: 500px){
+        
+        .bi-geo-alt{
+            display: none;
+        }
+
     }
 }
 </style>

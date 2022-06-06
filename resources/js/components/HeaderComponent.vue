@@ -81,6 +81,7 @@ a{
 
 nav{
   padding: 10px 0;
+  background-color: #00CCBC;
 
   .cover{
     max-width: 150px;
