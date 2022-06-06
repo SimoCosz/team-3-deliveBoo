@@ -96,13 +96,13 @@ export default {
       }
       @media (max-width: 1024px){
         .favourite-link{
-          width: 38%;
+          width: 43%;
         }
       }
 
       @media (max-width: 650px){
         .favourite-link{
-          width: 80%;
+          width: 90%;
         }
       }
     }

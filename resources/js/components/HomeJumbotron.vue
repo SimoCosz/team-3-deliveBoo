@@ -166,7 +166,7 @@ export default {
             align-items: center;
 
             .jumbo-left{
-                width: 80%;
+                width: 90%;
 
                 .jumbo-left-title{
                     text-align: center;
