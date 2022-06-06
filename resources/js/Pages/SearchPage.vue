@@ -12,8 +12,8 @@
           <!-- after -->
             <h5 class="my-3">Categorie</h5>
           <div class="check my-2" v-for="category in categories" :key="category.id">
-            <input type="checkbox" id="categories" name="categories">
-            <label for="categories">{{category.name}}</label>
+            <input type="checkbox" :id="category.name" :name="category.name" :value="category.name" @click="checkCategories">
+            <label :for="category.name">{{category.name}}</label>
           </div>
         </div>
         <div class="col-9 restaurants">
@@ -42,10 +42,13 @@ import RestaurantCard from '../components/RestaurantCard.vue'
     data(){
       return{
         users: [],
-        categories: []
+        categories: [],
+        filteredUsers: [],
+        userCategories: [],
+        categoryFiltered: [],
+        loading: false
       }
     },
-
     methods:{
       fetchRestaurant() {
         axios.get("/api/users")
@@ -69,6 +72,26 @@ import RestaurantCard from '../components/RestaurantCard.vue'
           console.warn(err);
             this.$router.push("/404");
         });
+      },
+      checkCategoriesContain(user){
+        let userCategories = user.categories.map((c)=>{
+          return c.name;
+        });
+        return this.categoryFiltered.every((el)=>{
+          return userCategories.includes(el);
+        });
+      }
+    },
+    computed: {
+      filteredRestaurants(){
+        if(!this.categoryFiltered.length){
+          return(this.filteredUsers = this.users);
+        } else {
+          this.filteredUsers = this.users.filter(
+            this.checkCategoriesContain
+          );
+          return this.filteredUsers;
+        }
       }
     },
     

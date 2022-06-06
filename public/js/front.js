@@ -2085,7 +2085,11 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       users: [],
-      categories: []
+      categories: [],
+      filteredUsers: [],
+      userCategories: [],
+      categoryFiltered: [],
+      loading: false
     };
   },
   methods: {
@@ -2112,6 +2116,24 @@ __webpack_require__.r(__webpack_exports__);
 
         _this2.$router.push("/404");
       });
+    },
+    checkCategoriesContain: function checkCategoriesContain(user) {
+      var userCategories = user.categories.map(function (c) {
+        return c.name;
+      });
+      return this.categoryFiltered.every(function (el) {
+        return userCategories.includes(el);
+      });
+    }
+  },
+  computed: {
+    filteredRestaurants: function filteredRestaurants() {
+      if (!this.categoryFiltered.length) {
+        return this.filteredUsers = this.users;
+      } else {
+        this.filteredUsers = this.users.filter(this.checkCategoriesContain);
+        return this.filteredUsers;
+      }
     }
   },
   mounted: function mounted() {
@@ -4655,7 +4677,7 @@ var render = function () {
     { staticClass: "container" },
     _vm._l(_vm.user.products, function (product) {
       return _c("div", { key: product.id }, [
-        _vm._v("\n    " + _vm._s(product.name) + "\n  "),
+        _vm._v("\r\n    " + _vm._s(product.name) + "\r\n  "),
       ])
     }),
     0
@@ -4717,12 +4739,14 @@ var render = function () {
                   _c("input", {
                     attrs: {
                       type: "checkbox",
-                      id: "categories",
-                      name: "categories",
+                      id: category.name,
+                      name: category.name,
                     },
+                    domProps: { value: category.name },
+                    on: { click: _vm.checkCategories },
                   }),
                   _vm._v(" "),
-                  _c("label", { attrs: { for: "categories" } }, [
+                  _c("label", { attrs: { for: category.name } }, [
                     _vm._v(_vm._s(category.name)),
                   ]),
                 ]
@@ -21281,7 +21305,7 @@ module.exports = "/images/ios-badge.png?2566899de2c3663e0250b22d1a160aa7";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/jumbo-bkg-svg2.svg?ece43a1805da9c592135a025ae78cca8";
+module.exports = "/images/jumbo-bkg-svg2.svg?8de0ecba9e591757458db25a3d02de10";
 
 /***/ }),
 
@@ -22826,11 +22850,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-module.exports = __webpack_require__(/*! /Users/simonecoszach/Developer/Boolean/Corso/Projects/team-3-deliveBoo/resources/js/front.js */"./resources/js/front.js");
-=======
-module.exports = __webpack_require__(/*! C:\Users\casa\OneDrive\Desktop\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
->>>>>>> body-alb-2nd
+module.exports = __webpack_require__(/*! C:\Users\black\Project\Hub Project\LARAVEL\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })
