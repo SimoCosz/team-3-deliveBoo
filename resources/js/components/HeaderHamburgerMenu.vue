@@ -67,6 +67,7 @@ a{
       padding: 5px 10px;
       border-radius: 5px;
       white-space: nowrap;
+      background-color: white;
 
       &:hover{
         border: 2px solid #97CDB4;

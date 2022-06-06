@@ -80,11 +80,10 @@ a{
 }
 
 nav{
-  padding: 10px 0;
   background-color: #00CCBC;
 
   .cover{
-    max-width: 150px;
+    max-width: 200px;
   }
 
   .items-menu{
@@ -96,6 +95,7 @@ nav{
       padding: 5px 10px;
       border-radius: 5px;
       white-space: nowrap;
+      background-color: white;
 
       &:hover{
         border: 2px solid #97CDB4;
