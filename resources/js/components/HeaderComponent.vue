@@ -80,6 +80,10 @@ a{
 }
 
 nav{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   background-color: transparent;
   padding: 10px 0;
 

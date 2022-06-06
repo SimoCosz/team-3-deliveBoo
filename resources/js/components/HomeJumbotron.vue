@@ -46,7 +46,6 @@ export default {
     display: flex;
     justify-content: center;
 
-
     .jumbo-sub-container{
         width: 1140px;
         display: flex;
