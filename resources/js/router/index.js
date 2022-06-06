@@ -6,6 +6,8 @@ Vue.use(VueRouter)
 import HomeComponent from '../Pages/HomeComponent.vue'
 import NotFound from '../Pages/404.vue'
 import CategoriesIndex from '../components/CategoriesIndex.vue'
+import SearchPage from '../Pages/SearchPage.vue'
+import MenuPage from '../Pages/MenuPage.vue'
 
 const routes = [
   {
@@ -17,6 +19,16 @@ const routes = [
     path: '/categories',
     name: 'categories.index',
     component: CategoriesIndex
+  },
+  {
+    path: '/search',
+    name: 'search.restaurant',
+    component: SearchPage
+  },
+  {
+    path: '/menu/:slug',
+    name: 'menu.restaurant',
+    component: MenuPage
   },
   {
     path: '/*',

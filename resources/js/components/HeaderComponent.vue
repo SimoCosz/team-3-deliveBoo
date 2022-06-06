@@ -80,7 +80,7 @@ a{
 }
 
 nav{
-  background-color: #00CCBC;
+  background-color: transparent;
   padding: 10px 0;
 
   .cover{
