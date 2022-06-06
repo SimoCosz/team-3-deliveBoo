@@ -48,7 +48,7 @@ export default {
 
 
     .jumbo-sub-container{
-        width: 1024px;
+        width: 1140px;
         display: flex;
         position: relative;
 

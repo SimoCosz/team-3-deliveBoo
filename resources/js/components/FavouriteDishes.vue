@@ -50,7 +50,7 @@ export default {
   justify-content: center;
 
   .favourite-container{
-    width: 1024px;
+    width: 1140px;
     display: flex;
     flex-direction: column;
     margin-top: 50px;

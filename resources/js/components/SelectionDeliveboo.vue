@@ -66,7 +66,7 @@ export default {
     justify-content: center;
 
     .selection-sub-container{
-        width: 1024px;
+        width: 1140px;
         display: flex;
         flex-direction: column;
         position: relative;
