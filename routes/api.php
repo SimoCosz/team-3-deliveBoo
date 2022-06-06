@@ -29,5 +29,9 @@ Route::namespace('Api')->group(function(){
 
     // Route::get('/categories', 'CategoryController@index');
     // Route::get('/categories/{category}/posts', 'CategoryController@archive');
+    Route::resource('categories', 'CategoryController')->only([
+        'index',
+        'show'
+    ]);
 });
 

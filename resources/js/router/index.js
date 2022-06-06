@@ -5,12 +5,18 @@ Vue.use(VueRouter)
 
 import HomeComponent from '../Pages/HomeComponent.vue'
 import NotFound from '../Pages/404.vue'
+import CategoriesIndex from '../components/CategoriesIndex.vue'
 
 const routes = [
   {
     path: '/',
     name: 'home',
     component: HomeComponent
+  },
+  {
+    path: '/categories',
+    name: 'categories.index',
+    component: CategoriesIndex
   },
   {
     path: '/*',
