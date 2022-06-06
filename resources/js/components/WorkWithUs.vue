@@ -1,51 +1,48 @@
 <template>
     <div class="container">
-        <h1 class="py-5">
+        <h1 class="py-3">
             {{lavoraConDelivebooTitle}}
         </h1>
         <ul class="card-container w-100 d-flex align-items-center justify-content-between">
-            <li class="card">
-                <div class="card_pic" :style="rider"></div>
-                <div class="card_text" id="card_1">
-                    <h1>
-                        Rider
-                    </h1>
-                    <p>
-                        Diventa un rider: flessibità, ottimi guadagni e un mondo di vantaggi per te.
-                    </p>
-                    <button>
-                        Unisciti a noi
-                    </button>
+            <li class="cardBox">
+                <div class="card" :style="rider">
+                    <h2>Rider</h2>
+                    <div class="content" id="card_1">
+                        <p>
+                            Diventa un rider: flessibità, ottimi guadagni e un mondo di vantaggi per te.
+                        </p>
+                        <button>
+                            Unisciti a noi
+                        </button>
+                    </div>
                 </div>
             </li>
-            <li class="card">
-                <div class="card_pic" :style="ristorante"></div>
-                <div class="card_text" id="card_2">
-                    <h1>
-                        Ristoranti
-                    </h1>
-                    <p>
-                        Diventa partner di Deliveroo e raggiungi sempre più clienti. Ci occupiamo noi della consegna,
-                        così che la tua unica preoccupazione sia continuare a preparare il miglior cibo.
-                    </p>
-                    <button>
-                        Diventa nostro partner
-                    </button>
+            <li class="cardBox">
+                <div class="card" :style="ristorante">
+                    <h2>Ristorante</h2>
+                    <div class="content" id="card_1">
+                        <p>
+                            Diventa partner di Deliveroo e raggiungi sempre più clienti. Ci occupiamo noi della consegna,
+                            così che la tua unica preoccupazione sia continuare a preparare il miglior cibo.
+                        </p>
+                        <button>
+                            Diventa nostro partner
+                        </button>
+                    </div>
                 </div>
             </li>
-            <li class="card">
-                <div class="card_pic" :style="lavoraConNoi"></div>
-                <div class="card_text" id="card_3">
-                    <h1>
-                        Lavora con noi
-                    </h1>
-                    <p>
-                        La nostra missione è trasformare il modo in cui le persone mangiano.
-                        E' un obbiettivo molto ambizioso, come noi, e ci servono persone che ci aiutino a raggiungerlo.
-                    </p>
-                    <button>
-                        Scopri di più
-                    </button>
+            <li class="cardBox">
+                <div class="card" :style="lavoraConNoi">
+                    <h2>Lavora con noi</h2>
+                    <div class="content" id="card_1">
+                        <p>
+                            La nostra missione è trasformare il modo in cui le persone mangiano.
+                            E' un obbiettivo molto ambizioso, come noi, e ci servono persone che ci aiutino a raggiungerlo.
+                        </p>
+                        <button>
+                            Scopri di più
+                        </button>
+                    </div>
                 </div>
             </li>
         </ul>
@@ -66,122 +63,115 @@ export default {
 </script>
 
 <style lang="scss">
-    .card-container{
-        // border: 3px solid red;
-        height: 650px;
-        .card{
-            width: 32%;
-            height: 98%;
-            // border: 1px solid blue;
+.cardBox {
+    width: 33%;
+    height: 400px;
+    position: relative;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 10px 0px, rgba(0, 0, 0, 0.5) 0px 2px 25px 0px;
+    .card {
+        position: absolute;
+        width: 95%;
+        height: 95%;
+        background: #000814;
+        border-radius: 20px;
+        z-index: 5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        color: black;
+        overflow: hidden;
+        // padding: 20px;
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 60px -12px inset,
+        rgba(0, 0, 0, 0.5) 0px 18px 36px -18px inset;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        h2, span{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            font-weight: 800;
+            pointer-events: none;
+            opacity: 0.9;
+            color: #00c1b2;
+            border-radius: 15px;
+        }
+        &:hover h2{
+            display: none;
+        }
+        .content p {
+            font-size: 1.6rem;
+            line-height: 25px;
+            color: #40E0D0;
+            padding: 0px 10px;
+        }
+        .content {
+            transform: translateY(100%);
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+            width: 100%;
+            height: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            color: white;
-            padding: 0px;
-            @media screen and (max-width: 767px){
-                .card{
-                    width: 100%;
-                    height: 33%;
-                    .card_text{
-                        height: 30%;
-                        h1{
-                            font-size: 36px;
-                            font-weight: 700;
-                        }
-                    }
-                    .card_pic{
-                        height: 70%;
-                    }
-                }
-            }
-            .card_pic{
-                height: 50%;
-                width: 100%;
-                background-position: center;
-                background-size: cover;
-                overflow: hidden;
-                @media screen and (max-width: 767px){
-                    .card_pic{
-                        height: 70%;
-                    }
-                }
-            }
-            .card_text{
-                width: 100%;
-                height: 50%;
-                // display: flex;
-                // flex-direction: column;
-                // align-items: center;
-                // justify-content: flex-start;
-                padding: 40px 5px 0px 5px;
-                h1{
-                    font-size: 42px;
-                }
-                p{
-                    font-size: 16px;
-                    font-weight: 500;
-                }
-                button{
-                    font-weight: 700;
-                    color: white;
-                    font-size: 14px;
-                    padding: 10px;
-                    background-color: #00c1b2;
-                    border: none;
-                    border-radius: 5px;
-                    opacity: 1;
-                    &:hover{
-                        transition: ease-in-out 0.5s;
-                        opacity: 0.8;
-                    }
-                }
-                @media screen and (max-width: 957px){
-                    h1{
-                        font-size: 36px;
-                    }
-                    p{
-                        font-size: 14px;
-                        font-weight: 500;
-                    }
-                    button{
-                        font-size: 14px;
-                    }
+            justify-content: center;
+            button{
+                font-weight: 700;
+                color: white;
+                font-size: 14px;
+                padding: 10px;
+                background-color: #00c1b2;
+                border: none;
+                border-radius: 5px;
+                opacity: 1;
+                &:hover{
+                    transition: ease-in-out 0.5s;
+                    opacity: 0.8;
                 }
             }
         }
-        #card_1{
-            background-color: #FF483B
-        }
-        #card_2{
-            background-color: #FF8100;
-        }
-        #card_3{
-            background-color: #BAC3C3;
-        }
-        @media screen and (max-width: 767px){
-            height: 2250px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            .card{
-                width: 100%;
-                height: calc(100% / 3);
-                .card_text{
-                    height: 30%;
-                    h1{
-                        font-size: 22px;
-                    }
-                    p{
-                        font-size: 14px;
-                    }
-                    button{
-                        padding: 6px;
-                    }
-                }
-                .card_pic{
-                    height: 70%;
-                }
-            }
+        &:hover .content {
+            transform: translateY(0);
+            opacity: 1;
+            background-color: rgba(0, 0, 0, 0.6);
         }
     }
+    span {
+        top: 75%;
+    }
+    @media screen and (max-width: 767px){
+        .cardBox{
+        width: 100%;
+        }
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        width: 40%;
+        height: 150%;
+        background: #40E0D0;
+        background: -webkit-linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);
+        background: linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);
+        animation: glowing01 5s linear infinite;
+        transform-origin: center;
+        animation: glowing 5s linear infinite;
+    }
+    @keyframes glowing {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    }
+}
 </style>
