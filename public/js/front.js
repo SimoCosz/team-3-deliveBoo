@@ -4889,31 +4889,36 @@ var render = function () {
       _c(
         "div",
         { staticClass: "favourite-card-container" },
-        _vm._l(_vm.users, function (user) {
-          return _c(
-            "router-link",
-            {
-              key: user.id,
-              staticClass: "favourite-link",
-              attrs: {
-                tag: "a",
-                to: { name: "menu.restaurant", params: { slug: user.slug } },
-                href: "",
-              },
-            },
-            [
-              _c("div", { staticClass: "favourite-card" }, [
-                _c("img", {
-                  staticClass: "favourite-img",
-                  attrs: { src: user.cover, alt: "" },
-                }),
-                _vm._v(" "),
-                _c("h2", { staticClass: "favourite-name" }, [
-                  _vm._v(_vm._s(user.name)),
-                ]),
-              ]),
-            ]
-          )
+        _vm._l(_vm.users, function (user, i) {
+          return i < 12
+            ? _c(
+                "router-link",
+                {
+                  key: user.id,
+                  staticClass: "favourite-link",
+                  attrs: {
+                    tag: "a",
+                    to: {
+                      name: "menu.restaurant",
+                      params: { slug: user.slug },
+                    },
+                    href: "",
+                  },
+                },
+                [
+                  _c("div", { staticClass: "favourite-card" }, [
+                    _c("img", {
+                      staticClass: "favourite-img",
+                      attrs: { src: user.cover, alt: "" },
+                    }),
+                    _vm._v(" "),
+                    _c("h2", { staticClass: "favourite-name" }, [
+                      _vm._v(_vm._s(user.name)),
+                    ]),
+                  ]),
+                ]
+              )
+            : _vm._e()
         }),
         1
       ),
