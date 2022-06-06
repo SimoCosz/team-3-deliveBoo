@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>DeliveBoo</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,7 +18,8 @@
   
     <!-- Styles -->
     <link href="{{ asset('css/front.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet"> 
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="icon" href="{{ URL::asset('/img/logo-favicon.png') }}" type="image/x-icon">
 </head>
 <body>
   <div id="root"></div>

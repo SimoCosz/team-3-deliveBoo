@@ -59,17 +59,17 @@
           <ul>
             <li>
               <a href="#">
-                <i class="bi bi-facebook icon"></i>
+                <i class="bi bi-facebook icon fb"></i>
               </a>
             </li>
             <li>
               <a href="#">
-                <i class="bi bi-twitter icon"></i>
+                <i class="bi bi-twitter icon tw"></i>
               </a>
             </li>
             <li>
               <a href="#">
-                <i class="bi bi-instagram icon"></i>
+                <i class="bi bi-instagram icon inst"></i>
               </a>
             </li>
           </ul>
@@ -140,8 +140,13 @@ a{
     color: white;
     padding: 10px;
 
-    &:hover{
-      color: rgb(74, 74, 196);
+    .fb:hover{
+      color: #0C88F0;
+    }
+    .tw:hover{
+      color: #1EA1F2;
+    }.inst:hover{
+      color: #CA2768;
     }
   }
   .copy{
