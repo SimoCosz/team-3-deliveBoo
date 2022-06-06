@@ -1266,7 +1266,7 @@ return[
     'city' => 'Via Bellinzona 21', 
     'telephone_number' => '0645615924',
     'p_iva' => '00000000000',
-    'cover' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt8HM12ZJp9Nu2Ei4iZFO01f_0p6c_5lWH4w&usqp=CAU',
+    'cover' => 'https://rs-menus-api.roocdn.com/images/c91843fe-b1d9-4c49-8043-0020fca35504/image.jpeg?width=388&height=279&auto=webp&format=jpg&fit=crop',
     'email' => 'burritos@gmail.com',
     'password' => 'Password',
     'categories' => [

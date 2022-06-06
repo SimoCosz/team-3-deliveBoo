@@ -34,7 +34,7 @@
           </ul>
         </div>
         <div class="card-footer">
-          <h6>Porta Deliveroo con te</h6>
+          <h6>Porta Deliveboo con te</h6>
           <ul>
             <li>
               <a href="#">
