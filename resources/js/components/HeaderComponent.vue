@@ -4,7 +4,7 @@
         <div class="container-fluid">
           <div class="container">
             <div class="row justify-content-between align-items-center">
-              <figure class="cover">
+              <figure class="cover m-0">
                 <a href="/">
                   <img src="../../../public/img/logo-navbar.png" alt="">
                 </a>
@@ -81,6 +81,7 @@ a{
 
 nav{
   background-color: #00CCBC;
+  padding: 10px 0;
 
   .cover{
     max-width: 200px;

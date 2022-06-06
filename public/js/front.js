@@ -2521,7 +2521,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "ul[data-v-153bfd55], li[data-v-153bfd55] {\n  list-style: none;\n}\nul[data-v-153bfd55] {\n  display: contents;\n}\na[data-v-153bfd55] {\n  text-decoration: none;\n  color: currentColor;\n}\nnav[data-v-153bfd55] {\n  background-color: #00CCBC;\n}\nnav .cover[data-v-153bfd55] {\n  max-width: 200px;\n}\nnav .items-menu[data-v-153bfd55] {\n  display: flex;\n  gap: 10px;\n}\nnav .items-menu .item[data-v-153bfd55] {\n  border: 2px solid #E9EBEB;\n  padding: 5px 10px;\n  border-radius: 5px;\n  white-space: nowrap;\n  background-color: white;\n}\nnav .items-menu .item[data-v-153bfd55]:hover {\n  border: 2px solid #97CDB4;\n}\nnav .items-menu .dropdown[data-v-153bfd55] {\n  position: relative;\n}\nnav .items-menu .dropdown[data-v-153bfd55]:hover {\n  border: 2px solid #97CDB4;\n}\nnav .items-menu .dropdown .dropbtn[data-v-153bfd55] {\n  cursor: pointer;\n}\nnav .items-menu .dropdown .dropdown-content[data-v-153bfd55] {\n  display: none;\n  position: absolute;\n  top: 105%;\n  left: 0;\n  border-radius: 5px;\n  width: 200px;\n  font-size: 12px;\n  background-color: #F8FAFC;\n  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);\n  z-index: 999;\n}\nnav .items-menu .dropdown .dropdown-content.show[data-v-153bfd55] {\n  display: block;\n}\nnav .items-menu .dropdown .dropdown-content li[data-v-153bfd55] {\n  padding: 5px;\n  border-radius: 5px;\n}\nnav .items-menu .dropdown .dropdown-content li a[data-v-153bfd55] {\n  padding: 10px;\n}\nnav .items-menu .dropdown .dropdown-content li[data-v-153bfd55]:hover {\n  background-color: #dddddd;\n}\n@media (max-width: 768px) {\nnav .items-menu[data-v-153bfd55] {\n    display: none;\n}\nnav .ghost[data-v-153bfd55] {\n    display: block;\n    white-space: nowrap;\n}\n}\n.ghost[data-v-153bfd55] {\n  display: none;\n}", ""]);
+exports.push([module.i, "ul[data-v-153bfd55], li[data-v-153bfd55] {\n  list-style: none;\n}\nul[data-v-153bfd55] {\n  display: contents;\n}\na[data-v-153bfd55] {\n  text-decoration: none;\n  color: currentColor;\n}\nnav[data-v-153bfd55] {\n  background-color: #00CCBC;\n  padding: 10px 0;\n}\nnav .cover[data-v-153bfd55] {\n  max-width: 200px;\n}\nnav .items-menu[data-v-153bfd55] {\n  display: flex;\n  gap: 10px;\n}\nnav .items-menu .item[data-v-153bfd55] {\n  border: 2px solid #E9EBEB;\n  padding: 5px 10px;\n  border-radius: 5px;\n  white-space: nowrap;\n  background-color: white;\n}\nnav .items-menu .item[data-v-153bfd55]:hover {\n  border: 2px solid #97CDB4;\n}\nnav .items-menu .dropdown[data-v-153bfd55] {\n  position: relative;\n}\nnav .items-menu .dropdown[data-v-153bfd55]:hover {\n  border: 2px solid #97CDB4;\n}\nnav .items-menu .dropdown .dropbtn[data-v-153bfd55] {\n  cursor: pointer;\n}\nnav .items-menu .dropdown .dropdown-content[data-v-153bfd55] {\n  display: none;\n  position: absolute;\n  top: 105%;\n  left: 0;\n  border-radius: 5px;\n  width: 200px;\n  font-size: 12px;\n  background-color: #F8FAFC;\n  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);\n  z-index: 999;\n}\nnav .items-menu .dropdown .dropdown-content.show[data-v-153bfd55] {\n  display: block;\n}\nnav .items-menu .dropdown .dropdown-content li[data-v-153bfd55] {\n  padding: 5px;\n  border-radius: 5px;\n}\nnav .items-menu .dropdown .dropdown-content li a[data-v-153bfd55] {\n  padding: 10px;\n}\nnav .items-menu .dropdown .dropdown-content li[data-v-153bfd55]:hover {\n  background-color: #dddddd;\n}\n@media (max-width: 768px) {\nnav .items-menu[data-v-153bfd55] {\n    display: none;\n}\nnav .ghost[data-v-153bfd55] {\n    display: block;\n    white-space: nowrap;\n}\n}\n.ghost[data-v-153bfd55] {\n  display: none;\n}", ""]);
 
 // exports
 
@@ -4293,7 +4293,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("figure", { staticClass: "cover" }, [
+    return _c("figure", { staticClass: "cover m-0" }, [
       _c("a", { attrs: { href: "/" } }, [
         _c("img", {
           attrs: {
@@ -20210,7 +20210,7 @@ module.exports = "/images/logo-404.png?d64f0d31614f28959d7a8e5586a58a54";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/logo-navbar.png?c18ff28e3e1059abdc2b150ee61fad05";
+module.exports = "/images/logo-navbar.png?2b3ede289a7ddea4560581515171baaa";
 
 /***/ }),
 
