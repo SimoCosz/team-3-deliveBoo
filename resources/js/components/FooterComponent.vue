@@ -130,6 +130,7 @@ a{
         .badge-app{
           width: 100px;
           margin: 0;
+          overflow: hidden;
         }
       }
     }
