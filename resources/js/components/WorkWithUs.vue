@@ -63,115 +63,126 @@ export default {
 </script>
 
 <style lang="scss">
-.cardBox {
-    width: 33%;
-    height: 400px;
-    position: relative;
-    display: grid;
-    place-items: center;
-    overflow: hidden;
-    border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 10px 0px, rgba(0, 0, 0, 0.5) 0px 2px 25px 0px;
-    .card {
-        position: absolute;
-        width: 95%;
-        height: 95%;
-        background: #000814;
-        border-radius: 20px;
-        z-index: 5;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+h1{
+    
+    @media screen and (max-width: 991px){
         text-align: center;
-        color: black;
+    }
+}
+.card-container{
+    .cardBox {
+        width: 31%;
+        height: 400px;
+        position: relative;
+        display: grid;
+        place-items: center;
         overflow: hidden;
-        // padding: 20px;
-        cursor: pointer;
-        box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 60px -12px inset,
-        rgba(0, 0, 0, 0.5) 0px 18px 36px -18px inset;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        h2, span{
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 10px 0px, rgba(0, 0, 0, 0.5) 0px 2px 25px 0px;
+        .card {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 3rem;
-            font-weight: 800;
-            pointer-events: none;
-            opacity: 0.9;
-            color: #00c1b2;
-            border-radius: 15px;
-        }
-        &:hover h2{
-            display: none;
-        }
-        .content p {
-            font-size: 1.6rem;
-            line-height: 25px;
-            color: #40E0D0;
-            padding: 0px 10px;
-        }
-        .content {
-            transform: translateY(100%);
-            opacity: 0;
-            transition: 0.3s ease-in-out;
-            width: 100%;
-            height: 100%;
+            width: 95%;
+            height: 95%;
+            background: #000814;
+            border-radius: 20px;
+            z-index: 5;
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
-            button{
-                font-weight: 700;
-                color: white;
-                font-size: 14px;
-                padding: 10px;
-                background-color: #00c1b2;
-                border: none;
-                border-radius: 5px;
-                opacity: 1;
-                &:hover{
-                    transition: ease-in-out 0.5s;
-                    opacity: 0.8;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            color: black;
+            overflow: hidden;
+            // padding: 20px;
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 60px -12px inset,
+            rgba(0, 0, 0, 0.5) 0px 18px 36px -18px inset;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            h2, span{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 3rem;
+                font-weight: 800;
+                pointer-events: none;
+                opacity: 0.9;
+                color: #00c1b2;
+                border-radius: 15px;
+            }
+            &:hover h2{
+                display: none;
+            }
+            .content p {
+                font-size: 1.6rem;
+                line-height: 25px;
+                color: #40E0D0;
+                padding: 0px 10px;
+            }
+            .content {
+                transform: translateY(100%);
+                opacity: 0;
+                transition: 0.3s ease-in-out;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                button{
+                    font-weight: 700;
+                    color: white;
+                    font-size: 14px;
+                    padding: 10px;
+                    background-color: #00c1b2;
+                    border: none;
+                    border-radius: 5px;
+                    opacity: 1;
+                    &:hover{
+                        transition: ease-in-out 0.5s;
+                        opacity: 0.8;
+                    }
                 }
             }
+            &:hover .content {
+                transform: translateY(0);
+                opacity: 1;
+                background-color: rgba(0, 0, 0, 0.6);
+            }
         }
-        &:hover .content {
-            transform: translateY(0);
-            opacity: 1;
-            background-color: rgba(0, 0, 0, 0.6);
+        span {
+            top: 75%;
         }
-    }
-    span {
-        top: 75%;
-    }
-    @media screen and (max-width: 767px){
-        .cardBox{
-        width: 100%;
+        @media screen and (max-width: 991px){
+            width: 75%;
         }
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     width: 40%;
+        //     height: 150%;
+        //     background: #40E0D0;
+        //     background: -webkit-linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);
+        //     background: linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);
+        //     animation: glowing01 5s linear infinite;
+        //     transform-origin: center;
+        //     animation: glowing 5s linear infinite;
+        // }
+        // @keyframes glowing {
+        // 0% {
+        //     transform: rotate(0);
+        // }
+        // 100% {
+        //     transform: rotate(360deg);
+        // }
+        // }
     }
-    &::before {
-        content: "";
-        position: absolute;
-        width: 40%;
-        height: 150%;
-        background: #40E0D0;
-        background: -webkit-linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);
-        background: linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);
-        animation: glowing01 5s linear infinite;
-        transform-origin: center;
-        animation: glowing 5s linear infinite;
-    }
-    @keyframes glowing {
-    0% {
-        transform: rotate(0);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+    @media screen and (max-width: 991px){
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
     }
 }
 </style>
