@@ -63,5 +63,17 @@
     }
   }
 }
+@media (max-width: 1200px){
+  .card{
+    width: calc((100% / 2) - 10px);
+  }
+}
+
+@media (max-width: 750px){
+  .card{
+    width: calc((100%));
+    margin-right: 10px;
+  }
+}
 
 </style>

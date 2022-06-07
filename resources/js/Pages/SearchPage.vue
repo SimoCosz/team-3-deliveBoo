@@ -16,7 +16,7 @@
             <label :for="category.name">{{category.name}}</label>
           </div>
         </div>
-        <div class="col-9 restaurants ml-5">
+        <div class="col restaurants mb-5">
           <h2 class="mb-4">Ristoranti che consegnano a Roma</h2>
           <div class="container-card" v-if="this.filteredRestaurants.length == 0">
             <h3>Nessun ristorante trovato</h3>
@@ -127,6 +127,7 @@ import RestaurantCard from '../components/RestaurantCard.vue'
 }
 
 .categories{
+  min-width: 180px;
   max-height: calc(100vh - 50px);
   overflow: auto;
   margin-left: 40px;
@@ -136,6 +137,20 @@ import RestaurantCard from '../components/RestaurantCard.vue'
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
+@media (max-width: 1200px){
+  .restaurants{
+    margin-left: 20px!important;
+  }
+}
+
+@media (max-width: 750px){
+  .categories{
+    display: none;
+  }
+  .restaurants{
+    margin-left: 10px!important;
+  }
 }
 
 </style>
