@@ -5345,7 +5345,12 @@ var render = function () {
               }),
               _vm._v(" "),
               _c("label", { attrs: { for: category.name } }, [
-                _vm._v(_vm._s(category.name)),
+                _vm._v(
+                  _vm._s(category.name) +
+                    " (" +
+                    _vm._s(category.name.length) +
+                    ")"
+                ),
               ]),
             ])
           }),
@@ -6422,10 +6427,12 @@ var render = function () {
                         },
                       }),
                       _vm._v(" "),
-                      _c("img", {
-                        staticClass: "product-show_img",
-                        attrs: { src: _vm.selectedProduct.cover, alt: "" },
-                      }),
+                      _vm.selectedProduct.cover
+                        ? _c("img", {
+                            staticClass: "product-show_img",
+                            attrs: { src: _vm.selectedProduct.cover, alt: "" },
+                          })
+                        : _vm._e(),
                       _vm._v(" "),
                       _c("div", { staticClass: "product-show_info p-4" }, [
                         _c("h4", { staticClass: "title" }, [
