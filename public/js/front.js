@@ -2915,7 +2915,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".where[data-v-30b3a980] {\n  width: 95px;\n  gap: 10px;\n}\n.after[data-v-30b3a980]::after {\n  content: \"\";\n  display: block;\n  border: 1px solid #e9e8e8;\n  width: 90%;\n}\n.categories[data-v-30b3a980] {\n  max-height: calc(100vh - 50px);\n  overflow: auto;\n  margin-left: 40px;\n}\n.container-card[data-v-30b3a980] {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n}", ""]);
+exports.push([module.i, ".where[data-v-30b3a980] {\n  width: 95px;\n  gap: 10px;\n}\n.after[data-v-30b3a980]::after {\n  content: \"\";\n  display: block;\n  border: 1px solid #e9e8e8;\n  width: 90%;\n}\n.categories[data-v-30b3a980] {\n  min-width: 180px;\n  max-height: calc(100vh - 50px);\n  overflow: auto;\n  margin-left: 40px;\n}\n.container-card[data-v-30b3a980] {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n}\n@media (max-width: 1200px) {\n.restaurants[data-v-30b3a980] {\n    margin-left: 20px !important;\n}\n}\n@media (max-width: 750px) {\n.categories[data-v-30b3a980] {\n    display: none;\n}\n.restaurants[data-v-30b3a980] {\n    margin-left: 10px !important;\n}\n}", ""]);
 
 // exports
 
@@ -3068,7 +3068,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".card[data-v-272b0098] {\n  width: calc(33.3333333333% - 10px);\n  overflow: hidden;\n}\n.card .cover-wrapper[data-v-272b0098] {\n  position: relative;\n  width: 100%;\n}\n.card .cover-wrapper .cover[data-v-272b0098] {\n  -o-object-fit: cover;\n     object-fit: cover;\n  -o-object-position: center;\n     object-position: center;\n  height: 150px;\n}\n.card .delivery[data-v-272b0098] {\n  position: absolute;\n  top: 10px;\n  left: 0px;\n  background-color: red;\n  color: white;\n  padding: 3px 6px;\n  font-size: 12px;\n}\n.card .title[data-v-272b0098]::after {\n  content: \"\";\n  display: block;\n  border: 1px solid #e9e8e8;\n  width: 65%;\n  margin-top: 5px;\n}", ""]);
+exports.push([module.i, ".card[data-v-272b0098] {\n  width: calc(33.3333333333% - 10px);\n  overflow: hidden;\n}\n.card .cover-wrapper[data-v-272b0098] {\n  position: relative;\n  width: 100%;\n}\n.card .cover-wrapper .cover[data-v-272b0098] {\n  -o-object-fit: cover;\n     object-fit: cover;\n  -o-object-position: center;\n     object-position: center;\n  height: 150px;\n}\n.card .delivery[data-v-272b0098] {\n  position: absolute;\n  top: 10px;\n  left: 0px;\n  background-color: red;\n  color: white;\n  padding: 3px 6px;\n  font-size: 12px;\n}\n.card .title[data-v-272b0098]::after {\n  content: \"\";\n  display: block;\n  border: 1px solid #e9e8e8;\n  width: 65%;\n  margin-top: 5px;\n}\n@media (max-width: 1200px) {\n.card[data-v-272b0098] {\n    width: calc(50% - 10px);\n}\n}\n@media (max-width: 750px) {\n.card[data-v-272b0098] {\n    width: 100%;\n    margin-right: 10px;\n}\n}", ""]);
 
 // exports
 
@@ -4780,7 +4780,7 @@ var render = function () {
         2
       ),
       _vm._v(" "),
-      _c("div", { staticClass: "col-9 restaurants ml-5" }, [
+      _c("div", { staticClass: "col restaurants mb-5" }, [
         _c("h2", { staticClass: "mb-4" }, [
           _vm._v("Ristoranti che consegnano a Roma"),
         ]),
