@@ -17,7 +17,7 @@ class UserController extends Controller
      */
     public function index()
     {
-       $users = User::with('products')->get();
+       $users = User::with('products', 'categories')->get();
 
        return response()->json([
            'users' => $users,
@@ -54,18 +54,12 @@ class UserController extends Controller
      */
     public function show($slug)
     {
-        $user = User::with('products')->where('slug',$slug)->first();
-        if($user){
-            return response()->json([
-                'user' => $user,
-                'succes' => true
-            ]);
-        }
-        return response()->json([
-            'message' => 'User not found',
-            'success' => false,
-        ],404);
-        
+        $users = User::with('products', 'categories')->where('slug', $slug)->first();
+
+       return response()->json([
+           'users' => $users,
+           'succes' => true
+       ]);
     }
 
     /**

@@ -16,8 +16,22 @@
 }
 
 img{
-  max-width: 100%;
+  width: 100%;
   display: block;
+}
+
+ul, li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: currentColor;
+}
+
+a:hover{
+  text-decoration: none;
+  color: currentColor;
 }
 
 // nostri stili

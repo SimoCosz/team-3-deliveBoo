@@ -1266,7 +1266,7 @@ return[
     'city' => 'Via Bellinzona 21', 
     'telephone_number' => '0645615924',
     'p_iva' => '00000000000',
-    'cover' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt8HM12ZJp9Nu2Ei4iZFO01f_0p6c_5lWH4w&usqp=CAU',
+    'cover' => 'https://rs-menus-api.roocdn.com/images/c91843fe-b1d9-4c49-8043-0020fca35504/image.jpeg?width=388&height=279&auto=webp&format=jpg&fit=crop',
     'email' => 'burritos@gmail.com',
     'password' => 'Password',
     'categories' => [
@@ -2685,7 +2685,7 @@ return[
     'city' => 'Roma', 
     'telephone_number' => '3334659872',
     'p_iva' => '7484903833',
-    'cover' => '',
+    'cover' => 'https://media-cdn.tripadvisor.com/media/photo-o/12/9d/29/ae/received-10155441614938963.jpg',
     'email' => 'trattoriadagino@gmail.com',
     'password' => 'trattoriagino',
     'categories' => [
@@ -2775,7 +2775,7 @@ return[
     'city' => 'Roma', 
     'telephone_number' => '0772453729',
     'p_iva' => '3946538202',
-    'cover' => '',
+    'cover' => 'https://media-cdn.tripadvisor.com/media/photo-o/09/26/b9/94/pinseria-romana-da-fabietto.jpg',
     'email' => 'pinseriarom@gmail.com',
     'password' => 'pineriaromana',
     'categories' => [
@@ -2863,7 +2863,7 @@ return[
     'city' => 'Roma', 
     'telephone_number' => '3946372976',
     'p_iva' => '29465383027',
-    'cover' => '',
+    'cover' => 'https://media-cdn.tripadvisor.com/media/photo-o/1c/e7/7f/fb/logo-ufficiale.jpg',
     'email' => 'bigburger@alice.it',
     'password' => 'bigburger69',
     'categories' => [
@@ -2874,7 +2874,7 @@ return[
     'products' => [
       [
         'user_id' => 23,
-        'cover' => '',
+        'cover' => 'https://media-cdn.tripadvisor.com/media/photo-s/1c/e7/81/4b/sua-maesta-il-re-dei.jpg',
         'name' => 'Pork Burger',
         'description' => 'Hamburger di pulletpork con scamorza ',
         'price' => 18.50,
@@ -2883,7 +2883,7 @@ return[
       ],
       [
         'user_id' => 23,
-        'cover' => '',
+        'cover' => 'https://media-cdn.tripadvisor.com/media/photo-s/1c/e7/81/a6/burger-3d-difficile-da.jpg',
         'name' => 'Mega Porchetta',
         'description' => 'Panino con 700gr di porchetta di ariccia con peproni e cicoria',
         'price' => 10.50,
@@ -2926,7 +2926,7 @@ return[
     'city' => 'Roma', 
     'telephone_number' => '3945893923',
     'p_iva' => '384648302',
-    'cover' => '',
+    'cover' => 'https://media-cdn.tripadvisor.com/media/photo-w/1b/49/2e/94/mandala.jpg',
     'email' => 'feng@gmail.com',
     'password' => 'fengfeng',
     'categories' => [
@@ -3006,7 +3006,7 @@ return[
     'city' => 'Roma', 
     'telephone_number' => '3334399872',
     'p_iva' => '74839462233',
-    'cover' => '',
+    'cover' => 'https://media-cdn.tripadvisor.com/media/photo-o/11/2a/ad/14/viagra-naturale.jpg',
     'email' => 'panzapiena@gmail.com',
     'password' => 'panzapiena',
     'categories' => [
@@ -3015,7 +3015,7 @@ return[
     'products' => [
       [
         'user_id' => 25,
-        'cover' => '',
+        'cover' => 'https://media-cdn.tripadvisor.com/media/photo-m/1280/1a/08/fc/f6/spaghetti-alla-carbonara.jpg',
         'name' => 'Spaghetti alla carbonara',
         'description' => 'Spaghetti alla carbonara con uova e guanciale',
         'price' => 7.50,
@@ -3024,7 +3024,7 @@ return[
       ],
       [
         'user_id' => 25,
-        'cover' => '',
+        'cover' => 'https://media-cdn.tripadvisor.com/media/photo-m/1280/1a/08/fd/01/bucatini-all-amatriciana.jpg',
         'name' => 'Buactini alla matriciana',
         'description' => 'Bucatini alla matriciana con sugo e guanciale',
         'price' => 9.00,
@@ -3033,7 +3033,7 @@ return[
       ],
       [
         'user_id' => 25,
-        'cover' => '',
+        'cover' => 'https://media-cdn.tripadvisor.com/media/photo-m/1280/1a/08/fc/da/la-gricia.jpg',
         'name' => 'Spaghettoni alla gricia',
         'description' => 'Spaghettoni alla gricia con pancetta pistacchio e pecorino',
         'price' => 9.00,
@@ -3042,7 +3042,7 @@ return[
       ],
       [
         'user_id' => 25,
-        'cover' => '',
+        'cover' => 'https://media-cdn.tripadvisor.com/media/photo-m/1280/1a/08/fc/ed/il-cacio-e-pepe.jpg',
         'name' => 'Spaghetti cacio e pepe',
         'description' => 'Spaghetti cacio e pepe con caciocavallo e pepe',
         'price' => 7.00,
@@ -3060,7 +3060,7 @@ return[
       ],
       [
         'user_id' => 25,
-        'cover' => '',
+        'cover' => 'https://media-cdn.tripadvisor.com/media/photo-o/0b/b9/3e/2e/ensalada.jpg',
         'name' => 'Insalata',
         'description' => 'Insalata verde e cipolla di tropea',
         'price' => 6.00,
@@ -3069,7 +3069,7 @@ return[
       ],
       [
         'user_id' => 25,
-        'cover' => '',
+        'cover' => 'https://media-cdn.tripadvisor.com/media/photo-o/19/4a/a3/11/20190914-214014-largejpg.jpg',
         'name' => 'Torta della nonna',
         'description' => 'Torta alle mele con scaglie di cioccolato',
         'price' => 5.00,
