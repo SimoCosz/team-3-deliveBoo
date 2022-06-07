@@ -1995,7 +1995,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _layouts_Layout_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../layouts/Layout.vue */ "./resources/js/layouts/Layout.vue");
-/* harmony import */ var _components_ProductList_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/ProductList.vue */ "./resources/js/components/ProductList.vue");
+/* harmony import */ var _components_ProductList_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/ProductList.vue */ "./resources/js/components/ProductList.vue");
 //
 //
 //
@@ -2028,7 +2028,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     Layout: _layouts_Layout_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-    ProductList: _components_ProductList_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
+    ProductList: _components_ProductList_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
     return {
@@ -3533,7 +3533,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".cardBox {\n  width: 33%;\n  height: 400px;\n  position: relative;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n  border-radius: 20px;\n  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 10px 0px, rgba(0, 0, 0, 0.5) 0px 2px 25px 0px;\n}\n.cardBox .card {\n  position: absolute;\n  width: 95%;\n  height: 95%;\n  background: #000814;\n  border-radius: 20px;\n  z-index: 5;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n  text-align: center;\n  color: black;\n  overflow: hidden;\n  cursor: pointer;\n  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.5) 0px 18px 36px -18px inset;\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n.cardBox .card h2, .cardBox .card span {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  font-size: 3rem;\n  font-weight: 800;\n  pointer-events: none;\n  opacity: 0.9;\n  color: #00c1b2;\n  border-radius: 15px;\n}\n.cardBox .card:hover h2 {\n  display: none;\n}\n.cardBox .card .content p {\n  font-size: 1.6rem;\n  line-height: 25px;\n  color: #40E0D0;\n  padding: 0px 10px;\n}\n.cardBox .card .content {\n  transform: translateY(100%);\n  opacity: 0;\n  transition: 0.3s ease-in-out;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n}\n.cardBox .card .content button {\n  font-weight: 700;\n  color: white;\n  font-size: 14px;\n  padding: 10px;\n  background-color: #00c1b2;\n  border: none;\n  border-radius: 5px;\n  opacity: 1;\n}\n.cardBox .card .content button:hover {\n  transition: ease-in-out 0.5s;\n  opacity: 0.8;\n}\n.cardBox .card:hover .content {\n  transform: translateY(0);\n  opacity: 1;\n  background-color: rgba(0, 0, 0, 0.6);\n}\n.cardBox span {\n  top: 75%;\n}\n@media screen and (max-width: 767px) {\n.cardBox .cardBox {\n    width: 100%;\n}\n}\n.cardBox::before {\n  content: \"\";\n  position: absolute;\n  width: 40%;\n  height: 150%;\n  background: #40E0D0;\n  background: linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);\n  -webkit-animation: glowing01 5s linear infinite;\n          animation: glowing01 5s linear infinite;\n  transform-origin: center;\n  -webkit-animation: glowing 5s linear infinite;\n          animation: glowing 5s linear infinite;\n}\n@-webkit-keyframes glowing {\n0% {\n    transform: rotate(0);\n}\n100% {\n    transform: rotate(360deg);\n}\n}\n@keyframes glowing {\n0% {\n    transform: rotate(0);\n}\n100% {\n    transform: rotate(360deg);\n}\n}", ""]);
+exports.push([module.i, "@media screen and (max-width: 991px) {\nh1 {\n    text-align: center;\n}\n}\n.card-container .cardBox {\n  width: 31%;\n  height: 400px;\n  position: relative;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n  border-radius: 20px;\n  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 10px 0px, rgba(0, 0, 0, 0.5) 0px 2px 25px 0px;\n}\n.card-container .cardBox .card {\n  position: absolute;\n  width: 95%;\n  height: 95%;\n  background: #000814;\n  border-radius: 20px;\n  z-index: 5;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n  text-align: center;\n  color: black;\n  overflow: hidden;\n  cursor: pointer;\n  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.5) 0px 18px 36px -18px inset;\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n.card-container .cardBox .card h2, .card-container .cardBox .card span {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  font-size: 3rem;\n  font-weight: 800;\n  pointer-events: none;\n  opacity: 0.9;\n  color: #00c1b2;\n  border-radius: 15px;\n}\n.card-container .cardBox .card:hover h2 {\n  display: none;\n}\n.card-container .cardBox .card .content p {\n  font-size: 1.6rem;\n  line-height: 25px;\n  color: #40E0D0;\n  padding: 0px 10px;\n}\n.card-container .cardBox .card .content {\n  transform: translateY(100%);\n  opacity: 0;\n  transition: 0.3s ease-in-out;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n}\n.card-container .cardBox .card .content button {\n  font-weight: 700;\n  color: white;\n  font-size: 14px;\n  padding: 10px;\n  background-color: #00c1b2;\n  border: none;\n  border-radius: 5px;\n  opacity: 1;\n}\n.card-container .cardBox .card .content button:hover {\n  transition: ease-in-out 0.5s;\n  opacity: 0.8;\n}\n.card-container .cardBox .card:hover .content {\n  transform: translateY(0);\n  opacity: 1;\n  background-color: rgba(0, 0, 0, 0.6);\n}\n.card-container .cardBox span {\n  top: 75%;\n}\n@media screen and (max-width: 991px) {\n.card-container .cardBox {\n    width: 75%;\n}\n}\n@media screen and (max-width: 991px) {\n.card-container {\n    display: flex;\n    flex-direction: column;\n    gap: 15px;\n}\n}", ""]);
 
 // exports
 
@@ -22596,7 +22596,7 @@ module.exports = "/images/ios-badge.png?2566899de2c3663e0250b22d1a160aa7";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/jumbo-bkg-svg2.svg?ece43a1805da9c592135a025ae78cca8";
+module.exports = "/images/jumbo-bkg-svg2.svg?8de0ecba9e591757458db25a3d02de10";
 
 /***/ }),
 
@@ -24430,7 +24430,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/simonecoszach/Developer/Boolean/Corso/Projects/team-3-deliveBoo-1/resources/js/front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\casa\OneDrive\Desktop\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })
