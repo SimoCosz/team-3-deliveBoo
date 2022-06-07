@@ -22,6 +22,8 @@ const routes = [
     path: '/users/:slug',
     name: 'users.show',
     component: UserShow
+  },
+  {
     path: '/categories',
     name: 'categories.index',
     component: CategoriesIndex
