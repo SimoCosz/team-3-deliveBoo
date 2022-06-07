@@ -1,22 +1,22 @@
 <template>
   <Layout>
-    <div>
+    <!-- <div>
       <Jumbo/>
       <Selection/>
       <Favourite/>
-    </div>
+    </div> -->
     <!-- <div>
       <Users/>
     </div> -->
-    <div>
+    <!-- <div>
       <Categories/>
-    </div>
+    </div> -->
     <div>
       <NewsSection/>
     </div>
-    <div>
+    <!-- <div>
       <WorkWithUs/>
-    </div>
+    </div> -->
   </Layout>
 </template>
 

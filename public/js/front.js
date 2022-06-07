@@ -2654,18 +2654,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      sushi: {
-        backgroundImage: "url(https://cwa.roocdn.com/_next/static/business.4fa3b853.jpg)"
-      },
       deliveroo: {
         backgroundImage: "url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1OTgiIGhlaWdodD0iNTk4IiB2aWV3Qm94PSIwIDAgNTk4IDU5OCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxwYXRoIGlkPSJhIiBkPSJNMi45MDMgMTQ5LjA3NkMwIDE0MC40NDQgMCAxMzQuODE4IDAgMTE0Ljc2NlY1OS4yMzRjMC0yMC4wNTIgMC0yNS42OCAyLjkwMy0zNC4zMUEzNy4wMiAzNy4wMiAwIDAgMSAyNC45MjQgMi45MDFDMzMuNTU2IDAgMzkuMTgyIDAgNTkuMjM0IDBoNTUuNTMyYzIwLjA1MiAwIDI1LjY3OCAwIDM0LjMxMSAyLjkwMWEzNy4wMjIgMzcuMDIyIDAgMCAxIDIyLjAyIDIyLjAyM0MxNzQgMzMuNTU0IDE3NCAzOS4xODIgMTc0IDU5LjIzNHY1NS41MzJjMCAyMC4wNTIgMCAyNS42NzgtMi45MDMgMzQuMzFhMzcuMDEyIDM3LjAxMiAwIDAgMS0yMi4wMiAyMi4wMjFDMTQwLjQ0NCAxNzQgMTM0LjgxOCAxNzQgMTE0Ljc2NyAxNzRINTkuMjMzYy0yMC4wNTIgMC0yNS42NzggMC0zNC4zMS0yLjkwM2EzNy4wMSAzNy4wMSAwIDAgMS0yMi4wMjEtMjIuMDIxeiIvPjwvZGVmcz48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGZpbGw9IiNFMjAwNEYiIGQ9Ik0tMSAwaDYwMHY2MDBILTF6Ii8+PHBhdGggZmlsbD0iI0ZGRiIgZD0iTTY3OC44MTMgMzc5LjMzM2wtNzEuNDcxLTIyLjAwMy0yLjgwMSA3MS45MDctMTIuMjE2IDMuNjQ5LTE4LjE0LTg1Ljc2LTQyLjkzNC0xMy4yMi0xNy40MDYgNjcuNzM2LTExLjYyNCAyLjc4LTMuMS04MC40MDgtNDguMjk5LTE0Ljg3My0yOS4wNzkgNjcuMjk1LTguNDc1IDEuNTg4IDIuMzEzLTc0LjI2NC03Mi44NDQtMy43Ni00NS42ODIgMzAuNDQ3LTMuMzE3IDQ4LjM2OCAxOC43ODUgMjcuNjk1TDYyNy4zNiA1MDcuMTU1bDc1LjA1NC0yNS4zNjcgMTQuMDY3LTUxLjA4LTM3LjY2OC01MS4zNzV6bTIzLjM3OCAxMjAuOTQzbC05Ny4xMzUgNDAuNTQtNDUuNTQ2LTM3LjEwOS01Mi43NDUgNy4yNzUtNDIuNDU3LTQ0Ljk5Ny01OS44MTQgMi43NC00NC42NzctMzYuNDQtNzAuMDI2LTYuNzNMMjg3IDQ1NC4yOThsNjMuNzcyIDEwLjc4NSAzOC44NTIgMzMuMjMyIDY1LjE3MiA0Ljk4NiA0NS4yNDIgMzguMDQ1IDQ5LjIyNy0xLjQ4MiA0OS42ODkgMzMuNzIzIDExMy4yODctNDcuNDY1LTEwLjA1LTI1Ljg0NnptLTQwNy42MjgtMjcuOTU4bDEuNzMyIDMxLjM5NSAxMC42NTcgMjAuMzY1IDI3MS41NDQgMTA0LjI4OCA1MC4xMjkgNi44ODUgNDcuNTgyLTE0LjY0NSAyMi44NC0zMC44MiAzLjM4My0zNC4yMzYtNzUuODc0IDMxLjUyOS0zMy44ODQgMy42NzYtMjk4LjExLTExOC40Mzd6TS0zMi4wODUgMTUzLjI1MmwyLjM1NSA0My42NDQgMjY0LjQ1NS01LjIwNS0uMTEzLTQ1Ljg1Mi0yNjYuNjk3IDcuNDEzek0tNTAgMTM3LjU0NWw2Ljg1Mi0zMy4wMSAzMi43MzggOS4zMTEgMzIuMTUtMjAuOTc1IDQ1Ljc0MiAyMC41NDUgMzIuMTQtMjYuMDM1IDUzLjk2NyAxOS4zODIgNDQuOTMxLTM1LjQ1OSAxOS4yNTMgMjUuMDc0LTYwLjQ1MSA0My42NTMtNDkuOTQ1LTIyLjgxNC0zNi42IDIzLjc4LTQxLjQ2NC0xNS45NTMtMzguMjI0IDE3LjU4NUwtNTAgMTM3LjU0NXpNMTYyLjc1Ny0xMEwtNi44MzcgMTQuMzk4bC0zMC4xODcgNzkuNzY0Yy0xLjEzLjE5MyAyNTcuNjA3LTM4Ljc5OCAyNTcuNjA3LTM4Ljc5OEwxNjIuNzU3LTEwek0tNDMuMTQ4IDIxMy45MjZsNDkuMDgzIDcwLjI4IDE3Ny4yNDEtNi4zNzYgNDMuODY3LTczLjA4M2MxLjE0Ny0uMDQ4LTI3MC4xOTEgOS4xNzktMjcwLjE5MSA5LjE3OXoiIG9wYWNpdHk9Ii4zNjMiLz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMTQgMjE2KSI+PG1hc2sgaWQ9ImIiIGZpbGw9IiNmZmYiPjx1c2UgeGxpbms6aHJlZj0iI2EiLz48L21hc2s+PHVzZSBmaWxsPSIjMzMzIiB4bGluazpocmVmPSIjYSIvPjxnIG1hc2s9InVybCgjYikiPjxwYXRoIGZpbGw9IiMwMENDQkMiIGQ9Ik0wIDBoMTc0djE3NEgweiIvPjxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik03Ny40NTEgOTcuOTVjLjYyNC0yLjQgMy41NjQtMi43NTggNS4wMzYtMi43ODRhMy43NTUgMy43NTUgMCAwIDEgMS42MTYuMzMyYzEuMDQuNDcgMi44MDIgMS40NzcgMy4xNTggMy4wMS41MTQgMi4yMDYuMDE5IDQuMDU3LTEuNTYzIDUuNTAzLTEuNTgyIDEuNDQ1LTMuNjcyIDEuMzEzLTUuODg2LjU3Ni0yLjIxNi0uNzMzLTMuMTk5LTMuNDA3LTIuMzYtNi42Mzd6bTIxLjUzMyA0LjM3NmMuMTItLjgyOC40NS0xLjYwOC45Ny0yLjI2NC43MTQtLjkwNCAxLjkwNi0yLjA4IDMuMjgyLTIuMTE4IDIuMjM4LS4wNTggNC4xNjQuOTQ1IDUuMjUyIDIuNzU4IDEuMDkgMS44MTEuNTQ1IDMuODA2LS42MDUgNS44MDItMS4xNSAxLjk5MS00LjE2MyAyLjI1NS03LjEyNy44MDUtMi0uOTc4LTEuOTktMy40NjctMS43NzItNC45ODN6TTM4LjE1IDEzMS42MzdsNzYuNjMgMTYuMjYzIDE3LjUyNi0zOS4zMDIgOC4zNDUtNzkuMjczLTMwLjczOC0zLjIyNS01LjY1MyA1My43MDdMOTQuNjIgMzQuNTNsLTMwLjIzIDYuNDE2IDkuNjM4IDQ1LjI3Ny00My41NzggOS4yNDggNy42OTkgMzYuMTY2eiIvPjwvZz48L2c+PC9nPjwvc3ZnPg==)"
       },
@@ -3438,7 +3429,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".news {\n  background-color: #f6f6f6;\n}\n.news .news_section {\n  display: flex;\n  flex-direction: column;\n  align-content: flex-start;\n  padding: 20px 0px 30px 0px;\n}\n.news .news_section h1 {\n  font-size: 30px;\n  font-weight: 700;\n  padding: 10px 0px;\n}\n.news .news_section .news_items_list {\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  list-style: none;\n  gap: 40px;\n  padding: 0;\n}\n.news .news_section .news_items_list .news_item {\n  width: 100%;\n  height: 225px;\n  display: flex;\n  padding: 0;\n  position: relative;\n}\n.news .news_section .news_items_list .news_item .news_img {\n  background-position: center;\n  background-size: cover;\n  height: 100%;\n  width: 50%;\n}\n.news .news_section .news_items_list .news_item .news_text {\n  height: 100%;\n  width: 50%;\n  background-color: white;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding-left: 15px;\n}\n.news .news_section .news_items_list .news_item .news_text .contact {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n@media screen and (max-width: 766px) {\n.news .news_section .news_items_list .news_item .news_text .contact .download_advice {\n    display: none;\n}\n.news .news_section .news_items_list .news_item .news_text .contact .download_badge {\n    width: 300px;\n    height: 50%;\n    justify-content: flex-start;\n    left: 0;\n}\n}\n.news .news_section .news_items_list .news_item .news_text .contact h3 {\n  font-weight: 700;\n  font-size: 24px;\n}\n.news .news_section .news_items_list .news_item .news_text .contact p {\n  font-weight: 500;\n  font-size: 16px;\n}\n.news .news_section .news_items_list .news_item .news_text .contact button {\n  font-weight: 700;\n  color: white;\n  font-size: 14px;\n  padding: 10px;\n  background-color: #00c1b2;\n  width: 125px;\n  border: none;\n  border-radius: 5px;\n  opacity: 0.8;\n}\n.news .news_section .news_items_list .news_item .news_text .contact button:hover {\n  transition: ease-in-out 0.5s;\n  opacity: 1;\n}\n.news .news_section .news_items_list .news_item .news_text .contact .download {\n  width: 100%;\n  height: 27%;\n  display: flex;\n  align-items: center;\n  gap: 2px;\n}\n@media (max-width: 525px) {\n.news .news_section .news_items_list .news_item .news_text .contact .download {\n    display: flex;\n    flex-direction: column;\n    height: 50%;\n    position: relative;\n}\n}\n.news .news_section .news_items_list .news_item .news_text .contact .download .download_badge {\n  background-position: center;\n  background-size: cover;\n  width: 29%;\n  height: 60%;\n  border-radius: 5px;\n  cursor: pointer;\n}\n@media (max-width: 993px) {\n.news .news_section .news_items_list .news_item .news_text .contact .download .download_badge {\n    height: 60%;\n    width: 38%;\n}\n}\n@media (max-width: 765px) {\n.news .news_section .news_items_list .news_item .news_text .contact .download .download_advice {\n    display: none;\n}\n.news .news_section .news_items_list .news_item .news_text .contact .download .download {\n    height: 20%;\n}\n.news .news_section .news_items_list .news_item .news_text .contact .download .download_badge {\n    width: 49%;\n}\n}\n@media (max-width: 525px) {\n.news .news_section .news_items_list .news_item .news_text .contact .download .download_badge {\n    width: 60%;\n    height: 30%;\n}\n}\n@media (max-width: 765px) {\n.news .news_section .news_items_list .news_item .deliveroo_for_work .contact {\n    padding-left: 30px;\n}\n}\n.news .news_section .news_items_list .news_item .deliveroo_for_work::after {\n  content: \"\";\n  width: 40px;\n  height: 102%;\n  background: white;\n  transform: rotate(5.5deg);\n  position: absolute;\n  left: 48%;\n}\n.news .news_section .news_items_list .news_item .download_app::after {\n  content: \"\";\n  width: 40px;\n  height: 102%;\n  background: white;\n  transform: rotate(4deg);\n  position: absolute;\n  left: 48%;\n}\n@media (max-width: 767px) {\n.news .news_section .news_items_list .news_item .deliveroo_for_work::after {\n    content: \"\";\n    width: 15px;\n    height: 102%;\n    background: white;\n    transform: rotate(3.5deg);\n    position: absolute;\n    left: 49%;\n}\n.news .news_section .news_items_list .news_item .download_app::after {\n    content: \"\";\n    width: 15px;\n    height: 102%;\n    background: white;\n    transform: rotate(3deg);\n    position: absolute;\n    left: 49%;\n}\n.news .news_section .news_items_list .news_item .deliveroo_for_work {\n    padding-left: 10px;\n}\n.news .news_section .news_items_list .news_item .deliveroo_for_work h3 {\n    font-size: 20px;\n}\n.news .news_section .news_items_list .news_item .deliveroo_for_work p {\n    font-size: 16px;\n}\n.news .news_section .news_items_list .news_item .deliveroo_for_work button {\n    padding: 5px;\n    font-size: 10px;\n    height: 40px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    margin-bottom: 10px;\n}\n}\n@media (max-width: 476px) {\n.news .news_section .news_items_list .news_item .deliveroo_for_work::after {\n    content: \"\";\n    width: 25px;\n    height: 102%;\n    background: white;\n    transform: rotate(4deg);\n    position: absolute;\n    left: 48%;\n}\n.news .news_section .news_items_list .news_item .download_app::after {\n    content: \"\";\n    width: 25px;\n    height: 102%;\n    background: white;\n    transform: rotate(4deg);\n    position: absolute;\n    left: 48%;\n}\n.news .news_section .news_items_list .news_item .deliveroo_for_work h3 {\n    font-size: 20px;\n}\n.news .news_section .news_items_list .news_item .deliveroo_for_work p {\n    font-size: 16px;\n}\n.news .news_section .news_items_list .news_item .deliveroo_for_work button {\n    padding: 5px;\n    font-size: 10px;\n    height: 40px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    margin-bottom: 10px;\n}\n}\n@media (max-width: 390px) {\n.news .news_section .news_items_list .news_item .deliveroo_for_work {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n.news .news_section .news_items_list .news_item .deliveroo_for_work h3 {\n    max-height: 20%;\n    font-size: 12px;\n}\n.news .news_section .news_items_list .news_item .deliveroo_for_work p {\n    max-height: 30%;\n    font-size: 8px;\n}\n.news .news_section .news_items_list .news_item .deliveroo_for_work .deliveroo_for_work button {\n    padding: 5px;\n    font-size: 10px;\n    max-height: 30%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n}\n.news .deliveroo_for_work {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: 100%;\n}", ""]);
+exports.push([module.i, ".news_section {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n.news_section #card_container {\n  box-shadow: 0 15px 30px 1px grey;\n  background: rgba(255, 255, 255, 0.9);\n  text-align: center;\n  border-radius: 5px;\n  overflow: hidden;\n  margin: 5em auto;\n  height: 350px;\n  width: 48%;\n}\n.news_section #card_container .product-details {\n  position: relative;\n  text-align: left;\n  overflow: hidden;\n  padding: 20px;\n  height: 100%;\n  float: left;\n  width: 40%;\n}\n.news_section #card_container .product-details h3 {\n  display: inline-block;\n  position: relative;\n  font-size: 24px;\n  color: #344055;\n  margin: 0;\n}\n@media (max-width: 991px) {\n.news_section #card_container .product-details h3 {\n    font-size: 20px;\n}\n}\n.news_section #card_container .product-details p {\n  font-size: 18px;\n}\n@media (max-width: 991px) {\n.news_section #card_container .product-details p {\n    font-size: 14px;\n}\n}\n.news_section #card_container .product-details button {\n  font-weight: 700;\n  color: white;\n  font-size: 14px;\n  padding: 10px;\n  background-color: #00c1b2;\n  width: 125px;\n  border: none;\n  border-radius: 5px;\n  opacity: 0.8;\n}\n.news_section #card_container .product-details button:hover {\n  transition: ease-in-out 0.5s;\n  opacity: 1;\n}\n@media (max-width: 991px) {\n.news_section #card_container .product-details button {\n    width: 75px;\n    padding: 5px;\n}\n}\n.news_section #card_container .product-details .download {\n  width: 100%;\n  height: 27%;\n  display: flex;\n  flex-direction: column;\n  gap: 2px;\n}\n.news_section #card_container .product-details .download .download_badge {\n  background-position: center;\n  background-size: cover;\n  width: 69%;\n  height: 40%;\n  border-radius: 5px;\n  cursor: pointer;\n}\n@media (max-width: 1100px) {\n.news_section #card_container .product-details .download .download_badge {\n    height: 37%;\n    width: 100%;\n}\n}\n@media (max-width: 767px) {\n.news_section #card_container .product-details .download .download_badge {\n    height: 38%;\n    width: 80%;\n}\n}\n@media (max-width: 435px) {\n.news_section #card_container .product-details .download .download_badge {\n    height: 35%;\n    width: 78%;\n}\n}\n@media (max-width: 400px) {\n.news_section #card_container .product-details .download .download_badge {\n    height: 35%;\n    width: 90%;\n}\n}\n.news_section #card_container .product-image {\n  transition: all 0.3s ease-out;\n  display: inline-block;\n  position: relative;\n  overflow: hidden;\n  height: 100%;\n  float: right;\n  width: 45%;\n  display: inline-block;\n}\n.news_section #card_container .product-image img {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n@media (max-width: 767px) {\n.news_section #card_container {\n    width: 100%;\n}\n}\n.news_section .product-image:hover img {\n  transition: all 0.3s ease-out;\n}\n.news_section .product-image:hover img {\n  transform: scale(1.2, 1.2);\n}\n@media (max-width: 767px) {\n.news_section {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap: 20px;\n}\n}", ""]);
 
 // exports
 
@@ -5183,19 +5174,7 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("Layout", [
-    _c(
-      "div",
-      [_c("Jumbo"), _vm._v(" "), _c("Selection"), _vm._v(" "), _c("Favourite")],
-      1
-    ),
-    _vm._v(" "),
-    _c("div", [_c("Categories")], 1),
-    _vm._v(" "),
-    _c("div", [_c("NewsSection")], 1),
-    _vm._v(" "),
-    _c("div", [_c("WorkWithUs")], 1),
-  ])
+  return _c("Layout", [_c("div", [_c("NewsSection")], 1)])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -6137,83 +6116,96 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "news" }, [
+  return _c("div", { staticClass: "news container" }, [
+    _c("h1", { staticClass: "pt-5 pb-2 text-center display-6" }, [
+      _vm._v("\n            " + _vm._s(_vm.titoloNews) + "\n            "),
+    ]),
+    _vm._v(" "),
     _c("section", { staticClass: "news_section container" }, [
-      _c("h1", { staticClass: "pt-5 pb-2" }, [
-        _vm._v("\n        " + _vm._s(_vm.titoloNews) + "\n        "),
-      ]),
-      _vm._v(" "),
-      _c("ul", { staticClass: "container news_items_list" }, [
-        _c("li", { staticClass: "news_item" }, [
-          _c("div", { staticClass: "news_img", style: _vm.sushi }),
+      _c("div", { attrs: { id: "card_container" } }, [
+        _c("div", { staticClass: "product-details" }, [
+          _c("h3", { staticClass: "pb-2" }, [
+            _vm._v(
+              "\n                        " +
+                _vm._s(_vm.deliverooWorkTitle) +
+                "\n                    "
+            ),
+          ]),
           _vm._v(" "),
-          _c("div", { staticClass: "news_text deliveroo_for_work" }, [
-            _c("div", { staticClass: "container contact" }, [
-              _c("h3", [
-                _vm._v(
-                  "\n                            " +
-                    _vm._s(_vm.deliverooWorkTitle) +
-                    "\n                        "
-                ),
-              ]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "\n                            " +
-                    _vm._s(_vm.deliverooWorkP) +
-                    "\n                        "
-                ),
-              ]),
-              _vm._v(" "),
-              _c("button", [
-                _vm._v(
-                  "\n                            Contattaci\n                        "
-                ),
-              ]),
-            ]),
+          _c("p", { staticClass: "information" }, [
+            _vm._v(
+              "\n                        " +
+                _vm._s(_vm.deliverooWorkP) +
+                "\n                    "
+            ),
+          ]),
+          _vm._v(" "),
+          _c("button", [
+            _vm._v(
+              "\n                        Contattaci\n                    "
+            ),
           ]),
         ]),
         _vm._v(" "),
-        _c("li", { staticClass: "news_item" }, [
-          _c("div", { staticClass: "news_text download_app" }, [
-            _c("div", { staticClass: "container contact" }, [
-              _c("h3", [
-                _vm._v(
-                  "\n                           " +
-                    _vm._s(_vm.appTitle) +
-                    "\n                        "
-                ),
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "download_advice" }, [
-                _vm._v(
-                  "\n                            " +
-                    _vm._s(_vm.appP) +
-                    "\n                        "
-                ),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "download" }, [
-                _c("div", {
-                  staticClass: "download_badge",
-                  style: _vm.appStore,
-                }),
-                _vm._v(" "),
-                _c("div", {
-                  staticClass: "download_badge",
-                  style: _vm.googlePlay,
-                }),
-              ]),
-            ]),
+        _vm._m(0),
+      ]),
+      _vm._v(" "),
+      _c("div", { attrs: { id: "card_container" } }, [
+        _c("div", { staticClass: "product-details" }, [
+          _c("h3", { staticClass: "pb-2" }, [
+            _vm._v(
+              "\n                        " +
+                _vm._s(_vm.appTitle) +
+                "\n                    "
+            ),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "news_img", style: _vm.deliveroo }),
+          _c("p", { staticClass: "information" }, [
+            _vm._v(
+              "\n                        " +
+                _vm._s(_vm.appP) +
+                "\n                    "
+            ),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "download" }, [
+            _c("div", { staticClass: "download_badge", style: _vm.appStore }),
+            _vm._v(" "),
+            _c("div", { staticClass: "download_badge", style: _vm.googlePlay }),
+          ]),
         ]),
+        _vm._v(" "),
+        _vm._m(1),
       ]),
     ]),
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "product-image" }, [
+      _c("img", {
+        attrs: {
+          src: "https://cwa.roocdn.com/_next/static/business.4fa3b853.jpg",
+        },
+      }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "product-image" }, [
+      _c("img", {
+        attrs: {
+          src: "https://dirittodellinformazione.it/wp-content/uploads/2022/03/thanitjanuary2022_61.jpg",
+        },
+      }),
+    ])
+  },
+]
 render._withStripped = true
 
 
