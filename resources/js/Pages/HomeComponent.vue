@@ -5,9 +5,9 @@
       <Selection/>
       <Favourite/>
     </div>
-    <div>
+    <!-- <div>
       <Users/>
-    </div>
+    </div> -->
     <div>
       <Categories/>
     </div>

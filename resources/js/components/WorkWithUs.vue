@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <h1 class="py-3">
+        <h1 class="py-3 text-center">
             {{lavoraConDelivebooTitle}}
         </h1>
         <ul class="card-container w-100 d-flex align-items-center justify-content-between">

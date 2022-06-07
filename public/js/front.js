@@ -5181,8 +5181,6 @@ var render = function () {
       1
     ),
     _vm._v(" "),
-    _c("div", [_c("Users")], 1),
-    _vm._v(" "),
     _c("div", [_c("Categories")], 1),
     _vm._v(" "),
     _c("div", [_c("NewsSection")], 1),
@@ -7052,7 +7050,7 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c("h1", { staticClass: "py-3" }, [
+    _c("h1", { staticClass: "py-3 text-center" }, [
       _vm._v("\n        " + _vm._s(_vm.lavoraConDelivebooTitle) + "\n    "),
     ]),
     _vm._v(" "),
@@ -24436,7 +24434,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\black\Project\Hub Project\LARAVEL\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\casa\OneDrive\Desktop\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })
