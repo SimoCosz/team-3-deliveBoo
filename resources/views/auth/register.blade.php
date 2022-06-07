@@ -72,7 +72,7 @@
                         </div>
                         {{-- EMAIL --}}
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}*</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail') }}*</label>
                             <div class="col-md-6">
                                 <input id="email" required type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email">
                                 @error('email')
@@ -96,13 +96,13 @@
                         </div>
                         {{-- PASSWORD-CONFIRM --}}
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Conferma Password') }}*</label>
                             <div class="col-md-6">
                                 <input id="password-confirm" required minlength="8" type="password" class="form-control" name="password_confirmation" autocomplete="new-password">
                             </div>
                         </div>
                         {{-- COVER --}}
-                        <div class="form-group row">
+                        <div class="form-group row align-items-center">
                             <label for="cover" class="col-md-4 col-form-label text-md-right">{{ __('Immagine di copertina') }}</label>
                             <div class="col-md-6">
                                 <input class="d-block my-3 @error('cover') is-invalid @enderror" type="file" accept="image/*" name="cover" id="cover">
@@ -115,7 +115,7 @@
                         </div>
                         {{-- CATEGORIES --}}
                         <label class="text-center container">Categorie</label>
-                        <div class="d-flex flex-wrap container align-items-center" style="gap:1rem">
+                        <div class="d-flex flex-wrap container align-items-center justify-content-center" style="gap:1rem">
                             @foreach ($categories as $key => $category)
                                 <div class="mb-3 form-check">
                                     <input type="checkbox" class="form-check-input @error('categories.{{$key}}') is-invalid @enderror" value="{{$category->id}}" name="categories[{{$key}}]" id="categories-{{$category->id}}">

@@ -37352,21 +37352,9 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-__webpack_require__(/*! C:\Users\matti\Laravel\team-3-deliveBoo\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\Users\matti\Laravel\team-3-deliveBoo\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\Users\matti\Laravel\team-3-deliveBoo\resources\sass\front.scss */"./resources/sass/front.scss");
-=======
-__webpack_require__(/*! C:\Users\casa\OneDrive\Desktop\team-3-deliveBoo\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\Users\casa\OneDrive\Desktop\team-3-deliveBoo\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\Users\casa\OneDrive\Desktop\team-3-deliveBoo\resources\sass\front.scss */"./resources/sass/front.scss");
->>>>>>> 74a5f2009cb183f4d9bb09f5ebe52b8822694fee
-=======
 __webpack_require__(/*! C:\Users\black\Project\Hub Project\LARAVEL\team-3-deliveBoo\resources\js\app.js */"./resources/js/app.js");
 __webpack_require__(/*! C:\Users\black\Project\Hub Project\LARAVEL\team-3-deliveBoo\resources\sass\app.scss */"./resources/sass/app.scss");
 module.exports = __webpack_require__(/*! C:\Users\black\Project\Hub Project\LARAVEL\team-3-deliveBoo\resources\sass\front.scss */"./resources/sass/front.scss");
->>>>>>> 2fa99f1be4095fac2606cffb818e568d1f8bd268
 
 
 /***/ })

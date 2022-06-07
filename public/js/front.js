@@ -24434,7 +24434,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\casa\OneDrive\Desktop\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\black\Project\Hub Project\LARAVEL\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })

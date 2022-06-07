@@ -23,7 +23,7 @@
       {{-- NAME --}}
       <div class="mb-3">
         <label for="name" class="form-label"> Nome* </label>
-        <input type="text" required minlength="3" maxlength="100" class="form-control @error('name') is-invalid @enderror" value=" {{old('name')?: $product->name}} " name="name" id="name">
+        <input type="text" required minlength="3" maxlength="100" class="form-control @error('name') is-invalid @enderror" value="{{old('name')?: $product->name}}" name="name" id="name">
         @error('name')
             <div class="invalid-feedback"> {{$message}} </div>
         @enderror
@@ -39,7 +39,7 @@
       {{-- PRICE --}}
       <div class="mb-3">
         <label for="price" class="form-label"> Prezzo* </label>
-        <input type="number" step=".01" required min="0.01" max="999.99" class="form-control @error('price') is-invalid @enderror" value=" {{old('price')?: $product->price}} " name="price" id="price">
+        <input type="number" step=".01" required min="0.01" max="999.99" class="form-control @error('price') is-invalid @enderror" value="{{old('price')?: $product->price}}" name="price" id="price">
         @error('price')
             <div class="invalid-feedback"> {{$message}} </div>
         @enderror
