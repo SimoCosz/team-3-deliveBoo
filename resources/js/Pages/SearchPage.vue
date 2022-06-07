@@ -1,7 +1,7 @@
 <template>
   <layout>
     <!-- <div class="container py-5"> -->
-      <div class="row mt-5">
+      <div class="search-page-container row mt-5">
         <div class="col-2 categories p-2">
           <div class="after">
             <div class="where d-flex align-items-center p-2">
@@ -112,6 +112,11 @@ import RestaurantCard from '../components/RestaurantCard.vue'
 </script>
 
 <style lang="scss" scoped>
+.search-page-container{
+  margin: 0;
+  padding: 0 15px 0 15px;
+}
+
 .where{
   width: 95px;
   gap: 10px;

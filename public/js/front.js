@@ -3285,7 +3285,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".where[data-v-30b3a980] {\n  width: 95px;\n  gap: 10px;\n}\n.after[data-v-30b3a980]::after {\n  content: \"\";\n  display: block;\n  border: 1px solid #e9e8e8;\n  width: 90%;\n}\n.categories[data-v-30b3a980] {\n  min-width: 180px;\n  max-height: calc(100vh - 50px);\n  overflow: auto;\n  margin-left: 40px;\n}\n.container-card[data-v-30b3a980] {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n}\n@media (max-width: 1200px) {\n.restaurants[data-v-30b3a980] {\n    margin-left: 20px !important;\n}\n}\n@media (max-width: 750px) {\n.categories[data-v-30b3a980] {\n    display: none;\n}\n.restaurants[data-v-30b3a980] {\n    margin-left: 10px !important;\n}\n}", ""]);
+exports.push([module.i, ".search-page-container[data-v-30b3a980] {\n  margin: 0;\n  padding: 0 15px 0 15px;\n}\n.where[data-v-30b3a980] {\n  width: 95px;\n  gap: 10px;\n}\n.after[data-v-30b3a980]::after {\n  content: \"\";\n  display: block;\n  border: 1px solid #e9e8e8;\n  width: 90%;\n}\n.categories[data-v-30b3a980] {\n  min-width: 180px;\n  max-height: calc(100vh - 50px);\n  overflow: auto;\n  margin-left: 40px;\n}\n.container-card[data-v-30b3a980] {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n}\n@media (max-width: 1200px) {\n.restaurants[data-v-30b3a980] {\n    margin-left: 20px !important;\n}\n}\n@media (max-width: 750px) {\n.categories[data-v-30b3a980] {\n    display: none;\n}\n.restaurants[data-v-30b3a980] {\n    margin-left: 10px !important;\n}\n}", ""]);
 
 // exports
 
@@ -5279,7 +5279,7 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("layout", [
-    _c("div", { staticClass: "row mt-5" }, [
+    _c("div", { staticClass: "search-page-container row mt-5" }, [
       _c(
         "div",
         { staticClass: "col-2 categories p-2" },
@@ -24430,7 +24430,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\casa\OneDrive\Desktop\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\black\Project\Hub Project\LARAVEL\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })
