@@ -158,26 +158,26 @@ h1{
         @media screen and (max-width: 991px){
             width: 75%;
         }
-        // &::before {
-        //     content: "";
-        //     position: absolute;
-        //     width: 40%;
-        //     height: 150%;
-        //     background: #40E0D0;
-        //     background: -webkit-linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);
-        //     background: linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);
-        //     animation: glowing01 5s linear infinite;
-        //     transform-origin: center;
-        //     animation: glowing 5s linear infinite;
-        // }
-        // @keyframes glowing {
-        // 0% {
-        //     transform: rotate(0);
-        // }
-        // 100% {
-        //     transform: rotate(360deg);
-        // }
-        // }
+        &::before {
+            content: "";
+            position: absolute;
+            width: 40%;
+            height: 150%;
+            background: #40E0D0;
+            background: -webkit-linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);
+            background: linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);
+            animation: glowing01 5s linear infinite;
+            transform-origin: center;
+            animation: glowing 5s linear infinite;
+        }
+        @keyframes glowing {
+        0% {
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+        }
     }
     @media screen and (max-width: 991px){
         display: flex;
