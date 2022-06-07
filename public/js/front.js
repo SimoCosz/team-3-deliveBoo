@@ -1961,7 +1961,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 // import Users from '../components/UsersIndex.vue'
 
 
@@ -2485,6 +2484,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -2513,6 +2515,10 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
 //
 //
 //
@@ -3025,9 +3031,13 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 // module
 <<<<<<< HEAD
+<<<<<<< HEAD
 exports.push([module.i, ".btn-bg-color[data-v-1d3d91e6] {\n  background-color: #00C2B3;\n  color: white;\n  font-weight: 700;\n}\n.r-color[data-v-1d3d91e6] {\n  color: #FB5058;\n}\n.primary-color[data-v-1d3d91e6] {\n  color: #14AA9E !important;\n}\n.products[data-v-1d3d91e6] {\n  background-color: #F9FAFA;\n}\n.products .my-container[data-v-1d3d91e6] {\n  max-width: 1500px;\n  margin: 0 auto;\n  padding: 0 20px;\n}\n.products .my-container .products-cart .cart[data-v-1d3d91e6] {\n  width: 100%;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 30px;\n  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\n  color: #abadad;\n}\n.products .my-container .products-cart .cart .btn-secondary[data-v-1d3d91e6] {\n  background-color: #e2e5e5;\n  border: none;\n  font-weight: bold;\n  color: #abadad;\n  cursor: not-allowed;\n}\n.products .my-container .products-cart .cart .bi.bi-dash-circle[data-v-1d3d91e6]::before, .products .my-container .products-cart .cart .bi.bi-plus-circle[data-v-1d3d91e6]::before {\n  line-height: 23.05px;\n  cursor: pointer;\n}\n.products .my-container .products-cart .row .product .single-card[data-v-1d3d91e6] {\n  border-radius: 5px;\n  margin-bottom: 30px;\n  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\n  gap: 20px;\n  min-height: 150px;\n  cursor: pointer;\n}\n.products .my-container .products-cart .row .product .single-card[data-v-1d3d91e6]:hover {\n  box-shadow: 0px 17px 43px -5px lightgrey;\n}\n.products .my-container .products-cart .row .product .single-card .product_info .title[data-v-1d3d91e6] {\n  font-weight: bold;\n  margin-bottom: 0.2rem;\n}\n.products .my-container .products-cart .row .product .single-card .product_info .description[data-v-1d3d91e6] {\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  -webkit-box-orient: vertical;\n  overflow: hidden;\n  font-size: 0.9rem;\n  color: #585c5c;\n  margin-bottom: 0.2rem;\n}\n.products .my-container .products-cart .row .product .single-card .image[data-v-1d3d91e6] {\n  width: 100px;\n  height: 100px;\n  background-size: cover;\n  background-position: center;\n  border-radius: 4px;\n}\n.my-modal[data-v-1d3d91e6] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  content: \"\";\n  background-color: rgba(0, 0, 0, 0.5);\n  overflow: hidden;\n}\n.my-modal .product-show[data-v-1d3d91e6] {\n  background-color: white;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  max-width: 500px;\n  max-height: 800px;\n}\n.my-modal .product-show .product-show_img[data-v-1d3d91e6] {\n  max-width: 100%;\n}\n.my-modal .product-show .product-show-add[data-v-1d3d91e6] {\n  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\n}\n.my-modal .product-show .product-show-add .m-gap[data-v-1d3d91e6] {\n  gap: 20px;\n}\n.my-modal .product-show .product-show-add .bi.bi-plus-circle[data-v-1d3d91e6], .my-modal .product-show .product-show-add .bi.bi-dash-circle[data-v-1d3d91e6] {\n  color: #00CCBC;\n  font-size: 24px;\n  font-weight: bold;\n}\n.my-modal .product-show .product-show-add .bi.bi-plus-circle[data-v-1d3d91e6]::before, .my-modal .product-show .product-show-add .bi.bi-dash-circle[data-v-1d3d91e6]::before {\n  cursor: pointer;\n  line-height: 48px;\n}\n.my-modal .product-show .product-show-add .quantity[data-v-1d3d91e6] {\n  font-size: 30px;\n}\n.my-modal .product-show .bi.bi-x[data-v-1d3d91e6] {\n  color: #00CCBC;\n  position: absolute;\n  top: -10px;\n  right: 10px;\n  font-size: 40px;\n  font-weight: bold;\n}\n.my-modal .product-show .bi.bi-x[data-v-1d3d91e6]::before {\n  background: white;\n  border-radius: 100%;\n  cursor: pointer;\n}\n.slide-fade-enter-active[data-v-1d3d91e6], .slide-fade-leave-active[data-v-1d3d91e6] {\n  transition: opacity 0.1s ease;\n}\n.slide-fade-enter-from[data-v-1d3d91e6],\n.slide-fade-leave-to[data-v-1d3d91e6] {\n  opacity: 0;\n}", ""]);
 =======
 exports.push([module.i, ".where[data-v-30b3a980] {\n  width: 70px;\n  gap: 10px;\n}\n.after[data-v-30b3a980]::after {\n  content: \"\";\n  display: block;\n  border: 1px solid #e9e8e8;\n  width: 90%;\n}\n.categories[data-v-30b3a980] {\n  max-height: calc(100vh - 50px);\n  overflow: auto;\n}\n.container-card[data-v-30b3a980] {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n}", ""]);
+=======
+exports.push([module.i, ".where[data-v-30b3a980] {\n  width: 95px;\n  gap: 10px;\n}\n.after[data-v-30b3a980]::after {\n  content: \"\";\n  display: block;\n  border: 1px solid #e9e8e8;\n  width: 90%;\n}\n.categories[data-v-30b3a980] {\n  max-height: calc(100vh - 50px);\n  overflow: auto;\n  margin-left: 40px;\n}\n.container-card[data-v-30b3a980] {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n}", ""]);
+>>>>>>> 2fa99f1be4095fac2606cffb818e568d1f8bd268
 
 // exports
 
@@ -3122,7 +3132,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "ul[data-v-09430040], li[data-v-09430040] {\n  list-style: none;\n}\nul[data-v-09430040] {\n  display: contents;\n}\na[data-v-09430040] {\n  text-decoration: none;\n  color: currentColor;\n}\n.hamburger-menu[data-v-09430040] {\n  display: flex;\n  gap: 10px;\n}\n.hamburger-menu .hamburger[data-v-09430040] {\n  border: 2px solid #E9EBEB;\n  padding: 5px 10px;\n  border-radius: 5px;\n  white-space: nowrap;\n  background-color: white;\n}\n.hamburger-menu .hamburger[data-v-09430040]:hover {\n  border: 2px solid #97CDB4;\n}\n.hamburger-menu .dropdown[data-v-09430040] {\n  position: relative;\n}\n.hamburger-menu .dropdown[data-v-09430040]:hover {\n  border: 2px solid #97CDB4;\n}\n.hamburger-menu .dropdown .dropbtn[data-v-09430040] {\n  cursor: pointer;\n}\n.hamburger-menu .dropdown .dropdown-content[data-v-09430040] {\n  display: none;\n  position: absolute;\n  top: 105%;\n  right: 0;\n  border-radius: 5px;\n  font-size: 12px;\n  background-color: #F8FAFC;\n  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);\n  z-index: 999;\n}\n.hamburger-menu .dropdown .dropdown-content.show[data-v-09430040] {\n  display: block;\n}\n.hamburger-menu .dropdown .dropdown-content li[data-v-09430040] {\n  padding: 5px;\n  border-radius: 5px;\n}\n.hamburger-menu .dropdown .dropdown-content li a[data-v-09430040] {\n  padding: 10px;\n}\n.hamburger-menu .dropdown .dropdown-content li[data-v-09430040]:hover {\n  background-color: #dddddd;\n}\n@media (max-width: 312px) {\n.hamburger-menu .dropdown[data-v-09430040] {\n    margin-top: 10px;\n}\n.hamburger-menu .dropdown-content[data-v-09430040] {\n    position: absolute;\n    top: 105%;\n    transform: translatex(25%);\n    width: -webkit-max-content;\n    width: -moz-max-content;\n    width: max-content;\n    text-align: center;\n}\n}", ""]);
+exports.push([module.i, "ul[data-v-09430040], li[data-v-09430040] {\n  list-style: none;\n}\nul[data-v-09430040] {\n  display: contents;\n}\na[data-v-09430040] {\n  text-decoration: none;\n  color: currentColor;\n}\n.hamburger-menu[data-v-09430040] {\n  display: flex;\n  gap: 10px;\n}\n.hamburger-menu .hamburger[data-v-09430040] {\n  border: 2px solid #E9EBEB;\n  padding: 5px 10px;\n  border-radius: 5px;\n  white-space: nowrap;\n  background-color: white;\n}\n.hamburger-menu .hamburger[data-v-09430040]:hover {\n  border: 2px solid #97CDB4;\n}\n.hamburger-menu .dropdown[data-v-09430040] {\n  position: relative;\n}\n.hamburger-menu .dropdown[data-v-09430040]:hover {\n  border: 2px solid #97CDB4;\n}\n.hamburger-menu .dropdown .dropbtn[data-v-09430040] {\n  cursor: pointer;\n}\n.hamburger-menu .dropdown .dropdown-content[data-v-09430040] {\n  display: none;\n  position: absolute;\n  top: 105%;\n  right: 0;\n  border-radius: 5px;\n  font-size: 12px;\n  background-color: #F8FAFC;\n  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);\n  z-index: 999;\n}\n.hamburger-menu .dropdown .dropdown-content.show[data-v-09430040] {\n  display: block;\n}\n.hamburger-menu .dropdown .dropdown-content .link[data-v-09430040] {\n  padding: 5px;\n  border-radius: 5px;\n}\n.hamburger-menu .dropdown .dropdown-content .link a[data-v-09430040] {\n  padding: 10px;\n}\n.hamburger-menu .dropdown .dropdown-content .link[data-v-09430040]:hover {\n  background-color: #dddddd;\n}\n.hamburger-menu .dropdown .dropdown-content .title[data-v-09430040] {\n  padding: 5px;\n}\n@media (max-width: 312px) {\n.hamburger-menu .dropdown[data-v-09430040] {\n    margin-top: 10px;\n}\n.hamburger-menu .dropdown-content[data-v-09430040] {\n    position: absolute;\n    top: 105%;\n    transform: translatex(25%);\n    width: -webkit-max-content;\n    width: -moz-max-content;\n    width: max-content;\n    text-align: center;\n}\n}", ""]);
 
 // exports
 
@@ -3142,7 +3152,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".jumbo-container[data-v-1f7dee9c] {\n  background-image: url(" + escape(__webpack_require__(/*! ../../../public/img/background-jumbo.png */ "./public/img/background-jumbo.png")) + ");\n  background-color: #00CCBC;\n  background-position: center;\n  background-repeat: no-repeat;\n  height: 396px;\n  max-width: 100vw;\n  display: flex;\n  justify-content: center;\n}\n.jumbo-container .jumbo-sub-container[data-v-1f7dee9c] {\n  width: 1140px;\n  display: flex;\n  position: relative;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left[data-v-1f7dee9c] {\n  width: 50%;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-end;\n  color: #440063;\n  font-weight: 900;\n  margin-bottom: 30px;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left .jumbo-left-title[data-v-1f7dee9c] {\n  margin-bottom: 25px;\n  font-weight: 700;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left .jumbo-search-container[data-v-1f7dee9c] {\n  padding: 22px 30px;\n  background-color: white;\n  border-radius: 5px;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left .jumbo-search-container .jumbo-search-title[data-v-1f7dee9c] {\n  color: black;\n  font-size: 16px;\n  font-weight: 500;\n  margin-bottom: 5px;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left .jumbo-search-container .jumbo-search[data-v-1f7dee9c] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  gap: 15px;\n  margin-bottom: 8px;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left .jumbo-search-container .jumbo-search .jumbo-search-bar-container[data-v-1f7dee9c] {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  flex-grow: 1;\n  position: relative;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left .jumbo-search-container .jumbo-search .jumbo-search-bar-container .jumbo-search-bar[data-v-1f7dee9c] {\n  color: black;\n  border-color: rgba(0, 0, 0, 0.299);\n  border-radius: 5px;\n  font-size: 16px;\n  padding-left: 15px;\n  padding-right: 15px;\n  flex-grow: 1;\n  height: 100%;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left .jumbo-search-container .jumbo-search .jumbo-search-bar-container .bi-geo-alt[data-v-1f7dee9c] {\n  font-size: 20px;\n  color: #00CCBC;\n  position: absolute;\n  z-index: 1;\n  right: 15px;\n  top: 50%;\n  transform: translateY(-50%);\n}\n.jumbo-container .jumbo-sub-container .jumbo-left .jumbo-search-container .jumbo-search .jumbo-button-search[data-v-1f7dee9c] {\n  padding: 15px 27px;\n  font-weight: 600;\n  color: white;\n  background-color: #00CCBC;\n  border: none;\n  border-radius: 5px;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left .jumbo-search-container .jumbo-search-text[data-v-1f7dee9c] {\n  color: black;\n  font-size: 14px;\n  font-weight: 500;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left .jumbo-search-container .jumbo-search-text a[data-v-1f7dee9c] {\n  color: #00CCBC;\n  text-decoration: none;\n  font-weight: 600;\n}\n.jumbo-container .jumbo-sub-container .jumbo-right[data-v-1f7dee9c] {\n  width: 50%;\n  position: relative;\n}\n.jumbo-container .jumbo-sub-container .jumbo-right .img-jumbo-svg-first[data-v-1f7dee9c] {\n  z-index: 1;\n  position: absolute;\n  bottom: -1px;\n  left: 50%;\n  transform: translateX(-50%);\n}\n.jumbo-container .jumbo-sub-container .jumbo-right .img-jumbo-svg-second[data-v-1f7dee9c] {\n  height: 350px;\n  overflow: hidden;\n  position: absolute;\n  bottom: 0;\n  left: 50%;\n  transform: translateX(-50%);\n}\n@media (max-width: 1024px) {\n.jumbo-container .jumbo-sub-container[data-v-1f7dee9c] {\n    justify-content: center;\n    align-items: center;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left[data-v-1f7dee9c] {\n    width: 90%;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left .jumbo-left-title[data-v-1f7dee9c] {\n    text-align: center;\n}\n.jumbo-container .jumbo-right[data-v-1f7dee9c] {\n    display: none;\n}\n}\n@media (max-width: 650px) {\n.jumbo-container .jumbo-left-title[data-v-1f7dee9c] {\n    font-size: 22px;\n    margin-bottom: 15px !important;\n}\n.jumbo-container .jumbo-search-title[data-v-1f7dee9c] {\n    font-size: 14px !important;\n    text-align: center;\n}\n.jumbo-container .jumbo-search-bar[data-v-1f7dee9c] {\n    width: 100%;\n    height: 36px !important;\n    font-size: 14px !important;\n}\n.jumbo-container .jumbo-button-search[data-v-1f7dee9c] {\n    padding: 8px 15px !important;\n}\n}\n@media (max-width: 500px) {\n.jumbo-container .bi-geo-alt[data-v-1f7dee9c] {\n    display: none;\n}\n}", ""]);
+exports.push([module.i, ".jumbo-container[data-v-1f7dee9c] {\n  background-image: url(" + escape(__webpack_require__(/*! ../../../public/img/background-jumbo.png */ "./public/img/background-jumbo.png")) + ");\n  background-color: #00CCBC;\n  background-position: center;\n  background-repeat: no-repeat;\n  height: 396px;\n  max-width: 100vw;\n  display: flex;\n  justify-content: center;\n}\n.jumbo-container .jumbo-sub-container[data-v-1f7dee9c] {\n  width: 1140px;\n  display: flex;\n  gap: 40px;\n  position: relative;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left[data-v-1f7dee9c] {\n  width: calc(50% - 20px);\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-end;\n  color: #440063;\n  font-weight: 900;\n  margin-bottom: 30px;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left .jumbo-left-title[data-v-1f7dee9c] {\n  margin-bottom: 25px;\n  font-weight: 700;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left .jumbo-search-container[data-v-1f7dee9c] {\n  padding: 22px 30px;\n  background-color: white;\n  border-radius: 5px;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left .jumbo-search-container .jumbo-search-title[data-v-1f7dee9c] {\n  color: black;\n  font-size: 16px;\n  font-weight: 500;\n  margin-bottom: 5px;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left .jumbo-search-container .jumbo-search[data-v-1f7dee9c] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  gap: 15px;\n  margin-bottom: 8px;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left .jumbo-search-container .jumbo-search .jumbo-search-bar-container[data-v-1f7dee9c] {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  flex-grow: 1;\n  position: relative;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left .jumbo-search-container .jumbo-search .jumbo-search-bar-container .jumbo-search-bar[data-v-1f7dee9c] {\n  color: black;\n  border-color: rgba(0, 0, 0, 0.299);\n  border-radius: 5px;\n  font-size: 16px;\n  padding-left: 15px;\n  padding-right: 15px;\n  flex-grow: 1;\n  height: 100%;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left .jumbo-search-container .jumbo-search .jumbo-search-bar-container .bi-geo-alt[data-v-1f7dee9c] {\n  font-size: 20px;\n  color: #00CCBC;\n  position: absolute;\n  z-index: 1;\n  right: 15px;\n  top: 50%;\n  transform: translateY(-50%);\n}\n.jumbo-container .jumbo-sub-container .jumbo-left .jumbo-search-container .jumbo-search .jumbo-button-search[data-v-1f7dee9c] {\n  padding: 15px 27px;\n  font-weight: 600;\n  color: white;\n  background-color: #00CCBC;\n  border: none;\n  border-radius: 5px;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left .jumbo-search-container .jumbo-search-text[data-v-1f7dee9c] {\n  color: black;\n  font-size: 14px;\n  font-weight: 500;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left .jumbo-search-container .jumbo-search-text a[data-v-1f7dee9c] {\n  color: #00CCBC;\n  text-decoration: none;\n  font-weight: 600;\n}\n.jumbo-container .jumbo-sub-container .jumbo-right[data-v-1f7dee9c] {\n  width: calc(50% - 20px);\n  position: relative;\n}\n.jumbo-container .jumbo-sub-container .jumbo-right .img-jumbo-svg-first[data-v-1f7dee9c] {\n  z-index: 1;\n  position: absolute;\n  bottom: -1px;\n  left: 50%;\n  transform: translateX(-50%);\n}\n.jumbo-container .jumbo-sub-container .jumbo-right .img-jumbo-svg-second[data-v-1f7dee9c] {\n  height: 350px;\n  overflow: hidden;\n  position: absolute;\n  bottom: 0;\n  left: 50%;\n  transform: translateX(-50%);\n}\n@media (max-width: 1024px) {\n.jumbo-container .jumbo-sub-container[data-v-1f7dee9c] {\n    justify-content: center;\n    align-items: center;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left[data-v-1f7dee9c] {\n    width: 90%;\n}\n.jumbo-container .jumbo-sub-container .jumbo-left .jumbo-left-title[data-v-1f7dee9c] {\n    text-align: center;\n}\n.jumbo-container .jumbo-right[data-v-1f7dee9c] {\n    display: none;\n}\n}\n@media (max-width: 650px) {\n.jumbo-container .jumbo-left-title[data-v-1f7dee9c] {\n    font-size: 22px;\n    margin-bottom: 15px !important;\n}\n.jumbo-container .jumbo-search-title[data-v-1f7dee9c] {\n    font-size: 14px !important;\n    text-align: center;\n}\n.jumbo-container .jumbo-search-bar[data-v-1f7dee9c] {\n    width: 100%;\n    height: 36px !important;\n    font-size: 14px !important;\n}\n.jumbo-container .jumbo-button-search[data-v-1f7dee9c] {\n    padding: 8px 15px !important;\n}\n}\n@media (max-width: 500px) {\n.jumbo-container .bi-geo-alt[data-v-1f7dee9c] {\n    display: none;\n}\n}", ""]);
 
 // exports
 
@@ -4777,19 +4787,7 @@ var render = function () {
   return _c("Layout", [
     _c(
       "div",
-      [
-        _c("Jumbo"),
-        _vm._v(" "),
-        _c(
-          "router-link",
-          { attrs: { tag: "button", to: { name: "search.restaurant" } } },
-          [_vm._v("search")]
-        ),
-        _vm._v(" "),
-        _c("Selection"),
-        _vm._v(" "),
-        _c("Favourite"),
-      ],
+      [_c("Jumbo"), _vm._v(" "), _c("Selection"), _vm._v(" "), _c("Favourite")],
       1
     ),
     _vm._v(" "),
@@ -4856,109 +4854,100 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("layout", [
-    _c("div", { staticClass: "container py-5" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          { staticClass: "col-3 categories p-2" },
-          [
-            _c("div", { staticClass: "after" }, [
-              _c(
-                "div",
-                { staticClass: "where d-flex align-items-center p-2" },
-                [
-                  _c("img", {
-                    attrs: {
-                      src: __webpack_require__(/*! ../../../public/img/logo-categories.png */ "./public/img/logo-categories.png"),
-                      alt: "",
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("h5", { staticClass: "m-0" }, [_vm._v("Roma")]),
-                ]
-              ),
+    _c("div", { staticClass: "row mt-5" }, [
+      _c(
+        "div",
+        { staticClass: "col-2 categories p-2" },
+        [
+          _c("div", { staticClass: "after" }, [
+            _c("div", { staticClass: "where d-flex align-items-center p-2" }, [
+              _c("img", {
+                attrs: {
+                  src: __webpack_require__(/*! ../../../public/img/logo-categories.png */ "./public/img/logo-categories.png"),
+                  alt: "",
+                },
+              }),
+              _vm._v(" "),
+              _c("h5", { staticClass: "m-0" }, [_vm._v("Roma")]),
             ]),
-            _vm._v(" "),
-            _c("h5", { staticClass: "my-3" }, [_vm._v("Categorie")]),
-            _vm._v(" "),
-            _vm._l(_vm.categories, function (category) {
-              return _c(
-                "div",
-                { key: category.id, staticClass: "check my-2" },
-                [
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.categoryFiltered,
-                        expression: "categoryFiltered",
-                      },
-                    ],
-                    attrs: {
-                      type: "checkbox",
-                      id: category.name,
-                      name: category.name,
-                    },
-                    domProps: {
-                      value: category.name,
-                      checked: Array.isArray(_vm.categoryFiltered)
-                        ? _vm._i(_vm.categoryFiltered, category.name) > -1
-                        : _vm.categoryFiltered,
-                    },
-                    on: {
-                      change: function ($event) {
-                        var $$a = _vm.categoryFiltered,
-                          $$el = $event.target,
-                          $$c = $$el.checked ? true : false
-                        if (Array.isArray($$a)) {
-                          var $$v = category.name,
-                            $$i = _vm._i($$a, $$v)
-                          if ($$el.checked) {
-                            $$i < 0 &&
-                              (_vm.categoryFiltered = $$a.concat([$$v]))
-                          } else {
-                            $$i > -1 &&
-                              (_vm.categoryFiltered = $$a
-                                .slice(0, $$i)
-                                .concat($$a.slice($$i + 1)))
-                          }
-                        } else {
-                          _vm.categoryFiltered = $$c
-                        }
-                      },
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("label", { attrs: { for: category.name } }, [
-                    _vm._v(_vm._s(category.name)),
-                  ]),
-                ]
-              )
-            }),
-          ],
-          2
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-9 restaurants" }, [
-          _c("h2", [_vm._v("Ristoranti che consegnano a Roma")]),
+          ]),
           _vm._v(" "),
-          this.filteredRestaurants.length == 0
-            ? _c("div", { staticClass: "container-card" }, [
-                _c("h3", [_vm._v("Nessun ristorante trovato")]),
-              ])
-            : _c(
-                "div",
-                { staticClass: "container-card" },
-                _vm._l(_vm.filteredUsers, function (user) {
-                  return _c("RestaurantCard", {
-                    key: user.id,
-                    attrs: { element: user },
-                  })
-                }),
-                1
-              ),
+          _c("h5", { staticClass: "my-3" }, [_vm._v("Categorie")]),
+          _vm._v(" "),
+          _vm._l(_vm.categories, function (category) {
+            return _c("div", { key: category.id, staticClass: "check my-2" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.categoryFiltered,
+                    expression: "categoryFiltered",
+                  },
+                ],
+                attrs: {
+                  type: "checkbox",
+                  id: category.name,
+                  name: category.name,
+                },
+                domProps: {
+                  value: category.name,
+                  checked: Array.isArray(_vm.categoryFiltered)
+                    ? _vm._i(_vm.categoryFiltered, category.name) > -1
+                    : _vm.categoryFiltered,
+                },
+                on: {
+                  change: function ($event) {
+                    var $$a = _vm.categoryFiltered,
+                      $$el = $event.target,
+                      $$c = $$el.checked ? true : false
+                    if (Array.isArray($$a)) {
+                      var $$v = category.name,
+                        $$i = _vm._i($$a, $$v)
+                      if ($$el.checked) {
+                        $$i < 0 && (_vm.categoryFiltered = $$a.concat([$$v]))
+                      } else {
+                        $$i > -1 &&
+                          (_vm.categoryFiltered = $$a
+                            .slice(0, $$i)
+                            .concat($$a.slice($$i + 1)))
+                      }
+                    } else {
+                      _vm.categoryFiltered = $$c
+                    }
+                  },
+                },
+              }),
+              _vm._v(" "),
+              _c("label", { attrs: { for: category.name } }, [
+                _vm._v(_vm._s(category.name)),
+              ]),
+            ])
+          }),
+        ],
+        2
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-9 restaurants ml-5" }, [
+        _c("h2", { staticClass: "mb-4" }, [
+          _vm._v("Ristoranti che consegnano a Roma"),
         ]),
+        _vm._v(" "),
+        this.filteredRestaurants.length == 0
+          ? _c("div", { staticClass: "container-card" }, [
+              _c("h3", [_vm._v("Nessun ristorante trovato")]),
+            ])
+          : _c(
+              "div",
+              { staticClass: "container-card" },
+              _vm._l(_vm.filteredUsers, function (user) {
+                return _c("RestaurantCard", {
+                  key: user.id,
+                  attrs: { element: user },
+                })
+              }),
+              1
+            ),
       ]),
     ]),
   ])
@@ -5033,31 +5022,36 @@ var render = function () {
       _c(
         "div",
         { staticClass: "favourite-card-container" },
-        _vm._l(_vm.users, function (user) {
-          return _c(
-            "router-link",
-            {
-              key: user.id,
-              staticClass: "favourite-link",
-              attrs: {
-                tag: "a",
-                to: { name: "menu.restaurant", params: { slug: user.slug } },
-                href: "",
-              },
-            },
-            [
-              _c("div", { staticClass: "favourite-card" }, [
-                _c("img", {
-                  staticClass: "favourite-img",
-                  attrs: { src: user.cover, alt: "" },
-                }),
-                _vm._v(" "),
-                _c("h2", { staticClass: "favourite-name" }, [
-                  _vm._v(_vm._s(user.name)),
-                ]),
-              ]),
-            ]
-          )
+        _vm._l(_vm.users, function (user, i) {
+          return i < 12
+            ? _c(
+                "router-link",
+                {
+                  key: user.id,
+                  staticClass: "favourite-link",
+                  attrs: {
+                    tag: "a",
+                    to: {
+                      name: "menu.restaurant",
+                      params: { slug: user.slug },
+                    },
+                    href: "",
+                  },
+                },
+                [
+                  _c("div", { staticClass: "favourite-card" }, [
+                    _c("img", {
+                      staticClass: "favourite-img",
+                      attrs: { src: user.cover, alt: "" },
+                    }),
+                    _vm._v(" "),
+                    _c("h2", { staticClass: "favourite-name" }, [
+                      _vm._v(_vm._s(user.name)),
+                    ]),
+                  ]),
+                ]
+              )
+            : _vm._e()
         }),
         1
       ),
@@ -5282,6 +5276,24 @@ var render = function () {
                 _c("ul", [
                   _c(
                     "li",
+                    { staticClass: "item" },
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          attrs: {
+                            tag: "a",
+                            to: { name: "search.restaurant" },
+                          },
+                        },
+                        [_vm._v("Ristoranti")]
+                      ),
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "li",
                     {
                       staticClass: "item dropdown",
                       on: {
@@ -5355,7 +5367,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("ul", [
       _c("li", [
-        _c("a", { attrs: { href: "/register" } }, [_vm._v("Ristoranti")]),
+        _c("a", { attrs: { href: "/register" } }, [_vm._v("Ristoratori")]),
       ]),
       _vm._v(" "),
       _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Lavora con noi")])]),
@@ -5426,7 +5438,38 @@ var render = function () {
         _c(
           "div",
           { class: ["dropdown-content", _vm.dropdown1 == true ? "show" : ""] },
-          [_vm._m(1)]
+          [
+            _c("ul", [
+              _c(
+                "li",
+                { staticClass: "link" },
+                [
+                  _c(
+                    "router-link",
+                    { attrs: { tag: "a", to: { name: "search.restaurant" } } },
+                    [_vm._v("Ristoranti")]
+                  ),
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("hr", { staticClass: "mt-0" }),
+              _vm._v(" "),
+              _vm._m(1),
+              _vm._v(" "),
+              _vm._m(2),
+              _vm._v(" "),
+              _vm._m(3),
+              _vm._v(" "),
+              _vm._m(4),
+              _vm._v(" "),
+              _c("hr"),
+              _vm._v(" "),
+              _vm._m(5),
+              _vm._v(" "),
+              _vm._m(6),
+            ]),
+          ]
         ),
       ]
     ),
@@ -5446,38 +5489,56 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("ul", [
-      _c("li", [
-        _c("h6", { staticClass: "title" }, [_vm._v("Collabora con noi")]),
-      ]),
-      _vm._v(" "),
-      _c("li", [
-        _c("a", { attrs: { href: "/register" } }, [_vm._v("Ristoranti")]),
-      ]),
-      _vm._v(" "),
-      _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Lavora con noi")])]),
-      _vm._v(" "),
-      _c("li", [
-        _c("a", { attrs: { href: "#" } }, [_vm._v("Deliveboo for Work")]),
-      ]),
-      _vm._v(" "),
-      _c("hr"),
-      _vm._v(" "),
-      _c("li", [
-        _c("h6", [
-          _c("a", { attrs: { href: "#" } }, [
-            _c("i", { staticClass: "bi bi-cart4 p-1" }),
-            _vm._v("0,00 €"),
-          ]),
+    return _c("li", [
+      _c("h6", { staticClass: "title" }, [_vm._v("Collabora con noi")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "link" }, [
+      _c("a", { attrs: { href: "/register" } }, [_vm._v("Ristoranti")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "link" }, [
+      _c("a", { attrs: { href: "#" } }, [_vm._v("Lavora con noi")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "link" }, [
+      _c("a", { attrs: { href: "#" } }, [_vm._v("Deliveboo for Work")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "link" }, [
+      _c("h6", [
+        _c("a", { attrs: { href: "#" } }, [
+          _c("i", { staticClass: "bi bi-cart4 p-1" }),
+          _vm._v("0,00 €"),
         ]),
       ]),
-      _vm._v(" "),
-      _c("li", [
-        _c("h6", [
-          _c("a", { attrs: { href: "/home" } }, [
-            _c("i", { staticClass: "bi bi-house-door p-1" }),
-            _vm._v("Registrati o accedi"),
-          ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "link" }, [
+      _c("h6", [
+        _c("a", { attrs: { href: "/home" } }, [
+          _c("i", { staticClass: "bi bi-house-door p-1" }),
+          _vm._v("Registrati o accedi"),
         ]),
       ]),
     ])

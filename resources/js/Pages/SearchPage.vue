@@ -1,8 +1,8 @@
 <template>
   <layout>
-    <div class="container py-5">
-      <div class="row">
-        <div class="col-3 categories p-2">
+    <!-- <div class="container py-5"> -->
+      <div class="row mt-5">
+        <div class="col-2 categories p-2">
           <div class="after">
             <div class="where d-flex align-items-center p-2">
               <img src="../../../public/img/logo-categories.png" alt="">
@@ -16,8 +16,8 @@
             <label :for="category.name">{{category.name}}</label>
           </div>
         </div>
-        <div class="col-9 restaurants">
-          <h2>Ristoranti che consegnano a Roma</h2>
+        <div class="col-9 restaurants ml-5">
+          <h2 class="mb-4">Ristoranti che consegnano a Roma</h2>
           <div class="container-card" v-if="this.filteredRestaurants.length == 0">
             <h3>Nessun ristorante trovato</h3>
             <!-- card -->
@@ -28,7 +28,7 @@
         </div>
       </div>
      
-    </div>
+    <!-- </div> -->
   </layout>
 </template>
 
@@ -113,7 +113,7 @@ import RestaurantCard from '../components/RestaurantCard.vue'
 
 <style lang="scss" scoped>
 .where{
-  width: 70px;
+  width: 95px;
   gap: 10px;
   // position: sticky !important;
   // top: 10px;
@@ -129,6 +129,7 @@ import RestaurantCard from '../components/RestaurantCard.vue'
 .categories{
   max-height: calc(100vh - 50px);
   overflow: auto;
+  margin-left: 40px;
 }
 
 .container-card{

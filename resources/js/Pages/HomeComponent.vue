@@ -2,7 +2,6 @@
   <Layout>
     <div>
       <Jumbo/>
-    <router-link tag="button" :to="{name:'search.restaurant'}">search</router-link>
       <Selection/>
       <Favourite/>
     </div>
