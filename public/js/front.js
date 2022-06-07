@@ -2915,7 +2915,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".where[data-v-30b3a980] {\n  width: 70px;\n  gap: 10px;\n}\n.after[data-v-30b3a980]::after {\n  content: \"\";\n  display: block;\n  border: 1px solid #e9e8e8;\n  width: 90%;\n}\n.categories[data-v-30b3a980] {\n  max-height: calc(100vh - 50px);\n  overflow: auto;\n}\n.container-card[data-v-30b3a980] {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n}", ""]);
+exports.push([module.i, ".where[data-v-30b3a980] {\n  width: 95px;\n  gap: 10px;\n}\n.after[data-v-30b3a980]::after {\n  content: \"\";\n  display: block;\n  border: 1px solid #e9e8e8;\n  width: 90%;\n}\n.categories[data-v-30b3a980] {\n  max-height: calc(100vh - 50px);\n  overflow: auto;\n  margin-left: 40px;\n}\n.container-card[data-v-30b3a980] {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n}", ""]);
 
 // exports
 
@@ -4677,7 +4677,7 @@ var render = function () {
     { staticClass: "container" },
     _vm._l(_vm.user.products, function (product) {
       return _c("div", { key: product.id }, [
-        _vm._v("\n    " + _vm._s(product.name) + "\n  "),
+        _vm._v("\r\n    " + _vm._s(product.name) + "\r\n  "),
       ])
     }),
     0
@@ -4706,109 +4706,100 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("layout", [
-    _c("div", { staticClass: "container py-5" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          { staticClass: "col-3 categories p-2" },
-          [
-            _c("div", { staticClass: "after" }, [
-              _c(
-                "div",
-                { staticClass: "where d-flex align-items-center p-2" },
-                [
-                  _c("img", {
-                    attrs: {
-                      src: __webpack_require__(/*! ../../../public/img/logo-categories.png */ "./public/img/logo-categories.png"),
-                      alt: "",
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("h5", { staticClass: "m-0" }, [_vm._v("Roma")]),
-                ]
-              ),
+    _c("div", { staticClass: "row mt-5" }, [
+      _c(
+        "div",
+        { staticClass: "col-2 categories p-2" },
+        [
+          _c("div", { staticClass: "after" }, [
+            _c("div", { staticClass: "where d-flex align-items-center p-2" }, [
+              _c("img", {
+                attrs: {
+                  src: __webpack_require__(/*! ../../../public/img/logo-categories.png */ "./public/img/logo-categories.png"),
+                  alt: "",
+                },
+              }),
+              _vm._v(" "),
+              _c("h5", { staticClass: "m-0" }, [_vm._v("Roma")]),
             ]),
-            _vm._v(" "),
-            _c("h5", { staticClass: "my-3" }, [_vm._v("Categorie")]),
-            _vm._v(" "),
-            _vm._l(_vm.categories, function (category) {
-              return _c(
-                "div",
-                { key: category.id, staticClass: "check my-2" },
-                [
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.categoryFiltered,
-                        expression: "categoryFiltered",
-                      },
-                    ],
-                    attrs: {
-                      type: "checkbox",
-                      id: category.name,
-                      name: category.name,
-                    },
-                    domProps: {
-                      value: category.name,
-                      checked: Array.isArray(_vm.categoryFiltered)
-                        ? _vm._i(_vm.categoryFiltered, category.name) > -1
-                        : _vm.categoryFiltered,
-                    },
-                    on: {
-                      change: function ($event) {
-                        var $$a = _vm.categoryFiltered,
-                          $$el = $event.target,
-                          $$c = $$el.checked ? true : false
-                        if (Array.isArray($$a)) {
-                          var $$v = category.name,
-                            $$i = _vm._i($$a, $$v)
-                          if ($$el.checked) {
-                            $$i < 0 &&
-                              (_vm.categoryFiltered = $$a.concat([$$v]))
-                          } else {
-                            $$i > -1 &&
-                              (_vm.categoryFiltered = $$a
-                                .slice(0, $$i)
-                                .concat($$a.slice($$i + 1)))
-                          }
-                        } else {
-                          _vm.categoryFiltered = $$c
-                        }
-                      },
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("label", { attrs: { for: category.name } }, [
-                    _vm._v(_vm._s(category.name)),
-                  ]),
-                ]
-              )
-            }),
-          ],
-          2
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-9 restaurants" }, [
-          _c("h2", [_vm._v("Ristoranti che consegnano a Roma")]),
+          ]),
           _vm._v(" "),
-          this.filteredRestaurants.length == 0
-            ? _c("div", { staticClass: "container-card" }, [
-                _c("h3", [_vm._v("Nessun ristorante trovato")]),
-              ])
-            : _c(
-                "div",
-                { staticClass: "container-card" },
-                _vm._l(_vm.filteredUsers, function (user) {
-                  return _c("RestaurantCard", {
-                    key: user.id,
-                    attrs: { element: user },
-                  })
-                }),
-                1
-              ),
+          _c("h5", { staticClass: "my-3" }, [_vm._v("Categorie")]),
+          _vm._v(" "),
+          _vm._l(_vm.categories, function (category) {
+            return _c("div", { key: category.id, staticClass: "check my-2" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.categoryFiltered,
+                    expression: "categoryFiltered",
+                  },
+                ],
+                attrs: {
+                  type: "checkbox",
+                  id: category.name,
+                  name: category.name,
+                },
+                domProps: {
+                  value: category.name,
+                  checked: Array.isArray(_vm.categoryFiltered)
+                    ? _vm._i(_vm.categoryFiltered, category.name) > -1
+                    : _vm.categoryFiltered,
+                },
+                on: {
+                  change: function ($event) {
+                    var $$a = _vm.categoryFiltered,
+                      $$el = $event.target,
+                      $$c = $$el.checked ? true : false
+                    if (Array.isArray($$a)) {
+                      var $$v = category.name,
+                        $$i = _vm._i($$a, $$v)
+                      if ($$el.checked) {
+                        $$i < 0 && (_vm.categoryFiltered = $$a.concat([$$v]))
+                      } else {
+                        $$i > -1 &&
+                          (_vm.categoryFiltered = $$a
+                            .slice(0, $$i)
+                            .concat($$a.slice($$i + 1)))
+                      }
+                    } else {
+                      _vm.categoryFiltered = $$c
+                    }
+                  },
+                },
+              }),
+              _vm._v(" "),
+              _c("label", { attrs: { for: category.name } }, [
+                _vm._v(_vm._s(category.name)),
+              ]),
+            ])
+          }),
+        ],
+        2
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-9 restaurants ml-5" }, [
+        _c("h2", { staticClass: "mb-4" }, [
+          _vm._v("Ristoranti che consegnano a Roma"),
         ]),
+        _vm._v(" "),
+        this.filteredRestaurants.length == 0
+          ? _c("div", { staticClass: "container-card" }, [
+              _c("h3", [_vm._v("Nessun ristorante trovato")]),
+            ])
+          : _c(
+              "div",
+              { staticClass: "container-card" },
+              _vm._l(_vm.filteredUsers, function (user) {
+                return _c("RestaurantCard", {
+                  key: user.id,
+                  attrs: { element: user },
+                })
+              }),
+              1
+            ),
       ]),
     ]),
   ])
@@ -21419,7 +21410,7 @@ module.exports = "/images/ios-badge.png?2566899de2c3663e0250b22d1a160aa7";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/jumbo-bkg-svg2.svg?ece43a1805da9c592135a025ae78cca8";
+module.exports = "/images/jumbo-bkg-svg2.svg?8de0ecba9e591757458db25a3d02de10";
 
 /***/ }),
 
@@ -22964,7 +22955,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/simonecoszach/Developer/Boolean/Corso/Projects/team-3-deliveBoo/resources/js/front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\black\Project\Hub Project\LARAVEL\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })
