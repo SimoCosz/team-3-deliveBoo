@@ -2023,6 +2023,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2032,7 +2034,8 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      user: null
+      user: null,
+      loading: false
     };
   },
   methods: {
@@ -2818,6 +2821,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+//
 //
 //
 //
@@ -2909,33 +2915,76 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      show: false,
-      selectedProduct: null,
-      quantity: 1,
-      //FIXME: quantità al momento gestita con questa variabile (Da eliminare)
-      cart: [],
-      totalPrice: 0
+      activeElement: undefined,
+      cartShop: [],
+      restaurant: [],
+      menuPlates: [],
+      ingredients: [],
+      logo: __webpack_require__(/*! /public/img/img-default-img.png */ "./public/img/img-default-img.png"),
+      authUser: window.authUser
     };
   },
   methods: {
-    showModal: function showModal(product) {
-      this.show = true;
-      this.selectedProduct = product;
+    fetchRestaurantInfo: function fetchRestaurantInfo() {
+      var _this = this;
+
+      axios.get("/app/Http/Controllers/Api/UserController.php/$(this.$route.params.id}").then(function (res) {
+        _this.restaurant = res.data.user[0];
+        _this.menuPlates = res.data.user_plates;
+      })["catch"](function (err) {
+        console.warn(err);
+      });
     },
-    addProduct: function addProduct(selectedProduct) {
-      if (!this.cart.includes(selectedProduct)) {
-        this.cart.push(selectedProduct);
-        this.totalPrice += selectedProduct.price; //TODO: da moltiplicare per la quantita del selectedProduct 
-      }
+    // a questa funzione viene passato come parametro l'indice del piatto cliccato,
+    // ed assegna all'array ingredients i corrispettivi ingredienti
+    viewPlate: function viewPlate(i) {
+      this.activeElement = i;
+      this.ingredients = this.menuPlates[i].ingredients.split(',');
     },
-    increment: function increment() {
-      this.quantity += 1;
+    closePlateInfo: function closePlateInfo() {
+      this.activeElement = undefined;
     },
-    decrement: function decrement() {
-      if (this.quantity != 1) {
-        this.quantity -= 1;
+    addToCart: function addToCart(index) {
+      var _this2 = this;
+
+      if ((typeof Storage === "undefined" ? "undefined" : _typeof(Storage)) !== undefined) {
+        var id = index.id,
+            name = index.name,
+            cover = index.cover,
+            price = index.price;
+        var plate = {
+          id: id,
+          name: name,
+          cover: cover,
+          price: price,
+          quantity: 1
+        };
+
+        if (JSON.parse(localStorage.getItem('cartShop')) === null) {
+          this.cartShop.push(plate);
+          localStorage.setItem('cartShop', JSON.stringify(this.cartShop));
+          window.location.reload();
+        } else {
+          var localItems = JSON.parse(localStorage.getItem('cartShop'));
+          localItems.map(function (data) {
+            if (plate.id == data.id) {
+              plate.quantity += data.quantity;
+              plate.price = plate.price * plate.quantity;
+            } else {
+              _this2.cartShop.push(data);
+            }
+          });
+          this.cartShop.push(plate);
+          window.location.reload();
+          localStorage.setItem('cartShop', JSON.stringify(this.cartShop));
+        }
+      } else {
+        alert('Storage non funziona nel tuo browser');
       }
     }
+  },
+  mounted: function mounted() {
+    this.fetchRestaurantInfo();
   }
 });
 
@@ -5220,14 +5269,20 @@ var render = function () {
                 _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-12 col-md-4" }, [
                     _c("figure", [
-                      _c("img", {
-                        staticClass: "restourant-image",
-                        attrs: { src: _vm.user.cover, alt: "" },
-                      }),
+                      _vm.user.cover != null
+                        ? _c("img", {
+                            staticClass: "restourant-image",
+                            attrs: { src: _vm.user.cover, alt: "" },
+                          })
+                        : _vm._e(),
                     ]),
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "col-12 col-md-8" }, [
+                    _c("button", { on: { click: _vm.addToCart } }, [
+                      _vm._v("Add to cart"),
+                    ]),
+                    _vm._v(" "),
                     _c("h1", [_vm._v(_vm._s(_vm.user.name))]),
                     _vm._v(" "),
                     _c("p", [_vm._v(_vm._s(_vm.user.category))]),
@@ -6552,8 +6607,20 @@ var render = function () {
                           ]),
                           _vm._v(" "),
                           _c("p", { staticClass: "description" }, [
-                            _vm._v(_vm._s(product.description)),
+                            _vm._v("grande simo"),
                           ]),
+                          _vm._v(" "),
+                          _c(
+                            "button",
+                            {
+                              on: {
+                                click: function ($event) {
+                                  return _vm.addToCart(product)
+                                },
+                              },
+                            },
+                            [_vm._v("cart")]
+                          ),
                           _vm._v(" "),
                           _c("p", { staticClass: "r-color" }, [
                             _vm._v(_vm._s(product.price) + " €"),
@@ -6575,96 +6642,6 @@ var render = function () {
               }),
               0
             ),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-12 col-lg-4" }, [
-            _c("div", { staticClass: "cart p-3" }, [
-              this.cart.length == 0
-                ? _c("div", [
-                    _c("p", { staticClass: "text-center py-5" }, [
-                      _vm._v("Il carrello è vuoto"),
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "button",
-                      { staticClass: "btn btn-secondary btn-block" },
-                      [_vm._v(" Vai al Pagamento")]
-                    ),
-                  ])
-                : _c(
-                    "div",
-                    { staticClass: "text-dark" },
-                    [
-                      _c("h4", { staticClass: "font-weight-bold" }, [
-                        _vm._v("I tuoi ordini"),
-                      ]),
-                      _vm._v(" "),
-                      _vm._l(this.cart, function (element) {
-                        return _c("div", { key: element.id }, [
-                          _c(
-                            "div",
-                            { staticClass: "d-flex justify-content-between" },
-                            [
-                              _c("span", [_vm._v(_vm._s(element.name))]),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "d-flex justify-content-center",
-                                },
-                                [
-                                  _c("i", {
-                                    staticClass:
-                                      "bi bi-dash-circle primary-color",
-                                    on: { click: _vm.decrement },
-                                  }),
-                                  _vm._v(" "),
-                                  _c("span", { staticClass: "quantity px-2" }, [
-                                    _vm._v(_vm._s(_vm.quantity)),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("i", {
-                                    staticClass:
-                                      "bi bi-plus-circle primary-color",
-                                    on: { click: _vm.increment },
-                                  }),
-                                  _vm._v(" "),
-                                  _c("span", { staticClass: "px-2" }, [
-                                    _vm._v(
-                                      _vm._s(element.price * _vm.quantity) +
-                                        " €"
-                                    ),
-                                  ]),
-                                ]
-                              ),
-                            ]
-                          ),
-                        ])
-                      }),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "total d-flex justify-content-between" },
-                        [
-                          _c("h5", { staticClass: "font-weight-bold" }, [
-                            _vm._v("Totale:"),
-                          ]),
-                          _vm._v(" "),
-                          _c("h5", { staticClass: "font-weight-bold" }, [
-                            _vm._v(_vm._s(_vm.totalPrice) + "€"),
-                          ]),
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "button",
-                        { staticClass: "btn btn-bg-color btn-block" },
-                        [_vm._v(" Vai al Pagamento")]
-                      ),
-                    ],
-                    2
-                  ),
-            ]),
           ]),
         ]),
       ]),
@@ -6723,19 +6700,13 @@ var render = function () {
                           "div",
                           { staticClass: "d-flex justify-content-center pb-3" },
                           [
-                            _c("i", {
-                              staticClass: "bi bi-dash-circle",
-                              on: { click: _vm.decrement },
-                            }),
+                            _c("i", { staticClass: "bi bi-dash-circle" }),
                             _vm._v(" "),
                             _c("span", { staticClass: "quantity px-2" }, [
                               _vm._v(_vm._s(_vm.quantity)),
                             ]),
                             _vm._v(" "),
-                            _c("i", {
-                              staticClass: "bi bi-plus-circle",
-                              on: { click: _vm.increment },
-                            }),
+                            _c("i", { staticClass: "bi bi-plus-circle" }),
                           ]
                         ),
                         _vm._v(" "),
@@ -6745,7 +6716,7 @@ var render = function () {
                             staticClass: "btn btn-block btn-bg-color",
                             on: {
                               click: function ($event) {
-                                return _vm.addProduct(_vm.selectedProduct)
+                                return _vm.addToCart(_vm.selectedProduct)
                               },
                             },
                           },
@@ -22579,6 +22550,17 @@ module.exports = "/images/at_home_with_deliveboo.png?c0f3970248ab6c9af16f6393caa
 /***/ (function(module, exports) {
 
 module.exports = "/images/background-jumbo.png?64e7b277d4188e0683d14ba208c6e0dc";
+
+/***/ }),
+
+/***/ "./public/img/img-default-img.png":
+/*!****************************************!*\
+  !*** ./public/img/img-default-img.png ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/img-default-img.png?b57c9911667144442820e96e524fee87";
 
 /***/ }),
 

@@ -62,6 +62,18 @@ class UserController extends Controller
        ]);
     }
 
+    public function showMenu($id)
+    {
+        $users = User::where('id', '=',$id)->get();
+
+        $user_plates = User::join('plates', 'plates.user_id', '=', 'users.id')->where('plates.user_id','=',$id)->get();
+
+        return response()->json([
+            'users' => $users,
+            'user_plates' => $user_plates
+        ]);
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

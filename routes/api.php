@@ -26,7 +26,8 @@ Route::namespace('Api')->group(function(){
     ->parameters([
         'users' => 'users:slug',
         'users' => 'users:user_id'
-     ]);
+    ]);
+     Route::get('/menu-restaurant/{user}', 'UserController@showMenu');
 
     Route::resource('orders', 'OrderController')->only([
         'index',

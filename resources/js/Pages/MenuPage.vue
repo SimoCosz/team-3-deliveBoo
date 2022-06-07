@@ -6,7 +6,8 @@
         <div class="row">
           <div class="col-12 col-md-4">
             <figure>
-              <img class="restourant-image" :src=user.cover alt="">
+              <img class="restourant-image" v-if="user.cover != null" :src='user.cover' alt="">
+              <!-- <img class="restourant-image" v-else :src='require('../../../public/img/img-default-img.png')' alt=""> -->
             </figure>
           </div>
           <div class="col-12 col-md-8">
@@ -37,7 +38,8 @@ import ProductList from '../components/ProductList.vue'
 
     data(){
       return {
-        user: null
+        user: null,
+        loading: false
       }
     },
     
