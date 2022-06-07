@@ -6,21 +6,25 @@
       </div>
       <div :class="['dropdown-content', dropdown1 == true? 'show' : '']">
         <ul>
+          <li class="link">
+            <router-link tag="a" :to="{name:'search.restaurant'}">Ristoranti</router-link>
+          </li>
+          <hr class="mt-0">
           <li>
             <h6 class="title">Collabora con noi</h6>
           </li>
-          <li>
+          <li class="link">
             <a href="/register">Ristoranti</a>
           </li>
-          <li>
+          <li class="link">
             <a href="#">Lavora con noi</a>
           </li>
-          <li>
+          <li class="link">
             <a href="#">Deliveboo for Work</a>
           </li>
           <hr>
-          <li><h6><a href="#"><i class="bi bi-cart4 p-1"></i>0,00 &euro;</a></h6></li>
-          <li><h6><a href="/home"><i class="bi bi-house-door p-1"></i>Registrati o accedi</a></h6></li>
+          <li class="link"><h6><a href="#"><i class="bi bi-cart4 p-1"></i>0,00 &euro;</a></h6></li>
+          <li class="link"><h6><a href="/home"><i class="bi bi-house-door p-1"></i>Registrati o accedi</a></h6></li>
         </ul>
 
       </div>
@@ -101,7 +105,7 @@ a{
            display: block;
         }
 
-        li{
+        .link{
           padding: 5px;
           border-radius: 5px;
 
@@ -112,6 +116,10 @@ a{
           &:hover{
             background-color: #dddddd;
           }
+        }
+
+        .title{
+          padding: 5px;
         }
       }
     }

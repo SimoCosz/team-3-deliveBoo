@@ -49,10 +49,11 @@ export default {
     .jumbo-sub-container{
         width: 1140px;
         display: flex;
+        gap: 40px;
         position: relative;
 
         .jumbo-left{
-            width: 50%;
+            width: calc(50% - 20px);
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
@@ -138,7 +139,7 @@ export default {
         }
     
         .jumbo-right{
-            width: 50%;
+            width: calc(50% - 20px);
             position: relative;
 
             .img-jumbo-svg-first{
