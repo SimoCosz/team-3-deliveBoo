@@ -36,7 +36,7 @@
       </div>
       {{-- PRICE --}}
       <div class="mb-3">
-        <label for="price" class="form-label"> Prezzo </label>
+        <label for="price" class="form-label"> Prezzo* </label>
         <input type="number" step=".01" required min="0.01" max="999.99" class="form-control @error('price') is-invalid @enderror" value=" {{old('price')?: $product->price}} " name="price" id="price">
         @error('price')
             <div class="invalid-feedback"> {{$message}} </div>
