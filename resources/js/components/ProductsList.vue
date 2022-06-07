@@ -90,37 +90,100 @@ props: {
 },
 data(){
   return {
-    show:false,
-    selectedProduct:null,
-    quantity: 1, //FIXME: quantità al momento gestita con questa variabile (Da eliminare)
-    cart:[],
-    totalPrice: 0,
+    // show:false,
+    // selectedProduct:null,
+    activeElement: undefined,
+    cartShop:[],
+    restaurant: [],
+    menuPlates: [],
+    ingredients: [],
+    logo: require('/public/img/img-default-img.png'),
+    authUser: window.authUser,
+    // totalPrice: 0,
   }
 },
 
 methods : {
-  showModal: function(product) {
-    this.show=true;
-    this.selectedProduct=product;
+  // showModal: function(product) {
+  //   this.show=true;
+  //   this.selectedProduct=product;
+  // },
+
+  // addProduct: function(selectedProduct) {
+  //   if(!this.cart.includes(selectedProduct)){
+  //     this.cart.push(selectedProduct);
+  //     this.totalPrice+=selectedProduct.price; //TODO: da moltiplicare per la quantita del selectedProduct 
+  //   }
+  // },
+
+  // increment: function(){
+  //   this.quantity +=1;
+  // },
+  // decrement: function(){
+  //   if(this.quantity!=1){
+  //     this.quantity -=1;
+  //   }
+  // }
+  fetchRestaurantInfo(){
+    axios.get(`/app/Http/Controllers/Api/UserController.php/$(this.$route.params.id}`)
+    .then( res => {
+      this.restaurant = res.data.user[0];
+      this.menuPlates = res.data.user_plates;
+    })
+    .catch( err => {
+      console.warn(err);
+    })
+  },
+  // a questa funzione viene passato come parametro l'indice del piatto cliccato,
+  // ed assegna all'array ingredients i corrispettivi ingredienti
+  viewPlate(i){
+    this.activeElement = i;
+    this.ingredients = this.menuPlates[i].ingredients.split(',');
+  },
+  closePlateInfo(){
+    this.activeElement = undefined;
   },
 
-  addProduct: function(selectedProduct) {
-    if(!this.cart.includes(selectedProduct)){
-      this.cart.push(selectedProduct);
-      this.totalPrice+=selectedProduct.price; //TODO: da moltiplicare per la quantita del selectedProduct 
-    }
-  },
+  addToCart(index) {
+    if(typeof(Storage) !== undefined) {
+      const {id, name, image, price} = index;
 
-  increment: function(){
-    this.quantity +=1;
-  },
-  decrement: function(){
-    if(this.quantity!=1){
-      this.quantity -=1;
+      const plate = {
+        id: id,
+        name: name,
+        image: image,
+        price: price,
+        quantity: 1
+      };
+
+      if(JSON.parse(localStorage.getItem('cartShop')) === null) {
+        this.cartShop.push(plate);
+        localStorage.setItem('cartShop', JSON.stringify(this.cartShop));
+        window.location.reload();
+      } else {
+        const localItems = JSON.parse(localStorage.getItem('cartShop'));
+        localItems.map(data=>{
+          if(plate.id == data.id) {
+            plate.quantity = data.quantity + 1;
+            plate.price = plate.price * plate.quantity;
+          } else {
+            this.cartShop.push(data);
+          }
+        });
+
+        this.cartShop.push(plate);
+        window.location.reload();
+        localStorage.setItem('cartShop', JSON.stringify(this.cartShop));
+      }
+
+    } else {
+      alert('Storage non funziona nel tuo browser');
     }
   }
-
 },
+mounted() {
+  this.fetchRestaurantInfo();
+}
 }
 </script>
 
