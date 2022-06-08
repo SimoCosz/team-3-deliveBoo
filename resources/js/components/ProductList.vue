@@ -23,25 +23,25 @@
         <!-- CART -->
         <div class="col-12 col-lg-4">
           <div class="cart p-3">
-            <div v-if="this.cartShop.length==0">
+            <div v-if="this.localCartShop.length==0">
               <p class="text-center py-5">Il carrello è vuoto</p>
               <button class="btn btn-secondary btn-block"> Vai al Pagamento</button>
             </div>
 
             <div class="text-dark" v-else>
               <h4 class="font-weight-bold">I tuoi ordini</h4>
-              <div v-for="element in this.cartShop" :key="element.id">
+              <div v-for="element in this.localCartShop" :key="element.id">
                 <div class="d-flex justify-content-between">
                   <span>{{element.name}}</span>
                   <div class="d-flex justify-content-center">
-                    <i class="bi bi-dash-circle primary-color" @click="decrementQuantity()"></i>
+                    <i class="bi bi-dash-circle primary-color" @click="decrementCartQuantity(element)"></i>
                     <span class="quantity px-2">{{element.quantity}}</span>
-                    <i class="bi bi-plus-circle primary-color" @click="incrementQuantity()"></i>
-                    <span class="px-2">{{element.price*quantity}} &#8364;</span>
+                    <i class="bi bi-plus-circle primary-color" @click="incrementCartQuantity(element)"></i>
+                    <span class="px-2">{{element.price*element.quantity}} &#8364;</span>
                   </div>
                 </div>
               </div>
-              <div class="total d-flex justify-content-between">
+              <div class="total d-flex justify-content-between mt-3">
                 <h5 class="font-weight-bold">Totale:</h5>
                 <h5 class="font-weight-bold">{{totalPrice}}&#8364;</h5>
               </div>
@@ -93,7 +93,7 @@ data(){
     show: false,
     selectedProduct: false,
     activeElement: undefined,
-    cartShop:[],
+    localC:[],
     restaurant: [],
     menuPlates: [],
     ingredients: [],
@@ -102,6 +102,9 @@ data(){
     quantity: 1,
     totalPrice: 0,
     csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+
+    // Cart shop del local storage
+    localCartShop: JSON.parse(localStorage.getItem('cartShop')),
   }
 },
 
@@ -133,6 +136,18 @@ methods : {
     console.log(this.show);
   },
 
+  // Per aumentare o diminuire le quantità nel carrello
+  incrementCartQuantity(el){
+    el.quantity++;
+  },
+
+  decrementCartQuantity(el){
+    if(el.quantity > 0) {
+      el.quantity--;
+    }
+  },
+
+  // Per aumentare o diminuire le quantità nella finestra del prodotto
   incrementQuantity(){
     this.quantity++;
   },

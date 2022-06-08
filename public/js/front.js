@@ -2784,7 +2784,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       show: false,
       selectedProduct: false,
       activeElement: undefined,
-      cartShop: [],
+      localC: [],
       restaurant: [],
       menuPlates: [],
       ingredients: [],
@@ -2792,7 +2792,9 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       authUser: window.authUser,
       quantity: 1,
       totalPrice: 0,
-      csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+      csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+      // Cart shop del local storage
+      localCartShop: JSON.parse(localStorage.getItem('cartShop'))
     };
   },
   methods: {
@@ -2821,6 +2823,16 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       this.quantity = 1;
       console.log(this.show);
     },
+    // Per aumentare o diminuire le quantità nel carrello
+    incrementCartQuantity: function incrementCartQuantity(el) {
+      el.quantity++;
+    },
+    decrementCartQuantity: function decrementCartQuantity(el) {
+      if (el.quantity > 0) {
+        el.quantity--;
+      }
+    },
+    // Per aumentare o diminuire le quantità nella finestra del prodotto
     incrementQuantity: function incrementQuantity() {
       this.quantity++;
     },
@@ -6417,7 +6429,7 @@ var render = function () {
           _vm._v(" "),
           _c("div", { staticClass: "col-12 col-lg-4" }, [
             _c("div", { staticClass: "cart p-3" }, [
-              this.cartShop.length == 0
+              this.localCartShop.length == 0
                 ? _c("div", [
                     _c("p", { staticClass: "text-center py-5" }, [
                       _vm._v("Il carrello è vuoto"),
@@ -6437,7 +6449,7 @@ var render = function () {
                         _vm._v("I tuoi ordini"),
                       ]),
                       _vm._v(" "),
-                      _vm._l(this.cartShop, function (element) {
+                      _vm._l(this.localCartShop, function (element) {
                         return _c("div", { key: element.id }, [
                           _c(
                             "div",
@@ -6456,7 +6468,9 @@ var render = function () {
                                       "bi bi-dash-circle primary-color",
                                     on: {
                                       click: function ($event) {
-                                        return _vm.decrementQuantity()
+                                        return _vm.decrementCartQuantity(
+                                          element
+                                        )
                                       },
                                     },
                                   }),
@@ -6470,14 +6484,16 @@ var render = function () {
                                       "bi bi-plus-circle primary-color",
                                     on: {
                                       click: function ($event) {
-                                        return _vm.incrementQuantity()
+                                        return _vm.incrementCartQuantity(
+                                          element
+                                        )
                                       },
                                     },
                                   }),
                                   _vm._v(" "),
                                   _c("span", { staticClass: "px-2" }, [
                                     _vm._v(
-                                      _vm._s(element.price * _vm.quantity) +
+                                      _vm._s(element.price * element.quantity) +
                                         " €"
                                     ),
                                   ]),
@@ -6490,7 +6506,10 @@ var render = function () {
                       _vm._v(" "),
                       _c(
                         "div",
-                        { staticClass: "total d-flex justify-content-between" },
+                        {
+                          staticClass:
+                            "total d-flex justify-content-between mt-3",
+                        },
                         [
                           _c("h5", { staticClass: "font-weight-bold" }, [
                             _vm._v("Totale:"),
