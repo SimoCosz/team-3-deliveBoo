@@ -2111,9 +2111,9 @@ __webpack_require__.r(__webpack_exports__);
     return {
       users: [],
       categories: [],
-      filteredUsers: [],
+      // filteredUsers: [],
       userCategories: [],
-      categoryFiltered: [],
+      categoryFilter: [],
       loading: false
     };
   },
@@ -2142,28 +2142,55 @@ __webpack_require__.r(__webpack_exports__);
         _this2.$router.push("/404");
       });
     },
-    // checkCategories(){
+    fetchFilters: function fetchFilters(category) {
+      var _this3 = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/users', {
+        params: {
+          category: category
+        }
+      }).then(function (res) {
+        var users = res.data.users;
+        _this3.users = users;
+      })["catch"](function (err) {
+        console.warn(err);
+
+        _this3.$router.push("/404");
+      });
+    },
+    check: function check(event) {
+      if (event.target.checked) {
+        this.fetchFilters(this.categoryFilter);
+      } else if (this.categoryFilter == '') {
+        this.fetchRestaurant();
+      } else {
+        this.fetchFilters(this.categoryFilter);
+      }
+    } // checkCategories(){
     //   console.log(this.categoryFiltered);
     // },
-    checkCategoriesContain: function checkCategoriesContain(user) {
-      var userCategories = user.categories.map(function (c) {
-        return c.name;
-      });
-      return this.categoryFiltered.every(function (el) {
-        return userCategories.includes(el);
-      });
-    }
+    // checkCategoriesContain(user){
+    //   let userCategories = user.categories.map((c)=>{
+    //     return c.name;
+    //   });
+    //   return this.categoryFiltered.every((el)=>{
+    //     return userCategories.includes(el);
+    //   });
+    // }
+
   },
-  computed: {
-    filteredRestaurants: function filteredRestaurants() {
-      if (!this.categoryFiltered.length) {
-        return this.filteredUsers = this.users;
-      } else {
-        this.filteredUsers = this.users.filter(this.checkCategoriesContain);
-        return this.filteredUsers;
-      }
-    }
-  },
+  // computed: {
+  //   filteredRestaurants(){
+  //     if(!this.categoryFiltered.length){
+  //       return(this.filteredUsers = this.users);
+  //     } else {
+  //       this.filteredUsers = this.users.filter(
+  //         this.checkCategoriesContain
+  //       );
+  //       return this.filteredUsers;
+  //     }
+  //   }
+  // },
   mounted: function mounted() {
     this.fetchRestaurant();
     this.fetchCategories();
@@ -5297,8 +5324,8 @@ var render = function () {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.categoryFiltered,
-                    expression: "categoryFiltered",
+                    value: _vm.categoryFilter,
+                    expression: "categoryFilter",
                   },
                 ],
                 attrs: {
@@ -5307,31 +5334,36 @@ var render = function () {
                   name: category.name,
                 },
                 domProps: {
-                  value: category.name,
-                  checked: Array.isArray(_vm.categoryFiltered)
-                    ? _vm._i(_vm.categoryFiltered, category.name) > -1
-                    : _vm.categoryFiltered,
+                  value: category.id,
+                  checked: Array.isArray(_vm.categoryFilter)
+                    ? _vm._i(_vm.categoryFilter, category.id) > -1
+                    : _vm.categoryFilter,
                 },
                 on: {
-                  change: function ($event) {
-                    var $$a = _vm.categoryFiltered,
-                      $$el = $event.target,
-                      $$c = $$el.checked ? true : false
-                    if (Array.isArray($$a)) {
-                      var $$v = category.name,
-                        $$i = _vm._i($$a, $$v)
-                      if ($$el.checked) {
-                        $$i < 0 && (_vm.categoryFiltered = $$a.concat([$$v]))
+                  change: [
+                    function ($event) {
+                      var $$a = _vm.categoryFilter,
+                        $$el = $event.target,
+                        $$c = $$el.checked ? true : false
+                      if (Array.isArray($$a)) {
+                        var $$v = category.id,
+                          $$i = _vm._i($$a, $$v)
+                        if ($$el.checked) {
+                          $$i < 0 && (_vm.categoryFilter = $$a.concat([$$v]))
+                        } else {
+                          $$i > -1 &&
+                            (_vm.categoryFilter = $$a
+                              .slice(0, $$i)
+                              .concat($$a.slice($$i + 1)))
+                        }
                       } else {
-                        $$i > -1 &&
-                          (_vm.categoryFiltered = $$a
-                            .slice(0, $$i)
-                            .concat($$a.slice($$i + 1)))
+                        _vm.categoryFilter = $$c
                       }
-                    } else {
-                      _vm.categoryFiltered = $$c
-                    }
-                  },
+                    },
+                    function ($event) {
+                      return _vm.check($event)
+                    },
+                  ],
                 },
               }),
               _vm._v(" "),
@@ -5349,21 +5381,23 @@ var render = function () {
           _vm._v("Ristoranti che consegnano a Roma"),
         ]),
         _vm._v(" "),
-        this.filteredRestaurants.length == 0
+        this.users.length == 0
           ? _c("div", { staticClass: "container-card" }, [
               _c("h3", [_vm._v("Nessun ristorante trovato")]),
             ])
-          : _c(
-              "div",
-              { staticClass: "container-card" },
-              _vm._l(_vm.filteredUsers, function (user) {
-                return _c("RestaurantCard", {
-                  key: user.id,
-                  attrs: { element: user },
-                })
-              }),
-              1
-            ),
+          : _vm._e(),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "container-card" },
+          _vm._l(_vm.users, function (user) {
+            return _c("RestaurantCard", {
+              key: user.id,
+              attrs: { element: user },
+            })
+          }),
+          1
+        ),
       ]),
     ]),
   ])
@@ -22600,7 +22634,7 @@ module.exports = "/images/ios-badge.png?2566899de2c3663e0250b22d1a160aa7";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/jumbo-bkg-svg2.svg?8de0ecba9e591757458db25a3d02de10";
+module.exports = "/images/jumbo-bkg-svg2.svg?ece43a1805da9c592135a025ae78cca8";
 
 /***/ }),
 
@@ -24434,7 +24468,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\black\Project\Hub Project\LARAVEL\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! /Users/simonecoszach/Developer/Boolean/Corso/Projects/team-3-deliveBoo-1/resources/js/front.js */"./resources/js/front.js");
 
 
 /***/ })

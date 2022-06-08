@@ -12,18 +12,18 @@
           <!-- after -->
             <h5 class="my-3">Categorie</h5>
           <div class="check my-2" v-for="category in categories" :key="category.id">
-            <input type="checkbox" v-model="categoryFiltered" :id="category.name" :name="category.name" :value="category.name">
+            <input type="checkbox" @change="check($event)" v-model="categoryFilter" :id="category.name" :name="category.name" :value="category.id">
             <label :for="category.name">{{category.name}}</label>
           </div>
         </div>
         <div class="col restaurants mb-5">
           <h2 class="mb-4">Ristoranti che consegnano a Roma</h2>
-          <div class="container-card" v-if="this.filteredRestaurants.length == 0">
+          <div class="container-card" v-if="this.users.length == 0">
             <h3>Nessun ristorante trovato</h3>
             <!-- card -->
           </div>
-          <div class="container-card" v-else>
-            <RestaurantCard :element="user" v-for="user in filteredUsers" :key="user.id"/>
+          <div class="container-card">
+            <RestaurantCard :element="user" v-for="user in users" :key="user.id"/>
           </div>
         </div>
       </div>
@@ -46,9 +46,9 @@ import RestaurantCard from '../components/RestaurantCard.vue'
       return{
         users: [],
         categories: [],
-        filteredUsers: [],
+        // filteredUsers: [],
         userCategories: [],
-        categoryFiltered: [],
+        categoryFilter: [],
         loading: false
       }
     },
@@ -61,7 +61,7 @@ import RestaurantCard from '../components/RestaurantCard.vue'
         })
         .catch((err) => {
           console.warn(err);
-            this.$router.push("/404");
+          this.$router.push("/404");
         });
       },
 
@@ -77,31 +77,57 @@ import RestaurantCard from '../components/RestaurantCard.vue'
         });
       },
 
+      fetchFilters(category) {
+        axios.get('/api/users', {
+          params: {
+            category : category,
+          }
+        })
+        .then(res => {
+          const { users } = res.data;
+          this.users = users;
+        })
+        .catch((err) => {
+          console.warn(err);
+          this.$router.push("/404");
+        });
+      },
+
+      check(event) {
+        if(event.target.checked){
+          this.fetchFilters(this.categoryFilter)
+        } else if (this.categoryFilter == '') {
+          this.fetchRestaurant()
+        } else {
+          this.fetchFilters(this.categoryFilter)
+        }
+      },
+
       // checkCategories(){
       //   console.log(this.categoryFiltered);
       // },
 
-      checkCategoriesContain(user){
-        let userCategories = user.categories.map((c)=>{
-          return c.name;
-        });
-        return this.categoryFiltered.every((el)=>{
-          return userCategories.includes(el);
-        });
-      }
+      // checkCategoriesContain(user){
+      //   let userCategories = user.categories.map((c)=>{
+      //     return c.name;
+      //   });
+      //   return this.categoryFiltered.every((el)=>{
+      //     return userCategories.includes(el);
+      //   });
+      // }
     },
-    computed: {
-      filteredRestaurants(){
-        if(!this.categoryFiltered.length){
-          return(this.filteredUsers = this.users);
-        } else {
-          this.filteredUsers = this.users.filter(
-            this.checkCategoriesContain
-          );
-          return this.filteredUsers;
-        }
-      }
-    },
+    // computed: {
+    //   filteredRestaurants(){
+    //     if(!this.categoryFiltered.length){
+    //       return(this.filteredUsers = this.users);
+    //     } else {
+    //       this.filteredUsers = this.users.filter(
+    //         this.checkCategoriesContain
+    //       );
+    //       return this.filteredUsers;
+    //     }
+    //   }
+    // },
     
     mounted() {
       this.fetchRestaurant()
