@@ -23,29 +23,34 @@
         <!-- CART -->
         <div class="col-12 col-lg-4">
           <div class="cart p-3">
-            <div v-if="this.cart.length==0">
-              <p class="text-center py-5">Il carrello è vuoto</p>
-              <button class="btn btn-secondary btn-block"> Vai al Pagamento</button>
-            </div>
-
-            <div class="text-dark" v-else>
+            <div class="text-dark" v-if="localCartShop">
               <h4 class="font-weight-bold">I tuoi ordini</h4>
-              <div v-for="element in this.cart" :key="element.id">
-                <div class="d-flex justify-content-between">
+              <div v-for="(element, i) in localCartShop" :key="element.id">
+                <div class="d-flex justify-content-between align-items-center">
                   <span>{{element.name}}</span>
-                  <div class="d-flex justify-content-center">
-                    <i class="bi bi-dash-circle primary-color" @click="decrement"></i>
-                    <span class="quantity px-2">{{quantity}}</span>
-                    <i class="bi bi-plus-circle primary-color" @click="increment"></i>
-                    <span class="px-2">{{element.price*quantity}} &#8364;</span>
+                  <div class="d-flex justify-content-center align-items-center">
+                    <i class="bi bi-dash-circle primary-color" v-if="element.quantity > 1" @click="decrementCartQuantity(element)"></i>
+                    <span class="quantity px-2">{{element.quantity}}</span>
+                    <i class="bi bi-plus-circle primary-color" @click="incrementCartQuantity(element)"></i>
+                    <span class="px-2">{{element.price*element.quantity}} &#8364;</span>
+                    <i class="bi bi-trash d-flex align-items-center" role="button" @click="deleteDish(i)"></i>
                   </div>
                 </div>
               </div>
-              <div class="total d-flex justify-content-between">
+              <div class="total d-flex justify-content-between align-items-center mt-3">
                 <h5 class="font-weight-bold">Totale:</h5>
                 <h5 class="font-weight-bold">{{totalPrice}}&#8364;</h5>
+                <div  @click="deleteAll()" role="button" class="product-list-trash d-flex flex-column justify-content-center align-items-center">
+                  <i class="bi bi-trash"></i>
+                  <p class="trash-name">Svuota Carrello</p>
+                </div>
               </div>
                <button class="btn btn-bg-color btn-block"> Vai al Pagamento</button>
+            </div>
+
+            <div v-else>
+              <p class="text-center py-5">Il carrello è vuoto</p>
+              <button class="btn btn-secondary btn-block"> Vai al Pagamento</button>
             </div>
 
           </div>
@@ -57,9 +62,9 @@
     <!--FIXME: Transition ancora non funzionante -->
     <Transition name="slide-fade" appear>
     <div v-if="show">
-      <div class="my-modal" @click="show=false">
+      <div class="my-modal" @click="closePlateInfo()">
         <div class="product-show" @click.stop>
-          <i class="bi bi-x" @click="show=false"></i>
+          <i class="bi bi-x" @click="closePlateInfo()"></i>
           <img class="product-show_img" :src=selectedProduct.cover alt="">
           <div class="product-show_info p-4">
             <h4 class="title">{{selectedProduct.name}}</h4>
@@ -67,13 +72,13 @@
           </div>
           <div class="product-show-add p-4">
             <div class="d-flex justify-content-center pb-3">
-              <i class="bi bi-dash-circle" @click="decrement"></i>
+              <i class="bi bi-dash-circle" @click="decrementQuantity()"></i>
               <span class="quantity px-2">{{quantity}}</span>
-              <i class="bi bi-plus-circle" @click="increment"></i>
+              <i class="bi bi-plus-circle" @click="incrementQuantity()"></i>
             </div>
             
-            <button class="btn btn-block btn-bg-color" @click="addProduct(selectedProduct)">
-              Aggiungi per &#8364;{{selectedProduct.price*quantity}}
+            <button class="btn btn-block btn-bg-color" @click="addToCart(selectedProduct)">
+              Aggiungi per &#8364;{{selectedProduct.price*quantity}} &euro;
             </button>
           </div>
         </div>
@@ -90,37 +95,155 @@ props: {
 },
 data(){
   return {
-    show:false,
-    selectedProduct:null,
-    quantity: 1, //FIXME: quantità al momento gestita con questa variabile (Da eliminare)
-    cart:[],
+    show: false,
+    selectedProduct: false,
+    activeElement: undefined,
+    cartShop:[],
+    restaurant: [],
+    menuPlates: [],
+    ingredients: [],
+    logo: require('/public/img/img-default-img.png'),
+    authUser: window.authUser,
+    quantity: 1,
     totalPrice: 0,
+    csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+
+    // Cart shop del local storage
+    localCartShop: JSON.parse(localStorage.getItem('cartShop')),
   }
 },
 
 methods : {
   showModal: function(product) {
-    this.show=true;
-    this.selectedProduct=product;
+    this.show = true;
+    this.selectedProduct = product;
   },
 
-  addProduct: function(selectedProduct) {
-    if(!this.cart.includes(selectedProduct)){
-      this.cart.push(selectedProduct);
-      this.totalPrice+=selectedProduct.price; //TODO: da moltiplicare per la quantita del selectedProduct 
+  totalPriceFunction() {
+    let elementTotPrice = 0;
+    for (let index = 0; index < this.localCartShop.length; index++) {
+      elementTotPrice = this.localCartShop[index].price * this.localCartShop[index].quantity;
+      this.totalPrice += elementTotPrice;
+    } 
+    localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); 
+
+    // window.location.reload();
+    return this.totalPrice
+  },
+
+  fetchRestaurantInfo(){
+    axios.get(`/app/Http/Controllers/Api/UserController.php/$(this.$route.params.id}`)
+    .then( res => {
+      this.restaurant = res.data.user[0];
+      this.menuPlates = res.data.user_plates;
+    })
+    .catch( err => {
+      console.warn(err);
+    })
+  },
+
+  // a questa funzione viene passato come parametro l'indice del piatto cliccato,
+  // ed assegna all'array ingredients i corrispettivi ingredienti
+  viewPlate(i){
+    this.activeElement = i;
+    this.ingredients = this.menuPlates[i].ingredients.split(',');
+  },
+  closePlateInfo(){
+    this.show = false;
+    this.quantity = 1;
+  },
+
+  deleteDish(el) {
+    this.localCartShop.splice(el, 1);
+
+    localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
+    window.location.reload();
+  },
+
+  deleteAll() {
+    this.localCartShop = null;
+
+    localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); 
+    window.location.reload();
+  },
+
+  // Per aumentare o diminuire le quantità nel carrello
+  incrementCartQuantity(el){
+    this.localCartShop[el.quantity++];
+
+    localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
+    window.location.reload();
+  },
+
+  decrementCartQuantity(el){
+    // if(this.localCartShop[el.quantity] >= 1) {
+      this.localCartShop[el.quantity--];
+
+      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
+      window.location.reload();
+    // }
+  },
+
+  // Per aumentare o diminuire le quantità nella finestra del prodotto
+  incrementQuantity(){
+    this.quantity++;
+  },
+
+  decrementQuantity() {
+    if(this.quantity > 1) {
+      this.quantity--;
     }
   },
 
-  increment: function(){
-    this.quantity +=1;
-  },
-  decrement: function(){
-    if(this.quantity!=1){
-      this.quantity -=1;
+  addToCart(plateObject) {
+      if(typeof(Storage) !== undefined) {
+        const {id, name, cover, price, user_id} = plateObject;
+  
+        const plate = {
+          user_id: user_id,
+          id: id,
+          name: name,
+          cover: cover,
+          price: price,
+          quantity: this.quantity
+        };
+  
+        if(JSON.parse(localStorage.getItem('cartShop')) === null) {
+          this.cartShop.push(plate);
+          localStorage.setItem('cartShop', JSON.stringify(this.cartShop));
+          window.location.reload();
+        } else {
+          if (plateObject.user_id == this.localCartShop[0].user_id) {
+            const localItems = JSON.parse(localStorage.getItem('cartShop'));
+            localItems.map(data=>{
+              if(plate.id == data.id) {
+                plate.quantity += data.quantity;
+              } else {
+                this.cartShop.push(data);
+              }
+            });
+    
+            this.cartShop.push(plate);
+            this.totalPriceFunction();
+            window.location.reload();
+            localStorage.setItem('cartShop', JSON.stringify(this.cartShop));
+          } else {
+            alert('Non puoi aggiungere i piatti di altri ristoranti. Svuota prima il carrello');
+          }
+        }
+      } else {
+        alert('Storage non funziona nel tuo browser');
+      }
     }
-  }
-
 },
+
+mounted() {
+  this.fetchRestaurantInfo();
+  this.totalPriceFunction();
+
+  // console.log(this.localCartShop[1]);
+  console.log(this.user);
+}
 }
 </script>
 
@@ -278,5 +401,13 @@ methods : {
 .slide-fade-enter-from,
 .slide-fade-leave-to {
   opacity: 0;
+}
+
+.bi-trash, .product-list-trash{
+
+
+  &:hover{
+    color: red;
+  }
 }
 </style>

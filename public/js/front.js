@@ -2027,6 +2027,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2036,7 +2037,8 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      user: null
+      user: {},
+      loading: false
     };
   },
   methods: {
@@ -2519,13 +2521,30 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      dropdown1: false
+      dropdown1: false,
+      localCartShop: JSON.parse(localStorage.getItem('cartShop')),
+      totalPrice: 0
     };
   },
   methods: {
     dropdown: function dropdown() {
       this.dropdown1 = !this.dropdown1;
+    },
+    totalPriceFunction: function totalPriceFunction() {
+      var elementTotPrice = 0;
+
+      for (var index = 0; index < this.localCartShop.length; index++) {
+        elementTotPrice = this.localCartShop[index].price * this.localCartShop[index].quantity;
+        this.totalPrice += elementTotPrice;
+      }
+
+      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); // window.location.reload();
+
+      return this.totalPrice;
     }
+  },
+  mounted: function mounted() {
+    this.totalPriceFunction(); // console.log(this.localCartShop[1]);
   }
 });
 
@@ -2858,6 +2877,13 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2950,11 +2976,19 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       show: false,
-      selectedProduct: null,
+      selectedProduct: false,
+      activeElement: undefined,
+      cartShop: [],
+      restaurant: [],
+      menuPlates: [],
+      ingredients: [],
+      logo: __webpack_require__(/*! /public/img/img-default-img.png */ "./public/img/img-default-img.png"),
+      authUser: window.authUser,
       quantity: 1,
-      //FIXME: quantità al momento gestita con questa variabile (Da eliminare)
-      cart: [],
-      totalPrice: 0
+      totalPrice: 0,
+      csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+      // Cart shop del local storage
+      localCartShop: JSON.parse(localStorage.getItem('cartShop'))
     };
   },
   methods: {
@@ -2962,20 +2996,119 @@ __webpack_require__.r(__webpack_exports__);
       this.show = true;
       this.selectedProduct = product;
     },
-    addProduct: function addProduct(selectedProduct) {
-      if (!this.cart.includes(selectedProduct)) {
-        this.cart.push(selectedProduct);
-        this.totalPrice += selectedProduct.price; //TODO: da moltiplicare per la quantita del selectedProduct 
+    totalPriceFunction: function totalPriceFunction() {
+      var elementTotPrice = 0;
+
+      for (var index = 0; index < this.localCartShop.length; index++) {
+        elementTotPrice = this.localCartShop[index].price * this.localCartShop[index].quantity;
+        this.totalPrice += elementTotPrice;
+      }
+
+      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); // window.location.reload();
+
+      return this.totalPrice;
+    },
+    fetchRestaurantInfo: function fetchRestaurantInfo() {
+      var _this = this;
+
+      axios.get("/app/Http/Controllers/Api/UserController.php/$(this.$route.params.id}").then(function (res) {
+        _this.restaurant = res.data.user[0];
+        _this.menuPlates = res.data.user_plates;
+      })["catch"](function (err) {
+        console.warn(err);
+      });
+    },
+    // a questa funzione viene passato come parametro l'indice del piatto cliccato,
+    // ed assegna all'array ingredients i corrispettivi ingredienti
+    viewPlate: function viewPlate(i) {
+      this.activeElement = i;
+      this.ingredients = this.menuPlates[i].ingredients.split(',');
+    },
+    closePlateInfo: function closePlateInfo() {
+      this.show = false;
+      this.quantity = 1;
+    },
+    deleteDish: function deleteDish(el) {
+      this.localCartShop.splice(el, 1);
+      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
+      window.location.reload();
+    },
+    deleteAll: function deleteAll() {
+      this.localCartShop = null;
+      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
+      window.location.reload();
+    },
+    // Per aumentare o diminuire le quantità nel carrello
+    incrementCartQuantity: function incrementCartQuantity(el) {
+      this.localCartShop[el.quantity++];
+      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
+      window.location.reload();
+    },
+    decrementCartQuantity: function decrementCartQuantity(el) {
+      // if(this.localCartShop[el.quantity] >= 1) {
+      this.localCartShop[el.quantity--];
+      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
+      window.location.reload(); // }
+    },
+    // Per aumentare o diminuire le quantità nella finestra del prodotto
+    incrementQuantity: function incrementQuantity() {
+      this.quantity++;
+    },
+    decrementQuantity: function decrementQuantity() {
+      if (this.quantity > 1) {
+        this.quantity--;
       }
     },
-    increment: function increment() {
-      this.quantity += 1;
-    },
-    decrement: function decrement() {
-      if (this.quantity != 1) {
-        this.quantity -= 1;
+    addToCart: function addToCart(plateObject) {
+      var _this2 = this;
+
+      if ((typeof Storage === "undefined" ? "undefined" : _typeof(Storage)) !== undefined) {
+        var id = plateObject.id,
+            name = plateObject.name,
+            cover = plateObject.cover,
+            price = plateObject.price,
+            user_id = plateObject.user_id;
+        var plate = {
+          user_id: user_id,
+          id: id,
+          name: name,
+          cover: cover,
+          price: price,
+          quantity: this.quantity
+        };
+
+        if (JSON.parse(localStorage.getItem('cartShop')) === null) {
+          this.cartShop.push(plate);
+          localStorage.setItem('cartShop', JSON.stringify(this.cartShop));
+          window.location.reload();
+        } else {
+          if (plateObject.user_id == this.localCartShop[0].user_id) {
+            var localItems = JSON.parse(localStorage.getItem('cartShop'));
+            localItems.map(function (data) {
+              if (plate.id == data.id) {
+                plate.quantity += data.quantity;
+              } else {
+                _this2.cartShop.push(data);
+              }
+            });
+            this.cartShop.push(plate);
+            this.totalPriceFunction();
+            window.location.reload();
+            localStorage.setItem('cartShop', JSON.stringify(this.cartShop));
+          } else {
+            alert('Non puoi aggiungere i piatti di altri ristoranti. Svuota prima il carrello');
+          }
+        }
+      } else {
+        alert('Storage non funziona nel tuo browser');
       }
     }
+  },
+  mounted: function mounted() {
+    this.fetchRestaurantInfo();
+    this.totalPriceFunction(); // console.log(this.localCartShop[1]);
+
+    console.log(this.user);
   }
 });
 
@@ -2990,6 +3123,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+//
 //
 //
 //
@@ -3081,33 +3217,76 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      show: false,
-      selectedProduct: null,
-      quantity: 1,
-      //FIXME: quantità al momento gestita con questa variabile (Da eliminare)
-      cart: [],
-      totalPrice: 0
+      activeElement: undefined,
+      cartShop: [],
+      restaurant: [],
+      menuPlates: [],
+      ingredients: [],
+      logo: __webpack_require__(/*! /public/img/img-default-img.png */ "./public/img/img-default-img.png"),
+      authUser: window.authUser
     };
   },
   methods: {
-    showModal: function showModal(product) {
-      this.show = true;
-      this.selectedProduct = product;
+    fetchRestaurantInfo: function fetchRestaurantInfo() {
+      var _this = this;
+
+      axios.get("/app/Http/Controllers/Api/UserController.php/$(this.$route.params.id}").then(function (res) {
+        _this.restaurant = res.data.user[0];
+        _this.menuPlates = res.data.user_plates;
+      })["catch"](function (err) {
+        console.warn(err);
+      });
     },
-    addProduct: function addProduct(selectedProduct) {
-      if (!this.cart.includes(selectedProduct)) {
-        this.cart.push(selectedProduct);
-        this.totalPrice += selectedProduct.price; //TODO: da moltiplicare per la quantita del selectedProduct 
-      }
+    // a questa funzione viene passato come parametro l'indice del piatto cliccato,
+    // ed assegna all'array ingredients i corrispettivi ingredienti
+    viewPlate: function viewPlate(i) {
+      this.activeElement = i;
+      this.ingredients = this.menuPlates[i].ingredients.split(',');
     },
-    increment: function increment() {
-      this.quantity += 1;
+    closePlateInfo: function closePlateInfo() {
+      this.activeElement = undefined;
     },
-    decrement: function decrement() {
-      if (this.quantity != 1) {
-        this.quantity -= 1;
+    addToCart: function addToCart(index) {
+      var _this2 = this;
+
+      if ((typeof Storage === "undefined" ? "undefined" : _typeof(Storage)) !== undefined) {
+        var id = index.id,
+            name = index.name,
+            cover = index.cover,
+            price = index.price;
+        var plate = {
+          id: id,
+          name: name,
+          cover: cover,
+          price: price,
+          quantity: 1
+        };
+
+        if (JSON.parse(localStorage.getItem('cartShop')) === null) {
+          this.cartShop.push(plate);
+          localStorage.setItem('cartShop', JSON.stringify(this.cartShop));
+          window.location.reload();
+        } else {
+          var localItems = JSON.parse(localStorage.getItem('cartShop'));
+          localItems.map(function (data) {
+            if (plate.id == data.id) {
+              plate.quantity += data.quantity;
+              plate.price = plate.price * plate.quantity;
+            } else {
+              _this2.cartShop.push(data);
+            }
+          });
+          this.cartShop.push(plate);
+          window.location.reload();
+          localStorage.setItem('cartShop', JSON.stringify(this.cartShop));
+        }
+      } else {
+        alert('Storage non funziona nel tuo browser');
       }
     }
+  },
+  mounted: function mounted() {
+    this.fetchRestaurantInfo();
   }
 });
 
@@ -3412,7 +3591,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".wrapper[data-v-22d72582] {\n  background-color: #00CCBC;\n}\n.wrapper .logo[data-v-22d72582] {\n  height: 400px;\n}\n.wrapper .btn-back[data-v-22d72582] {\n  font-size: 20px;\n}", ""]);
+exports.push([module.i, ".wrapper[data-v-22d72582] {\n  background-color: #00CCBC;\n}\n.wrapper .logo[data-v-22d72582] {\n  height: 400px;\n  width: 700px;\n}\n.wrapper .btn-back[data-v-22d72582] {\n  font-size: 20px;\n}", ""]);
 
 // exports
 
@@ -3641,7 +3820,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".btn-bg-color[data-v-438ffe92] {\n  background-color: #00C2B3;\n  color: white;\n  font-weight: 700;\n}\n.r-color[data-v-438ffe92] {\n  color: #FB5058;\n}\n.primary-color[data-v-438ffe92] {\n  color: #14AA9E !important;\n}\n.products[data-v-438ffe92] {\n  background-color: #F9FAFA;\n}\n.products .my-container[data-v-438ffe92] {\n  max-width: 1500px;\n  margin: 0 auto;\n  padding: 0 20px;\n}\n.products .my-container .products-cart .cart[data-v-438ffe92] {\n  width: 100%;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 30px;\n  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\n  color: #abadad;\n}\n.products .my-container .products-cart .cart .btn-secondary[data-v-438ffe92] {\n  background-color: #e2e5e5;\n  border: none;\n  font-weight: bold;\n  color: #abadad;\n  cursor: not-allowed;\n}\n.products .my-container .products-cart .cart .bi.bi-dash-circle[data-v-438ffe92]::before, .products .my-container .products-cart .cart .bi.bi-plus-circle[data-v-438ffe92]::before {\n  line-height: 23.05px;\n  cursor: pointer;\n}\n.products .my-container .products-cart .row .product .single-card[data-v-438ffe92] {\n  border-radius: 5px;\n  margin-bottom: 30px;\n  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\n  gap: 20px;\n  min-height: 150px;\n  cursor: pointer;\n}\n.products .my-container .products-cart .row .product .single-card[data-v-438ffe92]:hover {\n  box-shadow: 0px 17px 43px -5px lightgrey;\n}\n.products .my-container .products-cart .row .product .single-card .product_info .title[data-v-438ffe92] {\n  font-weight: bold;\n  margin-bottom: 0.2rem;\n}\n.products .my-container .products-cart .row .product .single-card .product_info .description[data-v-438ffe92] {\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  -webkit-box-orient: vertical;\n  overflow: hidden;\n  font-size: 0.9rem;\n  color: #585c5c;\n  margin-bottom: 0.2rem;\n}\n.products .my-container .products-cart .row .product .single-card .image[data-v-438ffe92] {\n  width: 100px;\n  height: 100px;\n  background-size: cover;\n  background-position: center;\n  border-radius: 4px;\n}\n.my-modal[data-v-438ffe92] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  content: \"\";\n  background-color: rgba(0, 0, 0, 0.5);\n  overflow: hidden;\n}\n.my-modal .product-show[data-v-438ffe92] {\n  background-color: white;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  max-width: 500px;\n  max-height: 800px;\n}\n.my-modal .product-show .product-show_img[data-v-438ffe92] {\n  max-width: 100%;\n}\n.my-modal .product-show .product-show-add[data-v-438ffe92] {\n  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\n}\n.my-modal .product-show .product-show-add .m-gap[data-v-438ffe92] {\n  gap: 20px;\n}\n.my-modal .product-show .product-show-add .bi.bi-plus-circle[data-v-438ffe92], .my-modal .product-show .product-show-add .bi.bi-dash-circle[data-v-438ffe92] {\n  color: #00CCBC;\n  font-size: 24px;\n  font-weight: bold;\n}\n.my-modal .product-show .product-show-add .bi.bi-plus-circle[data-v-438ffe92]::before, .my-modal .product-show .product-show-add .bi.bi-dash-circle[data-v-438ffe92]::before {\n  cursor: pointer;\n  line-height: 48px;\n}\n.my-modal .product-show .product-show-add .quantity[data-v-438ffe92] {\n  font-size: 30px;\n}\n.my-modal .product-show .bi.bi-x[data-v-438ffe92] {\n  color: #00CCBC;\n  position: absolute;\n  top: -10px;\n  right: 10px;\n  font-size: 40px;\n  font-weight: bold;\n}\n.my-modal .product-show .bi.bi-x[data-v-438ffe92]::before {\n  background: white;\n  border-radius: 100%;\n  cursor: pointer;\n}\n.slide-fade-enter-active[data-v-438ffe92], .slide-fade-leave-active[data-v-438ffe92] {\n  transition: opacity 0.1s ease;\n}\n.slide-fade-enter-from[data-v-438ffe92],\n.slide-fade-leave-to[data-v-438ffe92] {\n  opacity: 0;\n}", ""]);
+exports.push([module.i, ".btn-bg-color[data-v-438ffe92] {\n  background-color: #00C2B3;\n  color: white;\n  font-weight: 700;\n}\n.r-color[data-v-438ffe92] {\n  color: #FB5058;\n}\n.primary-color[data-v-438ffe92] {\n  color: #14AA9E !important;\n}\n.products[data-v-438ffe92] {\n  background-color: #F9FAFA;\n}\n.products .my-container[data-v-438ffe92] {\n  max-width: 1500px;\n  margin: 0 auto;\n  padding: 0 20px;\n}\n.products .my-container .products-cart .cart[data-v-438ffe92] {\n  width: 100%;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 30px;\n  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\n  color: #abadad;\n}\n.products .my-container .products-cart .cart .btn-secondary[data-v-438ffe92] {\n  background-color: #e2e5e5;\n  border: none;\n  font-weight: bold;\n  color: #abadad;\n  cursor: not-allowed;\n}\n.products .my-container .products-cart .cart .bi.bi-dash-circle[data-v-438ffe92]::before, .products .my-container .products-cart .cart .bi.bi-plus-circle[data-v-438ffe92]::before {\n  line-height: 23.05px;\n  cursor: pointer;\n}\n.products .my-container .products-cart .row .product .single-card[data-v-438ffe92] {\n  border-radius: 5px;\n  margin-bottom: 30px;\n  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\n  gap: 20px;\n  min-height: 150px;\n  cursor: pointer;\n}\n.products .my-container .products-cart .row .product .single-card[data-v-438ffe92]:hover {\n  box-shadow: 0px 17px 43px -5px lightgrey;\n}\n.products .my-container .products-cart .row .product .single-card .product_info .title[data-v-438ffe92] {\n  font-weight: bold;\n  margin-bottom: 0.2rem;\n}\n.products .my-container .products-cart .row .product .single-card .product_info .description[data-v-438ffe92] {\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  -webkit-box-orient: vertical;\n  overflow: hidden;\n  font-size: 0.9rem;\n  color: #585c5c;\n  margin-bottom: 0.2rem;\n}\n.products .my-container .products-cart .row .product .single-card .image[data-v-438ffe92] {\n  width: 100px;\n  height: 100px;\n  background-size: cover;\n  background-position: center;\n  border-radius: 4px;\n}\n.my-modal[data-v-438ffe92] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  content: \"\";\n  background-color: rgba(0, 0, 0, 0.5);\n  overflow: hidden;\n}\n.my-modal .product-show[data-v-438ffe92] {\n  background-color: white;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  max-width: 500px;\n  max-height: 800px;\n}\n.my-modal .product-show .product-show_img[data-v-438ffe92] {\n  max-width: 100%;\n}\n.my-modal .product-show .product-show-add[data-v-438ffe92] {\n  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\n}\n.my-modal .product-show .product-show-add .m-gap[data-v-438ffe92] {\n  gap: 20px;\n}\n.my-modal .product-show .product-show-add .bi.bi-plus-circle[data-v-438ffe92], .my-modal .product-show .product-show-add .bi.bi-dash-circle[data-v-438ffe92] {\n  color: #00CCBC;\n  font-size: 24px;\n  font-weight: bold;\n}\n.my-modal .product-show .product-show-add .bi.bi-plus-circle[data-v-438ffe92]::before, .my-modal .product-show .product-show-add .bi.bi-dash-circle[data-v-438ffe92]::before {\n  cursor: pointer;\n  line-height: 48px;\n}\n.my-modal .product-show .product-show-add .quantity[data-v-438ffe92] {\n  font-size: 30px;\n}\n.my-modal .product-show .bi.bi-x[data-v-438ffe92] {\n  color: #00CCBC;\n  position: absolute;\n  top: -10px;\n  right: 10px;\n  font-size: 40px;\n  font-weight: bold;\n}\n.my-modal .product-show .bi.bi-x[data-v-438ffe92]::before {\n  background: white;\n  border-radius: 100%;\n  cursor: pointer;\n}\n.slide-fade-enter-active[data-v-438ffe92], .slide-fade-leave-active[data-v-438ffe92] {\n  transition: opacity 0.1s ease;\n}\n.slide-fade-enter-from[data-v-438ffe92],\n.slide-fade-leave-to[data-v-438ffe92] {\n  opacity: 0;\n}\n.bi-trash[data-v-438ffe92]:hover, .product-list-trash[data-v-438ffe92]:hover {\n  color: red;\n}", ""]);
 
 // exports
 
@@ -5443,10 +5622,12 @@ var render = function () {
                 _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-12 col-md-4" }, [
                     _c("figure", [
-                      _c("img", {
-                        staticClass: "restourant-image",
-                        attrs: { src: _vm.user.cover, alt: "" },
-                      }),
+                      _vm.user.cover != null
+                        ? _c("img", {
+                            staticClass: "restourant-image",
+                            attrs: { src: _vm.user.cover, alt: "" },
+                          })
+                        : _vm._e(),
                     ]),
                   ]),
                   _vm._v(" "),
@@ -6031,9 +6212,25 @@ var render = function () {
                     ]
                   ),
                   _vm._v(" "),
-                  _vm._m(3),
+                  _c("li", { staticClass: "item" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "d-flex align-items-center justify-content-center",
+                        attrs: { href: "#" },
+                      },
+                      [
+                        _c("i", {
+                          staticClass:
+                            "bi bi-cart4 p-1 d-flex align-items-center",
+                        }),
+                        _vm._v(_vm._s(_vm.totalPrice) + " €"),
+                      ]
+                    ),
+                  ]),
                   _vm._v(" "),
-                  _vm._m(4),
+                  _vm._m(3),
                 ]),
               ]),
               _vm._v(" "),
@@ -6084,17 +6281,6 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("li", [
         _c("a", { attrs: { href: "#" } }, [_vm._v("Deliveboo for Work")]),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "item" }, [
-      _c("a", { attrs: { href: "#" } }, [
-        _c("i", { staticClass: "bi bi-cart4 p-1" }),
-        _vm._v("0,00 €"),
       ]),
     ])
   },
@@ -6792,19 +6978,8 @@ var render = function () {
           _vm._v(" "),
           _c("div", { staticClass: "col-12 col-lg-4" }, [
             _c("div", { staticClass: "cart p-3" }, [
-              this.cart.length == 0
-                ? _c("div", [
-                    _c("p", { staticClass: "text-center py-5" }, [
-                      _vm._v("Il carrello è vuoto"),
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "button",
-                      { staticClass: "btn btn-secondary btn-block" },
-                      [_vm._v(" Vai al Pagamento")]
-                    ),
-                  ])
-                : _c(
+              _vm.localCartShop
+                ? _c(
                     "div",
                     { staticClass: "text-dark" },
                     [
@@ -6812,42 +6987,71 @@ var render = function () {
                         _vm._v("I tuoi ordini"),
                       ]),
                       _vm._v(" "),
-                      _vm._l(this.cart, function (element) {
+                      _vm._l(_vm.localCartShop, function (element, i) {
                         return _c("div", { key: element.id }, [
                           _c(
                             "div",
-                            { staticClass: "d-flex justify-content-between" },
+                            {
+                              staticClass:
+                                "d-flex justify-content-between align-items-center",
+                            },
                             [
                               _c("span", [_vm._v(_vm._s(element.name))]),
                               _vm._v(" "),
                               _c(
                                 "div",
                                 {
-                                  staticClass: "d-flex justify-content-center",
+                                  staticClass:
+                                    "d-flex justify-content-center align-items-center",
                                 },
                                 [
-                                  _c("i", {
-                                    staticClass:
-                                      "bi bi-dash-circle primary-color",
-                                    on: { click: _vm.decrement },
-                                  }),
+                                  element.quantity > 1
+                                    ? _c("i", {
+                                        staticClass:
+                                          "bi bi-dash-circle primary-color",
+                                        on: {
+                                          click: function ($event) {
+                                            return _vm.decrementCartQuantity(
+                                              element
+                                            )
+                                          },
+                                        },
+                                      })
+                                    : _vm._e(),
                                   _vm._v(" "),
                                   _c("span", { staticClass: "quantity px-2" }, [
-                                    _vm._v(_vm._s(_vm.quantity)),
+                                    _vm._v(_vm._s(element.quantity)),
                                   ]),
                                   _vm._v(" "),
                                   _c("i", {
                                     staticClass:
                                       "bi bi-plus-circle primary-color",
-                                    on: { click: _vm.increment },
+                                    on: {
+                                      click: function ($event) {
+                                        return _vm.incrementCartQuantity(
+                                          element
+                                        )
+                                      },
+                                    },
                                   }),
                                   _vm._v(" "),
                                   _c("span", { staticClass: "px-2" }, [
                                     _vm._v(
-                                      _vm._s(element.price * _vm.quantity) +
+                                      _vm._s(element.price * element.quantity) +
                                         " €"
                                     ),
                                   ]),
+                                  _vm._v(" "),
+                                  _c("i", {
+                                    staticClass:
+                                      "bi bi-trash d-flex align-items-center",
+                                    attrs: { role: "button" },
+                                    on: {
+                                      click: function ($event) {
+                                        return _vm.deleteDish(i)
+                                      },
+                                    },
+                                  }),
                                 ]
                               ),
                             ]
@@ -6857,7 +7061,10 @@ var render = function () {
                       _vm._v(" "),
                       _c(
                         "div",
-                        { staticClass: "total d-flex justify-content-between" },
+                        {
+                          staticClass:
+                            "total d-flex justify-content-between align-items-center mt-3",
+                        },
                         [
                           _c("h5", { staticClass: "font-weight-bold" }, [
                             _vm._v("Totale:"),
@@ -6866,6 +7073,27 @@ var render = function () {
                           _c("h5", { staticClass: "font-weight-bold" }, [
                             _vm._v(_vm._s(_vm.totalPrice) + "€"),
                           ]),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "product-list-trash d-flex flex-column justify-content-center align-items-center",
+                              attrs: { role: "button" },
+                              on: {
+                                click: function ($event) {
+                                  return _vm.deleteAll()
+                                },
+                              },
+                            },
+                            [
+                              _c("i", { staticClass: "bi bi-trash" }),
+                              _vm._v(" "),
+                              _c("p", { staticClass: "trash-name" }, [
+                                _vm._v("Svuota Carrello"),
+                              ]),
+                            ]
+                          ),
                         ]
                       ),
                       _vm._v(" "),
@@ -6876,7 +7104,18 @@ var render = function () {
                       ),
                     ],
                     2
-                  ),
+                  )
+                : _c("div", [
+                    _c("p", { staticClass: "text-center py-5" }, [
+                      _vm._v("Il carrello è vuoto"),
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      { staticClass: "btn btn-secondary btn-block" },
+                      [_vm._v(" Vai al Pagamento")]
+                    ),
+                  ]),
             ]),
           ]),
         ]),
@@ -6891,7 +7130,7 @@ var render = function () {
                   staticClass: "my-modal",
                   on: {
                     click: function ($event) {
-                      _vm.show = false
+                      return _vm.closePlateInfo()
                     },
                   },
                 },
@@ -6911,7 +7150,7 @@ var render = function () {
                         staticClass: "bi bi-x",
                         on: {
                           click: function ($event) {
-                            _vm.show = false
+                            return _vm.closePlateInfo()
                           },
                         },
                       }),
@@ -6938,7 +7177,11 @@ var render = function () {
                           [
                             _c("i", {
                               staticClass: "bi bi-dash-circle",
-                              on: { click: _vm.decrement },
+                              on: {
+                                click: function ($event) {
+                                  return _vm.decrementQuantity()
+                                },
+                              },
                             }),
                             _vm._v(" "),
                             _c("span", { staticClass: "quantity px-2" }, [
@@ -6947,7 +7190,11 @@ var render = function () {
                             _vm._v(" "),
                             _c("i", {
                               staticClass: "bi bi-plus-circle",
-                              on: { click: _vm.increment },
+                              on: {
+                                click: function ($event) {
+                                  return _vm.incrementQuantity()
+                                },
+                              },
                             }),
                           ]
                         ),
@@ -6958,7 +7205,7 @@ var render = function () {
                             staticClass: "btn btn-block btn-bg-color",
                             on: {
                               click: function ($event) {
-                                return _vm.addProduct(_vm.selectedProduct)
+                                return _vm.addToCart(_vm.selectedProduct)
                               },
                             },
                           },
@@ -6968,7 +7215,7 @@ var render = function () {
                                 _vm._s(
                                   _vm.selectedProduct.price * _vm.quantity
                                 ) +
-                                "\n          "
+                                " €\n          "
                             ),
                           ]
                         ),
@@ -7042,8 +7289,20 @@ var render = function () {
                           ]),
                           _vm._v(" "),
                           _c("p", { staticClass: "description" }, [
-                            _vm._v(_vm._s(product.description)),
+                            _vm._v("grande simo"),
                           ]),
+                          _vm._v(" "),
+                          _c(
+                            "button",
+                            {
+                              on: {
+                                click: function ($event) {
+                                  return _vm.addToCart(product)
+                                },
+                              },
+                            },
+                            [_vm._v("cart")]
+                          ),
                           _vm._v(" "),
                           _c("p", { staticClass: "r-color" }, [
                             _vm._v(_vm._s(product.price) + " €"),
@@ -7213,19 +7472,13 @@ var render = function () {
                           "div",
                           { staticClass: "d-flex justify-content-center pb-3" },
                           [
-                            _c("i", {
-                              staticClass: "bi bi-dash-circle",
-                              on: { click: _vm.decrement },
-                            }),
+                            _c("i", { staticClass: "bi bi-dash-circle" }),
                             _vm._v(" "),
                             _c("span", { staticClass: "quantity px-2" }, [
                               _vm._v(_vm._s(_vm.quantity)),
                             ]),
                             _vm._v(" "),
-                            _c("i", {
-                              staticClass: "bi bi-plus-circle",
-                              on: { click: _vm.increment },
-                            }),
+                            _c("i", { staticClass: "bi bi-plus-circle" }),
                           ]
                         ),
                         _vm._v(" "),
@@ -7235,7 +7488,7 @@ var render = function () {
                             staticClass: "btn btn-block btn-bg-color",
                             on: {
                               click: function ($event) {
-                                return _vm.addProduct(_vm.selectedProduct)
+                                return _vm.addToCart(_vm.selectedProduct)
                               },
                             },
                           },
@@ -23069,6 +23322,17 @@ module.exports = "/images/at_home_with_deliveboo.png?c0f3970248ab6c9af16f6393caa
 /***/ (function(module, exports) {
 
 module.exports = "/images/background-jumbo.png?64e7b277d4188e0683d14ba208c6e0dc";
+
+/***/ }),
+
+/***/ "./public/img/img-default-img.png":
+/*!****************************************!*\
+  !*** ./public/img/img-default-img.png ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/img-default-img.png?b57c9911667144442820e96e524fee87";
 
 /***/ }),
 
