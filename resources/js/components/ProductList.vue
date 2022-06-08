@@ -141,6 +141,7 @@ methods : {
       console.warn(err);
     })
   },
+
   // a questa funzione viene passato come parametro l'indice del piatto cliccato,
   // ed assegna all'array ingredients i corrispettivi ingredienti
   viewPlate(i){
@@ -195,42 +196,45 @@ methods : {
   },
 
   addToCart(plateObject) {
-    if(typeof(Storage) !== undefined) {
-      const {id, name, cover, price} = plateObject;
-
-      const plate = {
-        id: id,
-        name: name,
-        cover: cover,
-        price: price,
-        totPrice: price * this.quantity,
-        quantity: this.quantity
-      };
-
-      if(JSON.parse(localStorage.getItem('cartShop')) === null) {
-        this.cartShop.push(plate);
-        localStorage.setItem('cartShop', JSON.stringify(this.cartShop));
-        window.location.reload();
-      } else {
-        const localItems = JSON.parse(localStorage.getItem('cartShop'));
-        localItems.map(data=>{
-          if(plate.id == data.id) {
-            plate.quantity += data.quantity;
-            plate.totPrice = plate.price * plate.quantity;
+      if(typeof(Storage) !== undefined) {
+        const {id, name, cover, price, user_id} = plateObject;
+  
+        const plate = {
+          user_id: user_id,
+          id: id,
+          name: name,
+          cover: cover,
+          price: price,
+          quantity: this.quantity
+        };
+  
+        if(JSON.parse(localStorage.getItem('cartShop')) === null) {
+          this.cartShop.push(plate);
+          localStorage.setItem('cartShop', JSON.stringify(this.cartShop));
+          window.location.reload();
+        } else {
+          if (plateObject.user_id == this.localCartShop[0].user_id) {
+            const localItems = JSON.parse(localStorage.getItem('cartShop'));
+            localItems.map(data=>{
+              if(plate.id == data.id) {
+                plate.quantity += data.quantity;
+              } else {
+                this.cartShop.push(data);
+              }
+            });
+    
+            this.cartShop.push(plate);
+            this.totalPriceFunction();
+            window.location.reload();
+            localStorage.setItem('cartShop', JSON.stringify(this.cartShop));
           } else {
-            this.cartShop.push(data);
+            alert('Non puoi aggiungere i piatti di altri ristoranti. Svuota prima il carrello');
           }
-        });
-
-        this.cartShop.push(plate);
-        this.totalPriceFunction();
-        window.location.reload();
-        localStorage.setItem('cartShop', JSON.stringify(this.cartShop));
+        }
+      } else {
+        alert('Storage non funziona nel tuo browser');
       }
-    } else {
-      alert('Storage non funziona nel tuo browser');
     }
-  }
 },
 
 mounted() {
@@ -238,6 +242,7 @@ mounted() {
   this.totalPriceFunction();
 
   // console.log(this.localCartShop[1]);
+  console.log(this.user);
 }
 }
 </script>

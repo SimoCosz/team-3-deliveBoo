@@ -2894,13 +2894,14 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         var id = plateObject.id,
             name = plateObject.name,
             cover = plateObject.cover,
-            price = plateObject.price;
+            price = plateObject.price,
+            user_id = plateObject.user_id;
         var plate = {
+          user_id: user_id,
           id: id,
           name: name,
           cover: cover,
           price: price,
-          totPrice: price * this.quantity,
           quantity: this.quantity
         };
 
@@ -2909,19 +2910,22 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
           localStorage.setItem('cartShop', JSON.stringify(this.cartShop));
           window.location.reload();
         } else {
-          var localItems = JSON.parse(localStorage.getItem('cartShop'));
-          localItems.map(function (data) {
-            if (plate.id == data.id) {
-              plate.quantity += data.quantity;
-              plate.totPrice = plate.price * plate.quantity;
-            } else {
-              _this2.cartShop.push(data);
-            }
-          });
-          this.cartShop.push(plate);
-          this.totalPriceFunction();
-          window.location.reload();
-          localStorage.setItem('cartShop', JSON.stringify(this.cartShop));
+          if (plateObject.user_id == this.localCartShop[0].user_id) {
+            var localItems = JSON.parse(localStorage.getItem('cartShop'));
+            localItems.map(function (data) {
+              if (plate.id == data.id) {
+                plate.quantity += data.quantity;
+              } else {
+                _this2.cartShop.push(data);
+              }
+            });
+            this.cartShop.push(plate);
+            this.totalPriceFunction();
+            window.location.reload();
+            localStorage.setItem('cartShop', JSON.stringify(this.cartShop));
+          } else {
+            alert('Non puoi aggiungere i piatti di altri ristoranti. Svuota prima il carrello');
+          }
         }
       } else {
         alert('Storage non funziona nel tuo browser');
@@ -2931,6 +2935,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
   mounted: function mounted() {
     this.fetchRestaurantInfo();
     this.totalPriceFunction(); // console.log(this.localCartShop[1]);
+
+    console.log(this.user);
   }
 });
 
