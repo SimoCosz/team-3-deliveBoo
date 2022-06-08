@@ -68,6 +68,7 @@ class User extends Authenticatable
     }
 
     public function categories(){
-        return $this->belongsToMany('App\Category');
+        return $this->belongsToMany('App\Category')
+        ->withPivot('category_id', 'user_id');
     }
 }

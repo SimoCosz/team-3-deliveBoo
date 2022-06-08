@@ -15,8 +15,23 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $param = $request->query('category');
+
+        if($param){
+            $users = User::with(['categories'])
+            ->whereHas('categories', function ($q) use ($param){
+                $q->whereIn('category_user.category_id', $param);
+            })->get();
+
+            return response()->json([
+                'users' => $users,
+                'success' => true,
+            ]);
+        }
+
+
        $users = User::with('products', 'categories')->get();
 
        return response()->json([
