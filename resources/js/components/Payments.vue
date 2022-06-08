@@ -1,6 +1,5 @@
 <template>
   <div class="payments">
-    <div></div>
     <div class="logo-butt">
       <div class="row">
         <figure class="immagine">
