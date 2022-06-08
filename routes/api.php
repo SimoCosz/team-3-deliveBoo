@@ -22,10 +22,17 @@ Route::namespace('Api')->group(function(){
     Route::resource('users', 'UserController')->only([
         'index',
         'show'
+    ])
+    ->parameters([
+        'users' => 'users:slug',
+        'users' => 'users:user_id'
+     ]);
+
+    Route::resource('orders', 'OrderController')->only([
+        'index',
+        'show'
     ]);
-    // ->parameters([
-    //     'posts' => 'post:slug'
-    // ]);
+    
 
     // Route::get('/categories', 'CategoryController@index');
     // Route::get('/categories/{category}/posts', 'CategoryController@archive');

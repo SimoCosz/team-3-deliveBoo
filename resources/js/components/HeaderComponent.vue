@@ -11,6 +11,9 @@
               </figure>
               <div class="items-menu">
                 <ul>
+                  <li class="item">
+                    <router-link tag="a" :to="{name:'search.restaurant'}">Ristoranti</router-link>
+                  </li>
                   <li class="item dropdown" @mouseenter="dropdown()" @mouseleave="dropdown()">
                     <div class="dropbtn">
                       <i cldivss="bi bi-chevron-compact-down"></i> Collabora con noi
@@ -18,7 +21,7 @@
                     <div :class="['dropdown-content', dropdown1 == true? 'show' : '']">
                       <ul>
                         <li>
-                          <a href="/register">Ristoranti</a>
+                          <a href="/register">Ristoratori</a>
                         </li>
                         <li>
                           <a href="#">Lavora con noi</a>
@@ -80,7 +83,7 @@ a{
 }
 
 nav{
-  background-color: #00CCBC;
+  background-color: transparent;
   padding: 10px 0;
 
   .cover{

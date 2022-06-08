@@ -50,7 +50,11 @@
                 </span>
               </td>
               <td>{{ $product->description }}</td>
-              <td class="text-center">{{ $product->visibility }}</td>
+              @if($product->visibility === 0)
+                <td class="text-center">No</td>
+              @else
+                <td class="text-center">Si</td>
+              @endif
               <td>€ {{ $product->price }}</td>
 
               <td>

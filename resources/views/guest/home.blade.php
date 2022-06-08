@@ -18,12 +18,15 @@
   
     <!-- Styles -->
     <link href="{{ asset('css/front.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="icon" href="{{ URL::asset('/img/logo-favicon.png') }}" type="image/x-icon">
 </head>
 <body>
   <div id="root"></div>
 
+  
   <script src="{{ asset('js/front.js') }}"></script>
 </body>
 </html>
