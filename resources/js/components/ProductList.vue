@@ -23,13 +23,13 @@
         <!-- CART -->
         <div class="col-12 col-lg-4">
           <div class="cart p-3">
-            <div class="text-dark" v-if="this.localCartShop.length">
+            <div class="text-dark" v-if="localCartShop">
               <h4 class="font-weight-bold">I tuoi ordini</h4>
               <div v-for="element in this.localCartShop" :key="element.id">
                 <div class="d-flex justify-content-between">
                   <span>{{element.name}}</span>
                   <div class="d-flex justify-content-center">
-                    <i class="bi bi-dash-circle primary-color" @click="decrementCartQuantity(element)"></i>
+                    <i class="bi bi-dash-circle primary-color" v-if="element.quantity > 1" @click="decrementCartQuantity(element)"></i>
                     <span class="quantity px-2">{{element.quantity}}</span>
                     <i class="bi bi-plus-circle primary-color" @click="incrementCartQuantity(element)"></i>
                     <span class="px-2">{{element.price*element.quantity}} &#8364;</span>
@@ -114,6 +114,10 @@ methods : {
     this.selectedProduct = product;
   },
 
+  totalPriceFunction() {
+    
+  },
+
   fetchRestaurantInfo(){
     axios.get(`/app/Http/Controllers/Api/UserController.php/$(this.$route.params.id}`)
     .then( res => {
@@ -133,19 +137,20 @@ methods : {
   closePlateInfo(){
     this.show = false;
     this.quantity = 1;
-    console.log(this.show);
   },
 
   // Per aumentare o diminuire le quantità nel carrello
   incrementCartQuantity(el){
     this.localCartShop[el.quantity++];
-    // window.location.reload();
+
+    localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
   },
 
   decrementCartQuantity(el){
-    // if(this.localCartShop[el.quantity] > 0) {
+    // if(this.localCartShop[el.quantity] >= 1) {
       this.localCartShop[el.quantity--];
-      // window.location.reload();
+
+      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
     // }
   },
 

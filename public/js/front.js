@@ -2802,6 +2802,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       this.show = true;
       this.selectedProduct = product;
     },
+    totalPriceFunction: function totalPriceFunction() {},
     fetchRestaurantInfo: function fetchRestaurantInfo() {
       var _this = this;
 
@@ -2821,16 +2822,16 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     closePlateInfo: function closePlateInfo() {
       this.show = false;
       this.quantity = 1;
-      console.log(this.show);
     },
     // Per aumentare o diminuire le quantità nel carrello
     incrementCartQuantity: function incrementCartQuantity(el) {
-      this.localCartShop[el.quantity++]; // window.location.reload();
+      this.localCartShop[el.quantity++];
+      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
     },
     decrementCartQuantity: function decrementCartQuantity(el) {
-      // if(this.localCartShop[el.quantity] > 0) {
-      this.localCartShop[el.quantity--]; // window.location.reload();
-      // }
+      // if(this.localCartShop[el.quantity] >= 1) {
+      this.localCartShop[el.quantity--];
+      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); // }
     },
     // Per aumentare o diminuire le quantità nella finestra del prodotto
     incrementQuantity: function incrementQuantity() {
@@ -6430,7 +6431,7 @@ var render = function () {
           _vm._v(" "),
           _c("div", { staticClass: "col-12 col-lg-4" }, [
             _c("div", { staticClass: "cart p-3" }, [
-              this.localCartShop.length
+              _vm.localCartShop
                 ? _c(
                     "div",
                     { staticClass: "text-dark" },
@@ -6453,17 +6454,19 @@ var render = function () {
                                   staticClass: "d-flex justify-content-center",
                                 },
                                 [
-                                  _c("i", {
-                                    staticClass:
-                                      "bi bi-dash-circle primary-color",
-                                    on: {
-                                      click: function ($event) {
-                                        return _vm.decrementCartQuantity(
-                                          element
-                                        )
-                                      },
-                                    },
-                                  }),
+                                  element.quantity > 1
+                                    ? _c("i", {
+                                        staticClass:
+                                          "bi bi-dash-circle primary-color",
+                                        on: {
+                                          click: function ($event) {
+                                            return _vm.decrementCartQuantity(
+                                              element
+                                            )
+                                          },
+                                        },
+                                      })
+                                    : _vm._e(),
                                   _vm._v(" "),
                                   _c("span", { staticClass: "quantity px-2" }, [
                                     _vm._v(_vm._s(element.quantity)),
