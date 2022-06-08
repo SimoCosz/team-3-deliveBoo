@@ -2775,13 +2775,14 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     user: Object
   },
   data: function data() {
     return {
+      show: false,
+      selectedProduct: false,
       activeElement: undefined,
       cartShop: [],
       restaurant: [],
@@ -2790,10 +2791,15 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       logo: __webpack_require__(/*! /public/img/img-default-img.png */ "./public/img/img-default-img.png"),
       authUser: window.authUser,
       quantity: 1,
+      totalPrice: 0,
       csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content')
     };
   },
   methods: {
+    showModal: function showModal(product) {
+      this.show = true;
+      this.selectedProduct = product;
+    },
     fetchRestaurantInfo: function fetchRestaurantInfo() {
       var _this = this;
 
@@ -2811,8 +2817,9 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       this.ingredients = this.menuPlates[i].ingredients.split(',');
     },
     closePlateInfo: function closePlateInfo() {
-      this.activeElement = undefined;
+      this.show = false;
       this.quantity = 1;
+      console.log(this.show);
     },
     incrementQuantity: function incrementQuantity() {
       this.quantity++;
@@ -2835,7 +2842,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
           name: name,
           cover: cover,
           price: price,
-          quantity: 1
+          totPrice: 0,
+          quantity: this.quantity
         };
 
         if (JSON.parse(localStorage.getItem('cartShop')) === null) {
@@ -2846,7 +2854,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
           var localItems = JSON.parse(localStorage.getItem('cartShop'));
           localItems.map(function (data) {
             if (plate.id == data.id) {
-              plate.quantity += data.quantity; // plate.price = plate.price * plate.quantity;
+              plate.quantity += data.quantity;
+              plate.totPrice = plate.price * plate.quantity;
             } else {
               _this2.cartShop.push(data);
             }
@@ -6387,18 +6396,6 @@ var render = function () {
                           _c("p", { staticClass: "r-color" }, [
                             _vm._v(_vm._s(product.price) + " €"),
                           ]),
-                          _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              on: {
-                                click: function ($event) {
-                                  return _vm.addToCart(product)
-                                },
-                              },
-                            },
-                            [_vm._v("add to cart")]
-                          ),
                         ]),
                         _vm._v(" "),
                         _c("div", [
@@ -6417,6 +6414,104 @@ var render = function () {
               0
             ),
           ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-12 col-lg-4" }, [
+            _c("div", { staticClass: "cart p-3" }, [
+              this.cartShop.length == 0
+                ? _c("div", [
+                    _c("p", { staticClass: "text-center py-5" }, [
+                      _vm._v("Il carrello è vuoto"),
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      { staticClass: "btn btn-secondary btn-block" },
+                      [_vm._v(" Vai al Pagamento")]
+                    ),
+                  ])
+                : _c(
+                    "div",
+                    { staticClass: "text-dark" },
+                    [
+                      _c("h4", { staticClass: "font-weight-bold" }, [
+                        _vm._v("I tuoi ordini"),
+                      ]),
+                      _vm._v(" "),
+                      _vm._l(this.cartShop, function (element) {
+                        return _c("div", { key: element.id }, [
+                          _c(
+                            "div",
+                            { staticClass: "d-flex justify-content-between" },
+                            [
+                              _c("span", [_vm._v(_vm._s(element.name))]),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "d-flex justify-content-center",
+                                },
+                                [
+                                  _c("i", {
+                                    staticClass:
+                                      "bi bi-dash-circle primary-color",
+                                    on: {
+                                      click: function ($event) {
+                                        return _vm.decrementQuantity()
+                                      },
+                                    },
+                                  }),
+                                  _vm._v(" "),
+                                  _c("span", { staticClass: "quantity px-2" }, [
+                                    _vm._v(_vm._s(element.quantity)),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("i", {
+                                    staticClass:
+                                      "bi bi-plus-circle primary-color",
+                                    on: {
+                                      click: function ($event) {
+                                        return _vm.incrementQuantity()
+                                      },
+                                    },
+                                  }),
+                                  _vm._v(" "),
+                                  _c("span", { staticClass: "px-2" }, [
+                                    _vm._v(
+                                      _vm._s(element.price * _vm.quantity) +
+                                        " €"
+                                    ),
+                                  ]),
+                                ]
+                              ),
+                            ]
+                          ),
+                        ])
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "total d-flex justify-content-between" },
+                        [
+                          _c("h5", { staticClass: "font-weight-bold" }, [
+                            _vm._v("Totale:"),
+                          ]),
+                          _vm._v(" "),
+                          _c("h5", { staticClass: "font-weight-bold" }, [
+                            _vm._v(_vm._s(_vm.totalPrice) + "€"),
+                          ]),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        { staticClass: "btn btn-bg-color btn-block" },
+                        [_vm._v(" Vai al Pagamento")]
+                      ),
+                    ],
+                    2
+                  ),
+            ]),
+          ]),
         ]),
       ]),
       _vm._v(" "),
@@ -6429,7 +6524,7 @@ var render = function () {
                   staticClass: "my-modal",
                   on: {
                     click: function ($event) {
-                      _vm.show = false
+                      return _vm.closePlateInfo()
                     },
                   },
                 },
@@ -6449,7 +6544,7 @@ var render = function () {
                         staticClass: "bi bi-x",
                         on: {
                           click: function ($event) {
-                            _vm.show = false
+                            return _vm.closePlateInfo()
                           },
                         },
                       }),
@@ -6476,7 +6571,11 @@ var render = function () {
                           [
                             _c("i", {
                               staticClass: "bi bi-dash-circle",
-                              on: { click: _vm.decrement },
+                              on: {
+                                click: function ($event) {
+                                  return _vm.decrementQuantity()
+                                },
+                              },
                             }),
                             _vm._v(" "),
                             _c("span", { staticClass: "quantity px-2" }, [
@@ -6485,7 +6584,11 @@ var render = function () {
                             _vm._v(" "),
                             _c("i", {
                               staticClass: "bi bi-plus-circle",
-                              on: { click: _vm.increment },
+                              on: {
+                                click: function ($event) {
+                                  return _vm.incrementQuantity()
+                                },
+                              },
                             }),
                           ]
                         ),
@@ -6496,7 +6599,7 @@ var render = function () {
                             staticClass: "btn btn-block btn-bg-color",
                             on: {
                               click: function ($event) {
-                                return _vm.addProduct(_vm.selectedProduct)
+                                return _vm.addToCart(_vm.selectedProduct)
                               },
                             },
                           },
@@ -6506,7 +6609,7 @@ var render = function () {
                                 _vm._s(
                                   _vm.selectedProduct.price * _vm.quantity
                                 ) +
-                                "\n          "
+                                " €\n          "
                             ),
                           ]
                         ),

@@ -11,7 +11,6 @@
                   <h5 class="title">{{product.name}}</h5>
                   <p class="description">{{product.description}}</p>
                   <p class="r-color">{{product.price}} &#8364;</p>
-                  <button @click="addToCart(product)">add to cart</button>
                 </div>
                 <div>
                   <div class="image" :style="{ backgroundImage: `url(${product.cover})` }"></div>
@@ -22,22 +21,22 @@
         </div>
 
         <!-- CART -->
-        <!-- <div class="col-12 col-lg-4">
+        <div class="col-12 col-lg-4">
           <div class="cart p-3">
-            <div v-if="this.cart.length==0">
+            <div v-if="this.cartShop.length==0">
               <p class="text-center py-5">Il carrello è vuoto</p>
               <button class="btn btn-secondary btn-block"> Vai al Pagamento</button>
             </div>
 
             <div class="text-dark" v-else>
               <h4 class="font-weight-bold">I tuoi ordini</h4>
-              <div v-for="element in this.cart" :key="element.id">
+              <div v-for="element in this.cartShop" :key="element.id">
                 <div class="d-flex justify-content-between">
                   <span>{{element.name}}</span>
                   <div class="d-flex justify-content-center">
-                    <i class="bi bi-dash-circle primary-color" @click="decrement"></i>
-                    <span class="quantity px-2">{{quantity}}</span>
-                    <i class="bi bi-plus-circle primary-color" @click="increment"></i>
+                    <i class="bi bi-dash-circle primary-color" @click="decrementQuantity()"></i>
+                    <span class="quantity px-2">{{element.quantity}}</span>
+                    <i class="bi bi-plus-circle primary-color" @click="incrementQuantity()"></i>
                     <span class="px-2">{{element.price*quantity}} &#8364;</span>
                   </div>
                 </div>
@@ -50,7 +49,7 @@
             </div>
 
           </div>
-        </div> -->
+        </div>
       </div>
     </div>
 
@@ -58,9 +57,9 @@
     <!--FIXME: Transition ancora non funzionante -->
     <Transition name="slide-fade" appear>
     <div v-if="show">
-      <div class="my-modal" @click="show=false">
+      <div class="my-modal" @click="closePlateInfo()">
         <div class="product-show" @click.stop>
-          <i class="bi bi-x" @click="show=false"></i>
+          <i class="bi bi-x" @click="closePlateInfo()"></i>
           <img class="product-show_img" :src=selectedProduct.cover alt="">
           <div class="product-show_info p-4">
             <h4 class="title">{{selectedProduct.name}}</h4>
@@ -68,13 +67,13 @@
           </div>
           <div class="product-show-add p-4">
             <div class="d-flex justify-content-center pb-3">
-              <i class="bi bi-dash-circle" @click="decrement"></i>
+              <i class="bi bi-dash-circle" @click="decrementQuantity()"></i>
               <span class="quantity px-2">{{quantity}}</span>
-              <i class="bi bi-plus-circle" @click="increment"></i>
+              <i class="bi bi-plus-circle" @click="incrementQuantity()"></i>
             </div>
             
-            <button class="btn btn-block btn-bg-color" @click="addProduct(selectedProduct)">
-              Aggiungi per &#8364;{{selectedProduct.price*quantity}}
+            <button class="btn btn-block btn-bg-color" @click="addToCart(selectedProduct)">
+              Aggiungi per &#8364;{{selectedProduct.price*quantity}} &euro;
             </button>
           </div>
         </div>
@@ -91,6 +90,8 @@ props: {
 },
 data(){
   return {
+    show: false,
+    selectedProduct: false,
     activeElement: undefined,
     cartShop:[],
     restaurant: [],
@@ -99,11 +100,16 @@ data(){
     logo: require('/public/img/img-default-img.png'),
     authUser: window.authUser,
     quantity: 1,
+    totalPrice: 0,
     csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
   }
 },
 
 methods : {
+  showModal: function(product) {
+    this.show = true;
+    this.selectedProduct = product;
+  },
 
   fetchRestaurantInfo(){
     axios.get(`/app/Http/Controllers/Api/UserController.php/$(this.$route.params.id}`)
@@ -122,8 +128,9 @@ methods : {
     this.ingredients = this.menuPlates[i].ingredients.split(',');
   },
   closePlateInfo(){
-    this.activeElement = undefined;
+    this.show = false;
     this.quantity = 1;
+    console.log(this.show);
   },
 
   incrementQuantity(){
@@ -145,7 +152,8 @@ methods : {
         name: name,
         cover: cover,
         price: price,
-        quantity: 1
+        totPrice: 0,
+        quantity: this.quantity
       };
 
       if(JSON.parse(localStorage.getItem('cartShop')) === null) {
@@ -157,7 +165,7 @@ methods : {
         localItems.map(data=>{
           if(plate.id == data.id) {
             plate.quantity += data.quantity;
-            // plate.price = plate.price * plate.quantity;
+            plate.totPrice = plate.price * plate.quantity;
           } else {
             this.cartShop.push(data);
           }
