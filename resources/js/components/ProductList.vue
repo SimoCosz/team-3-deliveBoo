@@ -33,12 +33,14 @@
                     <span class="quantity px-2">{{element.quantity}}</span>
                     <i class="bi bi-plus-circle primary-color" @click="incrementCartQuantity(element)"></i>
                     <span class="px-2">{{element.price*element.quantity}} &#8364;</span>
+                    <button>Delete</button>
                   </div>
                 </div>
               </div>
               <div class="total d-flex justify-content-between mt-3">
                 <h5 class="font-weight-bold">Totale:</h5>
                 <h5 class="font-weight-bold">{{totalPrice}}&#8364;</h5>
+                <button @click="deleteAll()">Delete All</button>
               </div>
                <button class="btn btn-bg-color btn-block"> Vai al Pagamento</button>
             </div>
@@ -115,7 +117,17 @@ methods : {
   },
 
   totalPriceFunction() {
-    
+    let elementTotPrice = 0;
+    for (let index = 0; index < this.localCartShop.length; index++) {
+      elementTotPrice = this.localCartShop[index].price * this.localCartShop[index].quantity;
+      this.totalPrice += elementTotPrice;
+    } 
+    localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); 
+
+    // window.location.reload();
+
+    return this.totalPrice
+
   },
 
   fetchRestaurantInfo(){
@@ -137,6 +149,16 @@ methods : {
   closePlateInfo(){
     this.show = false;
     this.quantity = 1;
+  },
+
+  deleteDish() {
+    
+  },
+
+  deleteAll() {
+    this.localCartShop = null;
+
+    localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); 
   },
 
   // Per aumentare o diminuire le quantità nel carrello
@@ -205,7 +227,8 @@ methods : {
 },
 mounted() {
   this.fetchRestaurantInfo();
-  console.log(this.localCartShop[1]);
+  // console.log(this.localCartShop[1]);
+  this.totalPriceFunction();
 }
 }
 </script>

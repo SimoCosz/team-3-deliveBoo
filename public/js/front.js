@@ -2775,6 +2775,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     user: Object
@@ -2802,7 +2804,18 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       this.show = true;
       this.selectedProduct = product;
     },
-    totalPriceFunction: function totalPriceFunction() {},
+    totalPriceFunction: function totalPriceFunction() {
+      var elementTotPrice = 0;
+
+      for (var index = 0; index < this.localCartShop.length; index++) {
+        elementTotPrice = this.localCartShop[index].price * this.localCartShop[index].quantity;
+        this.totalPrice += elementTotPrice;
+      }
+
+      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); // window.location.reload();
+
+      return this.totalPrice;
+    },
     fetchRestaurantInfo: function fetchRestaurantInfo() {
       var _this = this;
 
@@ -2822,6 +2835,11 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     closePlateInfo: function closePlateInfo() {
       this.show = false;
       this.quantity = 1;
+    },
+    deleteDish: function deleteDish() {},
+    deleteAll: function deleteAll() {
+      this.localCartShop = null;
+      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
     },
     // Per aumentare o diminuire le quantità nel carrello
     incrementCartQuantity: function incrementCartQuantity(el) {
@@ -2883,8 +2901,9 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     }
   },
   mounted: function mounted() {
-    this.fetchRestaurantInfo();
-    console.log(this.localCartShop[1]);
+    this.fetchRestaurantInfo(); // console.log(this.localCartShop[1]);
+
+    this.totalPriceFunction();
   }
 });
 
@@ -6490,6 +6509,8 @@ var render = function () {
                                         " €"
                                     ),
                                   ]),
+                                  _vm._v(" "),
+                                  _c("button", [_vm._v("Delete")]),
                                 ]
                               ),
                             ]
@@ -6511,6 +6532,18 @@ var render = function () {
                           _c("h5", { staticClass: "font-weight-bold" }, [
                             _vm._v(_vm._s(_vm.totalPrice) + "€"),
                           ]),
+                          _vm._v(" "),
+                          _c(
+                            "button",
+                            {
+                              on: {
+                                click: function ($event) {
+                                  return _vm.deleteAll()
+                                },
+                              },
+                            },
+                            [_vm._v("Delete All")]
+                          ),
                         ]
                       ),
                       _vm._v(" "),
