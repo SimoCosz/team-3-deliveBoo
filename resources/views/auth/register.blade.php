@@ -98,7 +98,7 @@
                         <div class="form-group row">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Conferma Password') }}*</label>
                             <div class="col-md-6">
-                                <input id="password-confirm" required minlength="8" type="password" class="form-control" name="password_confirmation" autocomplete="new-password">
+                                <input id="password-confirm" uguale minlength="8" type="password" class="form-control" name="password_confirmation" autocomplete="new-password">
                             </div>
                         </div>
                         {{-- COVER --}}
@@ -118,7 +118,7 @@
                         <div class="d-flex flex-wrap container align-items-center justify-content-center" style="gap:1rem">
                             @foreach ($categories as $key => $category)
                                 <div class="mb-3 form-check">
-                                    <input type="checkbox" class="form-check-input @error('categories.{{$key}}') is-invalid @enderror" value="{{$category->id}}" name="categories[{{$key}}]" id="categories-{{$category->id}}">
+                                    <input type="checkbox" onchange="controlCategory()" required class="form-check-input @error('categories.{{$key}}') is-invalid @enderror" value="{{$category->id}}" name="categories[{{$key}}]" id="categories-{{$category->id}}">
                                     <label class="form-check-label" for="categories-{{$category->id}}">{{$category->name}}</label>
                                 </div>
                             @endforeach
@@ -129,7 +129,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" onclick="controlPassword()" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
                             </div>
@@ -141,4 +141,36 @@
         </div>
     </div>
 </div>
+
+<script>
+    function controlPassword(){
+        const password = document.getElementById('password');
+        const confirm = document.getElementById('password-confirm');
+        if (confirm.value != password.value) {
+
+            // aggiungere div in display none
+            alert('Le password non coincidono')
+            confirm.value = '';
+        }
+    }
+
+    function controlCategory(){
+        const checked = document.querySelectorAll('input[type="checkbox"]:checked');
+        const uncheck = document.querySelectorAll('input[type="checkbox"]');
+
+        if (checked.length > 0) {
+            for (let index = 0; index < uncheck.length; index++) {
+                const el = uncheck[index];
+                if (checked.length > 0) {
+                    el.removeAttribute('required')
+                } else{
+                    el.setAttribute('required', '')
+                }
+                
+            }
+        }
+    }
+</script>
 @endsection
+
+

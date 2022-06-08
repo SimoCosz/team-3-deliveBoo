@@ -84,7 +84,9 @@ class RegisterController extends Controller
             $cover_path = Storage::put('uploads', $data['cover']);
 
             $data['cover'] = $cover_path;
-        } 
+        } else {
+            $data['cover'] = null;
+        }
         
         $user_data = [
             'name' => $data['name'],
