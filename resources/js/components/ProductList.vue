@@ -155,12 +155,14 @@ methods : {
     this.localCartShop.splice(el, 1);
 
     localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
+    window.location.reload();
   },
 
   deleteAll() {
     this.localCartShop = null;
 
     localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); 
+    window.location.reload();
   },
 
   // Per aumentare o diminuire le quantità nel carrello
@@ -168,6 +170,7 @@ methods : {
     this.localCartShop[el.quantity++];
 
     localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
+    window.location.reload();
   },
 
   decrementCartQuantity(el){
@@ -175,6 +178,7 @@ methods : {
       this.localCartShop[el.quantity--];
 
       localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
+      window.location.reload();
     // }
   },
 
@@ -230,8 +234,9 @@ methods : {
 
 mounted() {
   this.fetchRestaurantInfo();
+  this.totalPriceFunction();
+
   // console.log(this.localCartShop[1]);
-  // this.totalPriceFunction();
 }
 }
 </script>
