@@ -20,8 +20,7 @@ class UserController extends Controller
         $param = $request->query('category');
 
         if($param){
-            $users = User::with(['categories'])
-            ->whereHas('categories', function ($q) use ($param){
+            $users = User::with(['categories'])->whereHas('categories', function ($q) use ($param){
                 $q->whereIn('category_user.category_id', $param);
             })->get();
 
@@ -32,7 +31,7 @@ class UserController extends Controller
         }
 
 
-       $users = User::with('products', 'categories')->get();
+       $users = User::with('products', 'categories')->paginate(9);
 
        return response()->json([
            'users' => $users,
