@@ -17,6 +17,7 @@
     <div>
       <WorkWithUs/>
     </div>
+    
   </Layout>
 </template>
 
@@ -30,6 +31,7 @@
   import Jumbo from '../components/HomeJumbotron.vue'
   import Selection from '../components/SelectionDeliveboo.vue'
   import Favourite from '../components/FavouriteDishes.vue'
+  import Payments from '../components/Payments.vue'
 
 
   export default {
@@ -41,7 +43,8 @@
       Favourite,
       Categories,
       NewsSection,
-      WorkWithUs
+      WorkWithUs,
+      Payments
     },
     
   }
