@@ -33,7 +33,7 @@
                     <span class="quantity px-2">{{element.quantity}}</span>
                     <i class="bi bi-plus-circle primary-color" @click="incrementCartQuantity(element)"></i>
                     <span class="px-2">{{element.price*element.quantity}} &#8364;</span>
-                    <i class="bi bi-trash" role="button" @click="deleteDish(i)"></i>
+                    <i class="bi bi-trash d-flex align-items-center" role="button" @click="deleteDish(i)"></i>
                   </div>
                 </div>
               </div>

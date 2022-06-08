@@ -20,6 +20,7 @@ export default {
 
   .logo{
     height: 400px;
+    width: 700px;
   }
 
   .btn-back{

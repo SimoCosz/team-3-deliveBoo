@@ -3411,7 +3411,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".wrapper[data-v-22d72582] {\n  background-color: #00CCBC;\n}\n.wrapper .logo[data-v-22d72582] {\n  height: 400px;\n}\n.wrapper .btn-back[data-v-22d72582] {\n  font-size: 20px;\n}", ""]);
+exports.push([module.i, ".wrapper[data-v-22d72582] {\n  background-color: #00CCBC;\n}\n.wrapper .logo[data-v-22d72582] {\n  height: 400px;\n  width: 700px;\n}\n.wrapper .btn-back[data-v-22d72582] {\n  font-size: 20px;\n}", ""]);
 
 // exports
 
@@ -6547,7 +6547,8 @@ var render = function () {
                                   ]),
                                   _vm._v(" "),
                                   _c("i", {
-                                    staticClass: "bi bi-trash",
+                                    staticClass:
+                                      "bi bi-trash d-flex align-items-center",
                                     attrs: { role: "button" },
                                     on: {
                                       click: function ($event) {
