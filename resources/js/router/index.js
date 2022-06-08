@@ -33,6 +33,8 @@ const routes = [
     path: '/payments',
     name: 'payments',
     component: Payments,
+  },
+  {
     path: '/search',
     name: 'search.restaurant',
     component: SearchPage

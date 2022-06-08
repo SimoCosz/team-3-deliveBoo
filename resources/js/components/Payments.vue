@@ -388,9 +388,6 @@ form {
         width: 45%;
     }
 }
-.dentro-cart > h4{
-    
-}
 .prod{
     margin-bottom: 0;
 }

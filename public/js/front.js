@@ -24849,10 +24849,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Payments_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Payments.vue */ "./resources/js/components/Payments.vue");
 /* harmony import */ var _Pages_SearchPage_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Pages/SearchPage.vue */ "./resources/js/Pages/SearchPage.vue");
 /* harmony import */ var _Pages_MenuPage_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Pages/MenuPage.vue */ "./resources/js/Pages/MenuPage.vue");
-var _ref;
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
@@ -24875,11 +24871,15 @@ var routes = [{
   path: '/categories',
   name: 'categories.index',
   component: _components_CategoriesIndex_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
-}, (_ref = {
+}, {
   path: '/payments',
   name: 'payments',
   component: _components_Payments_vue__WEBPACK_IMPORTED_MODULE_6__["default"]
-}, _defineProperty(_ref, "path", '/search'), _defineProperty(_ref, "name", 'search.restaurant'), _defineProperty(_ref, "component", _Pages_SearchPage_vue__WEBPACK_IMPORTED_MODULE_7__["default"]), _ref), {
+}, {
+  path: '/search',
+  name: 'search.restaurant',
+  component: _Pages_SearchPage_vue__WEBPACK_IMPORTED_MODULE_7__["default"]
+}, {
   path: '/menu/:slug',
   name: 'menu.restaurant',
   component: _Pages_MenuPage_vue__WEBPACK_IMPORTED_MODULE_8__["default"]
