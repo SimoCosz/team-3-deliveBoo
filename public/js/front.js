@@ -2103,6 +2103,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 
@@ -2116,6 +2122,8 @@ __webpack_require__.r(__webpack_exports__);
       users: [],
       categories: [],
       // filteredUsers: [],
+      lastPage: [],
+      currentPage: [],
       userCategories: [],
       categoryFilter: [],
       loading: false
@@ -2125,9 +2133,19 @@ __webpack_require__.r(__webpack_exports__);
     fetchRestaurant: function fetchRestaurant() {
       var _this = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/users").then(function (res) {
+      var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/users", {
+        params: {
+          page: page
+        }
+      }).then(function (res) {
         var users = res.data.users;
-        _this.users = users;
+        var data = users.data,
+            last_page = users.last_page,
+            current_page = users.current_page;
+        _this.users = data;
+        _this.lastPage = last_page;
+        _this.currentPage = current_page;
       })["catch"](function (err) {
         console.warn(err);
 
@@ -2170,31 +2188,8 @@ __webpack_require__.r(__webpack_exports__);
       } else {
         this.fetchFilters(this.categoryFilter);
       }
-    } // checkCategories(){
-    //   console.log(this.categoryFiltered);
-    // },
-    // checkCategoriesContain(user){
-    //   let userCategories = user.categories.map((c)=>{
-    //     return c.name;
-    //   });
-    //   return this.categoryFiltered.every((el)=>{
-    //     return userCategories.includes(el);
-    //   });
-    // }
-
+    }
   },
-  // computed: {
-  //   filteredRestaurants(){
-  //     if(!this.categoryFiltered.length){
-  //       return(this.filteredUsers = this.users);
-  //     } else {
-  //       this.filteredUsers = this.users.filter(
-  //         this.checkCategoriesContain
-  //       );
-  //       return this.filteredUsers;
-  //     }
-  //   }
-  // },
   mounted: function mounted() {
     this.fetchRestaurant();
     this.fetchCategories();
@@ -3450,7 +3445,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".search-page-container[data-v-30b3a980] {\n  margin: 0;\n  padding: 0 15px 0 15px;\n}\n.where[data-v-30b3a980] {\n  width: 95px;\n  gap: 10px;\n}\n.after[data-v-30b3a980]::after {\n  content: \"\";\n  display: block;\n  border: 1px solid #e9e8e8;\n  width: 90%;\n}\n.categories[data-v-30b3a980] {\n  min-width: 180px;\n  max-height: calc(100vh - 50px);\n  overflow: auto;\n  margin-left: 40px;\n}\n.container-card[data-v-30b3a980] {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n}\n@media (max-width: 1200px) {\n.restaurants[data-v-30b3a980] {\n    margin-left: 20px !important;\n}\n}\n@media (max-width: 750px) {\n.categories[data-v-30b3a980] {\n    display: none;\n}\n.restaurants[data-v-30b3a980] {\n    margin-left: 10px !important;\n}\n}", ""]);
+exports.push([module.i, ".search-page-container[data-v-30b3a980] {\n  margin: 0;\n  padding: 0 15px 0 15px;\n}\n.where[data-v-30b3a980] {\n  width: 95px;\n  gap: 10px;\n}\n.after[data-v-30b3a980]::after {\n  content: \"\";\n  display: block;\n  border: 1px solid #e9e8e8;\n  width: 90%;\n}\n.categories[data-v-30b3a980] {\n  min-width: 180px;\n  max-height: calc(100vh - 50px);\n  overflow: auto;\n  margin-left: 40px;\n}\n.container-card[data-v-30b3a980] {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n}\n.page-wrap[data-v-30b3a980] {\n  gap: 15px;\n}\n.page-wrap .page[data-v-30b3a980] {\n  width: 40px;\n  height: 40px;\n  border-radius: 50%;\n  background-color: #077567;\n  display: flex;\n  justify-content: center;\n  color: white;\n  align-items: center;\n  cursor: pointer;\n}\n.page-wrap .bkg-page[data-v-30b3a980] {\n  background-color: #EDAE89;\n  width: 40px;\n  height: 40px;\n  border-radius: 50%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border: 2px solid #077567;\n  color: #077567;\n  cursor: pointer;\n}\n@media (max-width: 1200px) {\n.restaurants[data-v-30b3a980] {\n    margin-left: 20px !important;\n}\n}\n@media (max-width: 750px) {\n.categories[data-v-30b3a980] {\n    display: none;\n}\n.restaurants[data-v-30b3a980] {\n    margin-left: 10px !important;\n}\n}", ""]);
 
 // exports
 
@@ -5599,6 +5594,32 @@ var render = function () {
           }),
           1
         ),
+        _vm._v(" "),
+        _c("div", { staticClass: "paginate" }, [
+          _c(
+            "ul",
+            {
+              staticClass:
+                "page-wrap d-flex justify-content-center rounded mt-4",
+            },
+            _vm._l(_vm.lastPage, function (n) {
+              return _c(
+                "li",
+                {
+                  key: n,
+                  class: [_vm.currentPage === n ? "bkg-page" : "page"],
+                  on: {
+                    click: function ($event) {
+                      return _vm.fetchRestaurant(n)
+                    },
+                  },
+                },
+                [_vm._v(" " + _vm._s(n) + " ")]
+              )
+            }),
+            0
+          ),
+        ]),
       ]),
     ]),
   ])

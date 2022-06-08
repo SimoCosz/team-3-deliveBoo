@@ -25,6 +25,12 @@
           <div class="container-card">
             <RestaurantCard :element="user" v-for="user in users" :key="user.id"/>
           </div>
+          
+          <div class="paginate">
+            <ul class="page-wrap d-flex justify-content-center rounded mt-4">
+              <li :class="[currentPage === n? 'bkg-page' : 'page']" @click="fetchRestaurant(n)" v-for="n in lastPage" :key="n"> {{n}} </li>
+            </ul>
+          </div>
         </div>
       </div>
      
@@ -47,17 +53,26 @@ import RestaurantCard from '../components/RestaurantCard.vue'
         users: [],
         categories: [],
         // filteredUsers: [],
+        lastPage: [],
+        currentPage: [],
         userCategories: [],
         categoryFilter: [],
         loading: false
       }
     },
     methods:{
-      fetchRestaurant() {
-        axios.get("/api/users")
+      fetchRestaurant(page = 1) {
+        axios.get("/api/users", {
+          params : {
+            page
+          }
+        })
         .then((res) => {
             const { users } = res.data;
-            this.users = users;
+            const {data, last_page, current_page} = users
+            this.users = data
+            this.lastPage = last_page
+            this.currentPage = current_page
         })
         .catch((err) => {
           console.warn(err);
@@ -102,32 +117,7 @@ import RestaurantCard from '../components/RestaurantCard.vue'
           this.fetchFilters(this.categoryFilter)
         }
       },
-
-      // checkCategories(){
-      //   console.log(this.categoryFiltered);
-      // },
-
-      // checkCategoriesContain(user){
-      //   let userCategories = user.categories.map((c)=>{
-      //     return c.name;
-      //   });
-      //   return this.categoryFiltered.every((el)=>{
-      //     return userCategories.includes(el);
-      //   });
-      // }
     },
-    // computed: {
-    //   filteredRestaurants(){
-    //     if(!this.categoryFiltered.length){
-    //       return(this.filteredUsers = this.users);
-    //     } else {
-    //       this.filteredUsers = this.users.filter(
-    //         this.checkCategoriesContain
-    //       );
-    //       return this.filteredUsers;
-    //     }
-    //   }
-    // },
     
     mounted() {
       this.fetchRestaurant()
@@ -169,6 +159,36 @@ import RestaurantCard from '../components/RestaurantCard.vue'
   flex-wrap: wrap;
   gap: 10px;
 }
+
+.page-wrap{
+  gap: 15px;
+
+  .page{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #077567;
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .bkg-page{
+    background-color: #EDAE89;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #077567;
+    color: #077567;
+    cursor: pointer;
+  }
+}
+
 @media (max-width: 1200px){
   .restaurants{
     margin-left: 20px!important;
