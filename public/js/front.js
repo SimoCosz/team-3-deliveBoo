@@ -2814,7 +2814,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 
       localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); // window.location.reload();
 
-      console.log(this.totalPrice);
       return this.totalPrice;
     },
     fetchRestaurantInfo: function fetchRestaurantInfo() {
@@ -2877,7 +2876,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
           name: name,
           cover: cover,
           price: price,
-          totPrice: 0,
+          totPrice: price * this.quantity,
           quantity: this.quantity
         };
 
