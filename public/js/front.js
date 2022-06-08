@@ -2814,6 +2814,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 
       localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); // window.location.reload();
 
+      console.log(this.totalPrice);
       return this.totalPrice;
     },
     fetchRestaurantInfo: function fetchRestaurantInfo() {
@@ -2836,7 +2837,10 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       this.show = false;
       this.quantity = 1;
     },
-    deleteDish: function deleteDish() {},
+    deleteDish: function deleteDish(el) {
+      this.localCartShop.splice(el, 1);
+      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
+    },
     deleteAll: function deleteAll() {
       this.localCartShop = null;
       localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
@@ -2892,6 +2896,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
             }
           });
           this.cartShop.push(plate);
+          this.totalPriceFunction();
           window.location.reload();
           localStorage.setItem('cartShop', JSON.stringify(this.cartShop));
         }
@@ -2902,8 +2907,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
   },
   mounted: function mounted() {
     this.fetchRestaurantInfo(); // console.log(this.localCartShop[1]);
-
-    this.totalPriceFunction();
+    // this.totalPriceFunction();
   }
 });
 
@@ -6459,7 +6463,7 @@ var render = function () {
                         _vm._v("I tuoi ordini"),
                       ]),
                       _vm._v(" "),
-                      _vm._l(this.localCartShop, function (element) {
+                      _vm._l(_vm.localCartShop, function (element, i) {
                         return _c("div", { key: element.id }, [
                           _c(
                             "div",
@@ -6510,7 +6514,17 @@ var render = function () {
                                     ),
                                   ]),
                                   _vm._v(" "),
-                                  _c("button", [_vm._v("Delete")]),
+                                  _c(
+                                    "button",
+                                    {
+                                      on: {
+                                        click: function ($event) {
+                                          return _vm.deleteDish(i)
+                                        },
+                                      },
+                                    },
+                                    [_vm._v("Delete")]
+                                  ),
                                 ]
                               ),
                             ]

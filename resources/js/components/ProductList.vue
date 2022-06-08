@@ -25,7 +25,7 @@
           <div class="cart p-3">
             <div class="text-dark" v-if="localCartShop">
               <h4 class="font-weight-bold">I tuoi ordini</h4>
-              <div v-for="element in this.localCartShop" :key="element.id">
+              <div v-for="(element, i) in localCartShop" :key="element.id">
                 <div class="d-flex justify-content-between">
                   <span>{{element.name}}</span>
                   <div class="d-flex justify-content-center">
@@ -33,7 +33,7 @@
                     <span class="quantity px-2">{{element.quantity}}</span>
                     <i class="bi bi-plus-circle primary-color" @click="incrementCartQuantity(element)"></i>
                     <span class="px-2">{{element.price*element.quantity}} &#8364;</span>
-                    <button>Delete</button>
+                    <button @click="deleteDish(i)">Delete</button>
                   </div>
                 </div>
               </div>
@@ -125,8 +125,9 @@ methods : {
     localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); 
 
     // window.location.reload();
-
+    console.log(this.totalPrice);
     return this.totalPrice
+
 
   },
 
@@ -151,8 +152,10 @@ methods : {
     this.quantity = 1;
   },
 
-  deleteDish() {
-    
+  deleteDish(el) {
+    this.localCartShop.splice(el, 1);
+
+    localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
   },
 
   deleteAll() {
@@ -216,19 +219,20 @@ methods : {
         });
 
         this.cartShop.push(plate);
+        this.totalPriceFunction();
         window.location.reload();
         localStorage.setItem('cartShop', JSON.stringify(this.cartShop));
       }
-
     } else {
       alert('Storage non funziona nel tuo browser');
     }
   }
 },
+
 mounted() {
   this.fetchRestaurantInfo();
   // console.log(this.localCartShop[1]);
-  this.totalPriceFunction();
+  // this.totalPriceFunction();
 }
 }
 </script>
