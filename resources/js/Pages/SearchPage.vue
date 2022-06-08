@@ -13,7 +13,7 @@
             <h5 class="my-3">Categorie</h5>
           <div class="check my-2" v-for="category in categories" :key="category.id">
             <input type="checkbox" @change="check($event)" v-model="categoryFilter" :id="category.name" :name="category.name" :value="category.id">
-            <label :for="category.name">{{category.name}}</label>
+            <label :for="category.name">{{category.name}} ({{category.users.length}})</label>
           </div>
         </div>
         <div class="col restaurants mb-5">

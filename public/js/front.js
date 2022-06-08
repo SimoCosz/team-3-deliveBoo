@@ -5368,7 +5368,12 @@ var render = function () {
               }),
               _vm._v(" "),
               _c("label", { attrs: { for: category.name } }, [
-                _vm._v(_vm._s(category.name)),
+                _vm._v(
+                  _vm._s(category.name) +
+                    " (" +
+                    _vm._s(category.users.length) +
+                    ")"
+                ),
               ]),
             ])
           }),
