@@ -2490,13 +2490,30 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      dropdown1: false
+      dropdown1: false,
+      localCartShop: JSON.parse(localStorage.getItem('cartShop')),
+      totalPrice: 0
     };
   },
   methods: {
     dropdown: function dropdown() {
       this.dropdown1 = !this.dropdown1;
+    },
+    totalPriceFunction: function totalPriceFunction() {
+      var elementTotPrice = 0;
+
+      for (var index = 0; index < this.localCartShop.length; index++) {
+        elementTotPrice = this.localCartShop[index].price * this.localCartShop[index].quantity;
+        this.totalPrice += elementTotPrice;
+      }
+
+      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); // window.location.reload();
+
+      return this.totalPrice;
     }
+  },
+  mounted: function mounted() {
+    this.totalPriceFunction(); // console.log(this.localCartShop[1]);
   }
 });
 
@@ -5954,9 +5971,25 @@ var render = function () {
                     ]
                   ),
                   _vm._v(" "),
-                  _vm._m(3),
+                  _c("li", { staticClass: "item" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "d-flex align-items-center justify-content-center",
+                        attrs: { href: "#" },
+                      },
+                      [
+                        _c("i", {
+                          staticClass:
+                            "bi bi-cart4 p-1 d-flex align-items-center",
+                        }),
+                        _vm._v(_vm._s(_vm.totalPrice) + " €"),
+                      ]
+                    ),
+                  ]),
                   _vm._v(" "),
-                  _vm._m(4),
+                  _vm._m(3),
                 ]),
               ]),
               _vm._v(" "),
@@ -6007,17 +6040,6 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("li", [
         _c("a", { attrs: { href: "#" } }, [_vm._v("Deliveboo for Work")]),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "item" }, [
-      _c("a", { attrs: { href: "#" } }, [
-        _c("i", { staticClass: "bi bi-cart4 p-1" }),
-        _vm._v("0,00 €"),
       ]),
     ])
   },

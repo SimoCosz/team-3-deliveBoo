@@ -129,8 +129,6 @@ methods : {
 
     // window.location.reload();
     return this.totalPrice
-
-
   },
 
   fetchRestaurantInfo(){
