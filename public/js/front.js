@@ -2829,20 +2829,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      title: 'payments',
-      backgroundPayment: {
-        backgroundImage: "url(../../public/images/backgroundpayment.png)"
-      }
+      title: "payments"
     };
+  },
+  methods: {
+    currentDate: function currentDate() {
+      var date = new Date();
+      console.log(date);
+      return date;
+    }
+  },
+  mounted: function mounted() {
+    this.currentDate();
   }
 });
 
@@ -3616,13 +3617,12 @@ exports.push([module.i, ".news_section {\n  display: flex;\n  align-items: cente
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var escape = __webpack_require__(/*! ../../../node_modules/css-loader/lib/url/escape.js */ "./node_modules/css-loader/lib/url/escape.js");
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
 // imports
 
 
 // module
-exports.push([module.i, "*[data-v-04c873d0] {\n  font-family: \"Nunito\", sans-serif;\n}\n.payments[data-v-04c873d0] {\n  height: 100vh;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n  background-image: url(" + escape(__webpack_require__(/*! ../../../public/img/backgroundpayment.png */ "./public/img/backgroundpayment.png")) + ");\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  /* {asset ('images/backgroundpayment.png')} */\n}\n.row[data-v-04c873d0] {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin: 0;\n}\n.items-menu > ul[data-v-04c873d0] {\n  display: flex;\n  flex-direction: row;\n}\n.items-menu > ul > li[data-v-04c873d0] {\n  display: flex;\n  flex-direction: row;\n  text-decoration: none;\n}\n.item[data-v-04c873d0] {\n  border: 2px solid #E9EBEB;\n  padding: 5px 10px;\n  border-radius: 5px;\n  white-space: nowrap;\n  background-color: white;\n  margin-left: 10px;\n}\n.item > a[data-v-04c873d0] {\n  color: black;\n}\n\n/* .back{\n    width: 100%;\n    height: 100%;\n    background-image: url(\"../../../public/images/backgroundpayment.png\"); \n    background-size: cover;\n} */\n.immagine[data-v-04c873d0] {\n  width: 200px;\n  padding-left: 5px;\n}\n.logo-butt[data-v-04c873d0] {\n  width: 85%;\n  height: 70px;\n  padding-top: 10px;\n}\n.cont-2[data-v-04c873d0] {\n  width: 85%;\n  height: 85%;\n  order: 1px solid black;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n}\n.date[data-v-04c873d0] {\n  width: 40%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.dati-cliente[data-v-04c873d0] {\n  width: 90%;\n  height: 83%;\n}\n.nome-ristorante[data-v-04c873d0] {\n  width: 100%;\n  height: 15%;\n  margin-bottom: 25px;\n}\n.nome-ristorante > h2[data-v-04c873d0] {\n  font-weight: bold;\n}\n.cart[data-v-04c873d0] {\n  width: 40%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-family: \"Arimo\";\n  background-color: white;\n  box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);\n  -webkit-animation: slideUp-data-v-04c873d0 2000ms ease;\n          animation: slideUp-data-v-04c873d0 2000ms ease;\n  padding: 20px;\n  border-radius: 20px;\n}\n.dentro-cart[data-v-04c873d0] {\n  width: 90%;\n  min-height: 80%;\n}\n.dentro-cart > h4[data-v-04c873d0] {\n  font-weight: bold;\n}\n.sp-1[data-v-04c873d0] {\n  padding-left: 270px;\n  color: grey;\n}\n.sp-2[data-v-04c873d0] {\n  padding-left: 248px;\n  color: grey;\n}\n.sp-3[data-v-04c873d0] {\n  padding-left: 214px;\n  color: grey;\n}\n.sp-4[data-v-04c873d0] {\n  padding-left: 227px;\n  color: grey;\n}\n.sp-5[data-v-04c873d0] {\n  padding-left: 220px;\n  color: grey;\n}\n.sp-6[data-v-04c873d0] {\n  padding-left: 244px;\n  color: black;\n  font-weight: bold;\n}\n.part-blu[data-v-04c873d0] {\n  margin: 10px 10px 10px 0px;\n  background-color: #00CCBC;\n  padding: 15px 15px 15px 15px;\n  font-size: 16px;\n}\n.body[data-v-04c873d0] {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  padding: 0;\n}\n.date[data-v-04c873d0] {\n  width: 50%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  font-family: \"Arimo\";\n  background-color: white;\n  box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);\n  -webkit-animation: slideUp-data-v-04c873d0 2000ms ease;\n          animation: slideUp-data-v-04c873d0 2000ms ease;\n  padding: 20px;\n  border-radius: 20px;\n}\n@-webkit-keyframes slideUp-data-v-04c873d0 {\n0% {\n    transform: translateY(100%);\n    visibility: visible;\n}\n100% {\n    transform: translateY(0);\n}\n}\n@keyframes slideUp-data-v-04c873d0 {\n0% {\n    transform: translateY(100%);\n    visibility: visible;\n}\n100% {\n    transform: translateY(0);\n}\n}\n.container[data-v-04c873d0] {\n  width: 100%;\n}\nh1[data-v-04c873d0] {\n  align-self: center;\n}\nform[data-v-04c873d0] {\n  width: 100%;\n}\nform > *[data-v-04c873d0] {\n  margin-top: 5px;\n}\nform input[data-v-04c873d0] {\n  width: 100%;\n  min-height: 25px;\n  border: 0.3px solid grey;\n  font-size: 1rem;\n  letter-spacing: 0.15rem;\n  font-family: \"Arimo\";\n  margin-top: 5px;\n  color: brown;\n  border-radius: 4px;\n}\nform label[data-v-04c873d0] {\n  text-transform: uppercase;\n  font-size: 12px;\n  letter-spacing: 2px;\n  color: grey;\n  margin: 0;\n}\nform h1[data-v-04c873d0] {\n  font-size: 24px;\n  line-height: 10px;\n  color: black;\n  letter-spacing: 1px;\n  padding-bottom: 6px;\n  padding-top: 0;\n}\nform h1[data-v-04c873d0]:nth-of-type(2) {\n  margin-top: 25px;\n}\n.name[data-v-04c873d0] {\n  justify-content: space-between;\n  display: flex;\n  width: 100%;\n}\n.name div[data-v-04c873d0] {\n  width: 45%;\n}\n.address-info[data-v-04c873d0] {\n  display: flex;\n  justify-content: space-between;\n}\n.address-info div[data-v-04c873d0] {\n  width: 30%;\n}\n.cc-info[data-v-04c873d0] {\n  display: flex;\n  justify-content: space-between;\n}\n.cc-info div[data-v-04c873d0] {\n  width: 45%;\n}\n.prod[data-v-04c873d0] {\n  margin-bottom: 0;\n}\n.btns[data-v-04c873d0] {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n}\n.btns button[data-v-04c873d0] {\n  margin: 3px 0;\n  height: 30px;\n  width: 40%;\n  color: black;\n  background-color: #00CCBC;\n  text-transform: uppercase;\n  border: 0;\n  border-radius: 0.3rem;\n  letter-spacing: 2px;\n  margin-top: 10px;\n}\n.btns button[data-v-04c873d0]:hover {\n  -webkit-animation-name: btn-hov-data-v-04c873d0;\n          animation-name: btn-hov-data-v-04c873d0;\n  -webkit-animation-duration: 550ms;\n          animation-duration: 550ms;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n}\n@-webkit-keyframes btn-hov-data-v-04c873d0 {\n100% {\n    background-color: rgb(184, 184, 184);\n    color: black;\n    transform: scale(1.05);\n}\n}\n@keyframes btn-hov-data-v-04c873d0 {\n100% {\n    background-color: rgb(184, 184, 184);\n    color: black;\n    transform: scale(1.05);\n}\n}\ninput[data-v-04c873d0]:focus,\nbutton[data-v-04c873d0]:focus {\n  outline: none;\n}\n@media (max-width: 736px) {\n.wrapper[data-v-04c873d0] {\n    width: 100%;\n}\n.container[data-v-04c873d0] {\n    width: 100%;\n}\n.btns[data-v-04c873d0] {\n    align-items: center;\n}\n.btns button[data-v-04c873d0] {\n    width: 50%;\n}\nform h1[data-v-04c873d0] {\n    text-align: center;\n}\n.name[data-v-04c873d0],\n.address-info[data-v-04c873d0],\n.cc-info[data-v-04c873d0] {\n    flex-direction: column;\n    width: 100%;\n    justify-content: space-between;\n}\n.name div[data-v-04c873d0],\n.address-info div[data-v-04c873d0],\n.cc-info div[data-v-04c873d0] {\n    align-items: center;\n    flex-direction: column;\n    width: 100%;\n    display: flex;\n}\n.street[data-v-04c873d0],\n.cc-num[data-v-04c873d0] {\n    text-align: center;\n}\ninput[data-v-04c873d0] {\n    margin: 5px 0;\n    min-height: 30px;\n}\n}", ""]);
+exports.push([module.i, "*[data-v-04c873d0] {\n  font-family: \"Nunito\", sans-serif;\n}\n.payments[data-v-04c873d0] {\n  height: 100vh;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n.row[data-v-04c873d0] {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin: 0;\n}\n.items-menu > ul[data-v-04c873d0] {\n  display: flex;\n  flex-direction: row;\n}\n.items-menu > ul > li[data-v-04c873d0] {\n  display: flex;\n  flex-direction: row;\n  text-decoration: none;\n}\n.item[data-v-04c873d0] {\n  border: 2px solid #e9ebeb;\n  padding: 5px 10px;\n  border-radius: 5px;\n  white-space: nowrap;\n  background-color: white;\n  margin-left: 10px;\n}\n.item > a[data-v-04c873d0] {\n  color: black;\n}\n\n/* .back{\n    width: 100%;\n    height: 100%;\n    background-image: url(\"../../../public/images/backgroundpayment.png\"); \n    background-size: cover;\n} */\n.immagine[data-v-04c873d0] {\n  width: 200px;\n  padding-left: 5px;\n}\n.logo-butt[data-v-04c873d0] {\n  width: 85%;\n  height: 70px;\n  padding-top: 10px;\n}\n.cont-2[data-v-04c873d0] {\n  width: 85%;\n  height: 85%;\n  order: 1px solid black;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n}\n.date[data-v-04c873d0] {\n  width: 40%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.dati-cliente[data-v-04c873d0] {\n  width: 90%;\n  height: 83%;\n}\n.nome-ristorante[data-v-04c873d0] {\n  width: 100%;\n  height: 15%;\n  margin-bottom: 25px;\n}\n.nome-ristorante > h2[data-v-04c873d0] {\n  font-weight: bold;\n}\n.cart[data-v-04c873d0] {\n  width: 40%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-family: \"Arimo\";\n  background-color: white;\n  box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);\n  -webkit-animation: slideUp-data-v-04c873d0 2000ms ease;\n          animation: slideUp-data-v-04c873d0 2000ms ease;\n  padding: 20px;\n  border-radius: 20px;\n}\n.dentro-cart[data-v-04c873d0] {\n  width: 90%;\n  min-height: 80%;\n}\n.dentro-cart > h4[data-v-04c873d0] {\n  font-weight: bold;\n}\n.sp-1[data-v-04c873d0] {\n  padding-left: 270px;\n  color: grey;\n}\n.sp-2[data-v-04c873d0] {\n  padding-left: 248px;\n  color: grey;\n}\n.sp-3[data-v-04c873d0] {\n  padding-left: 214px;\n  color: grey;\n}\n.sp-4[data-v-04c873d0] {\n  padding-left: 227px;\n  color: grey;\n}\n.sp-5[data-v-04c873d0] {\n  padding-left: 220px;\n  color: grey;\n}\n.sp-6[data-v-04c873d0] {\n  padding-left: 244px;\n  color: black;\n  font-weight: bold;\n}\n.part-blu[data-v-04c873d0] {\n  margin: 10px 10px 10px 0px;\n  background-color: #00ccbc;\n  padding: 15px 15px 15px 15px;\n  font-size: 16px;\n}\n.body[data-v-04c873d0] {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  padding: 0;\n}\n.date[data-v-04c873d0] {\n  width: 50%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  font-family: \"Arimo\";\n  background-color: white;\n  box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);\n  -webkit-animation: slideUp-data-v-04c873d0 2000ms ease;\n          animation: slideUp-data-v-04c873d0 2000ms ease;\n  padding: 20px;\n  border-radius: 20px;\n}\n@-webkit-keyframes slideUp-data-v-04c873d0 {\n0% {\n    transform: translateY(100%);\n    visibility: visible;\n}\n100% {\n    transform: translateY(0);\n}\n}\n@keyframes slideUp-data-v-04c873d0 {\n0% {\n    transform: translateY(100%);\n    visibility: visible;\n}\n100% {\n    transform: translateY(0);\n}\n}\n.container[data-v-04c873d0] {\n  width: 100%;\n}\nh1[data-v-04c873d0] {\n  align-self: center;\n}\nform[data-v-04c873d0] {\n  width: 100%;\n}\nform > *[data-v-04c873d0] {\n  margin-top: 5px;\n}\nform input[data-v-04c873d0] {\n  width: 100%;\n  min-height: 25px;\n  border: 0.3px solid grey;\n  font-size: 1rem;\n  letter-spacing: 0.15rem;\n  font-family: \"Arimo\";\n  margin-top: 5px;\n  color: brown;\n  border-radius: 4px;\n}\nform label[data-v-04c873d0] {\n  text-transform: uppercase;\n  font-size: 12px;\n  letter-spacing: 2px;\n  color: grey;\n  margin: 0;\n}\nform h1[data-v-04c873d0] {\n  font-size: 24px;\n  line-height: 10px;\n  color: black;\n  letter-spacing: 1px;\n  padding-bottom: 6px;\n  padding-top: 0;\n}\nform h1[data-v-04c873d0]:nth-of-type(2) {\n  margin-top: 25px;\n}\n.name[data-v-04c873d0] {\n  justify-content: space-between;\n  display: flex;\n  width: 100%;\n}\n.name div[data-v-04c873d0] {\n  width: 45%;\n}\n.address-info[data-v-04c873d0] {\n  display: flex;\n  justify-content: space-between;\n}\n.address-info div[data-v-04c873d0] {\n  width: 100%;\n}\n.cc-info[data-v-04c873d0] {\n  display: flex;\n  justify-content: space-between;\n}\n.cc-info div[data-v-04c873d0] {\n  width: 45%;\n}\n.prod[data-v-04c873d0] {\n  margin-bottom: 0;\n}\n.btns[data-v-04c873d0] {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n}\n.btns button[data-v-04c873d0] {\n  margin: 3px 0;\n  height: 30px;\n  width: 40%;\n  color: black;\n  background-color: #00ccbc;\n  text-transform: uppercase;\n  border: 0;\n  border-radius: 0.3rem;\n  letter-spacing: 2px;\n  margin-top: 10px;\n}\n.btns button[data-v-04c873d0]:hover {\n  -webkit-animation-name: btn-hov-data-v-04c873d0;\n          animation-name: btn-hov-data-v-04c873d0;\n  -webkit-animation-duration: 550ms;\n          animation-duration: 550ms;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n}\n@-webkit-keyframes btn-hov-data-v-04c873d0 {\n100% {\n    background-color: rgb(184, 184, 184);\n    color: black;\n    transform: scale(1.05);\n}\n}\n@keyframes btn-hov-data-v-04c873d0 {\n100% {\n    background-color: rgb(184, 184, 184);\n    color: black;\n    transform: scale(1.05);\n}\n}\ninput[data-v-04c873d0]:focus,\nbutton[data-v-04c873d0]:focus {\n  outline: none;\n}\n@media (max-width: 736px) {\n.wrapper[data-v-04c873d0] {\n    width: 100%;\n}\n.container[data-v-04c873d0] {\n    width: 100%;\n}\n.btns[data-v-04c873d0] {\n    align-items: center;\n}\n.btns button[data-v-04c873d0] {\n    width: 50%;\n}\nform h1[data-v-04c873d0] {\n    text-align: center;\n}\n.name[data-v-04c873d0],\n.address-info[data-v-04c873d0],\n.cc-info[data-v-04c873d0] {\n    flex-direction: column;\n    width: 100%;\n    justify-content: space-between;\n}\n.name div[data-v-04c873d0],\n.address-info div[data-v-04c873d0],\n.cc-info div[data-v-04c873d0] {\n    align-items: center;\n    flex-direction: column;\n    width: 100%;\n    display: flex;\n}\n.street[data-v-04c873d0],\n.cc-num[data-v-04c873d0] {\n    text-align: center;\n}\ninput[data-v-04c873d0] {\n    margin: 5px 0;\n    min-height: 30px;\n}\n}", ""]);
 
 // exports
 
@@ -6482,15 +6482,8 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "payments" }, [
-      _c("img", {
-        attrs: {
-          src: __webpack_require__(/*! ../../../public/images/backgroundpayment.png */ "./public/images/backgroundpayment.png"),
-          alt: "",
-        },
-      }),
-      _vm._v(" "),
       _c("div", { staticClass: "logo-butt" }, [
-        _c("div", { staticClass: "row " }, [
+        _c("div", { staticClass: "row" }, [
           _c("figure", { staticClass: "immagine" }, [
             _c("a", { attrs: { href: "/" } }, [
               _c("img", {
@@ -6540,93 +6533,125 @@ var staticRenderFns = [
                   _c("h1", [
                     _c("i", { staticClass: "fas fa-shipping-fast" }),
                     _vm._v(
-                      "\n                Informazioni di consegna\n            "
+                      "\n                Informazioni di consegna\n              "
                     ),
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "name" }, [
                     _c("div", [
                       _c("label", { attrs: { for: "f-name" } }, [
-                        _vm._v("Nome"),
+                        _vm._v("Nome*"),
                       ]),
                       _vm._v(" "),
-                      _c("input", { attrs: { type: "text", name: "f-name" } }),
+                      _c("input", {
+                        attrs: {
+                          type: "text",
+                          required: "",
+                          minlength: "3",
+                          name: "f-name",
+                        },
+                      }),
                     ]),
                     _vm._v(" "),
                     _c("div", [
                       _c("label", { attrs: { for: "l-name" } }, [
-                        _vm._v("Cognome"),
+                        _vm._v("Cognome*"),
                       ]),
                       _vm._v(" "),
-                      _c("input", { attrs: { type: "text", name: "l-name" } }),
+                      _c("input", {
+                        attrs: {
+                          type: "text",
+                          required: "",
+                          minlength: "3",
+                          name: "l-name",
+                        },
+                      }),
                     ]),
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "street" }, [
-                    _c("label", { attrs: { for: "name" } }, [_vm._v("Via")]),
+                    _c("label", { attrs: { for: "name" } }, [_vm._v("Via*")]),
                     _vm._v(" "),
-                    _c("input", { attrs: { type: "text", name: "address" } }),
+                    _c("input", {
+                      attrs: {
+                        type: "text",
+                        required: "",
+                        minlength: "3",
+                        name: "address",
+                      },
+                    }),
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "address-info" }, [
                     _c("div", [
                       _c("label", { attrs: { for: "city" } }, [
-                        _vm._v("Città"),
+                        _vm._v("Città*"),
                       ]),
                       _vm._v(" "),
-                      _c("input", { attrs: { type: "text", name: "city" } }),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c("label", { attrs: { for: "state" } }, [
-                        _vm._v("Regione"),
-                      ]),
-                      _vm._v(" "),
-                      _c("input", { attrs: { type: "text", name: "state" } }),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c("label", { attrs: { for: "zip" } }, [_vm._v("CAP")]),
-                      _vm._v(" "),
-                      _c("input", { attrs: { type: "text", name: "zip" } }),
+                      _c("input", {
+                        attrs: {
+                          type: "text",
+                          required: "",
+                          minlength: "3",
+                          name: "city",
+                        },
+                      }),
                     ]),
                   ]),
                   _vm._v(" "),
                   _c("h1", [
-                    _c("i", { staticClass: "far fa-credit-card" }),
-                    _vm._v(" Dati di pagameto\n            "),
+                    _c("i", { staticClass: "bi bi-credit-card-2-back" }),
+                    _vm._v(" Dati di pagameto"),
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "cc-num" }, [
                     _c("label", { attrs: { for: "card-num" } }, [
-                      _vm._v("Carta di credito"),
+                      _vm._v("Carta di credito*"),
                     ]),
                     _vm._v(" "),
-                    _c("input", { attrs: { type: "text", name: "card-num" } }),
+                    _c("input", {
+                      attrs: {
+                        type: "text",
+                        required: "",
+                        minlength: "16",
+                        maxlength: "16",
+                        name: "card-num",
+                      },
+                    }),
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "cc-info" }, [
                     _c("div", [
                       _c("label", { attrs: { for: "card-num" } }, [
-                        _vm._v("Scadenza"),
+                        _vm._v("Scadenza*"),
                       ]),
                       _vm._v(" "),
-                      _c("input", { attrs: { type: "text", name: "expire" } }),
+                      _c("input", {
+                        attrs: { type: "date", required: "", name: "expire" },
+                      }),
                     ]),
                     _vm._v(" "),
                     _c("div", [
                       _c("label", { attrs: { for: "card-num" } }, [
-                        _vm._v("CCV"),
+                        _vm._v("CCV*"),
                       ]),
                       _vm._v(" "),
                       _c("input", {
-                        attrs: { type: "text", name: "security" },
+                        attrs: {
+                          type: "text",
+                          required: "",
+                          minlength: "3",
+                          maxlength: "3",
+                          name: "security",
+                        },
                       }),
                     ]),
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "btns" }, [
-                    _c("button", [_vm._v("Acquista")]),
+                    _c("button", { attrs: { type: "submit" } }, [
+                      _vm._v("Acquista"),
+                    ]),
                   ]),
                 ]),
               ]),
@@ -23014,17 +23039,6 @@ module.exports = g;
 
 /***/ }),
 
-/***/ "./public/images/backgroundpayment.png":
-/*!*********************************************!*\
-  !*** ./public/images/backgroundpayment.png ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/backgroundpayment.png?d41d8cd98f00b204e9800998ecf8427e";
-
-/***/ }),
-
 /***/ "./public/img/android-badge.png":
 /*!**************************************!*\
   !*** ./public/img/android-badge.png ***!
@@ -23058,17 +23072,6 @@ module.exports = "/images/background-jumbo.png?64e7b277d4188e0683d14ba208c6e0dc"
 
 /***/ }),
 
-/***/ "./public/img/backgroundpayment.png":
-/*!******************************************!*\
-  !*** ./public/img/backgroundpayment.png ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/backgroundpayment.png?d41d8cd98f00b204e9800998ecf8427e";
-
-/***/ }),
-
 /***/ "./public/img/ios-badge.png":
 /*!**********************************!*\
   !*** ./public/img/ios-badge.png ***!
@@ -23087,7 +23090,7 @@ module.exports = "/images/ios-badge.png?2566899de2c3663e0250b22d1a160aa7";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/jumbo-bkg-svg2.svg?8de0ecba9e591757458db25a3d02de10";
+module.exports = "/images/jumbo-bkg-svg2.svg?ece43a1805da9c592135a025ae78cca8";
 
 /***/ }),
 
@@ -25014,7 +25017,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Andrea\Desktop\progeto-finale\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! /Users/simonecoszach/Developer/Boolean/Corso/Projects/team-3-deliveBoo-1/resources/js/front.js */"./resources/js/front.js");
 
 
 /***/ })
