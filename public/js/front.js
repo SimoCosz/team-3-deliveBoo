@@ -2784,7 +2784,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       show: false,
       selectedProduct: false,
       activeElement: undefined,
-      localC: [],
+      cartShop: [],
       restaurant: [],
       menuPlates: [],
       ingredients: [],
@@ -2825,12 +2825,12 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     },
     // Per aumentare o diminuire le quantità nel carrello
     incrementCartQuantity: function incrementCartQuantity(el) {
-      el.quantity++;
+      this.localCartShop[el.quantity++]; // window.location.reload();
     },
     decrementCartQuantity: function decrementCartQuantity(el) {
-      if (el.quantity > 0) {
-        el.quantity--;
-      }
+      // if(this.localCartShop[el.quantity] > 0) {
+      this.localCartShop[el.quantity--]; // window.location.reload();
+      // }
     },
     // Per aumentare o diminuire le quantità nella finestra del prodotto
     incrementQuantity: function incrementQuantity() {
@@ -2883,6 +2883,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
   },
   mounted: function mounted() {
     this.fetchRestaurantInfo();
+    console.log(this.localCartShop[1]);
   }
 });
 
@@ -6429,19 +6430,8 @@ var render = function () {
           _vm._v(" "),
           _c("div", { staticClass: "col-12 col-lg-4" }, [
             _c("div", { staticClass: "cart p-3" }, [
-              this.localCartShop.length == 0
-                ? _c("div", [
-                    _c("p", { staticClass: "text-center py-5" }, [
-                      _vm._v("Il carrello è vuoto"),
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "button",
-                      { staticClass: "btn btn-secondary btn-block" },
-                      [_vm._v(" Vai al Pagamento")]
-                    ),
-                  ])
-                : _c(
+              this.localCartShop.length
+                ? _c(
                     "div",
                     { staticClass: "text-dark" },
                     [
@@ -6528,7 +6518,18 @@ var render = function () {
                       ),
                     ],
                     2
-                  ),
+                  )
+                : _c("div", [
+                    _c("p", { staticClass: "text-center py-5" }, [
+                      _vm._v("Il carrello è vuoto"),
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      { staticClass: "btn btn-secondary btn-block" },
+                      [_vm._v(" Vai al Pagamento")]
+                    ),
+                  ]),
             ]),
           ]),
         ]),

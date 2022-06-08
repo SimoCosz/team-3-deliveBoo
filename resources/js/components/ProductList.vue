@@ -23,12 +23,7 @@
         <!-- CART -->
         <div class="col-12 col-lg-4">
           <div class="cart p-3">
-            <div v-if="this.localCartShop.length==0">
-              <p class="text-center py-5">Il carrello è vuoto</p>
-              <button class="btn btn-secondary btn-block"> Vai al Pagamento</button>
-            </div>
-
-            <div class="text-dark" v-else>
+            <div class="text-dark" v-if="this.localCartShop.length">
               <h4 class="font-weight-bold">I tuoi ordini</h4>
               <div v-for="element in this.localCartShop" :key="element.id">
                 <div class="d-flex justify-content-between">
@@ -46,6 +41,11 @@
                 <h5 class="font-weight-bold">{{totalPrice}}&#8364;</h5>
               </div>
                <button class="btn btn-bg-color btn-block"> Vai al Pagamento</button>
+            </div>
+
+            <div v-else>
+              <p class="text-center py-5">Il carrello è vuoto</p>
+              <button class="btn btn-secondary btn-block"> Vai al Pagamento</button>
             </div>
 
           </div>
@@ -93,7 +93,7 @@ data(){
     show: false,
     selectedProduct: false,
     activeElement: undefined,
-    localC:[],
+    cartShop:[],
     restaurant: [],
     menuPlates: [],
     ingredients: [],
@@ -138,13 +138,15 @@ methods : {
 
   // Per aumentare o diminuire le quantità nel carrello
   incrementCartQuantity(el){
-    el.quantity++;
+    this.localCartShop[el.quantity++];
+    // window.location.reload();
   },
 
   decrementCartQuantity(el){
-    if(el.quantity > 0) {
-      el.quantity--;
-    }
+    // if(this.localCartShop[el.quantity] > 0) {
+      this.localCartShop[el.quantity--];
+      // window.location.reload();
+    // }
   },
 
   // Per aumentare o diminuire le quantità nella finestra del prodotto
@@ -198,6 +200,7 @@ methods : {
 },
 mounted() {
   this.fetchRestaurantInfo();
+  console.log(this.localCartShop[1]);
 }
 }
 </script>
