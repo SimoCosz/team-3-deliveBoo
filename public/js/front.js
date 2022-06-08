@@ -2777,6 +2777,9 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     user: Object
@@ -6470,14 +6473,18 @@ var render = function () {
                         return _c("div", { key: element.id }, [
                           _c(
                             "div",
-                            { staticClass: "d-flex justify-content-between" },
+                            {
+                              staticClass:
+                                "d-flex justify-content-between align-items-center",
+                            },
                             [
                               _c("span", [_vm._v(_vm._s(element.name))]),
                               _vm._v(" "),
                               _c(
                                 "div",
                                 {
-                                  staticClass: "d-flex justify-content-center",
+                                  staticClass:
+                                    "d-flex justify-content-center align-items-center",
                                 },
                                 [
                                   element.quantity > 1
@@ -6517,17 +6524,15 @@ var render = function () {
                                     ),
                                   ]),
                                   _vm._v(" "),
-                                  _c(
-                                    "button",
-                                    {
-                                      on: {
-                                        click: function ($event) {
-                                          return _vm.deleteDish(i)
-                                        },
+                                  _c("i", {
+                                    staticClass: "bi bi-trash",
+                                    attrs: { role: "button" },
+                                    on: {
+                                      click: function ($event) {
+                                        return _vm.deleteDish(i)
                                       },
                                     },
-                                    [_vm._v("Delete")]
-                                  ),
+                                  }),
                                 ]
                               ),
                             ]
@@ -6539,7 +6544,7 @@ var render = function () {
                         "div",
                         {
                           staticClass:
-                            "total d-flex justify-content-between mt-3",
+                            "total d-flex justify-content-between align-items-center mt-3",
                         },
                         [
                           _c("h5", { staticClass: "font-weight-bold" }, [
@@ -6551,15 +6556,24 @@ var render = function () {
                           ]),
                           _vm._v(" "),
                           _c(
-                            "button",
+                            "div",
                             {
+                              staticClass:
+                                "product-list-trash d-flex flex-column justify-content-center align-items-center",
+                              attrs: { role: "button" },
                               on: {
                                 click: function ($event) {
                                   return _vm.deleteAll()
                                 },
                               },
                             },
-                            [_vm._v("Delete All")]
+                            [
+                              _c("i", { staticClass: "bi bi-trash" }),
+                              _vm._v(" "),
+                              _c("p", { staticClass: "trash-name" }, [
+                                _vm._v("Svuota Carrello"),
+                              ]),
+                            ]
                           ),
                         ]
                       ),

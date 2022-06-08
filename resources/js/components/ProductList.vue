@@ -26,21 +26,24 @@
             <div class="text-dark" v-if="localCartShop">
               <h4 class="font-weight-bold">I tuoi ordini</h4>
               <div v-for="(element, i) in localCartShop" :key="element.id">
-                <div class="d-flex justify-content-between">
+                <div class="d-flex justify-content-between align-items-center">
                   <span>{{element.name}}</span>
-                  <div class="d-flex justify-content-center">
+                  <div class="d-flex justify-content-center align-items-center">
                     <i class="bi bi-dash-circle primary-color" v-if="element.quantity > 1" @click="decrementCartQuantity(element)"></i>
                     <span class="quantity px-2">{{element.quantity}}</span>
                     <i class="bi bi-plus-circle primary-color" @click="incrementCartQuantity(element)"></i>
                     <span class="px-2">{{element.price*element.quantity}} &#8364;</span>
-                    <button @click="deleteDish(i)">Delete</button>
+                    <i class="bi bi-trash" role="button" @click="deleteDish(i)"></i>
                   </div>
                 </div>
               </div>
-              <div class="total d-flex justify-content-between mt-3">
+              <div class="total d-flex justify-content-between align-items-center mt-3">
                 <h5 class="font-weight-bold">Totale:</h5>
                 <h5 class="font-weight-bold">{{totalPrice}}&#8364;</h5>
-                <button @click="deleteAll()">Delete All</button>
+                <div  @click="deleteAll()" role="button" class="product-list-trash d-flex flex-column justify-content-center align-items-center">
+                  <i class="bi bi-trash"></i>
+                  <p class="trash-name">Svuota Carrello</p>
+                </div>
               </div>
                <button class="btn btn-bg-color btn-block"> Vai al Pagamento</button>
             </div>
