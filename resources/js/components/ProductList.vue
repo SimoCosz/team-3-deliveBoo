@@ -399,4 +399,12 @@ mounted() {
 .slide-fade-leave-to {
   opacity: 0;
 }
+
+.bi-trash, .product-list-trash{
+
+
+  &:hover{
+    color: red;
+  }
+}
 </style>
