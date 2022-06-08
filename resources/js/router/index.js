@@ -6,6 +6,7 @@ Vue.use(VueRouter)
 import HomeComponent from '../Pages/HomeComponent.vue'
 import NotFound from '../Pages/404.vue'
 import CategoriesIndex from '../components/CategoriesIndex.vue'
+import Payments from '../components/Payments.vue'
 
 const routes = [
   {
@@ -17,6 +18,11 @@ const routes = [
     path: '/categories',
     name: 'categories.index',
     component: CategoriesIndex
+  },
+  {
+    path: '/payments',
+    name: 'payments',
+    component: Payments
   },
   {
     path: '/*',
