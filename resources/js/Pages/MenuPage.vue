@@ -38,7 +38,7 @@ import ProductList from '../components/ProductList.vue'
 
     data(){
       return {
-        user: null,
+        user: {},
         loading: false
       }
     },
@@ -50,7 +50,7 @@ import ProductList from '../components/ProductList.vue'
             const { users } = res.data;
             this.user = users;
         })
-        
+
       }
     },
 
@@ -58,6 +58,7 @@ import ProductList from '../components/ProductList.vue'
       this.fetchProducts()
     },
   }
+
 </script>
 
 <style lang="scss" scoped>

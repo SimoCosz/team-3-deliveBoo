@@ -11,6 +11,7 @@
                   <h5 class="title">{{product.name}}</h5>
                   <p class="description">{{product.description}}</p>
                   <p class="r-color">{{product.price}} &#8364;</p>
+                  <button @click="addToCart(product)">add to cart</button>
                 </div>
                 <div>
                   <div class="image" :style="{ backgroundImage: `url(${product.cover})` }"></div>
@@ -21,7 +22,7 @@
         </div>
 
         <!-- CART -->
-        <div class="col-12 col-lg-4">
+        <!-- <div class="col-12 col-lg-4">
           <div class="cart p-3">
             <div v-if="this.cart.length==0">
               <p class="text-center py-5">Il carrello è vuoto</p>
@@ -49,7 +50,7 @@
             </div>
 
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -90,37 +91,91 @@ props: {
 },
 data(){
   return {
-    show:false,
-    selectedProduct:null,
-    quantity: 1, //FIXME: quantità al momento gestita con questa variabile (Da eliminare)
-    cart:[],
-    totalPrice: 0,
+    activeElement: undefined,
+    cartShop:[],
+    restaurant: [],
+    menuPlates: [],
+    ingredients: [],
+    logo: require('/public/img/img-default-img.png'),
+    authUser: window.authUser,
+    quantity: 1,
+    csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
   }
 },
 
 methods : {
-  showModal: function(product) {
-    this.show=true;
-    this.selectedProduct=product;
+
+  fetchRestaurantInfo(){
+    axios.get(`/app/Http/Controllers/Api/UserController.php/$(this.$route.params.id}`)
+    .then( res => {
+      this.restaurant = res.data.user[0];
+      this.menuPlates = res.data.user_plates;
+    })
+    .catch( err => {
+      console.warn(err);
+    })
+  },
+  // a questa funzione viene passato come parametro l'indice del piatto cliccato,
+  // ed assegna all'array ingredients i corrispettivi ingredienti
+  viewPlate(i){
+    this.activeElement = i;
+    this.ingredients = this.menuPlates[i].ingredients.split(',');
+  },
+  closePlateInfo(){
+    this.activeElement = undefined;
+    this.quantity = 1;
   },
 
-  addProduct: function(selectedProduct) {
-    if(!this.cart.includes(selectedProduct)){
-      this.cart.push(selectedProduct);
-      this.totalPrice+=selectedProduct.price; //TODO: da moltiplicare per la quantita del selectedProduct 
+  incrementQuantity(){
+    this.quantity++;
+  },
+
+  decrementQuantity() {
+    if(this.quantity > 1) {
+      this.quantity--;
     }
   },
 
-  increment: function(){
-    this.quantity +=1;
-  },
-  decrement: function(){
-    if(this.quantity!=1){
-      this.quantity -=1;
+  addToCart(plateObject) {
+    if(typeof(Storage) !== undefined) {
+      const {id, name, cover, price} = plateObject;
+
+      const plate = {
+        id: id,
+        name: name,
+        cover: cover,
+        price: price,
+        quantity: 1
+      };
+
+      if(JSON.parse(localStorage.getItem('cartShop')) === null) {
+        this.cartShop.push(plate);
+        localStorage.setItem('cartShop', JSON.stringify(this.cartShop));
+        window.location.reload();
+      } else {
+        const localItems = JSON.parse(localStorage.getItem('cartShop'));
+        localItems.map(data=>{
+          if(plate.id == data.id) {
+            plate.quantity += data.quantity;
+            // plate.price = plate.price * plate.quantity;
+          } else {
+            this.cartShop.push(data);
+          }
+        });
+
+        this.cartShop.push(plate);
+        window.location.reload();
+        localStorage.setItem('cartShop', JSON.stringify(this.cartShop));
+      }
+
+    } else {
+      alert('Storage non funziona nel tuo browser');
     }
   }
-
 },
+mounted() {
+  this.fetchRestaurantInfo();
+}
 }
 </script>
 

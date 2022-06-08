@@ -20,9 +20,9 @@
             </div>
           </div>
         </div>
-
+    
         <!-- CART -->
-        <!-- <div class="col-12 col-lg-4">
+        <div class="col-12 col-lg-4">
           <div class="cart p-3">
             <div v-if="this.cart.length==0">
               <p class="text-center py-5">Il carrello è vuoto</p>
@@ -50,7 +50,7 @@
             </div>
 
           </div>
-        </div> -->
+        </div>
       </div>
     </div>
     
