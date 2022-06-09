@@ -110,6 +110,7 @@ data(){
 
     // Cart shop del local storage
     localCartShop: JSON.parse(localStorage.getItem('cartShop')),
+    totalCart: localStorage.setItem('total', this.totalPrice),
   }
 },
 
@@ -121,13 +122,13 @@ methods : {
 
   totalPriceFunction() {
     let elementTotPrice = 0;
-    this.totalPrice =0
+    this.totalPrice = 0;
     for (let index = 0; index < this.localCartShop.length; index++) {
       elementTotPrice = this.localCartShop[index].price * this.localCartShop[index].quantity;
       this.totalPrice += elementTotPrice;
     } 
     localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); 
-
+    localStorage.setItem('total', this.totalPrice);
     // window.location.reload();
     return this.totalPrice
   },
@@ -158,14 +159,18 @@ methods : {
     this.localCartShop.splice(el, 1);
     this.totalPriceFunction();
 
+
     localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
+    localStorage.setItem('total', this.totalPrice);
     // window.location.reload();
   },
 
   deleteAll() {
     this.localCartShop = null;
+    this.totalCart = 0;
 
     localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); 
+    localStorage.setItem('total', this.totalPrice);
     window.location.reload();
   },
 
@@ -175,6 +180,7 @@ methods : {
     this.totalPriceFunction();
 
     localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
+    localStorage.setItem('total', this.totalPrice);
     // window.location.reload();
   },
 
@@ -184,6 +190,7 @@ methods : {
       this.totalPriceFunction();
 
       localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
+      localStorage.setItem('total', this.totalPrice);
       // window.location.reload();
     // }
   },
@@ -215,6 +222,7 @@ methods : {
         if(JSON.parse(localStorage.getItem('cartShop')) === null) {
           this.cartShop.push(plate);
           localStorage.setItem('cartShop', JSON.stringify(this.cartShop));
+          localStorage.setItem('total', this.totalPrice);
           window.location.reload();
         } else {
           if (plateObject.user_id == this.localCartShop[0].user_id) {
@@ -230,6 +238,7 @@ methods : {
             this.cartShop.push(plate);
             window.location.reload();
             localStorage.setItem('cartShop', JSON.stringify(this.cartShop));
+            localStorage.setItem('total', this.totalPrice);
           } else {
             alert('Non puoi aggiungere i piatti di altri ristoranti. Svuota prima il carrello');
           }

@@ -2540,29 +2540,16 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       dropdown1: false,
-      localCartShop: JSON.parse(localStorage.getItem('cartShop')),
-      totalPrice: 0
+      // localCartShop: JSON.parse(localStorage.getItem('cartShop')),
+      totalPrice: JSON.parse(localStorage.getItem('total'))
     };
   },
   methods: {
     dropdown: function dropdown() {
       this.dropdown1 = !this.dropdown1;
-    },
-    totalPriceFunction: function totalPriceFunction() {
-      var elementTotPrice = 0;
-
-      for (var index = 0; index < this.localCartShop.length; index++) {
-        elementTotPrice = this.localCartShop[index].price * this.localCartShop[index].quantity;
-        this.totalPrice += elementTotPrice;
-      }
-
-      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); // window.location.reload();
-
-      return this.totalPrice;
     }
   },
-  mounted: function mounted() {
-    this.totalPriceFunction(); // console.log(this.localCartShop[1]);
+  mounted: function mounted() {// console.log(this.localCartShop[1]);
   }
 });
 
@@ -3006,7 +2993,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       totalPrice: 0,
       csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
       // Cart shop del local storage
-      localCartShop: JSON.parse(localStorage.getItem('cartShop'))
+      localCartShop: JSON.parse(localStorage.getItem('cartShop')),
+      totalCart: localStorage.setItem('total', this.totalPrice)
     };
   },
   methods: {
@@ -3023,7 +3011,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         this.totalPrice += elementTotPrice;
       }
 
-      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); // window.location.reload();
+      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
+      localStorage.setItem('total', this.totalPrice); // window.location.reload();
 
       return this.totalPrice;
     },
@@ -3050,24 +3039,29 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     deleteDish: function deleteDish(el) {
       this.localCartShop.splice(el, 1);
       this.totalPriceFunction();
-      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); // window.location.reload();
+      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
+      localStorage.setItem('total', this.totalPrice); // window.location.reload();
     },
     deleteAll: function deleteAll() {
       this.localCartShop = null;
+      this.totalCart = 0;
       localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
+      localStorage.setItem('total', this.totalPrice);
       window.location.reload();
     },
     // Per aumentare o diminuire le quantità nel carrello
     incrementCartQuantity: function incrementCartQuantity(el) {
       this.localCartShop[el.quantity++];
       this.totalPriceFunction();
-      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); // window.location.reload();
+      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
+      localStorage.setItem('total', this.totalPrice); // window.location.reload();
     },
     decrementCartQuantity: function decrementCartQuantity(el) {
       // if(this.localCartShop[el.quantity] >= 1) {
       this.localCartShop[el.quantity--];
       this.totalPriceFunction();
-      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); // window.location.reload();
+      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
+      localStorage.setItem('total', this.totalPrice); // window.location.reload();
       // }
     },
     // Per aumentare o diminuire le quantità nella finestra del prodotto
@@ -3100,6 +3094,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         if (JSON.parse(localStorage.getItem('cartShop')) === null) {
           this.cartShop.push(plate);
           localStorage.setItem('cartShop', JSON.stringify(this.cartShop));
+          localStorage.setItem('total', this.totalPrice);
           window.location.reload();
         } else {
           if (plateObject.user_id == this.localCartShop[0].user_id) {
@@ -3114,6 +3109,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
             this.cartShop.push(plate);
             window.location.reload();
             localStorage.setItem('cartShop', JSON.stringify(this.cartShop));
+            localStorage.setItem('total', this.totalPrice);
           } else {
             alert('Non puoi aggiungere i piatti di altri ristoranti. Svuota prima il carrello');
           }
@@ -6278,7 +6274,11 @@ var render = function () {
                               staticClass:
                                 "bi bi-cart4 p-1 d-flex align-items-center",
                             }),
-                            _vm._v(_vm._s(_vm.totalPrice) + " €"),
+                            _vm.totalPrice != null
+                              ? _c("span", [
+                                  _vm._v(_vm._s(_vm.totalPrice) + " €"),
+                                ])
+                              : _vm._e(),
                           ]
                         ),
                       ]
