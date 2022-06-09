@@ -3016,6 +3016,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     },
     totalPriceFunction: function totalPriceFunction() {
       var elementTotPrice = 0;
+      this.totalPrice = 0;
 
       for (var index = 0; index < this.localCartShop.length; index++) {
         elementTotPrice = this.localCartShop[index].price * this.localCartShop[index].quantity;
@@ -3048,25 +3049,26 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     },
     deleteDish: function deleteDish(el) {
       this.localCartShop.splice(el, 1);
-      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
-      window.location.reload();
+      this.totalPriceFunction();
+      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); // window.location.reload();
     },
     deleteAll: function deleteAll() {
       this.localCartShop = null;
-      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
-      window.location.reload();
+      this.totalPriceFunction();
+      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); // window.location.reload();
     },
     // Per aumentare o diminuire le quantità nel carrello
     incrementCartQuantity: function incrementCartQuantity(el) {
       this.localCartShop[el.quantity++];
-      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
-      window.location.reload();
+      this.totalPriceFunction();
+      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); // window.location.reload();
     },
     decrementCartQuantity: function decrementCartQuantity(el) {
       // if(this.localCartShop[el.quantity] >= 1) {
       this.localCartShop[el.quantity--];
-      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
-      window.location.reload(); // }
+      this.totalPriceFunction();
+      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); // window.location.reload();
+      // }
     },
     // Per aumentare o diminuire le quantità nella finestra del prodotto
     incrementQuantity: function incrementQuantity() {
@@ -25339,7 +25341,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\matti\Laravel\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\black\Project\Hub Project\LARAVEL\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })

@@ -121,6 +121,7 @@ methods : {
 
   totalPriceFunction() {
     let elementTotPrice = 0;
+    this.totalPrice =0
     for (let index = 0; index < this.localCartShop.length; index++) {
       elementTotPrice = this.localCartShop[index].price * this.localCartShop[index].quantity;
       this.totalPrice += elementTotPrice;
@@ -155,32 +156,36 @@ methods : {
 
   deleteDish(el) {
     this.localCartShop.splice(el, 1);
+    this.totalPriceFunction();
 
     localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
-    window.location.reload();
+    // window.location.reload();
   },
 
   deleteAll() {
     this.localCartShop = null;
+    this.totalPriceFunction();
 
     localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); 
-    window.location.reload();
+    // window.location.reload();
   },
 
   // Per aumentare o diminuire le quantità nel carrello
   incrementCartQuantity(el){
     this.localCartShop[el.quantity++];
+    this.totalPriceFunction();
 
     localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
-    window.location.reload();
+    // window.location.reload();
   },
 
   decrementCartQuantity(el){
     // if(this.localCartShop[el.quantity] >= 1) {
       this.localCartShop[el.quantity--];
+      this.totalPriceFunction();
 
       localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
-      window.location.reload();
+      // window.location.reload();
     // }
   },
 
