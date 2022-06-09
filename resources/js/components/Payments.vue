@@ -19,7 +19,7 @@
           <span>
             Cognome*
           </span>
-          <input placeholder="Es: Maldini, Mattarella..." type="text" minlength="3" name="lastname" required>
+          <input placeholder="Es: Maldini, Mattarella..." type="text" minlenght="3" name="lastname" required>
         </div>
         <div class="personal_info_input">
           <span>

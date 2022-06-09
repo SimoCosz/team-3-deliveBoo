@@ -151,7 +151,7 @@ export default {
             }
         }
         .product-image {
-            transition: all 0.3s ease-out;
+            transition: all 1s ease-out;
             display: inline-block;
             position: relative;
             overflow: hidden;
@@ -169,7 +169,7 @@ export default {
             width: 100%;
         }         
     }
-    .product-image:hover img {transition: all 0.3s ease-out;}
+    .product-image:hover img {transition: all 1s ease-out;}
     .product-image:hover img {transform: scale(1.2, 1.2);}
     @media (max-width: 767px){
         display: flex;
