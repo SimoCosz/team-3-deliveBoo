@@ -3054,8 +3054,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     },
     deleteAll: function deleteAll() {
       this.localCartShop = null;
-      this.totalPriceFunction();
-      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); // window.location.reload();
+      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
+      window.location.reload();
     },
     // Per aumentare o diminuire le quantità nel carrello
     incrementCartQuantity: function incrementCartQuantity(el) {
@@ -3112,7 +3112,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
               }
             });
             this.cartShop.push(plate);
-            this.totalPriceFunction();
             window.location.reload();
             localStorage.setItem('cartShop', JSON.stringify(this.cartShop));
           } else {

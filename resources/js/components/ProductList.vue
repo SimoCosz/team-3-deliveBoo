@@ -164,10 +164,9 @@ methods : {
 
   deleteAll() {
     this.localCartShop = null;
-    this.totalPriceFunction();
 
     localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); 
-    // window.location.reload();
+    window.location.reload();
   },
 
   // Per aumentare o diminuire le quantità nel carrello
@@ -229,7 +228,6 @@ methods : {
             });
     
             this.cartShop.push(plate);
-            this.totalPriceFunction();
             window.location.reload();
             localStorage.setItem('cartShop', JSON.stringify(this.cartShop));
           } else {
