@@ -43,3 +43,6 @@ Route::middleware('auth')
     Route::fallback(function(){
         return view('guest.home');
     });
+
+    Route::get('checkout','CheckoutController@checkout');
+    Route::post('checkout','CheckoutController@afterpayment')->name('checkout.credit-card');
