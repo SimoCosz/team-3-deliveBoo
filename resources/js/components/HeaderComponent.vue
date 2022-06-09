@@ -32,7 +32,7 @@
                       </ul>
                     </div>
                   </li>
-                    <router-link tag="li" :to="{name:'payments'}" class="item"><a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-cart4 p-1 d-flex align-items-center"></i>{{totalPrice}} &euro;</a></router-link>
+                    <router-link tag="li" :to="{name:'payments'}" class="item"><a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-cart4 p-1 d-flex align-items-center"></i><span v-if="totalPrice != null">{{totalPrice}} &euro;</span></a></router-link>
                     <li class="item"><a href="/home"><i class="bi bi-house-door p-1"></i>Registrati o accedi</a></li>
                 </ul>
               </div>
@@ -55,8 +55,8 @@ import HeaderHamburger from '../components/HeaderHamburgerMenu.vue'
     data() {
       return{
         dropdown1: false,
-        localCartShop: JSON.parse(localStorage.getItem('cartShop')),
-        totalPrice: 0,
+        // localCartShop: JSON.parse(localStorage.getItem('cartShop')),
+        totalPrice: JSON.parse(localStorage.getItem('total')),
       }
     },
 
@@ -64,21 +64,8 @@ import HeaderHamburger from '../components/HeaderHamburgerMenu.vue'
       dropdown(){
         this.dropdown1 = !this.dropdown1
       },
-
-      totalPriceFunction() {
-        let elementTotPrice = 0;
-        for (let index = 0; index < this.localCartShop.length; index++) {
-          elementTotPrice = this.localCartShop[index].price * this.localCartShop[index].quantity;
-          this.totalPrice += elementTotPrice;
-        } 
-        localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); 
-
-        // window.location.reload();
-        return this.totalPrice
-      },
     },
     mounted() {
-      this.totalPriceFunction();
 
       // console.log(this.localCartShop[1]);
     }
