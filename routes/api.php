@@ -29,10 +29,7 @@ Route::namespace('Api')->group(function(){
     ]);
      Route::get('/menu-restaurant/{user}', 'UserController@showMenu');
 
-    Route::resource('orders', 'OrderController')->only([
-        'index',
-        'show'
-    ]);
+    Route::resource('/orders', 'OrderController');
     
 
     // Route::get('/categories', 'CategoryController@index');

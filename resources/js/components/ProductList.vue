@@ -89,6 +89,7 @@
 </template>
 
 <script>
+import Axios from 'axios';
 export default {
 props: {
   user: Object,
@@ -115,6 +116,7 @@ data(){
 },
 
 methods : {
+
   showModal: function(product) {
     this.show = true;
     this.selectedProduct = product;
@@ -252,9 +254,10 @@ methods : {
 mounted() {
   this.fetchRestaurantInfo();
   this.totalPriceFunction();
+  this.sendData();
 
   // console.log(this.localCartShop[1]);
-  console.log(this.user);
+  // console.log(this.user);
 }
 }
 </script>

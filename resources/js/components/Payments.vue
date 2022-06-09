@@ -5,47 +5,48 @@
     <div class="personal_info">
       <h1>Nome ristorante</h1>
       <p>Tempo di consegna: 15-20 minuti</p>
-      <form action="">
+      <form @submit.prevent="handleSubmit(sendForm())" method="POST">
         <h3>
           Dati personali
         </h3>
         <div class="personal_info_input">
-          <span>
-            Nome *
-          </span>
-          <input placeholder="Es: Mario, Giulia..." type="text" minlength="3" name="name" required>
+          <label for="client_name">Nome*</label>
+          <input v-model="form.name" placeholder="Es: Mario, Giulia..." type="text" minlength="3" name="client_name" required>
         </div>
         <div class="personal_info_input">
-          <span>
-            Cognome*
-          </span>
-          <input placeholder="Es: Maldini, Mattarella..." type="text" minlenght="3" name="lastname" required>
+          <label for="client_surname">Cognome*</label>
+          <input v-model="form.surname" placeholder="Es: Maldini, Mattarella..." type="text" minlenght="3" name="client_surname" required>
         </div>
         <div class="personal_info_input">
-          <span>
-            Indirizzo*
-          </span>
-          <input placeholder="Es: Via Garibaldi 95" type="text" minlength="5" name="address" required>
+          <label for="client_address">Indirizzo*</label>
+          <input v-model="form.address" placeholder="Es: Via Garibaldi 95" type="text" minlength="5" name="client_address" required>
         </div>
         <div class="personal_info_input">
-          <span>
-            Città*
-          </span>
-          <input placeholder="Es: Roma" type="text" minlength="3" name="address" required>
+          <label for="client_città">Città*</label>
+          <input v-model="form.city" placeholder="Es: Roma" type="text" minlength="3" name="client_city" required>
+        </div><div class="personal_info_input">
+          <label for="client_telefono">Telefono*</label>
+          <input v-model="form.phone" placeholder="Es: Roma" type="text" minlength="3" name="client_phone" required>
+        </div><div class="personal_info_input">
+          <label for="client_email">E-mail*</label>
+          <input v-model="form.email" placeholder="Es: Roma" type="text" minlength="3" name="client_email" required>
         </div>
-        <button>
-          Vai al pagamento
-        </button>
       </form>
+      <button @click="onSubmit()" type="submit">
+        Vai al pagamento
+      </button>
     </div>
+<!-- 
+
+
+
+
+     -->
     <div class="cart_summary">
       <h1>Riepilogo dell'ordine</h1>
-      <ul class="cart_items_badges">
+      <ul  v-for="cart in localCartShop" :key="cart.id" class="cart_items_badges">
         <li class="cart_item_badge">
-          Pizza
-        </li>
-        <li class="cart_item_badge">
-          Coca-Cola
+          {{cart.name}}
         </li>
       </ul>
       <ul class="cart_items_list">
@@ -55,7 +56,7 @@
           <span class="cart_item_list_price">€</span>
         </li>
         <li class="cart_item_list">
-          <span class="cart_item_list_quantity">1x</span>
+          <span class="cart_item_list_quantity">{{localCartShop['quantity']}} x</span>
           <span class="cart_item_list_name">Coca-Cola</span>
           <span class="cart_item_list_price">€</span>
         </li>
@@ -64,8 +65,8 @@
         <h2>
           Totale
         </h2>
-        <h2>
-          €
+        <h2 :model="form.totalPrice">
+          {{totalPrice}}€
         </h2>
       </div>
     </div>
@@ -85,20 +86,45 @@ export default {
   data() {
     return {
       title: "payments",
+      totalPrice: JSON.parse(localStorage.getItem('total')),
+      localCartShop: JSON.parse(localStorage.getItem('cartShop')),
+      form: {
+        name: '',
+        surname: '',
+        address: '',
+        city: '',
+        phone: '',
+        email: '',
+      }
     };
   },
 
   methods: {
-    currentDate() {
-      const date = new Date();
-      console.log(date);
-      return date;
+    sendForm() {
+      axios.post('/api/orders', {
+          form: this.form,
+          total: localStorage.getItem('total'),
+          cart: this.localCartShop
+      })
+      .then( res => {
+          console.log(res);
+      })
     },
-  },
 
-  mounted() {
-    this.currentDate();
-  },
+    sendToCheckout() {
+      axios.post('/checkout', {
+          total: localStorage.getItem('total'),
+      })
+      .then( res => {
+          console.log(res);
+      })
+    },
+
+    onSubmit() {
+      this.sendForm();
+      console.log(this.form);
+    },
+  }  
 };
 </script>
 
@@ -124,9 +150,6 @@ export default {
     border-radius: 15px;
     border: 3px solid transparent;
     position: relative;
-    &:hover{
-      border: 3px solid #007e8a;
-    }
     h1, h2, h3, h4, h5{
       color: #007e8a;
       font-weight: 800;
@@ -163,7 +186,7 @@ export default {
       padding-bottom: 10px;
       text-align: left;
       width: 90%;
-      span{
+      label{
         width: 30%;
         height: 100%;
         text-transform: uppercase;
@@ -237,9 +260,6 @@ export default {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    &:hover{
-      border: 3px solid #007e8a;
-    }
     h1, h2, h3, h5{
       color: #007e8a;
       font-weight: 800;
