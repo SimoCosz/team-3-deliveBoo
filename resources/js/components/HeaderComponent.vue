@@ -32,7 +32,7 @@
                       </ul>
                     </div>
                   </li>
-                    <li class="item"><a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-cart4 p-1 d-flex align-items-center"></i>{{totalPrice}} &euro;</a></li>
+                    <router-link tag="li" :to="{name:'payments'}" class="item"><a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-cart4 p-1 d-flex align-items-center"></i>{{totalPrice}} &euro;</a></router-link>
                     <li class="item"><a href="/home"><i class="bi bi-house-door p-1"></i>Registrati o accedi</a></li>
                 </ul>
               </div>

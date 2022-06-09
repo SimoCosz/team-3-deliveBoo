@@ -6208,74 +6208,85 @@ var render = function () {
               _vm._m(0),
               _vm._v(" "),
               _c("div", { staticClass: "items-menu" }, [
-                _c("ul", [
-                  _c(
-                    "li",
-                    { staticClass: "item" },
-                    [
-                      _c(
-                        "router-link",
-                        {
-                          attrs: {
-                            tag: "a",
-                            to: { name: "search.restaurant" },
+                _c(
+                  "ul",
+                  [
+                    _c(
+                      "li",
+                      { staticClass: "item" },
+                      [
+                        _c(
+                          "router-link",
+                          {
+                            attrs: {
+                              tag: "a",
+                              to: { name: "search.restaurant" },
+                            },
+                          },
+                          [_vm._v("Ristoranti")]
+                        ),
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "li",
+                      {
+                        staticClass: "item dropdown",
+                        on: {
+                          mouseenter: function ($event) {
+                            return _vm.dropdown()
+                          },
+                          mouseleave: function ($event) {
+                            return _vm.dropdown()
                           },
                         },
-                        [_vm._v("Ristoranti")]
-                      ),
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "li",
-                    {
-                      staticClass: "item dropdown",
-                      on: {
-                        mouseenter: function ($event) {
-                          return _vm.dropdown()
-                        },
-                        mouseleave: function ($event) {
-                          return _vm.dropdown()
-                        },
-                      },
-                    },
-                    [
-                      _vm._m(1),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          class: [
-                            "dropdown-content",
-                            _vm.dropdown1 == true ? "show" : "",
-                          ],
-                        },
-                        [_vm._m(2)]
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("li", { staticClass: "item" }, [
-                    _c(
-                      "a",
-                      {
-                        staticClass:
-                          "d-flex align-items-center justify-content-center",
-                        attrs: { href: "#" },
                       },
                       [
-                        _c("i", {
-                          staticClass:
-                            "bi bi-cart4 p-1 d-flex align-items-center",
-                        }),
-                        _vm._v(_vm._s(_vm.totalPrice) + " €"),
+                        _vm._m(1),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            class: [
+                              "dropdown-content",
+                              _vm.dropdown1 == true ? "show" : "",
+                            ],
+                          },
+                          [_vm._m(2)]
+                        ),
                       ]
                     ),
-                  ]),
-                  _vm._v(" "),
-                  _vm._m(3),
-                ]),
+                    _vm._v(" "),
+                    _c(
+                      "router-link",
+                      {
+                        staticClass: "item",
+                        attrs: { tag: "li", to: { name: "payments" } },
+                      },
+                      [
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "d-flex align-items-center justify-content-center",
+                            attrs: { href: "#" },
+                          },
+                          [
+                            _c("i", {
+                              staticClass:
+                                "bi bi-cart4 p-1 d-flex align-items-center",
+                            }),
+                            _vm._v(_vm._s(_vm.totalPrice) + " €"),
+                          ]
+                        ),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _vm._m(3),
+                  ],
+                  1
+                ),
               ]),
               _vm._v(" "),
               _c("HeaderHamburger", { staticClass: "ghost" }),
@@ -7142,8 +7153,11 @@ var render = function () {
                       ),
                       _vm._v(" "),
                       _c(
-                        "button",
-                        { staticClass: "btn btn-bg-color btn-block" },
+                        "router-link",
+                        {
+                          staticClass: "btn btn-bg-color btn-block",
+                          attrs: { tag: "button", to: { name: "payments" } },
+                        },
                         [_vm._v(" Vai al Pagamento")]
                       ),
                     ],
@@ -23398,7 +23412,7 @@ module.exports = "/images/ios-badge.png?2566899de2c3663e0250b22d1a160aa7";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/jumbo-bkg-svg2.svg?ece43a1805da9c592135a025ae78cca8";
+module.exports = "/images/jumbo-bkg-svg2.svg?8de0ecba9e591757458db25a3d02de10";
 
 /***/ }),
 
@@ -25325,7 +25339,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/simonecoszach/Developer/Boolean/Corso/Projects/team-3-deliveBoo-1/resources/js/front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\matti\Laravel\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })

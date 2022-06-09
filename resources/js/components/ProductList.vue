@@ -45,7 +45,7 @@
                   <p class="trash-name">Svuota Carrello</p>
                 </div>
               </div>
-               <button class="btn btn-bg-color btn-block"> Vai al Pagamento</button>
+               <router-link tag="button" :to="{name:'payments'}" class="btn btn-bg-color btn-block"> Vai al Pagamento</router-link>
             </div>
 
             <div v-else>
