@@ -13,8 +13,15 @@
           <div class="col-12 col-md-8">
             <h1>{{user.name}}</h1>
             <p>{{user.category}}</p>
-            <p>Roma</p>
-            <p>{{user.telephone_number}}</p>
+            <div class="d-flex align-items-center">
+              <i class="bi bi-house-door"></i>
+              <span>Roma</span>
+            </div>
+            <div class="d-flex align-items-center">
+              <i class="bi bi-telephone"></i>
+              <span>{{user.telephone_number}}</span>
+            </div>
+            
           </div>
         </div>
       </div>
@@ -73,5 +80,14 @@ import ProductList from '../components/ProductList.vue'
       border-radius: 4px;
     }
   }
+}
+
+i{
+  font-size:20px;
+  padding-right: 10px;
+  color: #00C2B3;
+}
+i::before{
+  line-height: 32px;
 }
 </style>

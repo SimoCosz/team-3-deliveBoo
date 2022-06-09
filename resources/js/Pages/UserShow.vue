@@ -12,7 +12,7 @@
             <div class="col-12 col-md-8">
               <h1>{{user.name}}</h1>
               <p>{{user.category}}</p>
-              <p>Roma</p>
+              <p><i class="bi bi-house-door"></i>Roma</p>
               <p>{{user.telephone_number}}</p>
             </div>
           </div>
