@@ -15,11 +15,15 @@
             <p>{{user.category}}</p>
             <div class="d-flex align-items-center">
               <i class="bi bi-house-door"></i>
-              <span>Roma</span>
+              <span>{{user.city}}, {{user.address}}</span>
             </div>
             <div class="d-flex align-items-center">
               <i class="bi bi-telephone"></i>
               <span>{{user.telephone_number}}</span>
+            </div>
+            <div class="d-flex align-items-center">
+              <i class="bi bi-envelope"></i>
+              <span>{{user.email}}</span>
             </div>
             
           </div>

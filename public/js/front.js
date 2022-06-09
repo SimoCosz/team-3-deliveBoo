@@ -2035,6 +2035,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -5637,13 +5641,25 @@ var render = function () {
                     _c("div", { staticClass: "d-flex align-items-center" }, [
                       _c("i", { staticClass: "bi bi-house-door" }),
                       _vm._v(" "),
-                      _c("span", [_vm._v("Roma")]),
+                      _c("span", [
+                        _vm._v(
+                          _vm._s(_vm.user.city) +
+                            ", " +
+                            _vm._s(_vm.user.address)
+                        ),
+                      ]),
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "d-flex align-items-center" }, [
                       _c("i", { staticClass: "bi bi-telephone" }),
                       _vm._v(" "),
                       _c("span", [_vm._v(_vm._s(_vm.user.telephone_number))]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "d-flex align-items-center" }, [
+                      _c("i", { staticClass: "bi bi-envelope" }),
+                      _vm._v(" "),
+                      _c("span", [_vm._v(_vm._s(_vm.user.email))]),
                     ]),
                   ]),
                 ]),
