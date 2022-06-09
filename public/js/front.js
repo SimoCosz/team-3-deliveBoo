@@ -2111,6 +2111,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -2124,8 +2140,8 @@ __webpack_require__.r(__webpack_exports__);
       users: [],
       categories: [],
       // filteredUsers: [],
-      lastPage: [],
-      currentPage: [],
+      lastPage: 0,
+      currentPage: 1,
       userCategories: [],
       categoryFilter: [],
       loading: false
@@ -2169,13 +2185,20 @@ __webpack_require__.r(__webpack_exports__);
     fetchFilters: function fetchFilters(category) {
       var _this3 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/users', {
+      var page = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/users", {
         params: {
-          category: category
+          category: category,
+          page: page
         }
       }).then(function (res) {
         var users = res.data.users;
-        _this3.users = users;
+        var data = users.data,
+            last_page = users.last_page,
+            current_page = users.current_page;
+        _this3.users = data;
+        _this3.lastPage = last_page;
+        _this3.currentPage = current_page;
       })["catch"](function (err) {
         console.warn(err);
 
@@ -2185,7 +2208,7 @@ __webpack_require__.r(__webpack_exports__);
     check: function check(event) {
       if (event.target.checked) {
         this.fetchFilters(this.categoryFilter);
-      } else if (this.categoryFilter == '') {
+      } else if (this.categoryFilter == "") {
         this.fetchRestaurant();
       } else {
         this.fetchFilters(this.categoryFilter);
@@ -3624,7 +3647,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".search-page-container[data-v-30b3a980] {\n  margin: 0;\n  padding: 0 15px 0 15px;\n}\n.where[data-v-30b3a980] {\n  width: 95px;\n  gap: 10px;\n}\n.after[data-v-30b3a980]::after {\n  content: \"\";\n  display: block;\n  border: 1px solid #e9e8e8;\n  width: 90%;\n}\n.categories[data-v-30b3a980] {\n  min-width: 180px;\n  max-height: calc(100vh - 50px);\n  overflow: auto;\n  margin-left: 40px;\n}\n.container-card[data-v-30b3a980] {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n}\n.page-wrap[data-v-30b3a980] {\n  gap: 15px;\n}\n.page-wrap .page[data-v-30b3a980] {\n  width: 40px;\n  height: 40px;\n  border-radius: 50%;\n  background-color: #077567;\n  display: flex;\n  justify-content: center;\n  color: white;\n  align-items: center;\n  cursor: pointer;\n}\n.page-wrap .bkg-page[data-v-30b3a980] {\n  background-color: #EDAE89;\n  width: 40px;\n  height: 40px;\n  border-radius: 50%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border: 2px solid #077567;\n  color: #077567;\n  cursor: pointer;\n}\n@media (max-width: 1200px) {\n.restaurants[data-v-30b3a980] {\n    margin-left: 20px !important;\n}\n}\n@media (max-width: 750px) {\n.categories[data-v-30b3a980] {\n    display: none;\n}\n.restaurants[data-v-30b3a980] {\n    margin-left: 10px !important;\n}\n}", ""]);
+exports.push([module.i, ".search-page-container[data-v-30b3a980] {\n  margin: 0;\n  padding: 0 15px 0 15px;\n}\n.where[data-v-30b3a980] {\n  width: 95px;\n  gap: 10px;\n}\n.after[data-v-30b3a980]::after {\n  content: \"\";\n  display: block;\n  border: 1px solid #e9e8e8;\n  width: 90%;\n}\n.categories[data-v-30b3a980] {\n  min-width: 180px;\n  max-height: calc(100vh - 50px);\n  overflow: auto;\n  margin-left: 40px;\n}\n.container-card[data-v-30b3a980] {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n}\n.page-wrap[data-v-30b3a980] {\n  gap: 15px;\n}\n.page-wrap .page[data-v-30b3a980] {\n  width: 40px;\n  height: 40px;\n  border-radius: 50%;\n  background-color: #077567;\n  display: flex;\n  justify-content: center;\n  color: white;\n  align-items: center;\n  cursor: pointer;\n}\n.page-wrap .bkg-page[data-v-30b3a980] {\n  background-color: #edae89;\n  width: 40px;\n  height: 40px;\n  border-radius: 50%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border: 2px solid #077567;\n  color: #077567;\n  cursor: pointer;\n}\n@media (max-width: 1200px) {\n.restaurants[data-v-30b3a980] {\n    margin-left: 20px !important;\n}\n}\n@media (max-width: 750px) {\n.categories[data-v-30b3a980] {\n    display: none;\n}\n.restaurants[data-v-30b3a980] {\n    margin-left: 10px !important;\n}\n}", ""]);
 
 // exports
 
@@ -5791,11 +5814,11 @@ var render = function () {
                   class: [_vm.currentPage === n ? "bkg-page" : "page"],
                   on: {
                     click: function ($event) {
-                      return _vm.fetchRestaurant(n)
+                      return _vm.fetchFilters(_vm.categoryFilter, n)
                     },
                   },
                 },
-                [_vm._v(" " + _vm._s(n) + " ")]
+                [_vm._v("\n            " + _vm._s(n) + "\n          ")]
               )
             }),
             0

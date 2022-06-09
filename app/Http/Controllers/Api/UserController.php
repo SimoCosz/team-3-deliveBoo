@@ -22,7 +22,7 @@ class UserController extends Controller
         if($param){
             $users = User::with(['categories'])->whereHas('categories', function ($q) use ($param){
                 $q->whereIn('category_user.category_id', $param);
-            })->get();
+            })->paginate(9);
 
             return response()->json([
                 'users' => $users,

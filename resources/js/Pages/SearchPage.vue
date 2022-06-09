@@ -1,169 +1,191 @@
 <template>
   <layout>
     <!-- <div class="container py-5"> -->
-      <div class="search-page-container row mt-5">
-        <div class="col-2 categories p-2">
-          <div class="after">
-            <div class="where d-flex align-items-center p-2">
-              <img src="../../../public/img/logo-categories.png" alt="">
-              <h5 class="m-0">Roma</h5>
-            </div>
-          </div>
-          <!-- after -->
-            <h5 class="my-3">Categorie</h5>
-          <div class="check my-2" v-for="category in categories" :key="category.id">
-            <input type="checkbox" @change="check($event)" v-model="categoryFilter" :id="category.name" :name="category.name" :value="category.id">
-            <label :for="category.name">{{category.name}} ({{category.users.length}})</label>
+    <div class="search-page-container row mt-5">
+      <div class="col-2 categories p-2">
+        <div class="after">
+          <div class="where d-flex align-items-center p-2">
+            <img src="../../../public/img/logo-categories.png" alt="" />
+            <h5 class="m-0">Roma</h5>
           </div>
         </div>
-        <div class="col restaurants mb-5">
-          <h2 class="mb-4">Ristoranti che consegnano a Roma</h2>
-          <div class="container-card" v-if="this.users.length == 0">
-            <h3>Nessun ristorante trovato</h3>
-            <!-- card -->
-          </div>
-          <div class="container-card">
-            <RestaurantCard :element="user" v-for="user in users" :key="user.id"/>
-          </div>
-          
-          <div class="paginate">
-            <ul class="page-wrap d-flex justify-content-center rounded mt-4">
-              <li :class="[currentPage === n? 'bkg-page' : 'page']" @click="fetchRestaurant(n)" v-for="n in lastPage" :key="n"> {{n}} </li>
-            </ul>
-          </div>
+        <!-- after -->
+        <h5 class="my-3">Categorie</h5>
+        <div class="check my-2" v-for="category in categories" :key="category.id">
+          <input
+            type="checkbox"
+            @change="check($event)"
+            v-model="categoryFilter"
+            :id="category.name"
+            :name="category.name"
+            :value="category.id"
+          />
+          <label :for="category.name"
+            >{{ category.name }} ({{ category.users.length }})</label
+          >
         </div>
       </div>
-     
+      <div class="col restaurants mb-5">
+        <h2 class="mb-4">Ristoranti che consegnano a Roma</h2>
+        <div class="container-card" v-if="this.users.length == 0">
+          <h3>Nessun ristorante trovato</h3>
+          <!-- card -->
+        </div>
+        <div class="container-card">
+          <RestaurantCard :element="user" v-for="user in users" :key="user.id" />
+        </div>
+
+        <div class="paginate">
+          <ul class="page-wrap d-flex justify-content-center rounded mt-4">
+            <li
+              :class="[currentPage === n ? 'bkg-page' : 'page']"
+              @click="fetchFilters(categoryFilter, n)"
+              v-for="n in lastPage"
+              :key="n"
+            >
+              {{ n }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <!-- </div> -->
   </layout>
 </template>
 
 <script>
-import axios from 'axios';
-import Layout from '../layouts/Layout.vue';
-import RestaurantCard from '../components/RestaurantCard.vue'
+import axios from "axios";
+import Layout from "../layouts/Layout.vue";
+import RestaurantCard from "../components/RestaurantCard.vue";
 
-  export default {
+export default {
   components: {
     Layout,
-    RestaurantCard 
+    RestaurantCard,
   },
-    data(){
-      return{
-        users: [],
-        categories: [],
-        // filteredUsers: [],
-        lastPage: [],
-        currentPage: [],
-        userCategories: [],
-        categoryFilter: [],
-        loading: false
+  data() {
+    return {
+      users: [],
+      categories: [],
+      // filteredUsers: [],
+      lastPage: 0,
+      currentPage: 1,
+      userCategories: [],
+      categoryFilter: [],
+      loading: false,
+    };
+  },
+  methods: {
+    fetchRestaurant(page = 1) {
+      axios
+        .get("/api/users", {
+          params: {
+            page,
+          },
+        })
+        .then((res) => {
+          const { users } = res.data;
+          const { data, last_page, current_page } = users;
+          this.users = data;
+          this.lastPage = last_page;
+          this.currentPage = current_page;
+        })
+        .catch((err) => {
+          console.warn(err);
+          this.$router.push("/404");
+        });
+    },
+
+    fetchCategories() {
+      axios
+        .get("/api/categories")
+        .then((res) => {
+          const { categories } = res.data;
+          this.categories = categories;
+        })
+        .catch((err) => {
+          console.warn(err);
+          this.$router.push("/404");
+        });
+    },
+
+    fetchFilters(category, page = 1) {
+      axios
+        .get("/api/users", {
+          params: {
+            category: category,
+            page,
+          },
+        })
+        .then((res) => {
+          const { users } = res.data;
+          const { data, last_page, current_page } = users;
+          this.users = data;
+          this.lastPage = last_page;
+          this.currentPage = current_page;
+        })
+        .catch((err) => {
+          console.warn(err);
+          this.$router.push("/404");
+        });
+    },
+
+    check(event) {
+      if (event.target.checked) {
+        this.fetchFilters(this.categoryFilter);
+      } else if (this.categoryFilter == "") {
+        this.fetchRestaurant();
+      } else {
+        this.fetchFilters(this.categoryFilter);
       }
     },
-    methods:{
-      fetchRestaurant(page = 1) {
-        axios.get("/api/users", {
-          params : {
-            page
-          }
-        })
-        .then((res) => {
-            const { users } = res.data;
-            const {data, last_page, current_page} = users
-            this.users = data
-            this.lastPage = last_page
-            this.currentPage = current_page
-        })
-        .catch((err) => {
-          console.warn(err);
-          this.$router.push("/404");
-        });
-      },
+  },
 
-      fetchCategories(){
-        axios.get("/api/categories")
-        .then((res) => {
-            const { categories } = res.data;
-            this.categories = categories;
-        })
-        .catch((err) => {
-          console.warn(err);
-            this.$router.push("/404");
-        });
-      },
-
-      fetchFilters(category) {
-        axios.get('/api/users', {
-          params: {
-            category : category,
-          }
-        })
-        .then(res => {
-          const { users } = res.data;
-          this.users = users;
-        })
-        .catch((err) => {
-          console.warn(err);
-          this.$router.push("/404");
-        });
-      },
-
-      check(event) {
-        if(event.target.checked){
-          this.fetchFilters(this.categoryFilter)
-        } else if (this.categoryFilter == '') {
-          this.fetchRestaurant()
-        } else {
-          this.fetchFilters(this.categoryFilter)
-        }
-      },
-    },
-    
-    mounted() {
-      this.fetchRestaurant()
-      this.fetchCategories()
-    },
-      
-  }
+  mounted() {
+    this.fetchRestaurant();
+    this.fetchCategories();
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-.search-page-container{
+.search-page-container {
   margin: 0;
   padding: 0 15px 0 15px;
 }
 
-.where{
+.where {
   width: 95px;
   gap: 10px;
   // position: sticky !important;
   // top: 10px;
 }
 
-.after::after{
-    content: '';
-    display: block;
-    border: 1px solid #e9e8e8;
-    width: 90%;
+.after::after {
+  content: "";
+  display: block;
+  border: 1px solid #e9e8e8;
+  width: 90%;
 }
 
-.categories{
+.categories {
   min-width: 180px;
   max-height: calc(100vh - 50px);
   overflow: auto;
   margin-left: 40px;
 }
 
-.container-card{
+.container-card {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-.page-wrap{
+.page-wrap {
   gap: 15px;
 
-  .page{
+  .page {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -175,8 +197,8 @@ import RestaurantCard from '../components/RestaurantCard.vue'
     cursor: pointer;
   }
 
-  .bkg-page{
-    background-color: #EDAE89;
+  .bkg-page {
+    background-color: #edae89;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -189,19 +211,18 @@ import RestaurantCard from '../components/RestaurantCard.vue'
   }
 }
 
-@media (max-width: 1200px){
-  .restaurants{
-    margin-left: 20px!important;
+@media (max-width: 1200px) {
+  .restaurants {
+    margin-left: 20px !important;
   }
 }
 
-@media (max-width: 750px){
-  .categories{
+@media (max-width: 750px) {
+  .categories {
     display: none;
   }
-  .restaurants{
-    margin-left: 10px!important;
+  .restaurants {
+    margin-left: 10px !important;
   }
 }
-
 </style>
