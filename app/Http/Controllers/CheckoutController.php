@@ -18,7 +18,7 @@ class CheckoutController extends Controller
         $payment_intent = \Stripe\PaymentIntent::create([
 			'description' => 'Stripe Test Payment',
 			'amount' => $amount,
-			'currency' => 'INR',
+			'currency' => 'EUR',
 			'description' => 'Payment From Codehunger',
 			'payment_method_types' => ['card'],
 		]);
