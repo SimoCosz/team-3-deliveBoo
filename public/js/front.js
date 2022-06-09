@@ -2028,6 +2028,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -3601,7 +3612,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".info-users[data-v-009ff437] {\n  border-bottom: 1px solid rgba(0, 0, 0, 0.08);\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n}\n.info-users .my-container[data-v-009ff437] {\n  max-width: 1500px;\n  margin: 0 auto;\n  padding: 0 20px;\n}\n.info-users .my-container .restourant-image[data-v-009ff437] {\n  border-radius: 4px;\n}", ""]);
+exports.push([module.i, ".info-users[data-v-009ff437] {\n  border-bottom: 1px solid rgba(0, 0, 0, 0.08);\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n}\n.info-users .my-container[data-v-009ff437] {\n  max-width: 1500px;\n  margin: 0 auto;\n  padding: 0 20px;\n}\n.info-users .my-container .restourant-image[data-v-009ff437] {\n  border-radius: 4px;\n}\ni[data-v-009ff437] {\n  font-size: 20px;\n  padding-right: 10px;\n  color: #00C2B3;\n}\ni[data-v-009ff437]::before {\n  line-height: 32px;\n}", ""]);
 
 // exports
 
@@ -5627,9 +5638,29 @@ var render = function () {
                     _vm._v(" "),
                     _c("p", [_vm._v(_vm._s(_vm.user.category))]),
                     _vm._v(" "),
-                    _c("p", [_vm._v("Roma")]),
+                    _c("div", { staticClass: "d-flex align-items-center" }, [
+                      _c("i", { staticClass: "bi bi-house-door" }),
+                      _vm._v(" "),
+                      _c("span", [
+                        _vm._v(
+                          _vm._s(_vm.user.city) +
+                            ", " +
+                            _vm._s(_vm.user.address)
+                        ),
+                      ]),
+                    ]),
                     _vm._v(" "),
-                    _c("p", [_vm._v(_vm._s(_vm.user.telephone_number))]),
+                    _c("div", { staticClass: "d-flex align-items-center" }, [
+                      _c("i", { staticClass: "bi bi-telephone" }),
+                      _vm._v(" "),
+                      _c("span", [_vm._v(_vm._s(_vm.user.telephone_number))]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "d-flex align-items-center" }, [
+                      _c("i", { staticClass: "bi bi-envelope" }),
+                      _vm._v(" "),
+                      _c("span", [_vm._v(_vm._s(_vm.user.email))]),
+                    ]),
                   ]),
                 ]),
               ]),
@@ -5845,7 +5876,10 @@ var render = function () {
                     _vm._v(" "),
                     _c("p", [_vm._v(_vm._s(_vm.user.category))]),
                     _vm._v(" "),
-                    _c("p", [_vm._v("Roma")]),
+                    _c("p", [
+                      _c("i", { staticClass: "bi bi-house-door" }),
+                      _vm._v("Roma"),
+                    ]),
                     _vm._v(" "),
                     _c("p", [_vm._v(_vm._s(_vm.user.telephone_number))]),
                   ]),
@@ -25212,7 +25246,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\casa\OneDrive\Desktop\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\matti\Laravel\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })
