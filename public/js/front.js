@@ -2754,6 +2754,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_HeaderComponent_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/HeaderComponent.vue */ "./resources/js/components/HeaderComponent.vue");
+/* harmony import */ var _components_FooterComponent_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/FooterComponent.vue */ "./resources/js/components/FooterComponent.vue");
 //
 //
 //
@@ -2830,43 +2832,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    HeaderComponent: _components_HeaderComponent_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    FooterComponent: _components_FooterComponent_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
   data: function data() {
     return {
       title: "payments"
@@ -3819,7 +3791,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "*[data-v-04c873d0] {\n  font-family: \"Nunito\", sans-serif;\n}\n.payments[data-v-04c873d0] {\n  height: 100vh;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n.row[data-v-04c873d0] {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin: 0;\n}\n.items-menu > ul[data-v-04c873d0] {\n  display: flex;\n  flex-direction: row;\n}\n.items-menu > ul > li[data-v-04c873d0] {\n  display: flex;\n  flex-direction: row;\n  text-decoration: none;\n}\n.item[data-v-04c873d0] {\n  border: 2px solid #e9ebeb;\n  padding: 5px 10px;\n  border-radius: 5px;\n  white-space: nowrap;\n  background-color: white;\n  margin-left: 10px;\n}\n.item > a[data-v-04c873d0] {\n  color: black;\n}\n\n/* .back{\n    width: 100%;\n    height: 100%;\n    background-image: url(\"../../../public/images/backgroundpayment.png\"); \n    background-size: cover;\n} */\n.immagine[data-v-04c873d0] {\n  width: 200px;\n  padding-left: 5px;\n}\n.logo-butt[data-v-04c873d0] {\n  width: 85%;\n  height: 70px;\n  padding-top: 10px;\n}\n.cont-2[data-v-04c873d0] {\n  width: 85%;\n  height: 85%;\n  order: 1px solid black;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n}\n.date[data-v-04c873d0] {\n  width: 40%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.dati-cliente[data-v-04c873d0] {\n  width: 90%;\n  height: 83%;\n}\n.nome-ristorante[data-v-04c873d0] {\n  width: 100%;\n  height: 15%;\n  margin-bottom: 25px;\n}\n.nome-ristorante > h2[data-v-04c873d0] {\n  font-weight: bold;\n}\n.cart[data-v-04c873d0] {\n  width: 40%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-family: \"Arimo\";\n  background-color: white;\n  box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);\n  -webkit-animation: slideUp-data-v-04c873d0 2000ms ease;\n          animation: slideUp-data-v-04c873d0 2000ms ease;\n  padding: 20px;\n  border-radius: 20px;\n}\n.dentro-cart[data-v-04c873d0] {\n  width: 90%;\n  min-height: 80%;\n}\n.dentro-cart > h4[data-v-04c873d0] {\n  font-weight: bold;\n}\n.sp-1[data-v-04c873d0] {\n  padding-left: 270px;\n  color: grey;\n}\n.sp-2[data-v-04c873d0] {\n  padding-left: 248px;\n  color: grey;\n}\n.sp-3[data-v-04c873d0] {\n  padding-left: 214px;\n  color: grey;\n}\n.sp-4[data-v-04c873d0] {\n  padding-left: 227px;\n  color: grey;\n}\n.sp-5[data-v-04c873d0] {\n  padding-left: 220px;\n  color: grey;\n}\n.sp-6[data-v-04c873d0] {\n  padding-left: 244px;\n  color: black;\n  font-weight: bold;\n}\n.part-blu[data-v-04c873d0] {\n  margin: 10px 10px 10px 0px;\n  background-color: #00ccbc;\n  padding: 15px 15px 15px 15px;\n  font-size: 16px;\n}\n.body[data-v-04c873d0] {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  padding: 0;\n}\n.date[data-v-04c873d0] {\n  width: 50%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  font-family: \"Arimo\";\n  background-color: white;\n  box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);\n  -webkit-animation: slideUp-data-v-04c873d0 2000ms ease;\n          animation: slideUp-data-v-04c873d0 2000ms ease;\n  padding: 20px;\n  border-radius: 20px;\n}\n@-webkit-keyframes slideUp-data-v-04c873d0 {\n0% {\n    transform: translateY(100%);\n    visibility: visible;\n}\n100% {\n    transform: translateY(0);\n}\n}\n@keyframes slideUp-data-v-04c873d0 {\n0% {\n    transform: translateY(100%);\n    visibility: visible;\n}\n100% {\n    transform: translateY(0);\n}\n}\n.container[data-v-04c873d0] {\n  width: 100%;\n}\nh1[data-v-04c873d0] {\n  align-self: center;\n}\nform[data-v-04c873d0] {\n  width: 100%;\n}\nform > *[data-v-04c873d0] {\n  margin-top: 5px;\n}\nform input[data-v-04c873d0] {\n  width: 100%;\n  min-height: 25px;\n  border: 0.3px solid grey;\n  font-size: 1rem;\n  letter-spacing: 0.15rem;\n  font-family: \"Arimo\";\n  margin-top: 5px;\n  color: brown;\n  border-radius: 4px;\n}\nform label[data-v-04c873d0] {\n  text-transform: uppercase;\n  font-size: 12px;\n  letter-spacing: 2px;\n  color: grey;\n  margin: 0;\n}\nform h1[data-v-04c873d0] {\n  font-size: 24px;\n  line-height: 10px;\n  color: black;\n  letter-spacing: 1px;\n  padding-bottom: 6px;\n  padding-top: 0;\n}\nform h1[data-v-04c873d0]:nth-of-type(2) {\n  margin-top: 25px;\n}\n.name[data-v-04c873d0] {\n  justify-content: space-between;\n  display: flex;\n  width: 100%;\n}\n.name div[data-v-04c873d0] {\n  width: 45%;\n}\n.address-info[data-v-04c873d0] {\n  display: flex;\n  justify-content: space-between;\n}\n.address-info div[data-v-04c873d0] {\n  width: 100%;\n}\n.cc-info[data-v-04c873d0] {\n  display: flex;\n  justify-content: space-between;\n}\n.cc-info div[data-v-04c873d0] {\n  width: 45%;\n}\n.prod[data-v-04c873d0] {\n  margin-bottom: 0;\n}\n.btns[data-v-04c873d0] {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n}\n.btns button[data-v-04c873d0] {\n  margin: 3px 0;\n  height: 30px;\n  width: 40%;\n  color: black;\n  background-color: #00ccbc;\n  text-transform: uppercase;\n  border: 0;\n  border-radius: 0.3rem;\n  letter-spacing: 2px;\n  margin-top: 10px;\n}\n.btns button[data-v-04c873d0]:hover {\n  -webkit-animation-name: btn-hov-data-v-04c873d0;\n          animation-name: btn-hov-data-v-04c873d0;\n  -webkit-animation-duration: 550ms;\n          animation-duration: 550ms;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n}\n@-webkit-keyframes btn-hov-data-v-04c873d0 {\n100% {\n    background-color: rgb(184, 184, 184);\n    color: black;\n    transform: scale(1.05);\n}\n}\n@keyframes btn-hov-data-v-04c873d0 {\n100% {\n    background-color: rgb(184, 184, 184);\n    color: black;\n    transform: scale(1.05);\n}\n}\ninput[data-v-04c873d0]:focus,\nbutton[data-v-04c873d0]:focus {\n  outline: none;\n}\n@media (max-width: 736px) {\n.wrapper[data-v-04c873d0] {\n    width: 100%;\n}\n.container[data-v-04c873d0] {\n    width: 100%;\n}\n.btns[data-v-04c873d0] {\n    align-items: center;\n}\n.btns button[data-v-04c873d0] {\n    width: 50%;\n}\nform h1[data-v-04c873d0] {\n    text-align: center;\n}\n.name[data-v-04c873d0],\n.address-info[data-v-04c873d0],\n.cc-info[data-v-04c873d0] {\n    flex-direction: column;\n    width: 100%;\n    justify-content: space-between;\n}\n.name div[data-v-04c873d0],\n.address-info div[data-v-04c873d0],\n.cc-info div[data-v-04c873d0] {\n    align-items: center;\n    flex-direction: column;\n    width: 100%;\n    display: flex;\n}\n.street[data-v-04c873d0],\n.cc-num[data-v-04c873d0] {\n    text-align: center;\n}\ninput[data-v-04c873d0] {\n    margin: 5px 0;\n    min-height: 30px;\n}\n}", ""]);
+exports.push([module.i, ".payment_section[data-v-04c873d0] {\n  padding: 50px 0px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  text-align: center;\n  -webkit-animation: slideUp-data-v-04c873d0 1500ms ease;\n          animation: slideUp-data-v-04c873d0 1500ms ease;\n}\n.payment_section .personal_info[data-v-04c873d0] {\n  width: 50%;\n  height: 98%;\n  padding: 20px 5px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  box-shadow: 0 15px 30px 1px grey;\n  border-radius: 15px;\n  border: 3px solid transparent;\n  position: relative;\n}\n.payment_section .personal_info[data-v-04c873d0]:hover {\n  border: 3px solid #007e8a;\n}\n.payment_section .personal_info h1[data-v-04c873d0], .payment_section .personal_info h2[data-v-04c873d0], .payment_section .personal_info h3[data-v-04c873d0], .payment_section .personal_info h4[data-v-04c873d0], .payment_section .personal_info h5[data-v-04c873d0] {\n  color: #007e8a;\n  font-weight: 800;\n}\n@media (max-width: 381px) {\n.payment_section .personal_info h1[data-v-04c873d0] {\n    font-size: 28px;\n}\n}\n@media (max-width: 381px) {\n.payment_section .personal_info h3[data-v-04c873d0] {\n    font-size: 24px;\n}\n}\n.payment_section .personal_info p[data-v-04c873d0] {\n  font-weight: 700;\n  padding-bottom: 10px;\n}\n@media (max-width: 768px) {\n.payment_section .personal_info p[data-v-04c873d0] {\n    padding-bottom: 0px;\n}\n}\n.payment_section .personal_info form[data-v-04c873d0] {\n  width: 80%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.payment_section .personal_info .personal_info_input[data-v-04c873d0] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 5px;\n  padding-bottom: 10px;\n  text-align: left;\n  width: 90%;\n}\n.payment_section .personal_info .personal_info_input span[data-v-04c873d0] {\n  width: 30%;\n  height: 100%;\n  text-transform: uppercase;\n  font-size: 16px;\n  color: #007e8a;\n  padding: 5px;\n}\n@media (max-width: 991px) {\n.payment_section .personal_info .personal_info_input span[data-v-04c873d0] {\n    font-size: 12px;\n}\n}\n@media (max-width: 381px) {\n.payment_section .personal_info .personal_info_input span[data-v-04c873d0] {\n    font-size: 10px;\n}\n}\n@media (max-width: 281px) {\n.payment_section .personal_info .personal_info_input span[data-v-04c873d0] {\n    font-size: 10px;\n    width: 50%;\n}\n}\n.payment_section .personal_info .personal_info_input input[data-v-04c873d0] {\n  border: 1px solid #e5e5e5;\n  border-radius: 5px;\n  width: 70%;\n  height: 100%;\n  padding: 5px;\n  font-size: 14px;\n  outline-color: #007e8a;\n}\n@media (max-width: 991px) {\n.payment_section .personal_info .personal_info_input input[data-v-04c873d0] {\n    font-size: 12px;\n}\n}\n@media (max-width: 381px) {\n.payment_section .personal_info .personal_info_input input[data-v-04c873d0] {\n    font-size: 10px;\n}\n}\n@media (max-width: 281px) {\n.payment_section .personal_info .personal_info_input input[data-v-04c873d0] {\n    font-size: 8px;\n    width: 50%;\n}\n}\n.payment_section .personal_info button[data-v-04c873d0] {\n  font-weight: 700;\n  color: white;\n  font-size: 14px;\n  padding: 5px;\n  background-color: #007e8a;\n  width: 150px;\n  border: none;\n  border-radius: 5px;\n  opacity: 0.8;\n}\n.payment_section .personal_info button[data-v-04c873d0]:hover {\n  transition: ease-in-out 0.5s;\n  opacity: 1;\n}\n@media (max-width: 991px) {\n.payment_section .personal_info button[data-v-04c873d0] {\n    bottom: 28.5%;\n    font-size: 12px;\n}\n}\n@media (max-width: 768px) {\n.payment_section .personal_info[data-v-04c873d0] {\n    width: 80%;\n    height: 45%;\n}\n}\n.payment_section .cart_summary[data-v-04c873d0] {\n  width: 40%;\n  height: 98%;\n  padding: 20px 5px;\n  box-shadow: 0 15px 30px 1px grey;\n  border-radius: 15px;\n  border: 3px solid transparent;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 10px;\n}\n.payment_section .cart_summary[data-v-04c873d0]:hover {\n  border: 3px solid #007e8a;\n}\n.payment_section .cart_summary h1[data-v-04c873d0], .payment_section .cart_summary h2[data-v-04c873d0], .payment_section .cart_summary h3[data-v-04c873d0], .payment_section .cart_summary h5[data-v-04c873d0] {\n  color: #007e8a;\n  font-weight: 800;\n}\n@media (max-width: 381px) {\n.payment_section .cart_summary h1[data-v-04c873d0] {\n    font-size: 28px;\n}\n}\n.payment_section .cart_summary .cart_items_badges[data-v-04c873d0] {\n  margin: 0;\n  padding: 0;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  flex-wrap: wrap;\n  gap: 10px;\n  position: relative;\n}\n.payment_section .cart_summary .cart_items_badges .cart_item_badge[data-v-04c873d0] {\n  margin: 0;\n  padding: 0;\n  text-align: center;\n  background-color: #007e8a;\n  padding: 2px 7px;\n  color: white;\n  border-radius: 25px;\n}\n.payment_section .cart_summary .cart_items_list[data-v-04c873d0] {\n  width: 80%;\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n}\n.payment_section .cart_summary .cart_items_list .cart_item_list[data-v-04c873d0] {\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n  padding: 0px 5px;\n  border: 1px solid #007e8a;\n  border-radius: 5px;\n  font-size: 16px;\n}\n@media (max-width: 381px) {\n.payment_section .cart_summary .cart_items_list .cart_item_list[data-v-04c873d0] {\n    font-size: 14px;\n}\n}\n.payment_section .cart_summary .cart_items_list .cart_item_list .cart_item_list_quantity[data-v-04c873d0] {\n  width: 8%;\n  text-align: left;\n}\n.payment_section .cart_summary .cart_items_list .cart_item_list .cart_item_list_name[data-v-04c873d0] {\n  width: 70%;\n  text-align: left;\n  border-left: 1px solid #007e8a;\n  border-right: 1px solid #007e8a;\n  padding-left: 5px;\n}\n.payment_section .cart_summary .cart_items_list .cart_item_list .cart_item_list_price[data-v-04c873d0] {\n  width: 15%;\n  text-align: right;\n}\n.payment_section .cart_summary .total[data-v-04c873d0] {\n  width: 80%;\n  display: flex;\n  justify-content: space-between;\n  color: #007e8a;\n}\n@media (max-width: 768px) {\n.payment_section .cart_summary[data-v-04c873d0] {\n    width: 80%;\n    height: 45%;\n}\n}\n@-webkit-keyframes slideUp-data-v-04c873d0 {\n0% {\n    transform: translateY(100%);\n    visibility: hidden;\n}\n25% {\n    visibility: hidden;\n}\n50% {\n    visibility: hidden;\n}\n60% {\n    visibility: hidden;\n}\n100% {\n    transform: translateY(0);\n}\n}\n@keyframes slideUp-data-v-04c873d0 {\n0% {\n    transform: translateY(100%);\n    visibility: hidden;\n}\n25% {\n    visibility: hidden;\n}\n50% {\n    visibility: hidden;\n}\n60% {\n    visibility: hidden;\n}\n100% {\n    transform: translateY(0);\n}\n}\n@media (max-width: 768px) {\n.payment_section[data-v-04c873d0] {\n    display: flex;\n    flex-direction: column;\n    gap: 40px;\n    align-items: center;\n}\n}", ""]);
 
 // exports
 
@@ -6715,235 +6687,135 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "div",
+    [
+      _c("HeaderComponent"),
+      _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
+      _c("FooterComponent"),
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "payments" }, [
-      _c("div", { staticClass: "logo-butt" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("figure", { staticClass: "immagine" }, [
-            _c("a", { attrs: { href: "/" } }, [
-              _c("img", {
-                attrs: {
-                  src: __webpack_require__(/*! ../../../public/img/logo-navbar.png */ "./public/img/logo-navbar.png"),
-                  alt: "",
-                },
-              }),
-            ]),
+    return _c("section", { staticClass: "payment_section container" }, [
+      _c("div", { staticClass: "personal_info" }, [
+        _c("h1", [_vm._v("Nome ristorante")]),
+        _vm._v(" "),
+        _c("p", [_vm._v("Tempo di consegna: 15-20 minuti")]),
+        _vm._v(" "),
+        _c("form", { attrs: { action: "" } }, [
+          _c("h3", [_vm._v("\r\n          Dati personali\r\n        ")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "personal_info_input" }, [
+            _c("span", [_vm._v("\r\n            Nome *\r\n          ")]),
+            _vm._v(" "),
+            _c("input", {
+              attrs: {
+                placeholder: "Es: Mario, Giulia...",
+                type: "text",
+                minlength: "3",
+                name: "name",
+                required: "",
+              },
+            }),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "items-menu" }, [
-            _c("ul", [
-              _c("li", { staticClass: "item" }, [
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("i", { staticClass: "bi bi-cart4 p-1" }),
-                  _vm._v("0,00 €"),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "item" }, [
-                _c("a", { attrs: { href: "/home" } }, [
-                  _c("i", { staticClass: "bi bi-house-door p-1" }),
-                  _vm._v("Registrati o accedi"),
-                ]),
-              ]),
-            ]),
+          _c("div", { staticClass: "personal_info_input" }, [
+            _c("span", [_vm._v("\r\n            Cognome*\r\n          ")]),
+            _vm._v(" "),
+            _c("input", {
+              attrs: {
+                placeholder: "Es: Maldini, Mattarella...",
+                type: "text",
+                minlength: "3",
+                name: "lastname",
+                required: "",
+              },
+            }),
           ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "personal_info_input" }, [
+            _c("span", [_vm._v("\r\n            Indirizzo*\r\n          ")]),
+            _vm._v(" "),
+            _c("input", {
+              attrs: {
+                placeholder: "Es: Via Garibaldi 95",
+                type: "text",
+                minlength: "5",
+                name: "address",
+                required: "",
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "personal_info_input" }, [
+            _c("span", [_vm._v("\r\n            Città*\r\n          ")]),
+            _vm._v(" "),
+            _c("input", {
+              attrs: {
+                placeholder: "Es: Roma",
+                type: "text",
+                minlength: "3",
+                name: "address",
+                required: "",
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _c("button", [_vm._v("\r\n          Vai al pagamento\r\n        ")]),
         ]),
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "cont-2" }, [
-        _c("div", { staticClass: "date" }, [
-          _c("div", { staticClass: "nome-ristorante" }, [
-            _c("h2", [
-              _c("i", { staticClass: "fa-solid fa-timer" }),
-              _vm._v("Pinseria Romana"),
-            ]),
-            _vm._v(" "),
-            _c("h6", [_vm._v("Tempo di consegna 20 - 35 m")]),
+      _c("div", { staticClass: "cart_summary" }, [
+        _c("h1", [_vm._v("Riepilogo dell'ordine")]),
+        _vm._v(" "),
+        _c("ul", { staticClass: "cart_items_badges" }, [
+          _c("li", { staticClass: "cart_item_badge" }, [
+            _vm._v("\r\n          Pizza\r\n        "),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "dati-cliente" }, [
-            _c("div", { staticClass: "wrapper" }, [
-              _c("div", { staticClass: "container body" }, [
-                _c("form", { attrs: { action: "" } }, [
-                  _c("h1", [
-                    _c("i", { staticClass: "fas fa-shipping-fast" }),
-                    _vm._v(
-                      "\n                Informazioni di consegna\n              "
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "name" }, [
-                    _c("div", [
-                      _c("label", { attrs: { for: "f-name" } }, [
-                        _vm._v("Nome*"),
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        attrs: {
-                          type: "text",
-                          required: "",
-                          minlength: "3",
-                          name: "f-name",
-                        },
-                      }),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c("label", { attrs: { for: "l-name" } }, [
-                        _vm._v("Cognome*"),
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        attrs: {
-                          type: "text",
-                          required: "",
-                          minlength: "3",
-                          name: "l-name",
-                        },
-                      }),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "street" }, [
-                    _c("label", { attrs: { for: "name" } }, [_vm._v("Via*")]),
-                    _vm._v(" "),
-                    _c("input", {
-                      attrs: {
-                        type: "text",
-                        required: "",
-                        minlength: "3",
-                        name: "address",
-                      },
-                    }),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "address-info" }, [
-                    _c("div", [
-                      _c("label", { attrs: { for: "city" } }, [
-                        _vm._v("Città*"),
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        attrs: {
-                          type: "text",
-                          required: "",
-                          minlength: "3",
-                          name: "city",
-                        },
-                      }),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("h1", [
-                    _c("i", { staticClass: "bi bi-credit-card-2-back" }),
-                    _vm._v(" Dati di pagameto"),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "cc-num" }, [
-                    _c("label", { attrs: { for: "card-num" } }, [
-                      _vm._v("Carta di credito*"),
-                    ]),
-                    _vm._v(" "),
-                    _c("input", {
-                      attrs: {
-                        type: "text",
-                        required: "",
-                        minlength: "16",
-                        maxlength: "16",
-                        name: "card-num",
-                      },
-                    }),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "cc-info" }, [
-                    _c("div", [
-                      _c("label", { attrs: { for: "card-num" } }, [
-                        _vm._v("Scadenza*"),
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        attrs: { type: "date", required: "", name: "expire" },
-                      }),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c("label", { attrs: { for: "card-num" } }, [
-                        _vm._v("CCV*"),
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        attrs: {
-                          type: "text",
-                          required: "",
-                          minlength: "3",
-                          maxlength: "3",
-                          name: "security",
-                        },
-                      }),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "btns" }, [
-                    _c("button", { attrs: { type: "submit" } }, [
-                      _vm._v("Acquista"),
-                    ]),
-                  ]),
-                ]),
-              ]),
-            ]),
+          _c("li", { staticClass: "cart_item_badge" }, [
+            _vm._v("\r\n          Coca-Cola\r\n        "),
           ]),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "cart" }, [
-          _c("div", { staticClass: "dentro-cart" }, [
-            _c("h4", [_vm._v("Carrello")]),
-            _vm._v(" "),
-            _c("p", { staticClass: "prod" }, [_vm._v("1x Pizza margherita")]),
-            _vm._v(" "),
-            _c("hr"),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v("Subtotale"),
-              _c("span", { staticClass: "sp-1" }, [_vm._v("7,00 €")]),
+        _c("ul", { staticClass: "cart_items_list" }, [
+          _c("li", { staticClass: "cart_item_list" }, [
+            _c("span", { staticClass: "cart_item_list_quantity" }, [
+              _vm._v("1x"),
             ]),
             _vm._v(" "),
-            _c("p", [
-              _vm._v("Supplemento"),
-              _c("span", { staticClass: "sp-2" }, [_vm._v("2,00 €")]),
+            _c("span", { staticClass: "cart_item_list_name" }, [
+              _vm._v("Pizza"),
             ]),
             _vm._v(" "),
-            _c("p", [
-              _vm._v("Spese di consegna"),
-              _c("span", { staticClass: "sp-3" }, [_vm._v("4,90 €")]),
-            ]),
-            _vm._v(" "),
-            _c("h5", { staticClass: "part-blu" }, [
-              _vm._v("La consegna è gratuita se spendi almeno 10 €"),
-            ]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v("Spese di servizio"),
-              _c("span", { staticClass: "sp-4" }, [_vm._v("0,49 €")]),
-            ]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v("Mancia per il rider"),
-              _c("span", { staticClass: "sp-5" }, [_vm._v("0,00 €")]),
-            ]),
-            _vm._v(" "),
-            _c("hr"),
-            _vm._v(" "),
-            _c("h4", [
-              _vm._v("Totale"),
-              _c("span", { staticClass: "sp-6" }, [_vm._v("14,39 €")]),
-            ]),
+            _c("span", { staticClass: "cart_item_list_price" }, [_vm._v("€")]),
           ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "cart_item_list" }, [
+            _c("span", { staticClass: "cart_item_list_quantity" }, [
+              _vm._v("1x"),
+            ]),
+            _vm._v(" "),
+            _c("span", { staticClass: "cart_item_list_name" }, [
+              _vm._v("Coca-Cola"),
+            ]),
+            _vm._v(" "),
+            _c("span", { staticClass: "cart_item_list_price" }, [_vm._v("€")]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "total" }, [
+          _c("h2", [_vm._v("\r\n          Totale\r\n        ")]),
+          _vm._v(" "),
+          _c("h2", [_vm._v("\r\n          €\r\n        ")]),
         ]),
       ]),
     ])
@@ -25339,7 +25211,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\matti\Laravel\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\casa\OneDrive\Desktop\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })
