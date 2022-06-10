@@ -6751,9 +6751,10 @@ var render = function () {
                   attrs: {
                     placeholder: "Es: Mario, Giulia...",
                     type: "text",
-                    minlength: "3",
-                    name: "client_name",
                     required: "",
+                    minlength: "2",
+                    maxlength: "80",
+                    name: "client_name",
                   },
                   domProps: { value: _vm.form.name },
                   on: {
@@ -6784,9 +6785,10 @@ var render = function () {
                   attrs: {
                     placeholder: "Es: Maldini, Mattarella...",
                     type: "text",
-                    minlenght: "3",
-                    name: "client_surname",
                     required: "",
+                    minlenght: "2",
+                    maxlength: "80",
+                    name: "client_surname",
                   },
                   domProps: { value: _vm.form.surname },
                   on: {
@@ -6817,9 +6819,10 @@ var render = function () {
                   attrs: {
                     placeholder: "Es: Via Garibaldi 95",
                     type: "text",
-                    minlength: "5",
-                    name: "client_address",
                     required: "",
+                    minlength: "10",
+                    maxlength: "120",
+                    name: "client_address",
                   },
                   domProps: { value: _vm.form.address },
                   on: {
@@ -6850,9 +6853,10 @@ var render = function () {
                   attrs: {
                     placeholder: "Es: Roma",
                     type: "text",
-                    minlength: "3",
-                    name: "client_city",
                     required: "",
+                    minlength: "3",
+                    maxlength: "80",
+                    name: "client_city",
                   },
                   domProps: { value: _vm.form.city },
                   on: {
@@ -6880,11 +6884,12 @@ var render = function () {
                     },
                   ],
                   attrs: {
-                    placeholder: "Es: Roma",
-                    type: "text",
-                    minlength: "3",
-                    name: "client_phone",
+                    placeholder: "Es: 3829964715",
                     required: "",
+                    type: "text",
+                    minlength: "9",
+                    maxlength: "20",
+                    name: "client_phone",
                   },
                   domProps: { value: _vm.form.phone },
                   on: {
@@ -6912,11 +6917,10 @@ var render = function () {
                     },
                   ],
                   attrs: {
-                    placeholder: "Es: Roma",
-                    type: "text",
-                    minlength: "3",
-                    name: "client_email",
+                    placeholder: "Es: maldini@gmail.com",
+                    type: "email",
                     required: "",
+                    name: "client_email",
                   },
                   domProps: { value: _vm.form.email },
                   on: {

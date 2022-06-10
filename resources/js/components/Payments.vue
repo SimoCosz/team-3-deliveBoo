@@ -11,25 +11,25 @@
         </h3>
         <div class="personal_info_input">
           <label for="client_name">Nome*</label>
-          <input v-model="form.name" placeholder="Es: Mario, Giulia..." type="text" minlength="3" name="client_name" required>
+          <input v-model="form.name" placeholder="Es: Mario, Giulia..." type="text" required minlength="2" maxlength="80" name="client_name">
         </div>
         <div class="personal_info_input">
           <label for="client_surname">Cognome*</label>
-          <input v-model="form.surname" placeholder="Es: Maldini, Mattarella..." type="text" minlenght="3" name="client_surname" required>
+          <input v-model="form.surname" placeholder="Es: Maldini, Mattarella..." type="text" required minlenght="2" maxlength="80" name="client_surname">
         </div>
         <div class="personal_info_input">
           <label for="client_address">Indirizzo*</label>
-          <input v-model="form.address" placeholder="Es: Via Garibaldi 95" type="text" minlength="5" name="client_address" required>
+          <input v-model="form.address" placeholder="Es: Via Garibaldi 95" type="text" required minlength="10" maxlength="120" name="client_address">
         </div>
         <div class="personal_info_input">
           <label for="client_città">Città*</label>
-          <input v-model="form.city" placeholder="Es: Roma" type="text" minlength="3" name="client_city" required>
+          <input v-model="form.city" placeholder="Es: Roma" type="text" required minlength="3" maxlength="80" name="client_city">
         </div><div class="personal_info_input">
           <label for="client_telefono">Telefono*</label>
-          <input v-model="form.phone" placeholder="Es: Roma" type="text" minlength="3" name="client_phone" required>
+          <input v-model="form.phone" placeholder="Es: 3829964715" required type="text" minlength="9" maxlength="20" name="client_phone">
         </div><div class="personal_info_input">
           <label for="client_email">E-mail*</label>
-          <input v-model="form.email" placeholder="Es: Roma" type="text" minlength="3" name="client_email" required>
+          <input v-model="form.email" placeholder="Es: maldini@gmail.com" type="email" required name="client_email">
         </div>
       </form>
       <button @click="onSubmit()" type="submit">
