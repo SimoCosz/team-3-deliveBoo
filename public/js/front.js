@@ -25443,7 +25443,11 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = __webpack_require__(/*! C:\Users\matti\Laravel\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
+=======
+module.exports = __webpack_require__(/*! /Users/simonecoszach/Developer/Boolean/Corso/Projects/team-3-deliveBoo-1/resources/js/front.js */"./resources/js/front.js");
+>>>>>>> 53932ae63b92396681e6c186de6a341ade955d52
 =======
 module.exports = __webpack_require__(/*! /Users/simonecoszach/Developer/Boolean/Corso/Projects/team-3-deliveBoo-1/resources/js/front.js */"./resources/js/front.js");
 >>>>>>> 53932ae63b92396681e6c186de6a341ade955d52
