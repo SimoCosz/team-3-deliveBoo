@@ -15,18 +15,18 @@
             Dati personali
           </h3>
           <!-- NAME -->
-          <validationProvider class="personal_info_input" name="client_name" rules="required|alpha_spaces|max:30|min:2" v-slot="{ errors }">
+          <validationProvider class="personal_info_input_alert" name="client_name" rules="required|alpha_spaces|max:30|min:2" v-slot="{ errors }">
             <div class="personal_info_input">
               <label for="client_name">Nome*</label>
               <input v-model="form.client_name" placeholder="Es: Mario, Giulia..." type="text" minlength="3" name="client_name" required>
             </div>
-            <div :class="errors.length ? 'border border-danger rounded-lg focus:border-red-500 px-2 py-1' : '' ">
+            <div :class="errors.length ? 'w-100 text-center align-self-end border border-danger rounded-lg focus:border-red-500 px-2 py-1' : '' ">
               {{ errors[0] }}
             </div>
           </validationProvider>
 
           <!-- SURNAME -->
-          <validationProvider class="personal_info_input" name="client_name" rules="required|alpha_spaces|max:30|min:2" v-slot="{ errors }">
+          <validationProvider class="personal_info_input_alert" name="client_name" rules="required|alpha_spaces|max:30|min:2" v-slot="{ errors }">
             <div class="personal_info_input">
               <label for="client_surname">Cognome*</label>
               <input v-model="form.client_surname" placeholder="Es: Maldini, Mattarella..." type="text" minlenght="3" name="client_surname" required>
@@ -36,7 +36,7 @@
             </div>
           </validationProvider>
           <!-- ADDRESS -->
-          <validationProvider class="personal_info_input" name="client_name" rules="required|alpha_spaces|max:30|min:2" v-slot="{ errors }">
+          <validationProvider class="personal_info_input_alert" name="client_name" rules="required|alpha_spaces|max:30|min:2" v-slot="{ errors }">
             <div class="personal_info_input">
               <label for="client_address">Indirizzo*</label>
               <input v-model="form.client_address" placeholder="Es: Via Garibaldi 95" type="text" minlength="5" name="client_address" required>
@@ -46,7 +46,7 @@
             </div>
           </validationProvider>
           <!-- CITY -->
-          <validationProvider class="personal_info_input" name="client_name" rules="required|alpha_spaces|max:30|min:2" v-slot="{ errors }">
+          <validationProvider class="personal_info_input_alert" name="client_name" rules="required|alpha_spaces|max:30|min:2" v-slot="{ errors }">
             <div class="personal_info_input">
               <label for="client_città">Città*</label>
               <input v-model="form.client_city" placeholder="Es: Roma" type="text" minlength="3" name="client_city" required>
@@ -56,7 +56,7 @@
             </div>
           </validationProvider>
           <!-- PHONE -->
-          <validationProvider class="personal_info_input" name="client_name" rules="required|alpha_spaces|max:30|min:2" v-slot="{ errors }">
+          <validationProvider class="personal_info_input_alert" name="client_name" rules="required|alpha_spaces|max:30|min:2" v-slot="{ errors }">
             <div class="personal_info_input">
               <label for="client_telefono">Telefono*</label>
               <input v-model="form.client_phone" placeholder="Es: Roma" type="text" minlength="3" name="client_phone" required>
@@ -66,7 +66,7 @@
             </div>
           </validationProvider>
           <!-- MAIL -->
-          <validationProvider class="personal_info_input" name="client_name" rules="required|alpha_spaces|max:30|min:2" v-slot="{ errors }">
+          <validationProvider class="personal_info_input_alert" name="client_name" rules="required|alpha_spaces|max:30|min:2" v-slot="{ errors }">
             <div class="personal_info_input">
               <label for="client_email">E-mail*</label>
               <input v-model="form.client_email" placeholder="Es: Roma" type="text" minlength="3" name="client_email" required>
@@ -225,9 +225,8 @@ export default {
       justify-content: center;
       // border: 2px solid red;
       gap: 5px;
-      padding-bottom: 10px;
       text-align: left;
-      width: 90%;
+      width: 100%;
       label{
         width: 30%;
         height: 100%;
@@ -289,6 +288,16 @@ export default {
       width: 80%;
       height: 45%;
     }
+  }
+  .personal_info_input_alert{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // border: 2px solid red;
+    gap: 5px;
+    text-align: left;
+    width: 90%;
   }
   .cart_summary{
     // border: 3px solid purple;

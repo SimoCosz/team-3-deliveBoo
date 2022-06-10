@@ -22,9 +22,23 @@ export default {
     height: 400px;
     width: 700px;
   }
+  @media (max-width: 780px){
+    .logo{
+      width: 270px;
+      height: 160px;
+    }
+    .btn-back{
+      font-size: 14px;
+    }
+  }
 
   .btn-back{
     font-size: 20px;
+  }
+  @media (max-width: 780px){
+    .btn-back{
+      font-size: 14px;
+    }
   }
 }
 
