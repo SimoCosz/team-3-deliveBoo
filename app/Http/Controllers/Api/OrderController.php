@@ -49,7 +49,7 @@ class OrderController extends Controller
             $order->fill($value);
             $order->total_price = $total;
             $order->user_id = $userId;
-            $order->payment_state = true;
+            $order->payment_state = false;
 
             $order->save();
             return [$value, $total];

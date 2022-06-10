@@ -41,7 +41,7 @@
         </div>
       </form>
       <button @click="onSubmit()" type="submit">
-        Vai al pagamento
+       <a href="/checkout">Vai al pagamento</a>
       </button>
     </div>
 
@@ -126,6 +126,7 @@ export default {
 
     onSubmit() {
       this.sendForm();
+      this.sendToCheckout();
       // console.log(this.form);
     },
   },  

@@ -45,4 +45,4 @@ Route::middleware('auth')
     });
 
     Route::get('checkout','CheckoutController@checkout');
-    Route::post('checkout','CheckoutController@afterpayment')->name('checkout.credit-card');
+    Route::post('checkout/state','CheckoutController@afterpayment')->name('checkout.credit-card');

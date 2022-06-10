@@ -2864,7 +2864,8 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     onSubmit: function onSubmit() {
-      this.sendForm(); // console.log(this.form);
+      this.sendForm();
+      this.sendToCheckout(); // console.log(this.form);
     }
   },
   mounted: function mounted() {
@@ -6955,7 +6956,11 @@ var render = function () {
                 },
               },
             },
-            [_vm._v("\n        Vai al pagamento\n      ")]
+            [
+              _c("a", { attrs: { href: "/checkout" } }, [
+                _vm._v("Vai al pagamento"),
+              ]),
+            ]
           ),
         ]),
         _vm._v(" "),
