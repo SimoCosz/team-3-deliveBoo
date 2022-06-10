@@ -9,7 +9,7 @@
     <p><span class="underline"> Telefono Cliente</span>: {{$order->client_phone}}</p>
     <p><span class="underline"> Email Cliente</span>: {{$order->client_email}}</p>
     <p><span class="underline"> Totale</span>: {{$order->total_price}} &euro;</p>
-    @if($order->payment_stat == 1)
+    @if($order->payment_state === 1)
       <p>Pagamento effettuato</p>
     @else
       <p>Pagamento alla consegna.</p>

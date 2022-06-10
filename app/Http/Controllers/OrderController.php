@@ -29,9 +29,20 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $data = $request->all();
+        $total = $data['total'];
+
+        foreach ($data as  $value) {
+            $order = new Order();
+            $order->fill($value);
+            $order->total_price = $total;
+            $order->payment_state = true;
+
+            $order->save();
+            return [$value, $total];
+        }
     }
 
     /**
