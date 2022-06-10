@@ -71,4 +71,10 @@ class User extends Authenticatable
         return $this->belongsToMany('App\Category')
         ->withPivot('category_id', 'user_id');
     }
+
+    public function orders(){
+        return $this->hasMany('App\Order');
+    }
+
+    
 }
