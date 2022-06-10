@@ -2834,6 +2834,23 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -6778,13 +6795,13 @@ var render = function () {
               },
             },
             [
-              _c("h3", [_vm._v("\n          Dati personali\n        ")]),
+              _c("h3", [_vm._v("\r\n          Dati personali\r\n        ")]),
               _vm._v(" "),
               _c("div", { staticClass: "personal_info_input" }, [
                 _c("label", { attrs: { for: "client_name" } }, [
                   _vm._v("Nome*"),
                 ]),
-                _vm._v(" "),
+                _vm._v("\r\n<<<<<<< HEAD\r\n          "),
                 _c("input", {
                   directives: [
                     {
@@ -6811,13 +6828,44 @@ var render = function () {
                     },
                   },
                 }),
+                _vm._v("\r\n=======\r\n          "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.form.name,
+                      expression: "form.name",
+                    },
+                  ],
+                  attrs: {
+                    placeholder: "Es: Mario, Giulia...",
+                    type: "text",
+                    required: "",
+                    minlength: "2",
+                    maxlength: "80",
+                    name: "client_name",
+                  },
+                  domProps: { value: _vm.form.name },
+                  on: {
+                    input: function ($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.form, "name", $event.target.value)
+                    },
+                  },
+                }),
+                _vm._v(
+                  "\r\n>>>>>>> Implemento-validazioni-e-collegamento-dati-carrello-nel-payment\r\n        "
+                ),
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "personal_info_input" }, [
                 _c("label", { attrs: { for: "client_surname" } }, [
                   _vm._v("Cognome*"),
                 ]),
-                _vm._v(" "),
+                _vm._v("\r\n<<<<<<< HEAD\r\n          "),
                 _c("input", {
                   directives: [
                     {
@@ -6844,13 +6892,44 @@ var render = function () {
                     },
                   },
                 }),
+                _vm._v("\r\n=======\r\n          "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.form.surname,
+                      expression: "form.surname",
+                    },
+                  ],
+                  attrs: {
+                    placeholder: "Es: Maldini, Mattarella...",
+                    type: "text",
+                    required: "",
+                    minlenght: "2",
+                    maxlength: "80",
+                    name: "client_surname",
+                  },
+                  domProps: { value: _vm.form.surname },
+                  on: {
+                    input: function ($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.form, "surname", $event.target.value)
+                    },
+                  },
+                }),
+                _vm._v(
+                  "\r\n>>>>>>> Implemento-validazioni-e-collegamento-dati-carrello-nel-payment\r\n        "
+                ),
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "personal_info_input" }, [
                 _c("label", { attrs: { for: "client_address" } }, [
                   _vm._v("Indirizzo*"),
                 ]),
-                _vm._v(" "),
+                _vm._v("\r\n<<<<<<< HEAD\r\n          "),
                 _c("input", {
                   directives: [
                     {
@@ -6877,13 +6956,44 @@ var render = function () {
                     },
                   },
                 }),
+                _vm._v("\r\n=======\r\n          "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.form.address,
+                      expression: "form.address",
+                    },
+                  ],
+                  attrs: {
+                    placeholder: "Es: Via Garibaldi 95",
+                    type: "text",
+                    required: "",
+                    minlength: "10",
+                    maxlength: "120",
+                    name: "client_address",
+                  },
+                  domProps: { value: _vm.form.address },
+                  on: {
+                    input: function ($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.form, "address", $event.target.value)
+                    },
+                  },
+                }),
+                _vm._v(
+                  "\r\n>>>>>>> Implemento-validazioni-e-collegamento-dati-carrello-nel-payment\r\n        "
+                ),
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "personal_info_input" }, [
                 _c("label", { attrs: { for: "client_città" } }, [
                   _vm._v("Città*"),
                 ]),
-                _vm._v(" "),
+                _vm._v("\r\n<<<<<<< HEAD\r\n          "),
                 _c("input", {
                   directives: [
                     {
@@ -6976,6 +7086,101 @@ var render = function () {
                     },
                   },
                 }),
+                _vm._v("\r\n=======\r\n          "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.form.city,
+                      expression: "form.city",
+                    },
+                  ],
+                  attrs: {
+                    placeholder: "Es: Roma",
+                    type: "text",
+                    required: "",
+                    minlength: "3",
+                    maxlength: "80",
+                    name: "client_city",
+                  },
+                  domProps: { value: _vm.form.city },
+                  on: {
+                    input: function ($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.form, "city", $event.target.value)
+                    },
+                  },
+                }),
+              ]),
+              _c("div", { staticClass: "personal_info_input" }, [
+                _c("label", { attrs: { for: "client_telefono" } }, [
+                  _vm._v("Telefono*"),
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.form.phone,
+                      expression: "form.phone",
+                    },
+                  ],
+                  attrs: {
+                    placeholder: "Es: 3829964715",
+                    required: "",
+                    type: "text",
+                    minlength: "9",
+                    maxlength: "20",
+                    name: "client_phone",
+                  },
+                  domProps: { value: _vm.form.phone },
+                  on: {
+                    input: function ($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.form, "phone", $event.target.value)
+                    },
+                  },
+                }),
+              ]),
+              _c("div", { staticClass: "personal_info_input" }, [
+                _c("label", { attrs: { for: "client_email" } }, [
+                  _vm._v("E-mail*"),
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.form.email,
+                      expression: "form.email",
+                    },
+                  ],
+                  attrs: {
+                    placeholder: "Es: maldini@gmail.com",
+                    type: "email",
+                    required: "",
+                    name: "client_email",
+                  },
+                  domProps: { value: _vm.form.email },
+                  on: {
+                    input: function ($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.form, "email", $event.target.value)
+                    },
+                  },
+                }),
+                _vm._v(
+                  "\r\n>>>>>>> Implemento-validazioni-e-collegamento-dati-carrello-nel-payment\r\n        "
+                ),
               ]),
             ]
           ),
@@ -7004,41 +7209,47 @@ var render = function () {
           [
             _c("h1", [_vm._v("Riepilogo dell'ordine")]),
             _vm._v(" "),
+            _vm._m(0),
+            _vm._v(" "),
             _vm._l(_vm.localCartShop, function (cart) {
               return _c(
                 "ul",
-                { key: cart.id, staticClass: "cart_items_badges" },
+                { key: cart.id, staticClass: "cart_items_list" },
                 [
-                  _c("li", { staticClass: "cart_item_badge" }, [
-                    _vm._v("\n          " + _vm._s(cart.name) + "\n        "),
+                  _c("li", { staticClass: "cart_item_list" }, [
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "cart_item_list_quantity d-flex align-items-center justify-content-center",
+                      },
+                      [_vm._v(_vm._s(cart["quantity"]) + " x")]
+                    ),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "cart_item_list_name" }, [
+                      _vm._v(_vm._s(cart["name"])),
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "cart_item_list_price d-flex align-items-center justify-content-center",
+                      },
+                      [_vm._v(_vm._s(cart["price"] * cart["quantity"]) + "€")]
+                    ),
                   ]),
                 ]
               )
             }),
             _vm._v(" "),
-            _c("ul", { staticClass: "cart_items_list" }, [
-              _vm._m(0),
-              _vm._v(" "),
-              _c("li", { staticClass: "cart_item_list" }, [
-                _c("span", { staticClass: "cart_item_list_quantity" }, [
-                  _vm._v(_vm._s(_vm.localCartShop["quantity"]) + " x"),
-                ]),
-                _vm._v(" "),
-                _c("span", { staticClass: "cart_item_list_name" }, [
-                  _vm._v("Coca-Cola"),
-                ]),
-                _vm._v(" "),
-                _c("span", { staticClass: "cart_item_list_price" }, [
-                  _vm._v("€"),
-                ]),
-              ]),
-            ]),
-            _vm._v(" "),
             _c("div", { staticClass: "total" }, [
-              _c("h2", [_vm._v("\n          Totale\n        ")]),
+              _c("h2", [_vm._v("\r\n          Totale\r\n        ")]),
               _vm._v(" "),
               _c("h2", { attrs: { model: _vm.form.totalPrice } }, [
-                _vm._v("\n          " + _vm._s(_vm.totalPrice) + "€\n        "),
+                _vm._v(
+                  "\r\n          " + _vm._s(_vm.totalPrice) + "€\r\n        "
+                ),
               ]),
             ]),
           ],
@@ -7056,12 +7267,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "cart_item_list" }, [
-      _c("span", { staticClass: "cart_item_list_quantity" }, [_vm._v("1x")]),
-      _vm._v(" "),
-      _c("span", { staticClass: "cart_item_list_name" }, [_vm._v("Pizza")]),
-      _vm._v(" "),
-      _c("span", { staticClass: "cart_item_list_price" }, [_vm._v("€")]),
+    return _c("ul", { staticClass: "cart_items_badges" }, [
+      _c("li", { staticClass: "cart_item_badge" }, [
+        _vm._v("\r\n          boh\r\n        "),
+      ]),
     ])
   },
 ]
@@ -23528,7 +23737,7 @@ module.exports = "/images/ios-badge.png?2566899de2c3663e0250b22d1a160aa7";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/jumbo-bkg-svg2.svg?ece43a1805da9c592135a025ae78cca8";
+module.exports = "/images/jumbo-bkg-svg2.svg?8de0ecba9e591757458db25a3d02de10";
 
 /***/ }),
 
@@ -25455,15 +25664,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-module.exports = __webpack_require__(/*! C:\Users\matti\Laravel\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
-=======
-module.exports = __webpack_require__(/*! /Users/simonecoszach/Developer/Boolean/Corso/Projects/team-3-deliveBoo-1/resources/js/front.js */"./resources/js/front.js");
->>>>>>> 53932ae63b92396681e6c186de6a341ade955d52
-=======
-module.exports = __webpack_require__(/*! /Users/simonecoszach/Developer/Boolean/Corso/Projects/team-3-deliveBoo-1/resources/js/front.js */"./resources/js/front.js");
->>>>>>> 53932ae63b92396681e6c186de6a341ade955d52
+module.exports = __webpack_require__(/*! C:\Users\black\Project\Hub Project\LARAVEL\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })

@@ -47,21 +47,16 @@
 
     <div class="cart_summary">
       <h1>Riepilogo dell'ordine</h1>
-      <ul  v-for="cart in localCartShop" :key="cart.id" class="cart_items_badges">
+      <ul class="cart_items_badges">
         <li class="cart_item_badge">
-          {{cart.name}}
+          boh
         </li>
       </ul>
-      <ul class="cart_items_list">
+      <ul v-for="cart in localCartShop" :key="cart.id" class="cart_items_list">
         <li class="cart_item_list">
-          <span class="cart_item_list_quantity">1x</span>
-          <span class="cart_item_list_name">Pizza</span>
-          <span class="cart_item_list_price">€</span>
-        </li>
-        <li class="cart_item_list">
-          <span class="cart_item_list_quantity">{{localCartShop['quantity']}} x</span>
-          <span class="cart_item_list_name">Coca-Cola</span>
-          <span class="cart_item_list_price">€</span>
+          <span class="cart_item_list_quantity d-flex align-items-center justify-content-center">{{cart['quantity']}} x</span>
+          <span class="cart_item_list_name">{{cart['name']}}</span>
+          <span class="cart_item_list_price d-flex align-items-center justify-content-center">{{(cart['price']*cart['quantity'])}}€</span>
         </li>
       </ul>
       <div class="total">
