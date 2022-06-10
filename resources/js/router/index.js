@@ -12,7 +12,7 @@ import CategoriesIndex from '../components/CategoriesIndex.vue'
 import Payments from '../components/Payments.vue'
 import SearchPage from '../Pages/SearchPage.vue'
 import MenuPage from '../Pages/MenuPage.vue'
-
+import Succesfull from '../Pages/SuccesfullPayment.vue'
 const routes = [
   {
     path: '/',
@@ -45,8 +45,9 @@ const routes = [
     component: MenuPage
   },
   {
-    path: '/*',
-    component: NotFound
+    path: '/payments/succesfull',
+    name: 'payments.succesfull',
+    component: Succesfull
   },
   {
     path: '/*',
