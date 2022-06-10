@@ -3,7 +3,7 @@
     <!-- LISTA PRODOTTI -->
     <div class="my-container">
       <div class="products-cart row">
-        <div class="col-12 col-lg-8">
+        <div class="col-12 col-xl-8">
           <div class="row">
             <div class="product col-12 col-md-6" v-for="product in user.products" :key="product.id" @click="showModal(product)">
               <div class="d-flex align-items-center single-card p-3">
@@ -21,27 +21,28 @@
         </div>
 
         <!-- CART -->
-        <div class="col-12 col-lg-4">
+        <div class="col-12 col-xl-4">
           <div class="cart p-3">
             <div class="text-dark" v-if="localCartShop">
               <h4 class="font-weight-bold">I tuoi ordini</h4>
               <div v-for="(element, i) in localCartShop" :key="element.id">
-                <div class="d-flex justify-content-between align-items-center">
-                  <span>{{element.name}}</span>
-                  <div class="d-flex justify-content-center align-items-center">
-                    <i class="bi bi-dash-circle primary-color" v-if="element.quantity > 1" @click="decrementCartQuantity(element)"></i>
-                    <span class="quantity px-2">{{element.quantity}}</span>
-                    <i class="bi bi-plus-circle primary-color" @click="incrementCartQuantity(element)"></i>
-                    <span class="px-2">{{element.price*element.quantity}} &#8364;</span>
-                    <button class="btn btn-danger d-flex align-items-center justify-content-center p-1" @click="deleteDish(i)">
-                      <i class="bi bi-trash d-flex align-items-center"></i>
-                    </button>
+                <div class="align-items-center py-2 box-sh">
+                  <div class="row justify-content-between ">
+                    <span class="cart_product-name col-sm-6">{{element.name}}</span>
+                    <div class="d-flex align-items-center justify-content-end col-sm-6">
+                      <i class="bi bi-dash-circle primary-color" v-if="element.quantity > 1" @click="decrementCartQuantity(element)"></i>
+                      <span class="quantity px-2">{{element.quantity}}</span>
+                      <i class="bi bi-plus-circle primary-color" @click="incrementCartQuantity(element)"></i>
+                      <span class="px-2">{{element.price*element.quantity}} &#8364;</span>
+                      <button class="btn btn-danger d-flex align-items-center justify-content-center p-1" @click="deleteDish(i)">
+                        <i class="bi bi-trash d-flex align-items-center"></i>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
               <div class="total d-flex justify-content-between align-items-center mt-3">
-                <h5 class="font-weight-bold">Totale:</h5>
-                <h5 class="font-weight-bold">{{totalPrice}}&#8364;</h5>
+                <h5 class="font-weight-bold">Totale:<span class="px-2">{{totalPrice}}&#8364;</span></h5>
                 <button  @click="deleteAll()" class="btn btn-danger product-list-trash d-flex flex-column justify-content-center align-items-center mb-3">
                   <i class="bi bi-trash trash-all"></i>
                   <p class="trash-name">Svuota Carrello</p>
@@ -294,6 +295,9 @@ mounted() {
         top:30px;
         box-shadow: 0 1px 4px rgb(0 0 0 / 20%);
         color:#abadad;
+        .cart_product-name{
+          max-width: 200px;
+        }
         .btn-secondary{
           background-color: #e2e5e5;
           border:none;
@@ -305,16 +309,6 @@ mounted() {
           &::before{
             line-height: 23.05px;
             cursor:pointer;
-          }
-        }
-        .trash-single-element{
-          color: red;
-          border: 2px solid red;
-          border-radius: 3px;
-          font-size: 16px;
-          &:hover{
-            color:white;
-            background-color: red ;
           }
         }
       }
@@ -431,11 +425,6 @@ mounted() {
 }
 
 
-.total{
-  border-top: 1px solid lightgrey;
-  padding-top: 10px;
-}
-
 .trash-all{
   font-size: 16px;
 }
@@ -443,4 +432,7 @@ mounted() {
   margin-bottom: 0;
 }
 
+.box-sh{
+  border-bottom: 2px solid rgb(223, 223, 223);
+}
 </style>

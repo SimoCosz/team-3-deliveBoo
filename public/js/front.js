@@ -3013,6 +3013,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
@@ -3894,7 +3895,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".btn-bg-color[data-v-438ffe92] {\n  background-color: #00C2B3;\n  color: white;\n  font-weight: 700;\n}\n.r-color[data-v-438ffe92] {\n  color: #FB5058;\n}\n.primary-color[data-v-438ffe92] {\n  color: #14AA9E !important;\n}\n.products[data-v-438ffe92] {\n  background-color: #F9FAFA;\n}\n.products .my-container[data-v-438ffe92] {\n  max-width: 1500px;\n  margin: 0 auto;\n  padding: 0 20px;\n}\n.products .my-container .products-cart .cart[data-v-438ffe92] {\n  width: 100%;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 30px;\n  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\n  color: #abadad;\n}\n.products .my-container .products-cart .cart .btn-secondary[data-v-438ffe92] {\n  background-color: #e2e5e5;\n  border: none;\n  font-weight: bold;\n  color: #abadad;\n  cursor: not-allowed;\n}\n.products .my-container .products-cart .cart .bi.bi-dash-circle[data-v-438ffe92]::before, .products .my-container .products-cart .cart .bi.bi-plus-circle[data-v-438ffe92]::before {\n  line-height: 23.05px;\n  cursor: pointer;\n}\n.products .my-container .products-cart .cart .trash-single-element[data-v-438ffe92] {\n  color: red;\n  border: 2px solid red;\n  border-radius: 3px;\n  font-size: 16px;\n}\n.products .my-container .products-cart .cart .trash-single-element[data-v-438ffe92]:hover {\n  color: white;\n  background-color: red;\n}\n.products .my-container .products-cart .row .product .single-card[data-v-438ffe92] {\n  border-radius: 5px;\n  margin-bottom: 30px;\n  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\n  gap: 20px;\n  min-height: 150px;\n  cursor: pointer;\n}\n.products .my-container .products-cart .row .product .single-card[data-v-438ffe92]:hover {\n  box-shadow: 0px 17px 43px -5px lightgrey;\n}\n.products .my-container .products-cart .row .product .single-card .product_info .title[data-v-438ffe92] {\n  font-weight: bold;\n  margin-bottom: 0.2rem;\n}\n.products .my-container .products-cart .row .product .single-card .product_info .description[data-v-438ffe92] {\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  -webkit-box-orient: vertical;\n  overflow: hidden;\n  font-size: 0.9rem;\n  color: #585c5c;\n  margin-bottom: 0.2rem;\n}\n.products .my-container .products-cart .row .product .single-card .image[data-v-438ffe92] {\n  width: 100px;\n  height: 100px;\n  background-size: cover;\n  background-position: center;\n  border-radius: 4px;\n}\n.my-modal[data-v-438ffe92] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  content: \"\";\n  background-color: rgba(0, 0, 0, 0.5);\n  overflow: hidden;\n}\n.my-modal .product-show[data-v-438ffe92] {\n  background-color: white;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  max-width: 500px;\n  max-height: 800px;\n}\n.my-modal .product-show .product-show_img[data-v-438ffe92] {\n  max-width: 100%;\n}\n.my-modal .product-show .product-show-add[data-v-438ffe92] {\n  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\n}\n.my-modal .product-show .product-show-add .m-gap[data-v-438ffe92] {\n  gap: 20px;\n}\n.my-modal .product-show .product-show-add .bi.bi-plus-circle[data-v-438ffe92], .my-modal .product-show .product-show-add .bi.bi-dash-circle[data-v-438ffe92] {\n  color: #00CCBC;\n  font-size: 24px;\n  font-weight: bold;\n}\n.my-modal .product-show .product-show-add .bi.bi-plus-circle[data-v-438ffe92]::before, .my-modal .product-show .product-show-add .bi.bi-dash-circle[data-v-438ffe92]::before {\n  cursor: pointer;\n  line-height: 48px;\n}\n.my-modal .product-show .product-show-add .quantity[data-v-438ffe92] {\n  font-size: 30px;\n}\n.my-modal .product-show .bi.bi-x[data-v-438ffe92] {\n  color: #00CCBC;\n  position: absolute;\n  top: -10px;\n  right: 10px;\n  font-size: 40px;\n  font-weight: bold;\n}\n.my-modal .product-show .bi.bi-x[data-v-438ffe92]::before {\n  background: white;\n  border-radius: 100%;\n  cursor: pointer;\n}\n.slide-fade-enter-active[data-v-438ffe92], .slide-fade-leave-active[data-v-438ffe92] {\n  transition: opacity 0.1s ease;\n}\n.slide-fade-enter-from[data-v-438ffe92],\n.slide-fade-leave-to[data-v-438ffe92] {\n  opacity: 0;\n}\n.total[data-v-438ffe92] {\n  border-top: 1px solid lightgrey;\n  padding-top: 10px;\n}\n.trash-all[data-v-438ffe92] {\n  font-size: 16px;\n}\n.trash-name[data-v-438ffe92] {\n  margin-bottom: 0;\n}", ""]);
+exports.push([module.i, ".btn-bg-color[data-v-438ffe92] {\n  background-color: #00C2B3;\n  color: white;\n  font-weight: 700;\n}\n.r-color[data-v-438ffe92] {\n  color: #FB5058;\n}\n.primary-color[data-v-438ffe92] {\n  color: #14AA9E !important;\n}\n.products[data-v-438ffe92] {\n  background-color: #F9FAFA;\n}\n.products .my-container[data-v-438ffe92] {\n  max-width: 1500px;\n  margin: 0 auto;\n  padding: 0 20px;\n}\n.products .my-container .products-cart .cart[data-v-438ffe92] {\n  width: 100%;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 30px;\n  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\n  color: #abadad;\n}\n.products .my-container .products-cart .cart .cart_product-name[data-v-438ffe92] {\n  max-width: 200px;\n}\n.products .my-container .products-cart .cart .btn-secondary[data-v-438ffe92] {\n  background-color: #e2e5e5;\n  border: none;\n  font-weight: bold;\n  color: #abadad;\n  cursor: not-allowed;\n}\n.products .my-container .products-cart .cart .bi.bi-dash-circle[data-v-438ffe92]::before, .products .my-container .products-cart .cart .bi.bi-plus-circle[data-v-438ffe92]::before {\n  line-height: 23.05px;\n  cursor: pointer;\n}\n.products .my-container .products-cart .row .product .single-card[data-v-438ffe92] {\n  border-radius: 5px;\n  margin-bottom: 30px;\n  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\n  gap: 20px;\n  min-height: 150px;\n  cursor: pointer;\n}\n.products .my-container .products-cart .row .product .single-card[data-v-438ffe92]:hover {\n  box-shadow: 0px 17px 43px -5px lightgrey;\n}\n.products .my-container .products-cart .row .product .single-card .product_info .title[data-v-438ffe92] {\n  font-weight: bold;\n  margin-bottom: 0.2rem;\n}\n.products .my-container .products-cart .row .product .single-card .product_info .description[data-v-438ffe92] {\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  -webkit-box-orient: vertical;\n  overflow: hidden;\n  font-size: 0.9rem;\n  color: #585c5c;\n  margin-bottom: 0.2rem;\n}\n.products .my-container .products-cart .row .product .single-card .image[data-v-438ffe92] {\n  width: 100px;\n  height: 100px;\n  background-size: cover;\n  background-position: center;\n  border-radius: 4px;\n}\n.my-modal[data-v-438ffe92] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  content: \"\";\n  background-color: rgba(0, 0, 0, 0.5);\n  overflow: hidden;\n}\n.my-modal .product-show[data-v-438ffe92] {\n  background-color: white;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  max-width: 500px;\n  max-height: 800px;\n}\n.my-modal .product-show .product-show_img[data-v-438ffe92] {\n  max-width: 100%;\n}\n.my-modal .product-show .product-show-add[data-v-438ffe92] {\n  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\n}\n.my-modal .product-show .product-show-add .m-gap[data-v-438ffe92] {\n  gap: 20px;\n}\n.my-modal .product-show .product-show-add .bi.bi-plus-circle[data-v-438ffe92], .my-modal .product-show .product-show-add .bi.bi-dash-circle[data-v-438ffe92] {\n  color: #00CCBC;\n  font-size: 24px;\n  font-weight: bold;\n}\n.my-modal .product-show .product-show-add .bi.bi-plus-circle[data-v-438ffe92]::before, .my-modal .product-show .product-show-add .bi.bi-dash-circle[data-v-438ffe92]::before {\n  cursor: pointer;\n  line-height: 48px;\n}\n.my-modal .product-show .product-show-add .quantity[data-v-438ffe92] {\n  font-size: 30px;\n}\n.my-modal .product-show .bi.bi-x[data-v-438ffe92] {\n  color: #00CCBC;\n  position: absolute;\n  top: -10px;\n  right: 10px;\n  font-size: 40px;\n  font-weight: bold;\n}\n.my-modal .product-show .bi.bi-x[data-v-438ffe92]::before {\n  background: white;\n  border-radius: 100%;\n  cursor: pointer;\n}\n.slide-fade-enter-active[data-v-438ffe92], .slide-fade-leave-active[data-v-438ffe92] {\n  transition: opacity 0.1s ease;\n}\n.slide-fade-enter-from[data-v-438ffe92],\n.slide-fade-leave-to[data-v-438ffe92] {\n  opacity: 0;\n}\n.trash-all[data-v-438ffe92] {\n  font-size: 16px;\n}\n.trash-name[data-v-438ffe92] {\n  margin-bottom: 0;\n}\n.box-sh[data-v-438ffe92] {\n  border-bottom: 2px solid rgb(223, 223, 223);\n}", ""]);
 
 // exports
 
@@ -7234,7 +7235,7 @@ var render = function () {
     [
       _c("div", { staticClass: "my-container" }, [
         _c("div", { staticClass: "products-cart row" }, [
-          _c("div", { staticClass: "col-12 col-lg-8" }, [
+          _c("div", { staticClass: "col-12 col-xl-8" }, [
             _c(
               "div",
               { staticClass: "row" },
@@ -7289,7 +7290,7 @@ var render = function () {
             ),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-12 col-lg-4" }, [
+          _c("div", { staticClass: "col-12 col-xl-4" }, [
             _c("div", { staticClass: "cart p-3" }, [
               _vm.localCartShop
                 ? _c(
@@ -7304,73 +7305,85 @@ var render = function () {
                         return _c("div", { key: element.id }, [
                           _c(
                             "div",
-                            {
-                              staticClass:
-                                "d-flex justify-content-between align-items-center",
-                            },
+                            { staticClass: "align-items-center py-2 box-sh" },
                             [
-                              _c("span", [_vm._v(_vm._s(element.name))]),
-                              _vm._v(" "),
                               _c(
                                 "div",
-                                {
-                                  staticClass:
-                                    "d-flex justify-content-center align-items-center",
-                                },
+                                { staticClass: "row justify-content-between " },
                                 [
-                                  element.quantity > 1
-                                    ? _c("i", {
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass: "cart_product-name col-sm-6",
+                                    },
+                                    [_vm._v(_vm._s(element.name))]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "d-flex align-items-center justify-content-end col-sm-6",
+                                    },
+                                    [
+                                      element.quantity > 1
+                                        ? _c("i", {
+                                            staticClass:
+                                              "bi bi-dash-circle primary-color",
+                                            on: {
+                                              click: function ($event) {
+                                                return _vm.decrementCartQuantity(
+                                                  element
+                                                )
+                                              },
+                                            },
+                                          })
+                                        : _vm._e(),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        { staticClass: "quantity px-2" },
+                                        [_vm._v(_vm._s(element.quantity))]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("i", {
                                         staticClass:
-                                          "bi bi-dash-circle primary-color",
+                                          "bi bi-plus-circle primary-color",
                                         on: {
                                           click: function ($event) {
-                                            return _vm.decrementCartQuantity(
+                                            return _vm.incrementCartQuantity(
                                               element
                                             )
                                           },
                                         },
-                                      })
-                                    : _vm._e(),
-                                  _vm._v(" "),
-                                  _c("span", { staticClass: "quantity px-2" }, [
-                                    _vm._v(_vm._s(element.quantity)),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("i", {
-                                    staticClass:
-                                      "bi bi-plus-circle primary-color",
-                                    on: {
-                                      click: function ($event) {
-                                        return _vm.incrementCartQuantity(
-                                          element
-                                        )
-                                      },
-                                    },
-                                  }),
-                                  _vm._v(" "),
-                                  _c("span", { staticClass: "px-2" }, [
-                                    _vm._v(
-                                      _vm._s(element.price * element.quantity) +
-                                        " €"
-                                    ),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "button",
-                                    {
-                                      staticClass:
-                                        "btn btn-danger d-flex align-items-center justify-content-center p-1",
-                                      on: {
-                                        click: function ($event) {
-                                          return _vm.deleteDish(i)
-                                        },
-                                      },
-                                    },
-                                    [
-                                      _c("i", {
-                                        staticClass:
-                                          "bi bi-trash d-flex align-items-center",
                                       }),
+                                      _vm._v(" "),
+                                      _c("span", { staticClass: "px-2" }, [
+                                        _vm._v(
+                                          _vm._s(
+                                            element.price * element.quantity
+                                          ) + " €"
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "button",
+                                        {
+                                          staticClass:
+                                            "btn btn-danger d-flex align-items-center justify-content-center p-1",
+                                          on: {
+                                            click: function ($event) {
+                                              return _vm.deleteDish(i)
+                                            },
+                                          },
+                                        },
+                                        [
+                                          _c("i", {
+                                            staticClass:
+                                              "bi bi-trash d-flex align-items-center",
+                                          }),
+                                        ]
+                                      ),
                                     ]
                                   ),
                                 ]
@@ -7389,10 +7402,9 @@ var render = function () {
                         [
                           _c("h5", { staticClass: "font-weight-bold" }, [
                             _vm._v("Totale:"),
-                          ]),
-                          _vm._v(" "),
-                          _c("h5", { staticClass: "font-weight-bold" }, [
-                            _vm._v(_vm._s(_vm.totalPrice) + "€"),
+                            _c("span", { staticClass: "px-2" }, [
+                              _vm._v(_vm._s(_vm.totalPrice) + "€"),
+                            ]),
                           ]),
                           _vm._v(" "),
                           _c(
