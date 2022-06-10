@@ -267,6 +267,7 @@ export default {
     }
     button{
       font-weight: 700;
+      margin-top: 20px;
       color: white;
       font-size: 14px;
       padding: 5px;
@@ -346,6 +347,7 @@ export default {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
+      margin-bottom: 0;
       .cart_item_list{
         // border: 1px solid blue;
         width: 100%;
