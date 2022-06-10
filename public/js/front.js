@@ -2820,6 +2820,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2833,12 +2836,12 @@ __webpack_require__.r(__webpack_exports__);
       totalPrice: JSON.parse(localStorage.getItem('total')),
       localCartShop: JSON.parse(localStorage.getItem('cartShop')),
       form: {
-        name: '',
-        surname: '',
-        address: '',
-        city: '',
-        phone: '',
-        email: ''
+        client_name: '',
+        client_surname: '',
+        client_address: '',
+        client_city: '',
+        client_phone: '',
+        client_email: ''
       }
     };
   },
@@ -2846,8 +2849,9 @@ __webpack_require__.r(__webpack_exports__);
     sendForm: function sendForm() {
       axios.post('/api/orders', {
         form: this.form,
-        total: localStorage.getItem('total'),
-        cart: this.localCartShop
+        cartUserId: this.localCartShop[0].user_id,
+        total: localStorage.getItem('total') // cart: this.localCartShop
+
       }).then(function (res) {
         console.log(res);
       });
@@ -2860,9 +2864,11 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     onSubmit: function onSubmit() {
-      this.sendForm();
-      console.log(this.form);
+      this.sendForm(); // console.log(this.form);
     }
+  },
+  mounted: function mounted() {
+    console.log(this.localCartShop[0].user_id);
   }
 });
 
@@ -6749,8 +6755,8 @@ var render = function () {
                     {
                       name: "model",
                       rawName: "v-model",
-                      value: _vm.form.name,
-                      expression: "form.name",
+                      value: _vm.form.client_name,
+                      expression: "form.client_name",
                     },
                   ],
                   attrs: {
@@ -6760,13 +6766,13 @@ var render = function () {
                     name: "client_name",
                     required: "",
                   },
-                  domProps: { value: _vm.form.name },
+                  domProps: { value: _vm.form.client_name },
                   on: {
                     input: function ($event) {
                       if ($event.target.composing) {
                         return
                       }
-                      _vm.$set(_vm.form, "name", $event.target.value)
+                      _vm.$set(_vm.form, "client_name", $event.target.value)
                     },
                   },
                 }),
@@ -6782,8 +6788,8 @@ var render = function () {
                     {
                       name: "model",
                       rawName: "v-model",
-                      value: _vm.form.surname,
-                      expression: "form.surname",
+                      value: _vm.form.client_surname,
+                      expression: "form.client_surname",
                     },
                   ],
                   attrs: {
@@ -6793,13 +6799,13 @@ var render = function () {
                     name: "client_surname",
                     required: "",
                   },
-                  domProps: { value: _vm.form.surname },
+                  domProps: { value: _vm.form.client_surname },
                   on: {
                     input: function ($event) {
                       if ($event.target.composing) {
                         return
                       }
-                      _vm.$set(_vm.form, "surname", $event.target.value)
+                      _vm.$set(_vm.form, "client_surname", $event.target.value)
                     },
                   },
                 }),
@@ -6815,8 +6821,8 @@ var render = function () {
                     {
                       name: "model",
                       rawName: "v-model",
-                      value: _vm.form.address,
-                      expression: "form.address",
+                      value: _vm.form.client_address,
+                      expression: "form.client_address",
                     },
                   ],
                   attrs: {
@@ -6826,13 +6832,13 @@ var render = function () {
                     name: "client_address",
                     required: "",
                   },
-                  domProps: { value: _vm.form.address },
+                  domProps: { value: _vm.form.client_address },
                   on: {
                     input: function ($event) {
                       if ($event.target.composing) {
                         return
                       }
-                      _vm.$set(_vm.form, "address", $event.target.value)
+                      _vm.$set(_vm.form, "client_address", $event.target.value)
                     },
                   },
                 }),
@@ -6848,8 +6854,8 @@ var render = function () {
                     {
                       name: "model",
                       rawName: "v-model",
-                      value: _vm.form.city,
-                      expression: "form.city",
+                      value: _vm.form.client_city,
+                      expression: "form.client_city",
                     },
                   ],
                   attrs: {
@@ -6859,17 +6865,18 @@ var render = function () {
                     name: "client_city",
                     required: "",
                   },
-                  domProps: { value: _vm.form.city },
+                  domProps: { value: _vm.form.client_city },
                   on: {
                     input: function ($event) {
                       if ($event.target.composing) {
                         return
                       }
-                      _vm.$set(_vm.form, "city", $event.target.value)
+                      _vm.$set(_vm.form, "client_city", $event.target.value)
                     },
                   },
                 }),
               ]),
+              _vm._v(" "),
               _c("div", { staticClass: "personal_info_input" }, [
                 _c("label", { attrs: { for: "client_telefono" } }, [
                   _vm._v("Telefono*"),
@@ -6880,8 +6887,8 @@ var render = function () {
                     {
                       name: "model",
                       rawName: "v-model",
-                      value: _vm.form.phone,
-                      expression: "form.phone",
+                      value: _vm.form.client_phone,
+                      expression: "form.client_phone",
                     },
                   ],
                   attrs: {
@@ -6891,17 +6898,18 @@ var render = function () {
                     name: "client_phone",
                     required: "",
                   },
-                  domProps: { value: _vm.form.phone },
+                  domProps: { value: _vm.form.client_phone },
                   on: {
                     input: function ($event) {
                       if ($event.target.composing) {
                         return
                       }
-                      _vm.$set(_vm.form, "phone", $event.target.value)
+                      _vm.$set(_vm.form, "client_phone", $event.target.value)
                     },
                   },
                 }),
               ]),
+              _vm._v(" "),
               _c("div", { staticClass: "personal_info_input" }, [
                 _c("label", { attrs: { for: "client_email" } }, [
                   _vm._v("E-mail*"),
@@ -6912,8 +6920,8 @@ var render = function () {
                     {
                       name: "model",
                       rawName: "v-model",
-                      value: _vm.form.email,
-                      expression: "form.email",
+                      value: _vm.form.client_email,
+                      expression: "form.client_email",
                     },
                   ],
                   attrs: {
@@ -6923,13 +6931,13 @@ var render = function () {
                     name: "client_email",
                     required: "",
                   },
-                  domProps: { value: _vm.form.email },
+                  domProps: { value: _vm.form.client_email },
                   on: {
                     input: function ($event) {
                       if ($event.target.composing) {
                         return
                       }
-                      _vm.$set(_vm.form, "email", $event.target.value)
+                      _vm.$set(_vm.form, "client_email", $event.target.value)
                     },
                   },
                 }),

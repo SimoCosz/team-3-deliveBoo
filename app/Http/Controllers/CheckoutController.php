@@ -8,15 +8,16 @@ class CheckoutController extends Controller
 {
     public function checkout(Request $request)
     {
-        // $data = $request->all();
-        // dd($data);
+        $data = $request->all();
+        $total = $data['total'];
+        // dd($request['total']);
         // $total = json_decode()
 
         
         // Enter Your Stripe Secret
         \Stripe\Stripe::setApiKey('sk_test_51L8iyqJtHFYmGwezjEbVAp83vQMMMp7mRbrAZy7iOERejvIJ9HsHtFfRZr7zkhk5vJMoKnQCsL4FZLFURKTrOXjF00bYb4xsLs');
         		
-		$amount = 100;
+		$amount = $total;
 		$amount *= 100;
         $amount = (int) $amount;
         
@@ -37,9 +38,4 @@ class CheckoutController extends Controller
     {
         echo 'Payment Has been Received';
     }
-
-    // public function store(Request $request){
-    //     $data = $request->all();
-        
-    // }
 }

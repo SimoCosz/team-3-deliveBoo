@@ -9,39 +9,42 @@
         <h3>
           Dati personali
         </h3>
+        <!-- NAME -->
         <div class="personal_info_input">
           <label for="client_name">Nome*</label>
-          <input v-model="form.name" placeholder="Es: Mario, Giulia..." type="text" minlength="3" name="client_name" required>
+          <input v-model="form.client_name" placeholder="Es: Mario, Giulia..." type="text" minlength="3" name="client_name" required>
         </div>
+        <!-- SURNAME -->
         <div class="personal_info_input">
           <label for="client_surname">Cognome*</label>
-          <input v-model="form.surname" placeholder="Es: Maldini, Mattarella..." type="text" minlenght="3" name="client_surname" required>
+          <input v-model="form.client_surname" placeholder="Es: Maldini, Mattarella..." type="text" minlenght="3" name="client_surname" required>
         </div>
+        <!-- ADDRESS -->
         <div class="personal_info_input">
           <label for="client_address">Indirizzo*</label>
-          <input v-model="form.address" placeholder="Es: Via Garibaldi 95" type="text" minlength="5" name="client_address" required>
+          <input v-model="form.client_address" placeholder="Es: Via Garibaldi 95" type="text" minlength="5" name="client_address" required>
         </div>
+        <!-- CITY -->
         <div class="personal_info_input">
           <label for="client_città">Città*</label>
-          <input v-model="form.city" placeholder="Es: Roma" type="text" minlength="3" name="client_city" required>
-        </div><div class="personal_info_input">
+          <input v-model="form.client_city" placeholder="Es: Roma" type="text" minlength="3" name="client_city" required>
+        </div>
+        <!-- PHONE -->
+        <div class="personal_info_input">
           <label for="client_telefono">Telefono*</label>
-          <input v-model="form.phone" placeholder="Es: Roma" type="text" minlength="3" name="client_phone" required>
-        </div><div class="personal_info_input">
+          <input v-model="form.client_phone" placeholder="Es: Roma" type="text" minlength="3" name="client_phone" required>
+        </div>
+        <!-- MAIL -->
+        <div class="personal_info_input">
           <label for="client_email">E-mail*</label>
-          <input v-model="form.email" placeholder="Es: Roma" type="text" minlength="3" name="client_email" required>
+          <input v-model="form.client_email" placeholder="Es: Roma" type="text" minlength="3" name="client_email" required>
         </div>
       </form>
       <button @click="onSubmit()" type="submit">
         Vai al pagamento
       </button>
     </div>
-<!-- 
 
-
-
-
-     -->
     <div class="cart_summary">
       <h1>Riepilogo dell'ordine</h1>
       <ul  v-for="cart in localCartShop" :key="cart.id" class="cart_items_badges">
@@ -89,12 +92,12 @@ export default {
       totalPrice: JSON.parse(localStorage.getItem('total')),
       localCartShop: JSON.parse(localStorage.getItem('cartShop')),
       form: {
-        name: '',
-        surname: '',
-        address: '',
-        city: '',
-        phone: '',
-        email: '',
+        client_name: '',
+        client_surname: '',
+        client_address: '',
+        client_city: '',
+        client_phone: '',
+        client_email: '',
       }
     };
   },
@@ -103,8 +106,9 @@ export default {
     sendForm() {
       axios.post('/api/orders', {
           form: this.form,
+          cartUserId: this.localCartShop[0].user_id,
           total: localStorage.getItem('total'),
-          cart: this.localCartShop
+          // cart: this.localCartShop
       })
       .then( res => {
           console.log(res);
@@ -122,9 +126,12 @@ export default {
 
     onSubmit() {
       this.sendForm();
-      console.log(this.form);
+      // console.log(this.form);
     },
-  }  
+  },  
+  mounted() {
+    console.log(this.localCartShop[0].user_id)
+  },
 };
 </script>
 
