@@ -3865,7 +3865,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".payment_section[data-v-04c873d0] {\n  padding: 50px 0px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  text-align: center;\n  -webkit-animation: slideUp-data-v-04c873d0 1500ms ease;\n          animation: slideUp-data-v-04c873d0 1500ms ease;\n}\n.payment_section .personal_info[data-v-04c873d0] {\n  width: 50%;\n  height: 98%;\n  padding: 20px 5px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  box-shadow: 0 15px 30px 1px grey;\n  border-radius: 15px;\n  border: 3px solid transparent;\n  position: relative;\n}\n.payment_section .personal_info h1[data-v-04c873d0], .payment_section .personal_info h2[data-v-04c873d0], .payment_section .personal_info h3[data-v-04c873d0], .payment_section .personal_info h4[data-v-04c873d0], .payment_section .personal_info h5[data-v-04c873d0] {\n  color: #007e8a;\n  font-weight: 800;\n}\n@media (max-width: 381px) {\n.payment_section .personal_info h1[data-v-04c873d0] {\n    font-size: 28px;\n}\n}\n@media (max-width: 381px) {\n.payment_section .personal_info h3[data-v-04c873d0] {\n    font-size: 24px;\n}\n}\n.payment_section .personal_info p[data-v-04c873d0] {\n  font-weight: 700;\n  padding-bottom: 10px;\n}\n@media (max-width: 768px) {\n.payment_section .personal_info p[data-v-04c873d0] {\n    padding-bottom: 0px;\n}\n}\n.payment_section .personal_info form[data-v-04c873d0] {\n  width: 80%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.payment_section .personal_info .personal_info_input[data-v-04c873d0] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 5px;\n  text-align: left;\n  width: 100%;\n}\n.payment_section .personal_info .personal_info_input label[data-v-04c873d0] {\n  width: 30%;\n  height: 100%;\n  text-transform: uppercase;\n  font-size: 16px;\n  color: #007e8a;\n  padding: 5px;\n}\n@media (max-width: 991px) {\n.payment_section .personal_info .personal_info_input label[data-v-04c873d0] {\n    font-size: 12px;\n}\n}\n@media (max-width: 381px) {\n.payment_section .personal_info .personal_info_input label[data-v-04c873d0] {\n    font-size: 10px;\n}\n}\n@media (max-width: 281px) {\n.payment_section .personal_info .personal_info_input label[data-v-04c873d0] {\n    font-size: 10px;\n    width: 50%;\n}\n}\n.payment_section .personal_info .personal_info_input input[data-v-04c873d0] {\n  border: 1px solid #e5e5e5;\n  border-radius: 5px;\n  width: 70%;\n  height: 100%;\n  padding: 5px;\n  font-size: 14px;\n  outline-color: #007e8a;\n}\n@media (max-width: 991px) {\n.payment_section .personal_info .personal_info_input input[data-v-04c873d0] {\n    font-size: 12px;\n}\n}\n@media (max-width: 381px) {\n.payment_section .personal_info .personal_info_input input[data-v-04c873d0] {\n    font-size: 10px;\n}\n}\n@media (max-width: 281px) {\n.payment_section .personal_info .personal_info_input input[data-v-04c873d0] {\n    font-size: 8px;\n    width: 50%;\n}\n}\n.payment_section .personal_info button[data-v-04c873d0] {\n  font-weight: 700;\n  margin-top: 20px;\n  color: white;\n  font-size: 14px;\n  padding: 5px;\n  background-color: #007e8a;\n  width: 150px;\n  border: none;\n  border-radius: 5px;\n  opacity: 0.8;\n}\n.payment_section .personal_info button[data-v-04c873d0]:hover {\n  transition: ease-in-out 0.5s;\n  opacity: 1;\n}\n@media (max-width: 991px) {\n.payment_section .personal_info button[data-v-04c873d0] {\n    bottom: 28.5%;\n    font-size: 12px;\n}\n}\n@media (max-width: 768px) {\n.payment_section .personal_info[data-v-04c873d0] {\n    width: 80%;\n    height: 45%;\n}\n}\n.payment_section .personal_info_input_alert[data-v-04c873d0] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  gap: 5px;\n  text-align: left;\n  width: 90%;\n}\n.payment_section .cart_summary[data-v-04c873d0] {\n  width: 40%;\n  height: 98%;\n  padding: 20px 5px;\n  box-shadow: 0 15px 30px 1px grey;\n  border-radius: 15px;\n  border: 3px solid transparent;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 10px;\n}\n.payment_section .cart_summary h1[data-v-04c873d0], .payment_section .cart_summary h2[data-v-04c873d0], .payment_section .cart_summary h3[data-v-04c873d0], .payment_section .cart_summary h5[data-v-04c873d0] {\n  color: #007e8a;\n  font-weight: 800;\n}\n@media (max-width: 381px) {\n.payment_section .cart_summary h1[data-v-04c873d0] {\n    font-size: 28px;\n}\n}\n.payment_section .cart_summary .cart_items_badges[data-v-04c873d0] {\n  margin: 0;\n  padding: 0;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  flex-wrap: wrap;\n  gap: 10px;\n  position: relative;\n}\n.payment_section .cart_summary .cart_items_badges .cart_item_badge[data-v-04c873d0] {\n  margin: 0;\n  padding: 0;\n  text-align: center;\n  background-color: #007e8a;\n  padding: 2px 7px;\n  color: white;\n  border-radius: 25px;\n}\n.payment_section .cart_summary .cart_items_list[data-v-04c873d0] {\n  width: 80%;\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n  margin-bottom: 0;\n}\n.payment_section .cart_summary .cart_items_list .cart_item_list[data-v-04c873d0] {\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n  padding: 0px 5px;\n  border: 1px solid #007e8a;\n  border-radius: 5px;\n  font-size: 16px;\n}\n@media (max-width: 381px) {\n.payment_section .cart_summary .cart_items_list .cart_item_list[data-v-04c873d0] {\n    font-size: 14px;\n}\n}\n.payment_section .cart_summary .cart_items_list .cart_item_list .cart_item_list_quantity[data-v-04c873d0] {\n  width: 8%;\n  text-align: left;\n}\n.payment_section .cart_summary .cart_items_list .cart_item_list .cart_item_list_name[data-v-04c873d0] {\n  width: 70%;\n  text-align: left;\n  border-left: 1px solid #007e8a;\n  border-right: 1px solid #007e8a;\n  padding-left: 5px;\n}\n.payment_section .cart_summary .cart_items_list .cart_item_list .cart_item_list_price[data-v-04c873d0] {\n  width: 15%;\n  text-align: right;\n}\n.payment_section .cart_summary .total[data-v-04c873d0] {\n  width: 80%;\n  display: flex;\n  justify-content: space-between;\n  color: #007e8a;\n}\n@media (max-width: 768px) {\n.payment_section .cart_summary[data-v-04c873d0] {\n    width: 80%;\n    height: 45%;\n}\n}\n@-webkit-keyframes slideUp-data-v-04c873d0 {\n0% {\n    transform: translateY(100%);\n    visibility: hidden;\n}\n25% {\n    visibility: hidden;\n}\n50% {\n    visibility: hidden;\n}\n60% {\n    visibility: hidden;\n}\n100% {\n    transform: translateY(0);\n}\n}\n@keyframes slideUp-data-v-04c873d0 {\n0% {\n    transform: translateY(100%);\n    visibility: hidden;\n}\n25% {\n    visibility: hidden;\n}\n50% {\n    visibility: hidden;\n}\n60% {\n    visibility: hidden;\n}\n100% {\n    transform: translateY(0);\n}\n}\n@media (max-width: 768px) {\n.payment_section[data-v-04c873d0] {\n    display: flex;\n    flex-direction: column;\n    gap: 40px;\n    align-items: center;\n}\n}", ""]);
+exports.push([module.i, ".payment_section[data-v-04c873d0] {\n  padding: 50px 0px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  text-align: center;\n  -webkit-animation: slideUp-data-v-04c873d0 1500ms ease;\n          animation: slideUp-data-v-04c873d0 1500ms ease;\n  min-height: calc(100vh - 75px);\n}\n.payment_section .personal_info[data-v-04c873d0] {\n  width: 50%;\n  height: 98%;\n  padding: 20px 5px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  box-shadow: 0 15px 30px 1px grey;\n  border-radius: 15px;\n  border: 3px solid transparent;\n  position: relative;\n}\n.payment_section .personal_info h1[data-v-04c873d0], .payment_section .personal_info h2[data-v-04c873d0], .payment_section .personal_info h3[data-v-04c873d0], .payment_section .personal_info h4[data-v-04c873d0], .payment_section .personal_info h5[data-v-04c873d0] {\n  color: #007e8a;\n  font-weight: 800;\n}\n@media (max-width: 381px) {\n.payment_section .personal_info h1[data-v-04c873d0] {\n    font-size: 28px;\n}\n}\n@media (max-width: 381px) {\n.payment_section .personal_info h3[data-v-04c873d0] {\n    font-size: 24px;\n}\n}\n.payment_section .personal_info p[data-v-04c873d0] {\n  font-weight: 700;\n  padding-bottom: 10px;\n}\n@media (max-width: 768px) {\n.payment_section .personal_info p[data-v-04c873d0] {\n    padding-bottom: 0px;\n}\n}\n.payment_section .personal_info form[data-v-04c873d0] {\n  width: 80%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.payment_section .personal_info .personal_info_input[data-v-04c873d0] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 5px;\n  text-align: left;\n  width: 100%;\n}\n.payment_section .personal_info .personal_info_input label[data-v-04c873d0] {\n  width: 30%;\n  height: 100%;\n  text-transform: uppercase;\n  font-size: 16px;\n  color: #007e8a;\n  padding: 5px;\n}\n@media (max-width: 991px) {\n.payment_section .personal_info .personal_info_input label[data-v-04c873d0] {\n    font-size: 12px;\n}\n}\n@media (max-width: 381px) {\n.payment_section .personal_info .personal_info_input label[data-v-04c873d0] {\n    font-size: 10px;\n}\n}\n@media (max-width: 281px) {\n.payment_section .personal_info .personal_info_input label[data-v-04c873d0] {\n    font-size: 10px;\n    width: 50%;\n}\n}\n.payment_section .personal_info .personal_info_input input[data-v-04c873d0] {\n  border: 1px solid #e5e5e5;\n  border-radius: 5px;\n  width: 70%;\n  height: 100%;\n  padding: 5px;\n  font-size: 14px;\n  outline-color: #007e8a;\n}\n@media (max-width: 991px) {\n.payment_section .personal_info .personal_info_input input[data-v-04c873d0] {\n    font-size: 12px;\n}\n}\n@media (max-width: 381px) {\n.payment_section .personal_info .personal_info_input input[data-v-04c873d0] {\n    font-size: 10px;\n}\n}\n@media (max-width: 281px) {\n.payment_section .personal_info .personal_info_input input[data-v-04c873d0] {\n    font-size: 8px;\n    width: 50%;\n}\n}\n.payment_section .personal_info button[data-v-04c873d0] {\n  font-weight: 700;\n  margin-top: 20px;\n  color: white;\n  font-size: 14px;\n  padding: 5px;\n  background-color: #007e8a;\n  width: 150px;\n  border: none;\n  border-radius: 5px;\n  opacity: 0.8;\n}\n.payment_section .personal_info button[data-v-04c873d0]:hover {\n  transition: ease-in-out 0.5s;\n  opacity: 1;\n}\n@media (max-width: 991px) {\n.payment_section .personal_info button[data-v-04c873d0] {\n    bottom: 28.5%;\n    font-size: 12px;\n}\n}\n@media (max-width: 768px) {\n.payment_section .personal_info[data-v-04c873d0] {\n    width: 80%;\n    height: 45%;\n}\n}\n.payment_section .personal_info_input_alert[data-v-04c873d0] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  gap: 5px;\n  text-align: left;\n  width: 90%;\n}\n.payment_section .personal-error[data-v-04c873d0] {\n  margin-top: -8px;\n  margin-bottom: 13px;\n}\n.payment_section .cart_summary[data-v-04c873d0] {\n  width: 40%;\n  height: 98%;\n  padding: 20px 5px;\n  box-shadow: 0 15px 30px 1px grey;\n  border-radius: 15px;\n  border: 3px solid transparent;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 10px;\n}\n.payment_section .cart_summary h1[data-v-04c873d0], .payment_section .cart_summary h2[data-v-04c873d0], .payment_section .cart_summary h3[data-v-04c873d0], .payment_section .cart_summary h5[data-v-04c873d0] {\n  color: #007e8a;\n  font-weight: 800;\n}\n@media (max-width: 381px) {\n.payment_section .cart_summary h1[data-v-04c873d0] {\n    font-size: 28px;\n}\n}\n.payment_section .cart_summary .cart_items_badges[data-v-04c873d0] {\n  margin: 0;\n  padding: 0;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  flex-wrap: wrap;\n  gap: 10px;\n  position: relative;\n}\n.payment_section .cart_summary .cart_items_badges .cart_item_badge[data-v-04c873d0] {\n  margin: 0;\n  padding: 0;\n  text-align: center;\n  background-color: #007e8a;\n  padding: 2px 7px;\n  color: white;\n  border-radius: 25px;\n}\n.payment_section .cart_summary .cart_items_list[data-v-04c873d0] {\n  width: 80%;\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n  margin-bottom: 0;\n}\n.payment_section .cart_summary .cart_items_list .cart_item_list[data-v-04c873d0] {\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n  padding: 0px 5px;\n  border: 1px solid #007e8a;\n  border-radius: 5px;\n  font-size: 16px;\n}\n@media (max-width: 381px) {\n.payment_section .cart_summary .cart_items_list .cart_item_list[data-v-04c873d0] {\n    font-size: 14px;\n}\n}\n.payment_section .cart_summary .cart_items_list .cart_item_list .cart_item_list_quantity[data-v-04c873d0] {\n  width: 8%;\n  text-align: left;\n}\n.payment_section .cart_summary .cart_items_list .cart_item_list .cart_item_list_name[data-v-04c873d0] {\n  width: 70%;\n  text-align: left;\n  border-left: 1px solid #007e8a;\n  border-right: 1px solid #007e8a;\n  padding-left: 5px;\n}\n.payment_section .cart_summary .cart_items_list .cart_item_list .cart_item_list_price[data-v-04c873d0] {\n  width: 15%;\n  text-align: right;\n}\n.payment_section .cart_summary .total[data-v-04c873d0] {\n  width: 80%;\n  display: flex;\n  justify-content: space-between;\n  color: #007e8a;\n}\n@media (max-width: 768px) {\n.payment_section .cart_summary[data-v-04c873d0] {\n    width: 80%;\n    height: 45%;\n}\n}\n@-webkit-keyframes slideUp-data-v-04c873d0 {\n0% {\n    transform: translateY(100%);\n    visibility: hidden;\n}\n25% {\n    visibility: hidden;\n}\n50% {\n    visibility: hidden;\n}\n60% {\n    visibility: hidden;\n}\n100% {\n    transform: translateY(0);\n}\n}\n@keyframes slideUp-data-v-04c873d0 {\n0% {\n    transform: translateY(100%);\n    visibility: hidden;\n}\n25% {\n    visibility: hidden;\n}\n50% {\n    visibility: hidden;\n}\n60% {\n    visibility: hidden;\n}\n100% {\n    transform: translateY(0);\n}\n}\n@media (max-width: 768px) {\n.payment_section[data-v-04c873d0] {\n    display: flex;\n    flex-direction: column;\n    gap: 40px;\n    align-items: center;\n}\n}", ""]);
 
 // exports
 
@@ -11726,7 +11726,7 @@ var render = function () {
                             staticClass: "personal_info_input_alert",
                             attrs: {
                               name: "client_name",
-                              rules: "required|alpha_spaces|max:30|min:2",
+                              rules: "required|alpha_spaces|max:30",
                             },
                             scopedSlots: _vm._u(
                               [
@@ -11758,7 +11758,6 @@ var render = function () {
                                               placeholder:
                                                 "Es: Mario, Giulia...",
                                               type: "text",
-                                              minlength: "3",
                                               name: "client_name",
                                               required: "",
                                             },
@@ -11785,7 +11784,7 @@ var render = function () {
                                         "div",
                                         {
                                           class: errors.length
-                                            ? "w-100 text-center align-self-end border border-danger rounded-lg focus:border-red-500 px-2 py-1"
+                                            ? "personal-error w-100 text-center text-danger align-self-end border border-danger rounded-lg focus:border-red-500 px-2 py-1"
                                             : "",
                                         },
                                         [
@@ -11809,7 +11808,7 @@ var render = function () {
                             staticClass: "personal_info_input_alert",
                             attrs: {
                               name: "client_name",
-                              rules: "required|alpha_spaces|max:30|min:2",
+                              rules: "required|alpha_spaces|max:30",
                             },
                             scopedSlots: _vm._u(
                               [
@@ -11842,9 +11841,8 @@ var render = function () {
                                             ],
                                             attrs: {
                                               placeholder:
-                                                "Es: Maldini, Mattarella...",
+                                                "Es: Rossi, Bianchi...",
                                               type: "text",
-                                              minlenght: "3",
                                               name: "client_surname",
                                               required: "",
                                             },
@@ -11871,7 +11869,7 @@ var render = function () {
                                         "div",
                                         {
                                           class: errors.length
-                                            ? "border border-danger rounded-lg focus:border-red-500 px-2 py-1"
+                                            ? "personal-error w-100 text-center text-danger align-self-end border border-danger rounded-lg focus:border-red-500 px-2 py-1"
                                             : "",
                                         },
                                         [
@@ -11895,7 +11893,7 @@ var render = function () {
                             staticClass: "personal_info_input_alert",
                             attrs: {
                               name: "client_name",
-                              rules: "required|alpha_spaces|max:30|min:2",
+                              rules: "required|max:30",
                             },
                             scopedSlots: _vm._u(
                               [
@@ -11930,7 +11928,6 @@ var render = function () {
                                               placeholder:
                                                 "Es: Via Garibaldi 95",
                                               type: "text",
-                                              minlength: "5",
                                               name: "client_address",
                                               required: "",
                                             },
@@ -11957,7 +11954,7 @@ var render = function () {
                                         "div",
                                         {
                                           class: errors.length
-                                            ? "border border-danger rounded-lg focus:border-red-500 px-2 py-1"
+                                            ? "personal-error w-100 text-center text-danger align-self-end border border-danger rounded-lg focus:border-red-500 px-2 py-1"
                                             : "",
                                         },
                                         [
@@ -11981,7 +11978,7 @@ var render = function () {
                             staticClass: "personal_info_input_alert",
                             attrs: {
                               name: "client_name",
-                              rules: "required|alpha_spaces|max:30|min:2",
+                              rules: "required|max:30",
                             },
                             scopedSlots: _vm._u(
                               [
@@ -12012,7 +12009,6 @@ var render = function () {
                                             attrs: {
                                               placeholder: "Es: Roma",
                                               type: "text",
-                                              minlength: "3",
                                               name: "client_city",
                                               required: "",
                                             },
@@ -12039,7 +12035,7 @@ var render = function () {
                                         "div",
                                         {
                                           class: errors.length
-                                            ? "border border-danger rounded-lg focus:border-red-500 px-2 py-1"
+                                            ? "personal-error w-100 text-center text-danger align-self-end border border-danger rounded-lg focus:border-red-500 px-2 py-1"
                                             : "",
                                         },
                                         [
@@ -12063,7 +12059,7 @@ var render = function () {
                             staticClass: "personal_info_input_alert",
                             attrs: {
                               name: "client_name",
-                              rules: "required|alpha_spaces|max:30|min:2",
+                              rules: "required|numeric|max:16",
                             },
                             scopedSlots: _vm._u(
                               [
@@ -12094,9 +12090,8 @@ var render = function () {
                                               },
                                             ],
                                             attrs: {
-                                              placeholder: "Es: Roma",
+                                              placeholder: "Es: 3925679474",
                                               type: "text",
-                                              minlength: "3",
                                               name: "client_phone",
                                               required: "",
                                             },
@@ -12123,7 +12118,7 @@ var render = function () {
                                         "div",
                                         {
                                           class: errors.length
-                                            ? "border border-danger rounded-lg focus:border-red-500 px-2 py-1"
+                                            ? "personal-error w-100 text-center text-danger align-self-end border border-danger rounded-lg focus:border-red-500 px-2 py-1"
                                             : "",
                                         },
                                         [
@@ -12147,7 +12142,7 @@ var render = function () {
                             staticClass: "personal_info_input_alert",
                             attrs: {
                               name: "client_name",
-                              rules: "required|alpha_spaces|max:30|min:2",
+                              rules: "required|email|max:50",
                             },
                             scopedSlots: _vm._u(
                               [
@@ -12176,9 +12171,9 @@ var render = function () {
                                               },
                                             ],
                                             attrs: {
-                                              placeholder: "Es: Roma",
+                                              placeholder:
+                                                "Es: rossi@gmail.com",
                                               type: "text",
-                                              minlength: "3",
                                               name: "client_email",
                                               required: "",
                                             },
@@ -12205,7 +12200,7 @@ var render = function () {
                                         "div",
                                         {
                                           class: errors.length
-                                            ? "border border-danger rounded-lg focus:border-red-500 px-2 py-1"
+                                            ? "personal-error w-100 text-center text-danger align-self-end border border-danger rounded-lg focus:border-red-500 px-2 py-1"
                                             : "",
                                         },
                                         [
@@ -12259,8 +12254,6 @@ var render = function () {
           [
             _c("h1", [_vm._v("Riepilogo dell'ordine")]),
             _vm._v(" "),
-            _vm._m(0),
-            _vm._v(" "),
             _vm._l(_vm.localCartShop, function (cart) {
               return _c(
                 "ul",
@@ -12312,18 +12305,7 @@ var render = function () {
     1
   )
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "cart_items_badges" }, [
-      _c("li", { staticClass: "cart_item_badge" }, [
-        _vm._v("\r\n          boh\r\n        "),
-      ]),
-    ])
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
