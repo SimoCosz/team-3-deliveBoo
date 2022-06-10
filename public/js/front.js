@@ -6960,17 +6960,27 @@ var render = function () {
                 { key: cart.id, staticClass: "cart_items_list" },
                 [
                   _c("li", { staticClass: "cart_item_list" }, [
-                    _c("span", { staticClass: "cart_item_list_quantity" }, [
-                      _vm._v(_vm._s(cart["quantity"]) + " x"),
-                    ]),
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "cart_item_list_quantity d-flex align-items-center justify-content-center",
+                      },
+                      [_vm._v(_vm._s(cart["quantity"]) + " x")]
+                    ),
                     _vm._v(" "),
                     _c("span", { staticClass: "cart_item_list_name" }, [
                       _vm._v(_vm._s(cart["name"])),
                     ]),
                     _vm._v(" "),
-                    _c("span", { staticClass: "cart_item_list_price" }, [
-                      _vm._v(_vm._s(cart["price"] * cart["quantity"]) + "€"),
-                    ]),
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "cart_item_list_price d-flex align-items-center justify-content-center",
+                      },
+                      [_vm._v(_vm._s(cart["price"] * cart["quantity"]) + "€")]
+                    ),
                   ]),
                 ]
               )

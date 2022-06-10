@@ -51,9 +51,9 @@
       </ul>
       <ul v-for="cart in localCartShop" :key="cart.id" class="cart_items_list">
         <li class="cart_item_list">
-          <span class="cart_item_list_quantity">{{cart['quantity']}} x</span>
+          <span class="cart_item_list_quantity d-flex align-items-center justify-content-center">{{cart['quantity']}} x</span>
           <span class="cart_item_list_name">{{cart['name']}}</span>
-          <span class="cart_item_list_price">{{(cart['price']*cart['quantity'])}}€</span>
+          <span class="cart_item_list_price d-flex align-items-center justify-content-center">{{(cart['price']*cart['quantity'])}}€</span>
         </li>
       </ul>
       <div class="total">
