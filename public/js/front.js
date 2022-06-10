@@ -2551,29 +2551,16 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       dropdown1: false,
-      localCartShop: JSON.parse(localStorage.getItem('cartShop')),
-      totalPrice: 0
+      // localCartShop: JSON.parse(localStorage.getItem('cartShop')),
+      totalPrice: JSON.parse(localStorage.getItem('total'))
     };
   },
   methods: {
     dropdown: function dropdown() {
       this.dropdown1 = !this.dropdown1;
-    },
-    totalPriceFunction: function totalPriceFunction() {
-      var elementTotPrice = 0;
-
-      for (var index = 0; index < this.localCartShop.length; index++) {
-        elementTotPrice = this.localCartShop[index].price * this.localCartShop[index].quantity;
-        this.totalPrice += elementTotPrice;
-      }
-
-      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); // window.location.reload();
-
-      return this.totalPrice;
     }
   },
-  mounted: function mounted() {
-    this.totalPriceFunction(); // console.log(this.localCartShop[1]);
+  mounted: function mounted() {// console.log(this.localCartShop[1]);
   }
 });
 
@@ -2843,6 +2830,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2852,18 +2840,40 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      title: "payments"
+      title: "payments",
+      totalPrice: JSON.parse(localStorage.getItem('total')),
+      localCartShop: JSON.parse(localStorage.getItem('cartShop')),
+      form: {
+        name: '',
+        surname: '',
+        address: '',
+        city: '',
+        phone: '',
+        email: ''
+      }
     };
   },
   methods: {
-    currentDate: function currentDate() {
-      var date = new Date();
-      console.log(date);
-      return date;
+    sendForm: function sendForm() {
+      axios.post('/api/orders', {
+        form: this.form,
+        total: localStorage.getItem('total'),
+        cart: this.localCartShop
+      }).then(function (res) {
+        console.log(res);
+      });
+    },
+    sendToCheckout: function sendToCheckout() {
+      axios.post('/checkout', {
+        total: localStorage.getItem('total')
+      }).then(function (res) {
+        console.log(res);
+      });
+    },
+    onSubmit: function onSubmit() {
+      this.sendForm();
+      console.log(this.form);
     }
-  },
-  mounted: function mounted() {
-    this.currentDate();
   }
 });
 
@@ -2878,6 +2888,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 //
@@ -2970,6 +2982,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 //
 //
 //
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     user: Object
@@ -2989,7 +3002,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       totalPrice: 0,
       csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
       // Cart shop del local storage
-      localCartShop: JSON.parse(localStorage.getItem('cartShop'))
+      localCartShop: JSON.parse(localStorage.getItem('cartShop')),
+      totalCart: localStorage.setItem('total', this.totalPrice)
     };
   },
   methods: {
@@ -3006,7 +3020,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         this.totalPrice += elementTotPrice;
       }
 
-      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); // window.location.reload();
+      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
+      localStorage.setItem('total', this.totalPrice); // window.location.reload();
 
       return this.totalPrice;
     },
@@ -3033,24 +3048,29 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     deleteDish: function deleteDish(el) {
       this.localCartShop.splice(el, 1);
       this.totalPriceFunction();
-      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); // window.location.reload();
+      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
+      localStorage.setItem('total', this.totalPrice); // window.location.reload();
     },
     deleteAll: function deleteAll() {
       this.localCartShop = null;
+      this.totalCart = 0;
       localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
+      localStorage.setItem('total', this.totalPrice);
       window.location.reload();
     },
     // Per aumentare o diminuire le quantità nel carrello
     incrementCartQuantity: function incrementCartQuantity(el) {
       this.localCartShop[el.quantity++];
       this.totalPriceFunction();
-      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); // window.location.reload();
+      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
+      localStorage.setItem('total', this.totalPrice); // window.location.reload();
     },
     decrementCartQuantity: function decrementCartQuantity(el) {
       // if(this.localCartShop[el.quantity] >= 1) {
       this.localCartShop[el.quantity--];
       this.totalPriceFunction();
-      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); // window.location.reload();
+      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
+      localStorage.setItem('total', this.totalPrice); // window.location.reload();
       // }
     },
     // Per aumentare o diminuire le quantità nella finestra del prodotto
@@ -3083,6 +3103,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         if (JSON.parse(localStorage.getItem('cartShop')) === null) {
           this.cartShop.push(plate);
           localStorage.setItem('cartShop', JSON.stringify(this.cartShop));
+          localStorage.setItem('total', this.totalPrice);
           window.location.reload();
         } else {
           if (plateObject.user_id == this.localCartShop[0].user_id) {
@@ -3097,6 +3118,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
             this.cartShop.push(plate);
             window.location.reload();
             localStorage.setItem('cartShop', JSON.stringify(this.cartShop));
+            localStorage.setItem('total', this.totalPrice);
           } else {
             alert('Non puoi aggiungere i piatti di altri ristoranti. Svuota prima il carrello');
           }
@@ -3108,9 +3130,9 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
   },
   mounted: function mounted() {
     this.fetchRestaurantInfo();
-    this.totalPriceFunction(); // console.log(this.localCartShop[1]);
-
-    console.log(this.user);
+    this.totalPriceFunction();
+    this.sendData(); // console.log(this.localCartShop[1]);
+    // console.log(this.user);
   }
 });
 
@@ -3803,7 +3825,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".payment_section[data-v-04c873d0] {\n  padding: 50px 0px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  text-align: center;\n  -webkit-animation: slideUp-data-v-04c873d0 1500ms ease;\n          animation: slideUp-data-v-04c873d0 1500ms ease;\n}\n.payment_section .personal_info[data-v-04c873d0] {\n  width: 50%;\n  height: 98%;\n  padding: 20px 5px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  box-shadow: 0 15px 30px 1px grey;\n  border-radius: 15px;\n  border: 3px solid transparent;\n  position: relative;\n}\n.payment_section .personal_info[data-v-04c873d0]:hover {\n  border: 3px solid #007e8a;\n}\n.payment_section .personal_info h1[data-v-04c873d0], .payment_section .personal_info h2[data-v-04c873d0], .payment_section .personal_info h3[data-v-04c873d0], .payment_section .personal_info h4[data-v-04c873d0], .payment_section .personal_info h5[data-v-04c873d0] {\n  color: #007e8a;\n  font-weight: 800;\n}\n@media (max-width: 381px) {\n.payment_section .personal_info h1[data-v-04c873d0] {\n    font-size: 28px;\n}\n}\n@media (max-width: 381px) {\n.payment_section .personal_info h3[data-v-04c873d0] {\n    font-size: 24px;\n}\n}\n.payment_section .personal_info p[data-v-04c873d0] {\n  font-weight: 700;\n  padding-bottom: 10px;\n}\n@media (max-width: 768px) {\n.payment_section .personal_info p[data-v-04c873d0] {\n    padding-bottom: 0px;\n}\n}\n.payment_section .personal_info form[data-v-04c873d0] {\n  width: 80%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.payment_section .personal_info .personal_info_input[data-v-04c873d0] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 5px;\n  padding-bottom: 10px;\n  text-align: left;\n  width: 90%;\n}\n.payment_section .personal_info .personal_info_input span[data-v-04c873d0] {\n  width: 30%;\n  height: 100%;\n  text-transform: uppercase;\n  font-size: 16px;\n  color: #007e8a;\n  padding: 5px;\n}\n@media (max-width: 991px) {\n.payment_section .personal_info .personal_info_input span[data-v-04c873d0] {\n    font-size: 12px;\n}\n}\n@media (max-width: 381px) {\n.payment_section .personal_info .personal_info_input span[data-v-04c873d0] {\n    font-size: 10px;\n}\n}\n@media (max-width: 281px) {\n.payment_section .personal_info .personal_info_input span[data-v-04c873d0] {\n    font-size: 10px;\n    width: 50%;\n}\n}\n.payment_section .personal_info .personal_info_input input[data-v-04c873d0] {\n  border: 1px solid #e5e5e5;\n  border-radius: 5px;\n  width: 70%;\n  height: 100%;\n  padding: 5px;\n  font-size: 14px;\n  outline-color: #007e8a;\n}\n@media (max-width: 991px) {\n.payment_section .personal_info .personal_info_input input[data-v-04c873d0] {\n    font-size: 12px;\n}\n}\n@media (max-width: 381px) {\n.payment_section .personal_info .personal_info_input input[data-v-04c873d0] {\n    font-size: 10px;\n}\n}\n@media (max-width: 281px) {\n.payment_section .personal_info .personal_info_input input[data-v-04c873d0] {\n    font-size: 8px;\n    width: 50%;\n}\n}\n.payment_section .personal_info button[data-v-04c873d0] {\n  font-weight: 700;\n  color: white;\n  font-size: 14px;\n  padding: 5px;\n  background-color: #007e8a;\n  width: 150px;\n  border: none;\n  border-radius: 5px;\n  opacity: 0.8;\n}\n.payment_section .personal_info button[data-v-04c873d0]:hover {\n  transition: ease-in-out 0.5s;\n  opacity: 1;\n}\n@media (max-width: 991px) {\n.payment_section .personal_info button[data-v-04c873d0] {\n    bottom: 28.5%;\n    font-size: 12px;\n}\n}\n@media (max-width: 768px) {\n.payment_section .personal_info[data-v-04c873d0] {\n    width: 80%;\n    height: 45%;\n}\n}\n.payment_section .cart_summary[data-v-04c873d0] {\n  width: 40%;\n  height: 98%;\n  padding: 20px 5px;\n  box-shadow: 0 15px 30px 1px grey;\n  border-radius: 15px;\n  border: 3px solid transparent;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 10px;\n}\n.payment_section .cart_summary[data-v-04c873d0]:hover {\n  border: 3px solid #007e8a;\n}\n.payment_section .cart_summary h1[data-v-04c873d0], .payment_section .cart_summary h2[data-v-04c873d0], .payment_section .cart_summary h3[data-v-04c873d0], .payment_section .cart_summary h5[data-v-04c873d0] {\n  color: #007e8a;\n  font-weight: 800;\n}\n@media (max-width: 381px) {\n.payment_section .cart_summary h1[data-v-04c873d0] {\n    font-size: 28px;\n}\n}\n.payment_section .cart_summary .cart_items_badges[data-v-04c873d0] {\n  margin: 0;\n  padding: 0;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  flex-wrap: wrap;\n  gap: 10px;\n  position: relative;\n}\n.payment_section .cart_summary .cart_items_badges .cart_item_badge[data-v-04c873d0] {\n  margin: 0;\n  padding: 0;\n  text-align: center;\n  background-color: #007e8a;\n  padding: 2px 7px;\n  color: white;\n  border-radius: 25px;\n}\n.payment_section .cart_summary .cart_items_list[data-v-04c873d0] {\n  width: 80%;\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n}\n.payment_section .cart_summary .cart_items_list .cart_item_list[data-v-04c873d0] {\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n  padding: 0px 5px;\n  border: 1px solid #007e8a;\n  border-radius: 5px;\n  font-size: 16px;\n}\n@media (max-width: 381px) {\n.payment_section .cart_summary .cart_items_list .cart_item_list[data-v-04c873d0] {\n    font-size: 14px;\n}\n}\n.payment_section .cart_summary .cart_items_list .cart_item_list .cart_item_list_quantity[data-v-04c873d0] {\n  width: 8%;\n  text-align: left;\n}\n.payment_section .cart_summary .cart_items_list .cart_item_list .cart_item_list_name[data-v-04c873d0] {\n  width: 70%;\n  text-align: left;\n  border-left: 1px solid #007e8a;\n  border-right: 1px solid #007e8a;\n  padding-left: 5px;\n}\n.payment_section .cart_summary .cart_items_list .cart_item_list .cart_item_list_price[data-v-04c873d0] {\n  width: 15%;\n  text-align: right;\n}\n.payment_section .cart_summary .total[data-v-04c873d0] {\n  width: 80%;\n  display: flex;\n  justify-content: space-between;\n  color: #007e8a;\n}\n@media (max-width: 768px) {\n.payment_section .cart_summary[data-v-04c873d0] {\n    width: 80%;\n    height: 45%;\n}\n}\n@-webkit-keyframes slideUp-data-v-04c873d0 {\n0% {\n    transform: translateY(100%);\n    visibility: hidden;\n}\n25% {\n    visibility: hidden;\n}\n50% {\n    visibility: hidden;\n}\n60% {\n    visibility: hidden;\n}\n100% {\n    transform: translateY(0);\n}\n}\n@keyframes slideUp-data-v-04c873d0 {\n0% {\n    transform: translateY(100%);\n    visibility: hidden;\n}\n25% {\n    visibility: hidden;\n}\n50% {\n    visibility: hidden;\n}\n60% {\n    visibility: hidden;\n}\n100% {\n    transform: translateY(0);\n}\n}\n@media (max-width: 768px) {\n.payment_section[data-v-04c873d0] {\n    display: flex;\n    flex-direction: column;\n    gap: 40px;\n    align-items: center;\n}\n}", ""]);
+exports.push([module.i, ".payment_section[data-v-04c873d0] {\n  padding: 50px 0px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  text-align: center;\n  -webkit-animation: slideUp-data-v-04c873d0 1500ms ease;\n          animation: slideUp-data-v-04c873d0 1500ms ease;\n}\n.payment_section .personal_info[data-v-04c873d0] {\n  width: 50%;\n  height: 98%;\n  padding: 20px 5px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  box-shadow: 0 15px 30px 1px grey;\n  border-radius: 15px;\n  border: 3px solid transparent;\n  position: relative;\n}\n.payment_section .personal_info h1[data-v-04c873d0], .payment_section .personal_info h2[data-v-04c873d0], .payment_section .personal_info h3[data-v-04c873d0], .payment_section .personal_info h4[data-v-04c873d0], .payment_section .personal_info h5[data-v-04c873d0] {\n  color: #007e8a;\n  font-weight: 800;\n}\n@media (max-width: 381px) {\n.payment_section .personal_info h1[data-v-04c873d0] {\n    font-size: 28px;\n}\n}\n@media (max-width: 381px) {\n.payment_section .personal_info h3[data-v-04c873d0] {\n    font-size: 24px;\n}\n}\n.payment_section .personal_info p[data-v-04c873d0] {\n  font-weight: 700;\n  padding-bottom: 10px;\n}\n@media (max-width: 768px) {\n.payment_section .personal_info p[data-v-04c873d0] {\n    padding-bottom: 0px;\n}\n}\n.payment_section .personal_info form[data-v-04c873d0] {\n  width: 80%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.payment_section .personal_info .personal_info_input[data-v-04c873d0] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 5px;\n  padding-bottom: 10px;\n  text-align: left;\n  width: 90%;\n}\n.payment_section .personal_info .personal_info_input label[data-v-04c873d0] {\n  width: 30%;\n  height: 100%;\n  text-transform: uppercase;\n  font-size: 16px;\n  color: #007e8a;\n  padding: 5px;\n}\n@media (max-width: 991px) {\n.payment_section .personal_info .personal_info_input label[data-v-04c873d0] {\n    font-size: 12px;\n}\n}\n@media (max-width: 381px) {\n.payment_section .personal_info .personal_info_input label[data-v-04c873d0] {\n    font-size: 10px;\n}\n}\n@media (max-width: 281px) {\n.payment_section .personal_info .personal_info_input label[data-v-04c873d0] {\n    font-size: 10px;\n    width: 50%;\n}\n}\n.payment_section .personal_info .personal_info_input input[data-v-04c873d0] {\n  border: 1px solid #e5e5e5;\n  border-radius: 5px;\n  width: 70%;\n  height: 100%;\n  padding: 5px;\n  font-size: 14px;\n  outline-color: #007e8a;\n}\n@media (max-width: 991px) {\n.payment_section .personal_info .personal_info_input input[data-v-04c873d0] {\n    font-size: 12px;\n}\n}\n@media (max-width: 381px) {\n.payment_section .personal_info .personal_info_input input[data-v-04c873d0] {\n    font-size: 10px;\n}\n}\n@media (max-width: 281px) {\n.payment_section .personal_info .personal_info_input input[data-v-04c873d0] {\n    font-size: 8px;\n    width: 50%;\n}\n}\n.payment_section .personal_info button[data-v-04c873d0] {\n  font-weight: 700;\n  color: white;\n  font-size: 14px;\n  padding: 5px;\n  background-color: #007e8a;\n  width: 150px;\n  border: none;\n  border-radius: 5px;\n  opacity: 0.8;\n}\n.payment_section .personal_info button[data-v-04c873d0]:hover {\n  transition: ease-in-out 0.5s;\n  opacity: 1;\n}\n@media (max-width: 991px) {\n.payment_section .personal_info button[data-v-04c873d0] {\n    bottom: 28.5%;\n    font-size: 12px;\n}\n}\n@media (max-width: 768px) {\n.payment_section .personal_info[data-v-04c873d0] {\n    width: 80%;\n    height: 45%;\n}\n}\n.payment_section .cart_summary[data-v-04c873d0] {\n  width: 40%;\n  height: 98%;\n  padding: 20px 5px;\n  box-shadow: 0 15px 30px 1px grey;\n  border-radius: 15px;\n  border: 3px solid transparent;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 10px;\n}\n.payment_section .cart_summary h1[data-v-04c873d0], .payment_section .cart_summary h2[data-v-04c873d0], .payment_section .cart_summary h3[data-v-04c873d0], .payment_section .cart_summary h5[data-v-04c873d0] {\n  color: #007e8a;\n  font-weight: 800;\n}\n@media (max-width: 381px) {\n.payment_section .cart_summary h1[data-v-04c873d0] {\n    font-size: 28px;\n}\n}\n.payment_section .cart_summary .cart_items_badges[data-v-04c873d0] {\n  margin: 0;\n  padding: 0;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  flex-wrap: wrap;\n  gap: 10px;\n  position: relative;\n}\n.payment_section .cart_summary .cart_items_badges .cart_item_badge[data-v-04c873d0] {\n  margin: 0;\n  padding: 0;\n  text-align: center;\n  background-color: #007e8a;\n  padding: 2px 7px;\n  color: white;\n  border-radius: 25px;\n}\n.payment_section .cart_summary .cart_items_list[data-v-04c873d0] {\n  width: 80%;\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n}\n.payment_section .cart_summary .cart_items_list .cart_item_list[data-v-04c873d0] {\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n  padding: 0px 5px;\n  border: 1px solid #007e8a;\n  border-radius: 5px;\n  font-size: 16px;\n}\n@media (max-width: 381px) {\n.payment_section .cart_summary .cart_items_list .cart_item_list[data-v-04c873d0] {\n    font-size: 14px;\n}\n}\n.payment_section .cart_summary .cart_items_list .cart_item_list .cart_item_list_quantity[data-v-04c873d0] {\n  width: 8%;\n  text-align: left;\n}\n.payment_section .cart_summary .cart_items_list .cart_item_list .cart_item_list_name[data-v-04c873d0] {\n  width: 70%;\n  text-align: left;\n  border-left: 1px solid #007e8a;\n  border-right: 1px solid #007e8a;\n  padding-left: 5px;\n}\n.payment_section .cart_summary .cart_items_list .cart_item_list .cart_item_list_price[data-v-04c873d0] {\n  width: 15%;\n  text-align: right;\n}\n.payment_section .cart_summary .total[data-v-04c873d0] {\n  width: 80%;\n  display: flex;\n  justify-content: space-between;\n  color: #007e8a;\n}\n@media (max-width: 768px) {\n.payment_section .cart_summary[data-v-04c873d0] {\n    width: 80%;\n    height: 45%;\n}\n}\n@-webkit-keyframes slideUp-data-v-04c873d0 {\n0% {\n    transform: translateY(100%);\n    visibility: hidden;\n}\n25% {\n    visibility: hidden;\n}\n50% {\n    visibility: hidden;\n}\n60% {\n    visibility: hidden;\n}\n100% {\n    transform: translateY(0);\n}\n}\n@keyframes slideUp-data-v-04c873d0 {\n0% {\n    transform: translateY(100%);\n    visibility: hidden;\n}\n25% {\n    visibility: hidden;\n}\n50% {\n    visibility: hidden;\n}\n60% {\n    visibility: hidden;\n}\n100% {\n    transform: translateY(0);\n}\n}\n@media (max-width: 768px) {\n.payment_section[data-v-04c873d0] {\n    display: flex;\n    flex-direction: column;\n    gap: 40px;\n    align-items: center;\n}\n}", ""]);
 
 // exports
 
@@ -6284,7 +6306,11 @@ var render = function () {
                               staticClass:
                                 "bi bi-cart4 p-1 d-flex align-items-center",
                             }),
-                            _vm._v(_vm._s(_vm.totalPrice) + " €"),
+                            _vm.totalPrice != null
+                              ? _c("span", [
+                                  _vm._v(_vm._s(_vm.totalPrice) + " €"),
+                                ])
+                              : _vm._e(),
                           ]
                         ),
                       ]
@@ -6727,7 +6753,285 @@ var render = function () {
     [
       _c("HeaderComponent"),
       _vm._v(" "),
-      _vm._m(0),
+      _c("section", { staticClass: "payment_section container" }, [
+        _c("div", { staticClass: "personal_info" }, [
+          _c("h1", [_vm._v("Nome ristorante")]),
+          _vm._v(" "),
+          _c("p", [_vm._v("Tempo di consegna: 15-20 minuti")]),
+          _vm._v(" "),
+          _c(
+            "form",
+            {
+              attrs: { method: "POST" },
+              on: {
+                submit: function ($event) {
+                  $event.preventDefault()
+                  _vm.handleSubmit(_vm.sendForm())
+                },
+              },
+            },
+            [
+              _c("h3", [_vm._v("\n          Dati personali\n        ")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "personal_info_input" }, [
+                _c("label", { attrs: { for: "client_name" } }, [
+                  _vm._v("Nome*"),
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.form.name,
+                      expression: "form.name",
+                    },
+                  ],
+                  attrs: {
+                    placeholder: "Es: Mario, Giulia...",
+                    type: "text",
+                    minlength: "3",
+                    name: "client_name",
+                    required: "",
+                  },
+                  domProps: { value: _vm.form.name },
+                  on: {
+                    input: function ($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.form, "name", $event.target.value)
+                    },
+                  },
+                }),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "personal_info_input" }, [
+                _c("label", { attrs: { for: "client_surname" } }, [
+                  _vm._v("Cognome*"),
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.form.surname,
+                      expression: "form.surname",
+                    },
+                  ],
+                  attrs: {
+                    placeholder: "Es: Maldini, Mattarella...",
+                    type: "text",
+                    minlenght: "3",
+                    name: "client_surname",
+                    required: "",
+                  },
+                  domProps: { value: _vm.form.surname },
+                  on: {
+                    input: function ($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.form, "surname", $event.target.value)
+                    },
+                  },
+                }),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "personal_info_input" }, [
+                _c("label", { attrs: { for: "client_address" } }, [
+                  _vm._v("Indirizzo*"),
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.form.address,
+                      expression: "form.address",
+                    },
+                  ],
+                  attrs: {
+                    placeholder: "Es: Via Garibaldi 95",
+                    type: "text",
+                    minlength: "5",
+                    name: "client_address",
+                    required: "",
+                  },
+                  domProps: { value: _vm.form.address },
+                  on: {
+                    input: function ($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.form, "address", $event.target.value)
+                    },
+                  },
+                }),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "personal_info_input" }, [
+                _c("label", { attrs: { for: "client_città" } }, [
+                  _vm._v("Città*"),
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.form.city,
+                      expression: "form.city",
+                    },
+                  ],
+                  attrs: {
+                    placeholder: "Es: Roma",
+                    type: "text",
+                    minlength: "3",
+                    name: "client_city",
+                    required: "",
+                  },
+                  domProps: { value: _vm.form.city },
+                  on: {
+                    input: function ($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.form, "city", $event.target.value)
+                    },
+                  },
+                }),
+              ]),
+              _c("div", { staticClass: "personal_info_input" }, [
+                _c("label", { attrs: { for: "client_telefono" } }, [
+                  _vm._v("Telefono*"),
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.form.phone,
+                      expression: "form.phone",
+                    },
+                  ],
+                  attrs: {
+                    placeholder: "Es: Roma",
+                    type: "text",
+                    minlength: "3",
+                    name: "client_phone",
+                    required: "",
+                  },
+                  domProps: { value: _vm.form.phone },
+                  on: {
+                    input: function ($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.form, "phone", $event.target.value)
+                    },
+                  },
+                }),
+              ]),
+              _c("div", { staticClass: "personal_info_input" }, [
+                _c("label", { attrs: { for: "client_email" } }, [
+                  _vm._v("E-mail*"),
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.form.email,
+                      expression: "form.email",
+                    },
+                  ],
+                  attrs: {
+                    placeholder: "Es: Roma",
+                    type: "text",
+                    minlength: "3",
+                    name: "client_email",
+                    required: "",
+                  },
+                  domProps: { value: _vm.form.email },
+                  on: {
+                    input: function ($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.form, "email", $event.target.value)
+                    },
+                  },
+                }),
+              ]),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              attrs: { type: "submit" },
+              on: {
+                click: function ($event) {
+                  return _vm.onSubmit()
+                },
+              },
+            },
+            [_vm._v("\n        Vai al pagamento\n      ")]
+          ),
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "cart_summary" },
+          [
+            _c("h1", [_vm._v("Riepilogo dell'ordine")]),
+            _vm._v(" "),
+            _vm._l(_vm.localCartShop, function (cart) {
+              return _c(
+                "ul",
+                { key: cart.id, staticClass: "cart_items_badges" },
+                [
+                  _c("li", { staticClass: "cart_item_badge" }, [
+                    _vm._v("\n          " + _vm._s(cart.name) + "\n        "),
+                  ]),
+                ]
+              )
+            }),
+            _vm._v(" "),
+            _c("ul", { staticClass: "cart_items_list" }, [
+              _vm._m(0),
+              _vm._v(" "),
+              _c("li", { staticClass: "cart_item_list" }, [
+                _c("span", { staticClass: "cart_item_list_quantity" }, [
+                  _vm._v(_vm._s(_vm.localCartShop["quantity"]) + " x"),
+                ]),
+                _vm._v(" "),
+                _c("span", { staticClass: "cart_item_list_name" }, [
+                  _vm._v("Coca-Cola"),
+                ]),
+                _vm._v(" "),
+                _c("span", { staticClass: "cart_item_list_price" }, [
+                  _vm._v("€"),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "total" }, [
+              _c("h2", [_vm._v("\n          Totale\n        ")]),
+              _vm._v(" "),
+              _c("h2", { attrs: { model: _vm.form.totalPrice } }, [
+                _vm._v("\n          " + _vm._s(_vm.totalPrice) + "€\n        "),
+              ]),
+            ]),
+          ],
+          2
+        ),
+      ]),
       _vm._v(" "),
       _c("FooterComponent"),
     ],
@@ -6739,120 +7043,12 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("section", { staticClass: "payment_section container" }, [
-      _c("div", { staticClass: "personal_info" }, [
-        _c("h1", [_vm._v("Nome ristorante")]),
-        _vm._v(" "),
-        _c("p", [_vm._v("Tempo di consegna: 15-20 minuti")]),
-        _vm._v(" "),
-        _c("form", { attrs: { action: "" } }, [
-          _c("h3", [_vm._v("\r\n          Dati personali\r\n        ")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "personal_info_input" }, [
-            _c("span", [_vm._v("\r\n            Nome *\r\n          ")]),
-            _vm._v(" "),
-            _c("input", {
-              attrs: {
-                placeholder: "Es: Mario, Giulia...",
-                type: "text",
-                minlength: "3",
-                name: "name",
-                required: "",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "personal_info_input" }, [
-            _c("span", [_vm._v("\r\n            Cognome*\r\n          ")]),
-            _vm._v(" "),
-            _c("input", {
-              attrs: {
-                placeholder: "Es: Maldini, Mattarella...",
-                type: "text",
-                minlenght: "3",
-                name: "lastname",
-                required: "",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "personal_info_input" }, [
-            _c("span", [_vm._v("\r\n            Indirizzo*\r\n          ")]),
-            _vm._v(" "),
-            _c("input", {
-              attrs: {
-                placeholder: "Es: Via Garibaldi 95",
-                type: "text",
-                minlength: "5",
-                name: "address",
-                required: "",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "personal_info_input" }, [
-            _c("span", [_vm._v("\r\n            Città*\r\n          ")]),
-            _vm._v(" "),
-            _c("input", {
-              attrs: {
-                placeholder: "Es: Roma",
-                type: "text",
-                minlength: "3",
-                name: "address",
-                required: "",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("button", [_vm._v("\r\n          Vai al pagamento\r\n        ")]),
-        ]),
-      ]),
+    return _c("li", { staticClass: "cart_item_list" }, [
+      _c("span", { staticClass: "cart_item_list_quantity" }, [_vm._v("1x")]),
       _vm._v(" "),
-      _c("div", { staticClass: "cart_summary" }, [
-        _c("h1", [_vm._v("Riepilogo dell'ordine")]),
-        _vm._v(" "),
-        _c("ul", { staticClass: "cart_items_badges" }, [
-          _c("li", { staticClass: "cart_item_badge" }, [
-            _vm._v("\r\n          Pizza\r\n        "),
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "cart_item_badge" }, [
-            _vm._v("\r\n          Coca-Cola\r\n        "),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("ul", { staticClass: "cart_items_list" }, [
-          _c("li", { staticClass: "cart_item_list" }, [
-            _c("span", { staticClass: "cart_item_list_quantity" }, [
-              _vm._v("1x"),
-            ]),
-            _vm._v(" "),
-            _c("span", { staticClass: "cart_item_list_name" }, [
-              _vm._v("Pizza"),
-            ]),
-            _vm._v(" "),
-            _c("span", { staticClass: "cart_item_list_price" }, [_vm._v("€")]),
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "cart_item_list" }, [
-            _c("span", { staticClass: "cart_item_list_quantity" }, [
-              _vm._v("1x"),
-            ]),
-            _vm._v(" "),
-            _c("span", { staticClass: "cart_item_list_name" }, [
-              _vm._v("Coca-Cola"),
-            ]),
-            _vm._v(" "),
-            _c("span", { staticClass: "cart_item_list_price" }, [_vm._v("€")]),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "total" }, [
-          _c("h2", [_vm._v("\r\n          Totale\r\n        ")]),
-          _vm._v(" "),
-          _c("h2", [_vm._v("\r\n          €\r\n        ")]),
-        ]),
-      ]),
+      _c("span", { staticClass: "cart_item_list_name" }, [_vm._v("Pizza")]),
+      _vm._v(" "),
+      _c("span", { staticClass: "cart_item_list_price" }, [_vm._v("€")]),
     ])
   },
 ]
@@ -23319,7 +23515,7 @@ module.exports = "/images/ios-badge.png?2566899de2c3663e0250b22d1a160aa7";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/jumbo-bkg-svg2.svg?8de0ecba9e591757458db25a3d02de10";
+module.exports = "/images/jumbo-bkg-svg2.svg?ece43a1805da9c592135a025ae78cca8";
 
 /***/ }),
 
@@ -25246,7 +25442,11 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 module.exports = __webpack_require__(/*! C:\Users\matti\Laravel\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
+=======
+module.exports = __webpack_require__(/*! /Users/simonecoszach/Developer/Boolean/Corso/Projects/team-3-deliveBoo-1/resources/js/front.js */"./resources/js/front.js");
+>>>>>>> 53932ae63b92396681e6c186de6a341ade955d52
 
 
 /***/ })
