@@ -19,14 +19,7 @@ class Product extends Model
         'slug'
     ];
 
-    public function users(){
-        return $this->belongsTo('App\User');
-    }
-
-    public function orders(){
-        return $this->belongsToMany('App\Order');
-    }
-
+    
     public static function getUniqueSlug($name) {
         $slug = Str::slug($name);
         $slug_base = $slug;
@@ -43,4 +36,13 @@ class Product extends Model
     
         return $slug;
     }
+
+    public function users(){
+        return $this->belongsTo('App\User');
+    }
+
+    public function orders(){
+        return $this->belongsToMany('App\Order');
+    }
+
 }

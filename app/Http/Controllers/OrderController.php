@@ -64,8 +64,9 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
+        $products = Product::all();
         $user = Auth::user();
-        return view('admin.orders.show', compact('order', 'user'));
+        return view('admin.orders.show', compact('order', 'user', 'products'));
     }
 
     /**

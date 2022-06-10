@@ -40,9 +40,11 @@ Route::middleware('auth')
        Route::get('logout', 'loginController@logout');
     });
 
-    Route::fallback(function(){
-        return view('guest.home');
-    });
+
 
     Route::get('checkout','CheckoutController@checkout');
     Route::post('checkout/state','CheckoutController@afterpayment')->name('checkout.credit-card');
+
+    Route::fallback(function(){
+        return view('guest.home');
+    });
