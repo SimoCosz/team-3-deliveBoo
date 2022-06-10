@@ -15,7 +15,7 @@
             Dati personali
           </h3>
           <!-- NAME -->
-          <validationProvider class="personal_info_input_alert" name="client_name" rules="required|alpha_spaces|max:30" v-slot="{ errors }">
+          <validationProvider class="personal_info_input_alert" name="NAME" rules="required|alpha_spaces|max:30" v-slot="{ errors }">
             <div class="personal_info_input">
               <label for="client_name">Nome*</label>
               <input v-model="form.client_name" placeholder="Es: Mario, Giulia..." type="text" name="client_name" required>
@@ -26,7 +26,7 @@
           </validationProvider>
 
           <!-- SURNAME -->
-          <validationProvider class="personal_info_input_alert" name="client_name" rules="required|alpha_spaces|max:30" v-slot="{ errors }">
+          <validationProvider class="personal_info_input_alert" name="SURNAME" rules="required|alpha_spaces|max:30" v-slot="{ errors }">
             <div class="personal_info_input">
               <label for="client_surname">Cognome*</label>
               <input v-model="form.client_surname" placeholder="Es: Rossi, Bianchi..." type="text" name="client_surname" required>
@@ -36,7 +36,7 @@
             </div>
           </validationProvider>
           <!-- ADDRESS -->
-          <validationProvider class="personal_info_input_alert" name="client_name" rules="required|max:30" v-slot="{ errors }">
+          <validationProvider class="personal_info_input_alert" name="ADDRESS" rules="required|max:40" v-slot="{ errors }">
             <div class="personal_info_input">
               <label for="client_address">Indirizzo*</label>
               <input v-model="form.client_address" placeholder="Es: Via Garibaldi 95" type="text" name="client_address" required>
@@ -46,7 +46,7 @@
             </div>
           </validationProvider>
           <!-- CITY -->
-          <validationProvider class="personal_info_input_alert" name="client_name" rules="required|max:30" v-slot="{ errors }">
+          <validationProvider class="personal_info_input_alert" name="CITY" rules="required|max:30" v-slot="{ errors }">
             <div class="personal_info_input">
               <label for="client_città">Città*</label>
               <input v-model="form.client_city" placeholder="Es: Roma" type="text" name="client_city" required>
@@ -56,7 +56,7 @@
             </div>
           </validationProvider>
           <!-- PHONE -->
-          <validationProvider class="personal_info_input_alert" name="client_name" rules="required|numeric|max:16" v-slot="{ errors }">
+          <validationProvider class="personal_info_input_alert" name="PHONE NUMBER" rules="required|numeric|max:16" v-slot="{ errors }">
             <div class="personal_info_input">
               <label for="client_telefono">Telefono*</label>
               <input v-model="form.client_phone" placeholder="Es: 3925679474" type="text" name="client_phone" required>
@@ -66,7 +66,7 @@
             </div>
           </validationProvider>
           <!-- MAIL -->
-          <validationProvider class="personal_info_input_alert" name="client_name" rules="required|email|max:50" v-slot="{ errors }">
+          <validationProvider class="personal_info_input_alert" name="EMAIL" rules="required|email|max:50" v-slot="{ errors }">
             <div class="personal_info_input">
               <label for="client_email">E-mail*</label>
               <input v-model="form.client_email" placeholder="Es: rossi@gmail.com" type="text" name="client_email" required>
@@ -302,7 +302,7 @@ export default {
     width: 90%;
   }
   .personal-error{
-    margin-top: -8px;
+    margin-top: -12px;
     margin-bottom: 13px;
   }
   .cart_summary{
