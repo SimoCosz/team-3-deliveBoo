@@ -33,17 +33,19 @@
                     <span class="quantity px-2">{{element.quantity}}</span>
                     <i class="bi bi-plus-circle primary-color" @click="incrementCartQuantity(element)"></i>
                     <span class="px-2">{{element.price*element.quantity}} &#8364;</span>
-                    <i class="bi bi-trash d-flex align-items-center" role="button" @click="deleteDish(i)"></i>
+                    <button class="btn btn-danger d-flex align-items-center justify-content-center p-1" @click="deleteDish(i)">
+                      <i class="bi bi-trash d-flex align-items-center"></i>
+                    </button>
                   </div>
                 </div>
               </div>
               <div class="total d-flex justify-content-between align-items-center mt-3">
                 <h5 class="font-weight-bold">Totale:</h5>
                 <h5 class="font-weight-bold">{{totalPrice}}&#8364;</h5>
-                <div  @click="deleteAll()" role="button" class="product-list-trash d-flex flex-column justify-content-center align-items-center">
-                  <i class="bi bi-trash"></i>
+                <button  @click="deleteAll()" class="btn btn-danger product-list-trash d-flex flex-column justify-content-center align-items-center mb-3">
+                  <i class="bi bi-trash trash-all"></i>
                   <p class="trash-name">Svuota Carrello</p>
-                </div>
+                </button>
               </div>
                <router-link tag="button" :to="{name:'payments'}" class="btn btn-bg-color btn-block"> Vai al Pagamento</router-link>
             </div>
@@ -305,6 +307,16 @@ mounted() {
             cursor:pointer;
           }
         }
+        .trash-single-element{
+          color: red;
+          border: 2px solid red;
+          border-radius: 3px;
+          font-size: 16px;
+          &:hover{
+            color:white;
+            background-color: red ;
+          }
+        }
       }
 
       .row{
@@ -418,11 +430,17 @@ mounted() {
   opacity: 0;
 }
 
-.bi-trash, .product-list-trash{
 
-
-  &:hover{
-    color: red;
-  }
+.total{
+  border-top: 1px solid lightgrey;
+  padding-top: 10px;
 }
+
+.trash-all{
+  font-size: 16px;
+}
+.trash-name{
+  margin-bottom: 0;
+}
+
 </style>

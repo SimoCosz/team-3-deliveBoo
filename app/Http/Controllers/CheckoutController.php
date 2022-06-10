@@ -42,6 +42,6 @@ class CheckoutController extends Controller
         
         echo 'Payment Has been Received';
 
-        // return view('admin.user.index');
+        return redirect('/payments/succesfull');
     }
 }
