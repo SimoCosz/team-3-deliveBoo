@@ -132,7 +132,7 @@ methods : {
       elementTotPrice = this.localCartShop[index].price * this.localCartShop[index].quantity;
       this.totalPrice += elementTotPrice;
     } 
-    localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); 
+    // localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); 
     localStorage.setItem('total', this.totalPrice);
     // window.location.reload();
     return this.totalPrice
@@ -164,9 +164,14 @@ methods : {
     this.localCartShop.splice(el, 1);
     this.totalPriceFunction();
 
-
+    if( this.localCartShop.length > 0 ) {
     localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
     localStorage.setItem('total', this.totalPrice);
+    } else {
+      this.localCartShop = null;
+      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
+      localStorage.setItem('total', this.totalPrice);
+    }
     // window.location.reload();
   },
 

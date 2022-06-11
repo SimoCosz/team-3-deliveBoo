@@ -3024,9 +3024,9 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       for (var index = 0; index < this.localCartShop.length; index++) {
         elementTotPrice = this.localCartShop[index].price * this.localCartShop[index].quantity;
         this.totalPrice += elementTotPrice;
-      }
+      } // localStorage.setItem("cartShop", JSON.stringify(this.localCartShop)); 
 
-      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
+
       localStorage.setItem('total', this.totalPrice); // window.location.reload();
 
       return this.totalPrice;
@@ -3054,8 +3054,16 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     deleteDish: function deleteDish(el) {
       this.localCartShop.splice(el, 1);
       this.totalPriceFunction();
-      localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
-      localStorage.setItem('total', this.totalPrice); // window.location.reload();
+
+      if (this.localCartShop.length > 0) {
+        localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
+        localStorage.setItem('total', this.totalPrice);
+      } else {
+        this.localCartShop = null;
+        localStorage.setItem("cartShop", JSON.stringify(this.localCartShop));
+        localStorage.setItem('total', this.totalPrice);
+      } // window.location.reload();
+
     },
     deleteAll: function deleteAll() {
       this.localCartShop = null;
