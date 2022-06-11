@@ -25,6 +25,8 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
-        "bootstrap-icons": "^1.8.3"
+        "@chartisan/chartjs": "^2.1.0",
+        "bootstrap-icons": "^1.8.3",
+        "chart.js": "^2.9.4"
     }
 }
