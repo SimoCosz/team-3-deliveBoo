@@ -1,57 +1,95 @@
 <template>
 <div>
   <HeaderComponent />
+
   <section class="payment_section container">
     <div class="personal_info">
       <h1>Nome ristorante</h1>
       <p>Tempo di consegna: 15-20 minuti</p>
-      <form @submit.prevent="handleSubmit(sendForm())" method="POST">
-        <h3>
-          Dati personali
-        </h3>
-        <!-- NAME -->
-        <div class="personal_info_input">
-          <label for="client_name">Nome*</label>
-          <input v-model="form.client_name" placeholder="Es: Mario, Giulia..." type="text" minlength="3" name="client_name" required>
-        </div>
-        <!-- SURNAME -->
-        <div class="personal_info_input">
-          <label for="client_surname">Cognome*</label>
-          <input v-model="form.client_surname" placeholder="Es: Maldini, Mattarella..." type="text" minlenght="3" name="client_surname" required>
-        </div>
-        <!-- ADDRESS -->
-        <div class="personal_info_input">
-          <label for="client_address">Indirizzo*</label>
-          <input v-model="form.client_address" placeholder="Es: Via Garibaldi 95" type="text" minlength="5" name="client_address" required>
-        </div>
-        <!-- CITY -->
-        <div class="personal_info_input">
-          <label for="client_città">Città*</label>
-          <input v-model="form.client_city" placeholder="Es: Roma" type="text" minlength="3" name="client_city" required>
-        </div>
-        <!-- PHONE -->
-        <div class="personal_info_input">
-          <label for="client_telefono">Telefono*</label>
-          <input v-model="form.client_phone" placeholder="Es: Roma" type="text" minlength="3" name="client_phone" required>
-        </div>
-        <!-- MAIL -->
-        <div class="personal_info_input">
-          <label for="client_email">E-mail*</label>
-          <input v-model="form.client_email" placeholder="Es: Roma" type="text" minlength="3" name="client_email" required>
-        </div>
-      </form>
-      <button @click="onSubmit()" type="submit">
-       <a href="/checkout">Vai al pagamento</a>
-      </button>
+
+      <!-- INSERITE VALIDAZIONI CON VEEVALIDATE -->
+      <ValidationObserver v-slot="{ handleSubmit }" style="width: 80%;">
+
+        <form @submit.prevent="handleSubmit(sendForm())" method="POST" style="width: 100%;">
+          <h3>
+            Dati personali
+          </h3>
+          <!-- NAME -->
+          <validationProvider class="personal_info_input_alert" name="NAME" rules="required|alpha_spaces|max:30" v-slot="{ errors }">
+            <div class="personal_info_input">
+              <label for="client_name">Nome*</label>
+              <input v-model="form.client_name" placeholder="Es: Mario, Giulia..." type="text" name="client_name" required>
+            </div>
+            <div :class="errors.length ? 'personal-error w-100 text-center text-danger align-self-end border border-danger rounded-lg focus:border-red-500 px-2 py-1' : '' ">
+              {{ errors[0] }}
+            </div>
+          </validationProvider>
+
+          <!-- SURNAME -->
+          <validationProvider class="personal_info_input_alert" name="SURNAME" rules="required|alpha_spaces|max:30" v-slot="{ errors }">
+            <div class="personal_info_input">
+              <label for="client_surname">Cognome*</label>
+              <input v-model="form.client_surname" placeholder="Es: Rossi, Bianchi..." type="text" name="client_surname" required>
+            </div>
+            <div :class="errors.length ? 'personal-error w-100 text-center text-danger align-self-end border border-danger rounded-lg focus:border-red-500 px-2 py-1' : '' ">
+              {{ errors[0] }}
+            </div>
+          </validationProvider>
+          <!-- ADDRESS -->
+          <validationProvider class="personal_info_input_alert" name="ADDRESS" rules="required|max:40" v-slot="{ errors }">
+            <div class="personal_info_input">
+              <label for="client_address">Indirizzo*</label>
+              <input v-model="form.client_address" placeholder="Es: Via Garibaldi 95" type="text" name="client_address" required>
+            </div>
+            <div :class="errors.length ? 'personal-error w-100 text-center text-danger align-self-end border border-danger rounded-lg focus:border-red-500 px-2 py-1' : '' ">
+              {{ errors[0] }}
+            </div>
+          </validationProvider>
+          <!-- CITY -->
+          <validationProvider class="personal_info_input_alert" name="CITY" rules="required|max:30" v-slot="{ errors }">
+            <div class="personal_info_input">
+              <label for="client_città">Città*</label>
+              <input v-model="form.client_city" placeholder="Es: Roma" type="text" name="client_city" required>
+            </div>
+            <div :class="errors.length ? 'personal-error w-100 text-center text-danger align-self-end border border-danger rounded-lg focus:border-red-500 px-2 py-1' : '' ">
+              {{ errors[0] }}
+            </div>
+          </validationProvider>
+          <!-- PHONE -->
+          <validationProvider class="personal_info_input_alert" name="PHONE NUMBER" rules="required|numeric|max:16" v-slot="{ errors }">
+            <div class="personal_info_input">
+              <label for="client_telefono">Telefono*</label>
+              <input v-model="form.client_phone" placeholder="Es: 3925679474" type="text" name="client_phone" required>
+            </div>
+            <div :class="errors.length ? 'personal-error w-100 text-center text-danger align-self-end border border-danger rounded-lg focus:border-red-500 px-2 py-1' : '' ">
+              {{ errors[0] }}
+            </div>
+          </validationProvider>
+          <!-- MAIL -->
+          <validationProvider class="personal_info_input_alert" name="EMAIL" rules="required|email|max:50" v-slot="{ errors }">
+            <div class="personal_info_input">
+              <label for="client_email">E-mail*</label>
+              <input v-model="form.client_email" placeholder="Es: rossi@gmail.com" type="text" name="client_email" required>
+            </div>
+            <div :class="errors.length ? 'personal-error w-100 text-center text-danger align-self-end border border-danger rounded-lg focus:border-red-500 px-2 py-1' : '' ">
+              {{ errors[0] }}
+            </div>
+          </validationProvider>
+        </form>
+        <button @click="onSubmit()" type="submit">
+        <a href="/checkout">Vai al pagamento</a>
+        </button>
+        
+      </ValidationObserver>
     </div>
 
     <div class="cart_summary">
       <h1>Riepilogo dell'ordine</h1>
-      <ul class="cart_items_badges">
+      <!-- <ul class="cart_items_badges">
         <li class="cart_item_badge">
-          boh
+          
         </li>
-      </ul>
+      </ul> -->
       <ul v-for="cart in localCartShop" :key="cart.id" class="cart_items_list">
         <li class="cart_item_list">
           <span class="cart_item_list_quantity d-flex align-items-center justify-content-center">{{cart['quantity']}} x</span>
@@ -76,6 +114,7 @@
 <script>
 import HeaderComponent from '../components/HeaderComponent.vue'
 import FooterComponent from '../components/FooterComponent.vue'
+
 export default {
   components: { 
     HeaderComponent,
@@ -141,6 +180,7 @@ export default {
   justify-content: space-between;
   text-align: center;
   animation: slideUp 1500ms ease;
+  min-height: calc(100vh - 75px);
   .personal_info{
     // border: 3px solid purple;
     width: 50%;
@@ -186,9 +226,8 @@ export default {
       justify-content: center;
       // border: 2px solid red;
       gap: 5px;
-      padding-bottom: 10px;
       text-align: left;
-      width: 90%;
+      width: 100%;
       label{
         width: 30%;
         height: 100%;
@@ -229,6 +268,7 @@ export default {
     }
     button{
       font-weight: 700;
+      margin-top: 20px;
       color: white;
       font-size: 14px;
       padding: 5px;
@@ -250,6 +290,20 @@ export default {
       width: 80%;
       height: 45%;
     }
+  }
+  .personal_info_input_alert{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // border: 2px solid red;
+    gap: 5px;
+    text-align: left;
+    width: 90%;
+  }
+  .personal-error{
+    margin-top: -12px;
+    margin-bottom: 13px;
   }
   .cart_summary{
     // border: 3px solid purple;
@@ -298,6 +352,7 @@ export default {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
+      margin-bottom: 0;
       .cart_item_list{
         // border: 1px solid blue;
         width: 100%;
