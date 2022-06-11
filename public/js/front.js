@@ -6513,7 +6513,7 @@ var render = function () {
               },
             },
             [
-              _c("h3", [_vm._v("\r\n          Dati personali\r\n        ")]),
+              _c("h3", [_vm._v("\n          Dati personali\n        ")]),
               _vm._v(" "),
               _c("div", { staticClass: "personal_info_input" }, [
                 _c("label", { attrs: { for: "client_name" } }, [
@@ -6774,12 +6774,10 @@ var render = function () {
             }),
             _vm._v(" "),
             _c("div", { staticClass: "total" }, [
-              _c("h2", [_vm._v("\r\n          Totale\r\n        ")]),
+              _c("h2", [_vm._v("\n          Totale\n        ")]),
               _vm._v(" "),
               _c("h2", { attrs: { model: _vm.form.totalPrice } }, [
-                _vm._v(
-                  "\r\n          " + _vm._s(_vm.totalPrice) + "€\r\n        "
-                ),
+                _vm._v("\n          " + _vm._s(_vm.totalPrice) + "€\n        "),
               ]),
             ]),
           ],
@@ -6799,7 +6797,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("ul", { staticClass: "cart_items_badges" }, [
       _c("li", { staticClass: "cart_item_badge" }, [
-        _vm._v("\r\n          boh\r\n        "),
+        _vm._v("\n          boh\n        "),
       ]),
     ])
   },
@@ -23002,7 +23000,7 @@ module.exports = "/images/ios-badge.png?2566899de2c3663e0250b22d1a160aa7";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/jumbo-bkg-svg2.svg?8de0ecba9e591757458db25a3d02de10";
+module.exports = "/images/jumbo-bkg-svg2.svg?ece43a1805da9c592135a025ae78cca8";
 
 /***/ }),
 
@@ -24839,11 +24837,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-module.exports = __webpack_require__(/*! C:\Users\matti\Laravel\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
-=======
-module.exports = __webpack_require__(/*! C:\Users\casa\OneDrive\Desktop\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
->>>>>>> chart.js
+module.exports = __webpack_require__(/*! /Users/simonecoszach/Developer/Boolean/Corso/Projects/team-3-deliveBoo/resources/js/front.js */"./resources/js/front.js");
 
 
 /***/ })
