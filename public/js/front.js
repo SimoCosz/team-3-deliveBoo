@@ -2829,28 +2829,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -6801,7 +6779,7 @@ var render = function () {
                 _c("label", { attrs: { for: "client_name" } }, [
                   _vm._v("Nome*"),
                 ]),
-                _vm._v("\r\n<<<<<<< HEAD\r\n          "),
+                _vm._v(" "),
                 _c("input", {
                   directives: [
                     {
@@ -6828,44 +6806,13 @@ var render = function () {
                     },
                   },
                 }),
-                _vm._v("\r\n=======\r\n          "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.form.name,
-                      expression: "form.name",
-                    },
-                  ],
-                  attrs: {
-                    placeholder: "Es: Mario, Giulia...",
-                    type: "text",
-                    required: "",
-                    minlength: "2",
-                    maxlength: "80",
-                    name: "client_name",
-                  },
-                  domProps: { value: _vm.form.name },
-                  on: {
-                    input: function ($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.form, "name", $event.target.value)
-                    },
-                  },
-                }),
-                _vm._v(
-                  "\r\n>>>>>>> Implemento-validazioni-e-collegamento-dati-carrello-nel-payment\r\n        "
-                ),
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "personal_info_input" }, [
                 _c("label", { attrs: { for: "client_surname" } }, [
                   _vm._v("Cognome*"),
                 ]),
-                _vm._v("\r\n<<<<<<< HEAD\r\n          "),
+                _vm._v(" "),
                 _c("input", {
                   directives: [
                     {
@@ -6892,44 +6839,13 @@ var render = function () {
                     },
                   },
                 }),
-                _vm._v("\r\n=======\r\n          "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.form.surname,
-                      expression: "form.surname",
-                    },
-                  ],
-                  attrs: {
-                    placeholder: "Es: Maldini, Mattarella...",
-                    type: "text",
-                    required: "",
-                    minlenght: "2",
-                    maxlength: "80",
-                    name: "client_surname",
-                  },
-                  domProps: { value: _vm.form.surname },
-                  on: {
-                    input: function ($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.form, "surname", $event.target.value)
-                    },
-                  },
-                }),
-                _vm._v(
-                  "\r\n>>>>>>> Implemento-validazioni-e-collegamento-dati-carrello-nel-payment\r\n        "
-                ),
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "personal_info_input" }, [
                 _c("label", { attrs: { for: "client_address" } }, [
                   _vm._v("Indirizzo*"),
                 ]),
-                _vm._v("\r\n<<<<<<< HEAD\r\n          "),
+                _vm._v(" "),
                 _c("input", {
                   directives: [
                     {
@@ -6956,44 +6872,13 @@ var render = function () {
                     },
                   },
                 }),
-                _vm._v("\r\n=======\r\n          "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.form.address,
-                      expression: "form.address",
-                    },
-                  ],
-                  attrs: {
-                    placeholder: "Es: Via Garibaldi 95",
-                    type: "text",
-                    required: "",
-                    minlength: "10",
-                    maxlength: "120",
-                    name: "client_address",
-                  },
-                  domProps: { value: _vm.form.address },
-                  on: {
-                    input: function ($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.form, "address", $event.target.value)
-                    },
-                  },
-                }),
-                _vm._v(
-                  "\r\n>>>>>>> Implemento-validazioni-e-collegamento-dati-carrello-nel-payment\r\n        "
-                ),
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "personal_info_input" }, [
                 _c("label", { attrs: { for: "client_città" } }, [
                   _vm._v("Città*"),
                 ]),
-                _vm._v("\r\n<<<<<<< HEAD\r\n          "),
+                _vm._v(" "),
                 _c("input", {
                   directives: [
                     {
@@ -7086,101 +6971,6 @@ var render = function () {
                     },
                   },
                 }),
-                _vm._v("\r\n=======\r\n          "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.form.city,
-                      expression: "form.city",
-                    },
-                  ],
-                  attrs: {
-                    placeholder: "Es: Roma",
-                    type: "text",
-                    required: "",
-                    minlength: "3",
-                    maxlength: "80",
-                    name: "client_city",
-                  },
-                  domProps: { value: _vm.form.city },
-                  on: {
-                    input: function ($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.form, "city", $event.target.value)
-                    },
-                  },
-                }),
-              ]),
-              _c("div", { staticClass: "personal_info_input" }, [
-                _c("label", { attrs: { for: "client_telefono" } }, [
-                  _vm._v("Telefono*"),
-                ]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.form.phone,
-                      expression: "form.phone",
-                    },
-                  ],
-                  attrs: {
-                    placeholder: "Es: 3829964715",
-                    required: "",
-                    type: "text",
-                    minlength: "9",
-                    maxlength: "20",
-                    name: "client_phone",
-                  },
-                  domProps: { value: _vm.form.phone },
-                  on: {
-                    input: function ($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.form, "phone", $event.target.value)
-                    },
-                  },
-                }),
-              ]),
-              _c("div", { staticClass: "personal_info_input" }, [
-                _c("label", { attrs: { for: "client_email" } }, [
-                  _vm._v("E-mail*"),
-                ]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.form.email,
-                      expression: "form.email",
-                    },
-                  ],
-                  attrs: {
-                    placeholder: "Es: maldini@gmail.com",
-                    type: "email",
-                    required: "",
-                    name: "client_email",
-                  },
-                  domProps: { value: _vm.form.email },
-                  on: {
-                    input: function ($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.form, "email", $event.target.value)
-                    },
-                  },
-                }),
-                _vm._v(
-                  "\r\n>>>>>>> Implemento-validazioni-e-collegamento-dati-carrello-nel-payment\r\n        "
-                ),
               ]),
             ]
           ),
@@ -25664,7 +25454,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\black\Project\Hub Project\LARAVEL\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\casa\OneDrive\Desktop\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })
