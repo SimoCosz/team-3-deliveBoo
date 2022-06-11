@@ -61,6 +61,14 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            .content{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 20px
+            }
         </style>
     </head>
     <body>
@@ -86,7 +94,23 @@
                 <div class="title m-b-md">
                    <img src="{{asset('img/logo-home.jpg')}}" alt="">
                 </div>
+
+                <h1>Chart</h1>
+                <!-- Chart's container -->
+                <div id="sales-chart" style="height: 300px; width: 200px; border: 1px solid red"></div>
             </div>
         </div>
+        <!-- Charting library -->
+        <script src="https://unpkg.com/echarts/dist/echarts.min.js"></script>
+        <!-- Chartisan -->
+        <script src="https://unpkg.com/@chartisan/echarts/dist/chartisan_echarts.js"></script>
+    
+        <!-- Your application script -->
+        <script>
+          const chart = new Chartisan({
+            el: '#sales-chart',
+            url: "@chart('sales_chart')",
+          });
+        </script>    
     </body>
 </html>
