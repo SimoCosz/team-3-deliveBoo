@@ -257,10 +257,6 @@ methods : {
 mounted() {
   this.fetchRestaurantInfo();
   this.totalPriceFunction();
-  this.sendData();
-
-  // console.log(this.localCartShop[1]);
-  // console.log(this.user);
 }
 }
 </script>

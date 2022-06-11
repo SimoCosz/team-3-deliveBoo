@@ -3099,8 +3099,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
   mounted: function mounted() {
     this.fetchRestaurantInfo();
     this.totalPriceFunction();
-    this.sendData(); // console.log(this.localCartShop[1]);
-    // console.log(this.user);
   }
 });
 
