@@ -10517,7 +10517,9 @@ var render = function () {
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "col-12 col-md-8" }, [
-                    _c("h1", [_vm._v(_vm._s(_vm.user.name))]),
+                    _c("h1", { staticClass: "text-md-left" }, [
+                      _vm._v(_vm._s(_vm.user.name)),
+                    ]),
                     _vm._v(" "),
                     _c("p", [_vm._v(_vm._s(_vm.user.category))]),
                     _vm._v(" "),
