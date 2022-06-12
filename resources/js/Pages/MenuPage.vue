@@ -1,5 +1,5 @@
 <template>
-<Layout>
+<LayoutAlternative>
   <div v-if="!loading">
     <section class="info-users py-4">
       <div class="my-container">
@@ -34,16 +34,16 @@
     <ProductList :user="user"/>
 
   </div>
-</Layout>
+</LayoutAlternative>
 </template>
 
 <script>
-import Layout from '../layouts/Layout.vue'
+import LayoutAlternative from '../layouts/LayoutAlternative.vue'
 import ProductList from '../components/ProductList.vue'
 
   export default {
     components:{
-      Layout,
+      LayoutAlternative,
       ProductList
     },
 

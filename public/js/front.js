@@ -1935,7 +1935,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_CategoriesIndex_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/CategoriesIndex.vue */ "./resources/js/components/CategoriesIndex.vue");
 /* harmony import */ var _components_NewsSection_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/NewsSection.vue */ "./resources/js/components/NewsSection.vue");
 /* harmony import */ var _components_WorkWithUs_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/WorkWithUs.vue */ "./resources/js/components/WorkWithUs.vue");
-/* harmony import */ var _layouts_LayoutAlternative_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../layouts/LayoutAlternative.vue */ "./resources/js/layouts/LayoutAlternative.vue");
+/* harmony import */ var _layouts_Layout_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../layouts/Layout.vue */ "./resources/js/layouts/Layout.vue");
 /* harmony import */ var _components_HomeJumbotron_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/HomeJumbotron.vue */ "./resources/js/components/HomeJumbotron.vue");
 /* harmony import */ var _components_SelectionDeliveboo_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/SelectionDeliveboo.vue */ "./resources/js/components/SelectionDeliveboo.vue");
 /* harmony import */ var _components_FavouriteDishes_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/FavouriteDishes.vue */ "./resources/js/components/FavouriteDishes.vue");
@@ -1975,7 +1975,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    LayoutAlternative: _layouts_LayoutAlternative_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+    Layout: _layouts_Layout_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
     Users: _components_UsersIndex_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
     Jumbo: _components_HomeJumbotron_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
     Selection: _components_SelectionDeliveboo_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
@@ -1998,7 +1998,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _layouts_Layout_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../layouts/Layout.vue */ "./resources/js/layouts/Layout.vue");
+/* harmony import */ var _layouts_LayoutAlternative_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../layouts/LayoutAlternative.vue */ "./resources/js/layouts/LayoutAlternative.vue");
 /* harmony import */ var _components_ProductList_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/ProductList.vue */ "./resources/js/components/ProductList.vue");
 //
 //
@@ -2043,7 +2043,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    Layout: _layouts_Layout_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    LayoutAlternative: _layouts_LayoutAlternative_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
     ProductList: _components_ProductList_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
@@ -10450,7 +10450,7 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("LayoutAlternative", [
+  return _c("Layout", [
     _c(
       "div",
       [_c("Jumbo"), _vm._v(" "), _c("Selection"), _vm._v(" "), _c("Favourite")],
@@ -10486,7 +10486,7 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("Layout", [
+  return _c("LayoutAlternative", [
     !_vm.loading
       ? _c(
           "div",
