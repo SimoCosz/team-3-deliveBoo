@@ -3,6 +3,7 @@
     <!-- <div class="container py-5"> -->
     <div class="search-page-container row mt-5">
       <div class="col-2 categories p-2">
+        <div class="perScrollbarsottoi750">
         <div class="after">
           <div class="where d-flex align-items-center p-2">
             <img src="../../../public/img/logo-categories.png" alt="" />
@@ -23,6 +24,7 @@
           <label :for="category.name"
             >{{ category.name }} ({{ category.users.length }})</label
           >
+        </div>
         </div>
       </div>
       <div class="col restaurants mb-5">
@@ -166,7 +168,7 @@ export default {
   content: "";
   display: block;
   border: 1px solid #e9e8e8;
-  width: 90%;
+  width: 100%;
 }
 
 .categories {
@@ -216,10 +218,68 @@ export default {
     margin-left: 20px !important;
   }
 }
+/* @media (max-width: 620px) {
+  .categories {
+    display: block;
+    font-size: 13px;
+    height: 200px;
+  min-width: 350px;
+  background-color: #f1f1f1;
+  padding: 24px;
+  margin-right: 24px;
+  overflow-y:scroll;
+  margin-bottom: 10px;
+  }
+  .perScrollbarsottoi750{
+     max-height: 200px;
+    width: 2100px;
+  }
+  .check {
+    display: inline-block !important;
+    padding: 7px;
+  }
+  .row{
+    display: flex;
+    flex-direction: column;
+  }
+  .restaurants {
+    margin-left: 10px !important;
+  }
+} */
 
 @media (max-width: 750px) {
   .categories {
-    display: none;
+    display: block;
+    font-size: 13px;
+    height: 200px;
+  min-width: 530px;
+  background-color: #f8fafc;
+  padding: 24px;
+  margin-right: 24px;
+  margin-bottom: 10px;
+  
+  }
+  .perScrollbarsottoi750{
+     max-height: 200px;
+    width: 2400px;
+  }
+  .check {
+    display: inline-block !important;
+    padding: 7px;
+    border: 2px solid #E9EBEB;
+    border-radius: 5px;
+    margin-bottom: 0 !important;
+    margin-right: 10px;
+  }
+  input{
+    padding-top: 100px !important;
+  }
+  label{
+    margin: 0 !important;
+  }
+  .row{
+    display: flex;
+    flex-direction: column;
   }
   .restaurants {
     margin-left: 10px !important;
