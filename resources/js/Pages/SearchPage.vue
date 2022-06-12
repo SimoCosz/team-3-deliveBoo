@@ -218,45 +218,17 @@ export default {
     margin-left: 20px !important;
   }
 }
-/* @media (max-width: 620px) {
-  .categories {
-    display: block;
-    font-size: 13px;
-    height: 200px;
-  min-width: 350px;
-  background-color: #f1f1f1;
-  padding: 24px;
-  margin-right: 24px;
-  overflow-y:scroll;
-  margin-bottom: 10px;
-  }
-  .perScrollbarsottoi750{
-     max-height: 200px;
-    width: 2100px;
-  }
-  .check {
-    display: inline-block !important;
-    padding: 7px;
-  }
-  .row{
-    display: flex;
-    flex-direction: column;
-  }
-  .restaurants {
-    margin-left: 10px !important;
-  }
-} */
+ 
 
 @media (max-width: 750px) {
   .categories {
     display: block;
     font-size: 13px;
     height: 200px;
-  min-width: 420px;
+  min-width: 100%;
   background-color: #f8fafc;
-  padding: 24px;
-  margin-right: 24px;
-  margin-bottom: 10px;
+  margin-left: 0 !important;
+  
   
   }
   .perScrollbarsottoi750{
