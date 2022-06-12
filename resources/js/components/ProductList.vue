@@ -68,13 +68,10 @@
       <div class="my-modal" @click="closePlateInfo()">
         <div class="product-show" @click.stop>
           <i class="bi bi-x" @click="closePlateInfo()"></i>
-          <div class="wrapper-img">
-            <img v-if="selectedProduct.cover" class="product-show_img" :src=selectedProduct.cover alt="">
-            <img v-else src="../../../public/images/img-default-img.png" alt="">
-          </div>
-          <div class="product-show_info px-3 py-2">
+          <img class="product-show_img" :src=selectedProduct.cover alt="">
+          <div class="product-show_info p-4">
             <h4 class="title">{{selectedProduct.name}}</h4>
-            <p class="m-0 description">{{selectedProduct.description}}</p>
+            <p class="description">{{selectedProduct.description}}</p>
           </div>
           <div class="product-show-add p-4">
             <div class="d-flex justify-content-center pb-3">
@@ -375,18 +372,10 @@ mounted() {
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
-    width: 400px;
-    height: max-content;
-
-    .wrapper-img{
-      width: 100%;
-     
-      .product-show_img{
-        max-width: 100%;
-        height: 250px;
-        object-fit: cover;
-        object-position: center;
-      }
+    max-width: 500px;
+    max-height: 800px;
+    .product-show_img{
+      max-width: 100%;
     }
     .product-show-add{
       box-shadow: 0 1px 4px rgb(0 0 0 / 20%);
