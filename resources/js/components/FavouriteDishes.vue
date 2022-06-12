@@ -24,11 +24,16 @@ export default {
     }
   },
   methods: {
-    fetchUsers(){
-      axios.get('/api/users')
+    fetchUsers(page = 1){
+      axios.get('/api/users', {
+        params: {
+          page,
+        }
+      })
       .then(res =>{
-        const {users} = res.data
-        this.users = users
+        const { users } = res.data;
+        const { data, last_page, current_page } = users;
+        this.users = data;
     })
     .catch( err => {
       console.warn(err)
