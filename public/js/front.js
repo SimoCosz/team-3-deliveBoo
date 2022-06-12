@@ -2138,6 +2138,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 
@@ -3618,7 +3620,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".search-page-container[data-v-30b3a980] {\n  margin: 0;\n  padding: 0 15px 0 15px;\n}\n.where[data-v-30b3a980] {\n  width: 95px;\n  gap: 10px;\n}\n.after[data-v-30b3a980]::after {\n  content: \"\";\n  display: block;\n  border: 1px solid #e9e8e8;\n  width: 90%;\n}\n.categories[data-v-30b3a980] {\n  min-width: 180px;\n  max-height: calc(100vh - 50px);\n  overflow: auto;\n  margin-left: 40px;\n}\n.container-card[data-v-30b3a980] {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n}\n.page-wrap[data-v-30b3a980] {\n  gap: 15px;\n}\n.page-wrap .page[data-v-30b3a980] {\n  width: 40px;\n  height: 40px;\n  border-radius: 50%;\n  background-color: #077567;\n  display: flex;\n  justify-content: center;\n  color: white;\n  align-items: center;\n  cursor: pointer;\n}\n.page-wrap .bkg-page[data-v-30b3a980] {\n  background-color: #edae89;\n  width: 40px;\n  height: 40px;\n  border-radius: 50%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border: 2px solid #077567;\n  color: #077567;\n  cursor: pointer;\n}\n@media (max-width: 1200px) {\n.restaurants[data-v-30b3a980] {\n    margin-left: 20px !important;\n}\n}\n@media (max-width: 750px) {\n.categories[data-v-30b3a980] {\n    display: none;\n}\n.restaurants[data-v-30b3a980] {\n    margin-left: 10px !important;\n}\n}", ""]);
+exports.push([module.i, ".search-page-container[data-v-30b3a980] {\n  margin: 0;\n  padding: 0 15px 0 15px;\n}\n.where[data-v-30b3a980] {\n  width: 95px;\n  gap: 10px;\n}\n.after[data-v-30b3a980]::after {\n  content: \"\";\n  display: block;\n  border: 1px solid #e9e8e8;\n  width: 100%;\n}\n.categories[data-v-30b3a980] {\n  min-width: 180px;\n  max-height: calc(100vh - 50px);\n  overflow: auto;\n  margin-left: 40px;\n}\n.container-card[data-v-30b3a980] {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n}\n.page-wrap[data-v-30b3a980] {\n  gap: 15px;\n}\n.page-wrap .page[data-v-30b3a980] {\n  width: 40px;\n  height: 40px;\n  border-radius: 50%;\n  background-color: #077567;\n  display: flex;\n  justify-content: center;\n  color: white;\n  align-items: center;\n  cursor: pointer;\n}\n.page-wrap .bkg-page[data-v-30b3a980] {\n  background-color: #edae89;\n  width: 40px;\n  height: 40px;\n  border-radius: 50%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border: 2px solid #077567;\n  color: #077567;\n  cursor: pointer;\n}\n@media (max-width: 1200px) {\n.restaurants[data-v-30b3a980] {\n    margin-left: 20px !important;\n}\n}\n/* @media (max-width: 620px) {\n  .categories {\n    display: block;\n    font-size: 13px;\n    height: 200px;\n  min-width: 350px;\n  background-color: #f1f1f1;\n  padding: 24px;\n  margin-right: 24px;\n  overflow-y:scroll;\n  margin-bottom: 10px;\n  }\n  .perScrollbarsottoi750{\n     max-height: 200px;\n    width: 2100px;\n  }\n  .check {\n    display: inline-block !important;\n    padding: 7px;\n  }\n  .row{\n    display: flex;\n    flex-direction: column;\n  }\n  .restaurants {\n    margin-left: 10px !important;\n  }\n} */\n@media (max-width: 750px) {\n.categories[data-v-30b3a980] {\n    display: block;\n    font-size: 13px;\n    height: 200px;\n    min-width: 530px;\n    background-color: #f8fafc;\n    padding: 24px;\n    margin-right: 24px;\n    margin-bottom: 10px;\n}\n.perScrollbarsottoi750[data-v-30b3a980] {\n    max-height: 200px;\n    width: 2400px;\n}\n.check[data-v-30b3a980] {\n    display: inline-block !important;\n    padding: 7px;\n    border: 2px solid #E9EBEB;\n    border-radius: 5px;\n    margin-bottom: 0 !important;\n    margin-right: 10px;\n}\ninput[data-v-30b3a980] {\n    padding-top: 100px !important;\n}\nlabel[data-v-30b3a980] {\n    margin: 0 !important;\n}\n.row[data-v-30b3a980] {\n    display: flex;\n    flex-direction: column;\n}\n.restaurants[data-v-30b3a980] {\n    margin-left: 10px !important;\n}\n}", ""]);
 
 // exports
 
@@ -10582,88 +10584,99 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c("layout", [
     _c("div", { staticClass: "search-page-container row mt-5" }, [
-      _c(
-        "div",
-        { staticClass: "col-2 categories p-2" },
-        [
-          _c("div", { staticClass: "after" }, [
-            _c("div", { staticClass: "where d-flex align-items-center p-2" }, [
-              _c("img", {
-                attrs: {
-                  src: __webpack_require__(/*! ../../../public/img/logo-categories.png */ "./public/img/logo-categories.png"),
-                  alt: "",
-                },
-              }),
-              _vm._v(" "),
-              _c("h5", { staticClass: "m-0" }, [_vm._v("Roma")]),
+      _c("div", { staticClass: "col-2 categories p-2" }, [
+        _c(
+          "div",
+          { staticClass: "perScrollbarsottoi750" },
+          [
+            _c("div", { staticClass: "after" }, [
+              _c(
+                "div",
+                { staticClass: "where d-flex align-items-center p-2" },
+                [
+                  _c("img", {
+                    attrs: {
+                      src: __webpack_require__(/*! ../../../public/img/logo-categories.png */ "./public/img/logo-categories.png"),
+                      alt: "",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("h5", { staticClass: "m-0" }, [_vm._v("Roma")]),
+                ]
+              ),
             ]),
-          ]),
-          _vm._v(" "),
-          _c("h5", { staticClass: "my-3" }, [_vm._v("Categorie")]),
-          _vm._v(" "),
-          _vm._l(_vm.categories, function (category) {
-            return _c("div", { key: category.id, staticClass: "check my-2" }, [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.categoryFilter,
-                    expression: "categoryFilter",
-                  },
-                ],
-                attrs: {
-                  type: "checkbox",
-                  id: category.name,
-                  name: category.name,
-                },
-                domProps: {
-                  value: category.id,
-                  checked: Array.isArray(_vm.categoryFilter)
-                    ? _vm._i(_vm.categoryFilter, category.id) > -1
-                    : _vm.categoryFilter,
-                },
-                on: {
-                  change: [
-                    function ($event) {
-                      var $$a = _vm.categoryFilter,
-                        $$el = $event.target,
-                        $$c = $$el.checked ? true : false
-                      if (Array.isArray($$a)) {
-                        var $$v = category.id,
-                          $$i = _vm._i($$a, $$v)
-                        if ($$el.checked) {
-                          $$i < 0 && (_vm.categoryFilter = $$a.concat([$$v]))
-                        } else {
-                          $$i > -1 &&
-                            (_vm.categoryFilter = $$a
-                              .slice(0, $$i)
-                              .concat($$a.slice($$i + 1)))
-                        }
-                      } else {
-                        _vm.categoryFilter = $$c
-                      }
+            _vm._v(" "),
+            _c("h5", { staticClass: "my-3" }, [_vm._v("Categorie")]),
+            _vm._v(" "),
+            _vm._l(_vm.categories, function (category) {
+              return _c(
+                "div",
+                { key: category.id, staticClass: "check my-2" },
+                [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.categoryFilter,
+                        expression: "categoryFilter",
+                      },
+                    ],
+                    attrs: {
+                      type: "checkbox",
+                      id: category.name,
+                      name: category.name,
                     },
-                    function ($event) {
-                      return _vm.check($event)
+                    domProps: {
+                      value: category.id,
+                      checked: Array.isArray(_vm.categoryFilter)
+                        ? _vm._i(_vm.categoryFilter, category.id) > -1
+                        : _vm.categoryFilter,
                     },
-                  ],
-                },
-              }),
-              _vm._v(" "),
-              _c("label", { attrs: { for: category.name } }, [
-                _vm._v(
-                  _vm._s(category.name) +
-                    " (" +
-                    _vm._s(category.users.length) +
-                    ")"
-                ),
-              ]),
-            ])
-          }),
-        ],
-        2
-      ),
+                    on: {
+                      change: [
+                        function ($event) {
+                          var $$a = _vm.categoryFilter,
+                            $$el = $event.target,
+                            $$c = $$el.checked ? true : false
+                          if (Array.isArray($$a)) {
+                            var $$v = category.id,
+                              $$i = _vm._i($$a, $$v)
+                            if ($$el.checked) {
+                              $$i < 0 &&
+                                (_vm.categoryFilter = $$a.concat([$$v]))
+                            } else {
+                              $$i > -1 &&
+                                (_vm.categoryFilter = $$a
+                                  .slice(0, $$i)
+                                  .concat($$a.slice($$i + 1)))
+                            }
+                          } else {
+                            _vm.categoryFilter = $$c
+                          }
+                        },
+                        function ($event) {
+                          return _vm.check($event)
+                        },
+                      ],
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("label", { attrs: { for: category.name } }, [
+                    _vm._v(
+                      _vm._s(category.name) +
+                        " (" +
+                        _vm._s(category.users.length) +
+                        ")"
+                    ),
+                  ]),
+                ]
+              )
+            }),
+          ],
+          2
+        ),
+      ]),
       _vm._v(" "),
       _c("div", { staticClass: "col restaurants mb-5" }, [
         _c("h2", { staticClass: "mb-4" }, [
@@ -30602,7 +30615,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\matti\Laravel\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\Andrea\Desktop\progeto-finale\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })
