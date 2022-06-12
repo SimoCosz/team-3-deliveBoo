@@ -65,7 +65,6 @@ export default {
       }
 
     .favourite-card-container{
-      margin-bottom: 50px;
       display: flex;
       flex-wrap: wrap;
       gap: 2%;
