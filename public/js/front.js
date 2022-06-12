@@ -3086,6 +3086,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
@@ -3620,7 +3622,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".search-page-container[data-v-30b3a980] {\n  margin: 0;\n  padding: 0 15px 0 15px;\n}\n.where[data-v-30b3a980] {\n  width: 95px;\n  gap: 10px;\n}\n.after[data-v-30b3a980]::after {\n  content: \"\";\n  display: block;\n  border: 1px solid #e9e8e8;\n  width: 100%;\n}\n.categories[data-v-30b3a980] {\n  min-width: 180px;\n  max-height: calc(100vh - 50px);\n  overflow: auto;\n  margin-left: 40px;\n}\n.container-card[data-v-30b3a980] {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n}\n.page-wrap[data-v-30b3a980] {\n  gap: 15px;\n}\n.page-wrap .page[data-v-30b3a980] {\n  width: 40px;\n  height: 40px;\n  border-radius: 50%;\n  background-color: #077567;\n  display: flex;\n  justify-content: center;\n  color: white;\n  align-items: center;\n  cursor: pointer;\n}\n.page-wrap .bkg-page[data-v-30b3a980] {\n  background-color: #edae89;\n  width: 40px;\n  height: 40px;\n  border-radius: 50%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border: 2px solid #077567;\n  color: #077567;\n  cursor: pointer;\n}\n@media (max-width: 1200px) {\n.restaurants[data-v-30b3a980] {\n    margin-left: 20px !important;\n}\n}\n/* @media (max-width: 620px) {\n  .categories {\n    display: block;\n    font-size: 13px;\n    height: 200px;\n  min-width: 350px;\n  background-color: #f1f1f1;\n  padding: 24px;\n  margin-right: 24px;\n  overflow-y:scroll;\n  margin-bottom: 10px;\n  }\n  .perScrollbarsottoi750{\n     max-height: 200px;\n    width: 2100px;\n  }\n  .check {\n    display: inline-block !important;\n    padding: 7px;\n  }\n  .row{\n    display: flex;\n    flex-direction: column;\n  }\n  .restaurants {\n    margin-left: 10px !important;\n  }\n} */\n@media (max-width: 750px) {\n.categories[data-v-30b3a980] {\n    display: block;\n    font-size: 13px;\n    height: 200px;\n    min-width: 530px;\n    background-color: #f8fafc;\n    padding: 24px;\n    margin-right: 24px;\n    margin-bottom: 10px;\n}\n.perScrollbarsottoi750[data-v-30b3a980] {\n    max-height: 200px;\n    width: 2400px;\n}\n.check[data-v-30b3a980] {\n    display: inline-block !important;\n    padding: 7px;\n    border: 2px solid #E9EBEB;\n    border-radius: 5px;\n    margin-bottom: 0 !important;\n    margin-right: 10px;\n}\ninput[data-v-30b3a980] {\n    padding-top: 100px !important;\n}\nlabel[data-v-30b3a980] {\n    margin: 0 !important;\n}\n.row[data-v-30b3a980] {\n    display: flex;\n    flex-direction: column;\n}\n.restaurants[data-v-30b3a980] {\n    margin-left: 10px !important;\n}\n}", ""]);
+exports.push([module.i, ".search-page-container[data-v-30b3a980] {\n  margin: 0;\n  padding: 0 15px 0 15px;\n}\n.where[data-v-30b3a980] {\n  width: 95px;\n  gap: 10px;\n}\n.after[data-v-30b3a980]::after {\n  content: \"\";\n  display: block;\n  border: 1px solid #e9e8e8;\n  width: 100%;\n}\n.categories[data-v-30b3a980] {\n  min-width: 180px;\n  max-height: calc(100vh - 50px);\n  overflow: auto;\n  margin-left: 40px;\n}\n.container-card[data-v-30b3a980] {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n}\n.page-wrap[data-v-30b3a980] {\n  gap: 15px;\n}\n.page-wrap .page[data-v-30b3a980] {\n  width: 40px;\n  height: 40px;\n  border-radius: 50%;\n  background-color: #077567;\n  display: flex;\n  justify-content: center;\n  color: white;\n  align-items: center;\n  cursor: pointer;\n}\n.page-wrap .bkg-page[data-v-30b3a980] {\n  background-color: #edae89;\n  width: 40px;\n  height: 40px;\n  border-radius: 50%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border: 2px solid #077567;\n  color: #077567;\n  cursor: pointer;\n}\n@media (max-width: 1200px) {\n.restaurants[data-v-30b3a980] {\n    margin-left: 20px !important;\n}\n}\n@media (max-width: 750px) {\n.categories[data-v-30b3a980] {\n    display: block;\n    font-size: 13px;\n    height: 200px;\n    min-width: 100%;\n    background-color: #f8fafc;\n    margin-left: 0 !important;\n}\n.perScrollbarsottoi750[data-v-30b3a980] {\n    max-height: 200px;\n    width: 2400px;\n}\n.check[data-v-30b3a980] {\n    display: inline-block !important;\n    padding: 7px;\n    border: 2px solid #E9EBEB;\n    border-radius: 5px;\n    margin-bottom: 0 !important;\n    margin-right: 10px;\n}\ninput[data-v-30b3a980] {\n    padding-top: 100px !important;\n}\nlabel[data-v-30b3a980] {\n    margin: 0 !important;\n}\n.row[data-v-30b3a980] {\n    display: flex;\n    flex-direction: column;\n}\n.restaurants[data-v-30b3a980] {\n    margin-left: 10px !important;\n}\n}", ""]);
 
 // exports
 
@@ -10885,7 +10887,7 @@ var render = function () {
                   _c("div", { staticClass: "favourite-card" }, [
                     _c("img", {
                       staticClass: "favourite-img",
-                      attrs: { src: user.cover, alt: "" },
+                      attrs: { src: "/storage/" + user.cover, alt: "" },
                     }),
                     _vm._v(" "),
                     _c("h2", { staticClass: "favourite-name" }, [
@@ -12451,10 +12453,18 @@ var render = function () {
                         ]),
                         _vm._v(" "),
                         _c("div", [
-                          _c("img", {
-                            staticClass: "image",
-                            attrs: { src: "/storage/" + product.cover },
-                          }),
+                          product.cover
+                            ? _c("img", {
+                                staticClass: "image",
+                                attrs: { src: "/storage/" + product.cover },
+                              })
+                            : _c("img", {
+                                staticClass: "image",
+                                attrs: {
+                                  src: __webpack_require__(/*! ../../../public/img/img-default-img.png */ "./public/img/img-default-img.png"),
+                                  alt: "",
+                                },
+                              }),
                         ]),
                       ]
                     ),
@@ -12665,10 +12675,21 @@ var render = function () {
                         },
                       }),
                       _vm._v(" "),
-                      _c("img", {
-                        staticClass: "product-show_img",
-                        attrs: { src: _vm.selectedProduct.cover, alt: "" },
-                      }),
+                      _vm.selectedProduct.cover
+                        ? _c("img", {
+                            staticClass: "product-show_img",
+                            attrs: {
+                              src: "/storage/" + _vm.selectedProduct.cover,
+                              alt: "",
+                            },
+                          })
+                        : _c("img", {
+                            staticClass: "product-show_img",
+                            attrs: {
+                              src: __webpack_require__(/*! ../../../public/img/img-default-img.png */ "./public/img/img-default-img.png"),
+                              alt: "",
+                            },
+                          }),
                       _vm._v(" "),
                       _c("div", { staticClass: "product-show_info p-4" }, [
                         _c("h4", { staticClass: "title" }, [
@@ -30615,7 +30636,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Andrea\Desktop\progeto-finale\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\black\Project\Hub Project\LARAVEL\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })

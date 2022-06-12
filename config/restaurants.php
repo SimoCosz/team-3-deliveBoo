@@ -7,7 +7,7 @@ return[
     'city' => 'Roma',
     'telephone_number' => '066797497',
     'p_iva' => '04872434812',
-    'cover' => 'https://rs-menus-api.roocdn.com/images/5370ed30-4c43-4a80-99ee-beaaec29408c/image.jpeg?width=602&height=300&auto=webp&format=jpg&fit=crop&v=1629357961',
+    'cover' => 'uploads/don_nino.jpg',
     'email' => 'info@don.it',
     'password' => 'password',
     'categories' => [
@@ -18,7 +18,7 @@ return[
     'products' => [
       [
         'user_id' => 1,
-        'cover' => 'https://www.don-nino.it/wp-content/uploads/2019/02/Prodotto_punta_1-1.png',
+        'cover' => 'uploads/don_nino_product_1.png',
         'name' => 'Cannolo siciliano di Don Nino',
         'description' => 'Cannolo all ricotta con pere, cioccolata e pistacchio',
         'price' => 5.50,
@@ -28,7 +28,7 @@ return[
       [
 
         'user_id' => 1,
-        'cover' => 'https://www.don-nino.it/wp-content/uploads/2019/02/Prodotto_punta_2-1.png',
+        'cover' => 'uploads/don_nino_product_2.png',
         'name' => 'La Monoporzione di Don Nino',
         'description' => 'Bavarese alla nocciola, croccatino alle mandorle e mousse al cioccolato, racchiusi da una glassa di cacao',
         'price' => 5.50,
@@ -37,7 +37,7 @@ return[
       ],
       [
         'user_id' => 1,
-        'cover' => 'https://www.don-nino.it/wp-content/uploads/2019/02/Prodotto_punta_4-1.jpg',
+        'cover' => 'uploads/don_nino_product_3.jpg',
         'name' => 'I Macarons di Don Nino',
         'description' => 'Due gusci di meringhe, fatta di farina di mandorle, albume e zucchero a velo racchiudono squisite confetture',
         'price' => 6.00,
@@ -46,7 +46,7 @@ return[
       ],
       [
         'user_id' => 1,
-        'cover' => 'https://www.don-nino.it/wp-content/uploads/2019/02/Prodotto_punta_3.jpg',
+        'cover' => 'uploads/don_nino_product_4.jpg',
         'name' => 'Il Cuor di Brontolo',
         'description' => 'Gelato al pistacchio di Bronte con variegatura di Nutella al pistacchio, mandorle e pistacchi caramellati',
         'price' => 4.50,
@@ -55,7 +55,7 @@ return[
       ],
       [
         'user_id' => 1,
-        'cover' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Flecattivecompagnie.it%2Fshop%2Fmenu%2Fpizza-menu%2Fmargherita%2F&psig=AOvVaw2EVvaqDyIWFrV_aLYjE4Z6&ust=1653466883964000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCOj77qja9_cCFQAAAAAdAAAAABAO',
+        'cover' => 'uploads/don_nino_product_5.jpg',
         'name' => 'Pinsa margherita',
         'description' => 'Pinsa pomodoro e mozzarella',
         'price' => 8.00,
@@ -64,7 +64,7 @@ return[
       ],
       [
         'user_id' => 1,
-        'cover' => 'https://cinquegusti.com/wp-content/uploads/2022/04/pinsa-romana-condimenti.png',
+        'cover' => 'uploads/don_nino_product_6.webp',
         'name' => 'Pinsa crostone',
         'description' => 'Pinsa mozzarella, pomodorini, rucola e prosciutto crudo',
         'price' => 11.00,
@@ -73,7 +73,7 @@ return[
       ],
       [
         'user_id' => 1,
-        'cover' => 'https://blog.oraviaggiando.it/wp-content/uploads/2021/11/Pinsa-romana-e-pizza-differenze.jpg',
+        'cover' => 'uploads/don_nino_product_7.jpg',
         'name' => 'Pinsa provola e speck',
         'description' => 'Pinsa provola e speck',
         'price' => 13.00,
@@ -82,7 +82,7 @@ return[
       ],
       [
         'user_id' => 1,
-        'cover' => 'https://www.dimarco.it/build/images/pages/pinsa/pinsa_header.7803a749.jpg',
+        'cover' => 'uploads/don_nino_product_8.jpg',
         'name' => 'Pinsa burrata e zucchine',
         'description' => 'Pinsa burrata e zucchine',
         'price' => 13.00,
@@ -91,7 +91,7 @@ return[
       ],
       [
         'user_id' => 1,
-        'cover' => 'https://video-images.vice.com/articles/61efd28bce101c009445b4a5/lede/1643114104948-pinsa-romana-antica-roma.jpeg?crop=1xw:0.8428148379052369xh;center,center',
+        'cover' => 'uploads/don_nino_product_10.jpg',
         'name' => 'Pinsa bufala, speck e pancetta',
         'description' => 'Pinsa con mozzarella di bufala, speck e pancetta',
         'price' => 16.00,
@@ -100,7 +100,7 @@ return[
       ],
       [
         'user_id' => 1,
-        'cover' => 'https://recipeimages.migros.ch/crop/v-w-600-h-300-a-center_center/d43502e903bca5c85d6df99dd9dfd2a82f0779bc/caesar-salad-con-pollo-e-pancetta-0-16-9.jpg',
+        'cover' => 'uploads/don_nino_product_11.webp',
         'name' => 'Caesar salad',
         'description' => 'Insalata con parmigiano a scaglie, pancetta, crostini e petto di pollo arrosto',
         'price' => 12.00,
@@ -109,7 +109,7 @@ return[
       ],
       [
         'user_id' => 1,
-        'cover' => 'https://images.fidhouse.com/fidelitynews/wp-content/uploads/sites/6/2014/12/Insalata-greca-71111-2.jpg',
+        'cover' => 'uploads/don_nino_product_9.jpg',
         'name' => 'Insalata greca',
         'description' => 'Insalata greca con formaggio bianco, olive nere, cetrioli, pomodoro a fette e cipolla',
         'price' => 9.00,
@@ -118,7 +118,7 @@ return[
       ],
       [
         'user_id' => 1,
-        'cover' => 'https://primochef.it/wp-content/uploads/2020/11/SH_cappuccino.jpg.webp',
+        'cover' => 'uploads/don_nino_product_12.webp',
         'name' => 'Cappuccino',
         'description' => 'Cappuccino',
         'price' => 4.00,
@@ -127,7 +127,7 @@ return[
       ],
       [
         'user_id' => 1,
-        'cover' => 'https://www.ricetteperbimby.it/foto-ricette/cioccolata-calda-bimby.jpg',
+        'cover' => 'uploads/don_nino_product_13.jpg',
         'name' => 'Cioccolata calda',
         'description' => 'Cioccolata calda',
         'price' => 4.00,
@@ -136,7 +136,7 @@ return[
       ],
       [
         'user_id' => 1,
-        'cover' => 'http://www.coopfirenze.it/uploads/25755/original/19_succhi_di_frutta_1.jpg',
+        'cover' => 'uploads/don_nino_product_14.jpg',
         'name' => 'Succo di frutta',
         'description' => 'Verrà consegnato un succo di frutta casuale',
         'price' => 4.00,
@@ -152,7 +152,7 @@ return[
     'city' => 'Roma',
     'telephone_number' => '064823949',
     'p_iva' => '74495728007',
-    'cover' => 'https://rs-menus-api.roocdn.com/images/c428b227-6fdd-41e6-b58c-bf9329368a2c/image.jpeg?width=386&height=217&auto=webp&format=jpg&fit=crop',
+    'cover' => 'uploads/five_guys.webp',
     'email' => 'info@fiveguysroma.it',
     'password' => 'FiveGuys000',
     'categories' => [
@@ -162,7 +162,7 @@ return[
     'products' => [
       [
         'user_id' => 2,
-        'cover' => 'https://rs-menus-api.roocdn.com/images/7659239f-7b74-4a47-9d95-a1874f8dca9e/image.jpeg?width=98&height=98&auto=webp&format=jpg&fit=crop',
+        'cover' => '',
         'name' => 'Hamburger',
         'description' => 'Hamburger classico',
         'price' => 11.50,
@@ -171,7 +171,7 @@ return[
       ],
       [
         'user_id' => 2,
-        'cover' => 'https://rs-menus-api.roocdn.com/images/f6dee3e6-a034-41de-802d-40076e64b6c8/image.jpeg?width=98&height=98&auto=webp&format=jpg&fit=crop',
+        'cover' => '',
         'name' => 'Cheeseburger',
         'description' => 'Hamburger con formaggio',
         'price' => 13.00,
@@ -180,7 +180,7 @@ return[
       ],
       [
         'user_id' => 2,
-        'cover' => 'https://rs-menus-api.roocdn.com/images/8bede887-9652-4310-be79-339657ebc506/image.jpeg?width=98&height=98&auto=webp&format=jpg&fit=crop',
+        'cover' => '',
         'name' => 'Baconburger',
         'description' => 'Hamburger con bacon',
         'price' => 13.50,
@@ -189,7 +189,7 @@ return[
       ],
       [
         'user_id' => 2,
-        'cover' => 'https://rs-menus-api.roocdn.com/images/5c1ae89e-894f-4d6f-9789-bddce6710d4b/image.jpeg?width=98&height=98&auto=webp&format=jpg&fit=crop',
+        'cover' => '',
         'name' => 'Bacon-cheeseburger',
         'description' => 'Hamburger con bacon e formaggio',
         'price' => 14.50,
@@ -198,7 +198,7 @@ return[
       ],
       [
         'user_id' => 2,
-        'cover' => 'https://rs-menus-api.roocdn.com/images/7aabd144-4c7c-4776-b97f-916bb290ba38/image.jpeg?width=98&height=98&auto=webp&format=jpg&fit=crop',
+        'cover' => '',
         'name' => 'All beef hot dog',
         'description' => 'Hot dog con wurstel e salse',
         'price' => 8.00,
@@ -207,7 +207,7 @@ return[
       ],
       [
         'user_id' => 2,
-        'cover' => 'https://rs-menus-api.roocdn.com/images/2a1640a7-777c-46b4-a47b-bf2a58a6c947/image.jpeg?width=98&height=98&auto=webp&format=jpg&fit=crop',
+        'cover' => '',
         'name' => 'Cheese dog',
         'description' => 'Hot dog con wurstel e formaggio',
         'price' => 9.00,
@@ -216,7 +216,7 @@ return[
       ],
       [
         'user_id' => 2,
-        'cover' => 'https://rs-menus-api.roocdn.com/images/ade42290-691b-418e-9b41-6ef27a8fc8b0/image.jpeg?width=98&height=98&auto=webp&format=jpg&fit=crop',
+        'cover' => '',
         'name' => 'Bacon dog',
         'description' => 'Hot dog con wurstel e bacon',
         'price' => 9.50,
@@ -225,7 +225,7 @@ return[
       ],
       [
         'user_id' => 2,
-        'cover' => 'https://rs-menus-api.roocdn.com/images/2ad1716a-0f8d-459e-85b9-480e7086d944/image.jpeg?width=98&height=98&auto=webp&format=jpg&fit=crop',
+        'cover' => '',
         'name' => 'Bacon-cheese dog',
         'description' => 'Hot dog con wurstel, formaggio e bacon',
         'price' => 10.50,
@@ -234,7 +234,7 @@ return[
       ],
       [
         'user_id' => 2,
-        'cover' => 'https://rs-menus-api.roocdn.com/images/47031d87-73fd-4732-88b8-efcb7495ff24/image.jpeg?width=98&height=98&auto=webp&format=jpg&fit=crop',
+        'cover' => '',
         'name' => 'Fries',
         'description' => '',
         'price' => 5.00,
@@ -243,7 +243,7 @@ return[
       ],
       [
         'user_id' => 2,
-        'cover' => 'https://rs-menus-api.roocdn.com/images/30cf44ec-cd74-4170-903a-32690ce59aa4/image.jpeg?width=98&height=98&auto=webp&format=jpg&fit=crop',
+        'cover' => '',
         'name' => 'Cajun',
         'description' => '',
         'price' => 5.00,
@@ -252,7 +252,7 @@ return[
       ],
       [
         'user_id' => 2,
-        'cover' => 'https://rs-menus-api.roocdn.com/images/7878b838-0ed9-410e-8c0c-210585bf494b/image.jpeg?width=98&height=98&auto=webp&format=jpg&fit=crop',
+        'cover' => '',
         'name' => 'Coca Cola 45cl',
         'description' => '',
         'price' => 4.00,
@@ -261,7 +261,7 @@ return[
       ],
       [
         'user_id' => 2,
-        'cover' => 'https://rs-menus-api.roocdn.com/images/e1a7be3f-9729-4cce-b218-d60bd771159d/image.jpeg?width=98&height=98&auto=webp&format=jpg&fit=crop',
+        'cover' => '',
         'name' => 'Fanta 45cl',
         'description' => '',
         'price' => 4.00,
@@ -277,7 +277,7 @@ return[
     'city' => 'Roma',
     'telephone_number' => '0669923705',
     'p_iva' => '38474248092',
-    'cover' => 'https://rs-menus-api.roocdn.com/images/8b64aa1d-28cc-4806-bb74-c9efd23f744e/image.jpeg?width=533&height=300&auto=webp&format=jpg&fit=crop',
+    'cover' => 'uploads/hosteria_del_mercato.webp',
     'email' => 'info@hosteriadelmercato.it',
     'password' => 'HosteriaTheOldest000',
     'categories' => [
@@ -412,7 +412,7 @@ return[
     'city' => 'Roma',
     'telephone_number' => '3338570289',
     'p_iva' => '03848975908',
-    'cover' => 'https://rs-menus-api.roocdn.com/images/63af147b-c0b4-4f87-8586-a7e8ef580b39/image.jpeg?width=386&height=217&auto=webp&format=jpg&fit=crop',
+    'cover' => 'uploads/il_caseificio_pugliese.webp',
     'email' => 'info@ilcaseificiopugliese.it',
     'password' => 'CaseificioPugliese00',
     'categories' => [
@@ -582,7 +582,7 @@ return[
     'city' => 'Roma',
     'telephone_number' => '3884471681',
     'p_iva' => '04556675908',
-    'cover' => 'https://rs-menus-api.roocdn.com/images/a4a3841d-644a-43b5-9e11-82cc8a58f4d8/image.jpeg?width=386&height=217&auto=webp&format=jpg&fit=crop&v=1629357808',
+    'cover' => 'uploads/mr_kebab_turco.webp',
     'email' => 'info@mrkebabturco.it',
     'password' => 'KebabBonoKebab00',
     'categories' => [
@@ -754,7 +754,7 @@ return[
     'city' => 'Roma', 
     'telephone_number' => '0659603867',
     'p_iva' => '12345678912',
-    'cover' => 'https://res.cloudinary.com/glovoapp/h_225,f_auto,q_auto/Stores/ufgotgxvuwmdwyqy1ruu',
+    'cover' => 'uploads/billy_tacos.avif',
     'email' => 'billy_tacos@gmail.com',
     'password' => 'Password',
     'categories' => [
@@ -942,7 +942,7 @@ return[
     'city' => 'Roma', 
     'telephone_number' => '0683984024',
     'p_iva' => '99999999999',
-    'cover' => 'https://ilovepoke.it/wp-content/uploads/2020/06/i-love-poke6970_-scaled.jpg',
+    'cover' => 'uploads/i_love_poke.jpg',
     'email' => 'pokeLeonina@gmail.com',
     'password' => 'Password',
     'categories' => [
@@ -1068,7 +1068,7 @@ return[
     'city' => 'Via Bellinzona 21', 
     'telephone_number' => '0645615924',
     'p_iva' => '00000000000',
-    'cover' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt8HM12ZJp9Nu2Ei4iZFO01f_0p6c_5lWH4w&usqp=CAU',
+    'cover' => 'uploads/lievito_madre.png',
     'email' => 'lievito00@gmail.com',
     'password' => 'Password',
     'categories' => [
@@ -1266,7 +1266,7 @@ return[
     'city' => 'Via Bellinzona 21', 
     'telephone_number' => '0645615924',
     'p_iva' => '00000000000',
-    'cover' => 'https://rs-menus-api.roocdn.com/images/c91843fe-b1d9-4c49-8043-0020fca35504/image.jpeg?width=388&height=279&auto=webp&format=jpg&fit=crop',
+    'cover' => 'uploads/casa_de_los_burritos.webp',
     'email' => 'burritos@gmail.com',
     'password' => 'Password',
     'categories' => [
@@ -1373,7 +1373,7 @@ return[
     'city' => 'Roma', 
     'telephone_number' => '7895367894',
     'p_iva' => '79548617893',
-    'cover' => 'https://rs-menus-api.roocdn.com/images/a0137f24-ca32-4d1d-be6e-e40a6e24ac4c/image.jpeg?width=379&height=213&auto=webp&format=jpg&fit=crop',
+    'cover' => 'uploads/daruma_sushi.webp',
     'email' => 'darumasushi@hotmail.com',
     'password' => 'darumasushi',
     'categories' => [
@@ -1491,7 +1491,7 @@ return[
     'city' => 'Roma', 
     'telephone_number' => '7891564895',
     'p_iva' => '65789456874',
-    'cover' => 'https://rs-menus-api.roocdn.com/images/c97954e6-cec5-43c6-9cfd-a9451ba2feb6/image.jpeg?width=447&height=251&auto=webp&format=jpg&fit=crop',
+    'cover' => 'uploads/sushi_kaito.webp',
     'email' => 'sushikatio@live.it',
     'password' => 'sushi',
     'categories' => [
@@ -1503,7 +1503,7 @@ return[
     'products' => [
       [
         'user_id' => 11,
-        'cover' => 'https://rs-menus-api.roocdn.com/images/01477b6b-a25c-404e-b399-a0f1c84bc825/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop',
+        'cover' => 'uploads/sushi_kaito.webp',
         'name' => 'Edamame',
         'description' => 'Fagioli di soia',
         'price' => 5.00,
@@ -1600,7 +1600,7 @@ return[
     'city' => 'CittàRistorante', 
     'telephone_number' => '0645123889',
     'p_iva' => '78428946812',
-    'cover' => 'https://rs-menus-api.roocdn.com/images/73f0fd45-f5d1-4c4f-9ca1-969e1faed832/image.jpeg?width=533&height=300&auto=webp&format=jpg&fit=crop',
+    'cover' => 'uploads/temakinho.webp',
     'email' => 'temakinho@gmail.com',
     'password' => 'temakinho',
     'categories' => [
@@ -1708,7 +1708,7 @@ return[
     'city' => 'Roma', 
     'telephone_number' => '3645879459',
     'p_iva' => '15423689458',
-    'cover' => 'https://rs-menus-api.roocdn.com/images/9789f58a-ca02-4398-a3c7-d341df1a2f96/image.jpeg?width=372&height=209&auto=webp&format=jpg&fit=crop',
+    'cover' => 'uploads/cody.webp',
     'email' => 'cody@hotmail.it',
     'password' => 'cody',
     'categories' => [
@@ -1853,7 +1853,7 @@ return[
     'city' => 'Roma', 
     'telephone_number' => '3498471932',
     'p_iva' => '88888888888',
-    'cover' => 'https://www.dissapore.com/wp-content/uploads/2015/11/panini-milano.jpg',
+    'cover' => 'uploads/er_mejo_panino.jpg',
     'email' => 'reMejo_panino@libero.it',
     'password' => 'Password',
     'categories' => [
@@ -2024,7 +2024,7 @@ return[
     'city' => 'Roma', 
     'telephone_number' => '0642011164',
     'p_iva' => '05253501000',
-    'cover' => 'https://rs-menus-api.roocdn.com/images/4c80c423-6fc4-448a-bc62-4344aa52f5a9/image.jpeg?width=533&height=300&auto=webp&format=jpg&fit=crop',
+    'cover' => 'uploads/al_forno_della_soffitta.webp',
     'email' => 'direzione.soffitta@gmail.com',
     'password' => 'soffitta111',
     'categories' => [
@@ -2149,7 +2149,7 @@ return[
     'city' => 'Roma', 
     'telephone_number' => '0643419624',
     'p_iva' => '05253501000',
-    'cover' => 'https://rs-menus-api.roocdn.com/images/550bc094-9ba1-4542-8a72-467fba974242/image.jpeg?width=533&height=300&auto=webp&format=jpg&fit=crop',
+    'cover' => 'uploads/trapizzino.webp',
     'email' => 'trapizzino@gmail.com',
     'password' => 'trapizzino111',
     'categories' => [
@@ -2229,7 +2229,7 @@ return[
     'city' => 'Roma', 
     'telephone_number' => '0685357255',
     'p_iva' => '05253501123',
-    'cover' => 'https://rs-menus-api.roocdn.com/images/75ffd6ca-94be-401e-9ee0-74aaf04a7e18/image.jpeg?width=533&height=300&auto=webp&format=jpg&fit=crop',
+    'cover' => 'uploads/mangiafuoco.webp',
     'email' => 'ristorante.mangiafuoco@3gdynamics.it',
     'password' => 'mangiafuoco111',
     'categories' => [
@@ -2318,7 +2318,7 @@ return[
     'city' => 'Roma', 
     'telephone_number' => '065880516',
     'p_iva' => '01642890568',
-    'cover' => 'https://rs-menus-api.roocdn.com/images/79646a04-8459-475e-96f1-93edac4fa9f7/image.jpeg?width=538&height=302&auto=webp&format=jpg&fit=crop',
+    'cover' => 'uploads/dar_poeta.webp',
     'email' => 'marco@darpoeta.com',
     'password' => 'darpoeta111',
     'categories' => [
@@ -2425,7 +2425,7 @@ return[
     'city' => 'Roma', 
     'telephone_number' => '066785595',
     'p_iva' => '05253598507',
-    'cover' => 'https://rs-menus-api.roocdn.com/images/a426dceb-cb59-4a47-bca3-fa2c1bef9b13/image.jpeg?width=533&height=300&auto=webp&format=jpg&fit=crop',
+    'cover' => 'uploads/la_panetteria_ristorante.webp',
     'email' => 'lapanetteria@gmail.com',
     'password' => 'lapanetteria111',
     'categories' => [
@@ -2577,7 +2577,7 @@ return[
     'city' => 'Roma', 
     'telephone_number' => '0692599256',
     'p_iva' => '05253577752',
-    'cover' => 'https://rs-menus-api.roocdn.com/images/120d8fc0-d9a2-4912-9eed-ff7acbf07651/image.jpeg?width=533&height=300&auto=webp&format=jpg&fit=crop',
+    'cover' => 'uploads/lo_sfilatino.webp',
     'email' => 'losfilatino@gmail.com',
     'password' => 'losfilatino111',
     'categories' => [
@@ -2685,7 +2685,7 @@ return[
     'city' => 'Roma', 
     'telephone_number' => '3334659872',
     'p_iva' => '7484903833',
-    'cover' => 'https://media-cdn.tripadvisor.com/media/photo-o/12/9d/29/ae/received-10155441614938963.jpg',
+    'cover' => 'uploads/trattoria_da_gino.jpg',
     'email' => 'trattoriadagino@gmail.com',
     'password' => 'trattoriagino',
     'categories' => [
@@ -2775,7 +2775,7 @@ return[
     'city' => 'Roma', 
     'telephone_number' => '0772453729',
     'p_iva' => '3946538202',
-    'cover' => 'https://media-cdn.tripadvisor.com/media/photo-o/09/26/b9/94/pinseria-romana-da-fabietto.jpg',
+    'cover' => 'uploads/pinseria_romana.jpg',
     'email' => 'pinseriarom@gmail.com',
     'password' => 'pineriaromana',
     'categories' => [
@@ -2863,7 +2863,7 @@ return[
     'city' => 'Roma', 
     'telephone_number' => '3946372976',
     'p_iva' => '29465383027',
-    'cover' => 'https://media-cdn.tripadvisor.com/media/photo-o/1c/e7/7f/fb/logo-ufficiale.jpg',
+    'cover' => 'uploads/bigburger.jpg',
     'email' => 'bigburger@alice.it',
     'password' => 'bigburger69',
     'categories' => [
@@ -2926,7 +2926,7 @@ return[
     'city' => 'Roma', 
     'telephone_number' => '3945893923',
     'p_iva' => '384648302',
-    'cover' => 'https://media-cdn.tripadvisor.com/media/photo-w/1b/49/2e/94/mandala.jpg',
+    'cover' => 'uploads/jin_feng.jpg',
     'email' => 'feng@gmail.com',
     'password' => 'fengfeng',
     'categories' => [
@@ -3006,7 +3006,7 @@ return[
     'city' => 'Roma', 
     'telephone_number' => '3334399872',
     'p_iva' => '74839462233',
-    'cover' => 'https://media-cdn.tripadvisor.com/media/photo-o/11/2a/ad/14/viagra-naturale.jpg',
+    'cover' => 'uploads/panza_piena.jpg',
     'email' => 'panzapiena@gmail.com',
     'password' => 'panzapiena',
     'categories' => [
@@ -3015,7 +3015,7 @@ return[
     'products' => [
       [
         'user_id' => 25,
-        'cover' => 'https://media-cdn.tripadvisor.com/media/photo-m/1280/1a/08/fc/f6/spaghetti-alla-carbonara.jpg',
+        'cover' => '',
         'name' => 'Spaghetti alla carbonara',
         'description' => 'Spaghetti alla carbonara con uova e guanciale',
         'price' => 7.50,
