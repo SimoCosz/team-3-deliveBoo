@@ -34,14 +34,14 @@
           @foreach($products as $key => $product)
             <tr>
               <td class="text-center">{{ $product->id }}</td>
-              <td>{{ $product->name }}</td>
+              <td class="">{{ $product->name }}</td>
               <td class="d-flex align-items-center justify-content-center">
                 @if ($product->cover)
                 <img class="w-75 h-75 rounded-circle" style="aspect-ratio:1/1" src="{{ asset('storage/'.$product->cover)}}" alt="">   
                 {{-- @elseif($product->cover)
                 <img class="w-75 h-75 rounded-circle" style="aspect-ratio:1/1" src="{{ $product->cover }}" alt="">    --}}
                 @else
-                  <img class="w-100 h-100 rounded-circle mx-auto d-block" style="aspect-ratio:1/1" src="{{URL::asset('img/segna-posto.jpg')}}" alt="">  
+                  <img class="w-75 h-75 rounded-circle mx-auto d-block" style="aspect-ratio:1/1" src="{{URL::asset('img/segna-posto.jpg')}}" alt="">  
                 @endif
               </td>
               <td class="text-capitalize">
@@ -62,13 +62,33 @@
               </td>
 
               <td>
-                <form action="{{ route('admin.products.destroy', $product)}}" method="POST">
-                @csrf
-                @method('DELETE')
-                  <button type="submit" class="btn btn-small border-rounder btn-outline-danger">
-                    {{$product->deleted_at ? 'Elimina definitivamente' : 'Elimina'}}
-                  </button>  
-                </form>
+                <button type="button" class="btn btn-small border-rounder btn-outline-danger" data-toggle="modal" data-target="#exampleModal">
+                  Elimina
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog  modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Sei sicuro di voler eliminare {{$product->name}}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <form action="{{ route('admin.products.destroy', $product)}}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-small border-rounder btn-outline-danger">
+                            {{$product->deleted_at ? 'Elimina definitivamente' : 'Elimina'}}
+                            </button>  
+                          </form>                        
+                      </div>
+                    </div>
+                  </div>
+                </div>                
               </td>
             </tr>
           @endforeach
