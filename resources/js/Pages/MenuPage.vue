@@ -6,8 +6,8 @@
         <div class="row">
           <div class="col-12 col-md-4">
             <figure>
-              <img class="restourant-image" v-if="user.cover != null" :src='user.cover' alt="">
-              <!-- <img class="restourant-image" v-else :src='require('../../../public/img/img-default-img.png')' alt=""> -->
+              <img class="restourant-image" v-if="user.cover" :src="`/storage/${ user.cover }`" alt="">
+              <!-- <img class="restourant-image" v-else :src="`/storage/${ user.cover }`") alt=""> -->
             </figure>
           </div>
           <div class="col-12 col-md-8">

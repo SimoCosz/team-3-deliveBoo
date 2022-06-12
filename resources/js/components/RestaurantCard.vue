@@ -2,7 +2,8 @@
     <router-link class="card" tag="a" :to="{name:'menu.restaurant', params:{slug:element.slug} }">
       <div class="cover-wrapper">
         <figure>
-          <img class="cover" :src="element.cover" alt="">
+          <img class="cover" :src="`/storage/${ element.cover }`" alt="">
+          <!-- <img class="cover" :src="element.cover" alt=""> -->
         </figure>
         <div class="delivery">
           <p class="p-0 m-0">Consegna gratuita</p>
