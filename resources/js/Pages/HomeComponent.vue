@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <LayoutAlternative>
     <div>
       <Jumbo/>
       <Selection/>
@@ -18,7 +18,7 @@
       <WorkWithUs/>
     </div>
     
-  </Layout>
+  </LayoutAlternative>
 </template>
 
 <script>
@@ -27,7 +27,7 @@
   import Categories from '../components/CategoriesIndex.vue'
   import NewsSection from '../components/NewsSection.vue'
   import WorkWithUs from '../components/WorkWithUs.vue'
-  import Layout from '../layouts/Layout.vue'
+  import LayoutAlternative from '../layouts/LayoutAlternative.vue'
   import Jumbo from '../components/HomeJumbotron.vue'
   import Selection from '../components/SelectionDeliveboo.vue'
   import Favourite from '../components/FavouriteDishes.vue'
@@ -36,7 +36,7 @@
 
   export default {
     components: { 
-      Layout,
+      LayoutAlternative,
       Users,
       Jumbo,
       Selection,
