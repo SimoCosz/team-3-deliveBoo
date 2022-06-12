@@ -39,6 +39,14 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'form.client_name'=>"required|min:2|max:30",
+            'form.client_surname'=>"required|min:2|max:30",
+            'form.client_address'=>"required|min:4|max:60",
+            'form.client_city'=>"required|min:2|max:50",
+            'form.client_phone'=>"required|min:9999999|max:9999999999999999|numeric",
+            'form.client_email'=>'required|email|max:50',
+        ]);
 
         $data = $request->all();
         $total = $data['total'];

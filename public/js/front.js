@@ -2830,6 +2830,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2854,13 +2855,22 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     sendForm: function sendForm() {
+      var _this = this;
+
       axios.post('/api/orders', {
         form: this.form,
         cartUserId: this.localCartShop[0].user_id,
         total: localStorage.getItem('total') // cart: this.localCartShop
 
       }).then(function (res) {
-        console.log(res);
+        if (res.status == 200) {
+          localStorage.setItem('cartShop', null);
+          localStorage.setItem('total', 0);
+          _this.localCartShop = null;
+          window.location = "/checkout";
+        }
+
+        console.log(res.error);
       });
     },
     sendToCheckout: function sendToCheckout() {
@@ -11459,7 +11469,7 @@ var render = function () {
                           on: {
                             submit: function ($event) {
                               $event.preventDefault()
-                              handleSubmit(_vm.sendForm())
+                              handleSubmit(_vm.onSubmit())
                             },
                           },
                         },
@@ -11474,7 +11484,7 @@ var render = function () {
                             staticClass: "personal_info_input_alert",
                             attrs: {
                               name: "NAME",
-                              rules: "required|alpha_spaces|max:30",
+                              rules: "required|alpha_spaces|min:2|max:30",
                             },
                             scopedSlots: _vm._u(
                               [
@@ -11556,7 +11566,7 @@ var render = function () {
                             staticClass: "personal_info_input_alert",
                             attrs: {
                               name: "SURNAME",
-                              rules: "required|alpha_spaces|max:30",
+                              rules: "required|alpha_spaces|min:2|max:30",
                             },
                             scopedSlots: _vm._u(
                               [
@@ -11641,7 +11651,7 @@ var render = function () {
                             staticClass: "personal_info_input_alert",
                             attrs: {
                               name: "ADDRESS",
-                              rules: "required|max:40",
+                              rules: "required|min:4|max:60",
                             },
                             scopedSlots: _vm._u(
                               [
@@ -11724,7 +11734,10 @@ var render = function () {
                           _vm._v(" "),
                           _c("validationProvider", {
                             staticClass: "personal_info_input_alert",
-                            attrs: { name: "CITY", rules: "required|max:30" },
+                            attrs: {
+                              name: "CITY",
+                              rules: "required|min:2|max:50",
+                            },
                             scopedSlots: _vm._u(
                               [
                                 {
@@ -11804,7 +11817,7 @@ var render = function () {
                             staticClass: "personal_info_input_alert",
                             attrs: {
                               name: "PHONE NUMBER",
-                              rules: "required|numeric|max:16",
+                              rules: "required|numeric|min:8|max:16",
                             },
                             scopedSlots: _vm._u(
                               [
@@ -11964,25 +11977,14 @@ var render = function () {
                               true
                             ),
                           }),
+                          _vm._v(" "),
+                          _c("button", { attrs: { type: "submit" } }, [
+                            _vm._v(
+                              "\r\n            Vai al pagamento\r\n          "
+                            ),
+                          ]),
                         ],
                         1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "button",
-                        {
-                          attrs: { type: "submit" },
-                          on: {
-                            click: function ($event) {
-                              return _vm.onSubmit()
-                            },
-                          },
-                        },
-                        [
-                          _c("a", { attrs: { href: "/checkout" } }, [
-                            _vm._v("Vai al pagamento"),
-                          ]),
-                        ]
                       ),
                     ]
                   },
