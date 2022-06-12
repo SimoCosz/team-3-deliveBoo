@@ -235,7 +235,7 @@ methods : {
           localStorage.setItem('total', this.totalPrice);
           window.location.reload();
         } else {
-          if (plateObject.user_id == this.localCartShop[0].user_id) {
+          if (plateObject.user_id === this.localCartShop[0].user_id) {
             const localItems = JSON.parse(localStorage.getItem('cartShop'));
             localItems.map(data=>{
               if(plate.id == data.id) {
