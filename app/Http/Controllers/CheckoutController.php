@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ClientSuccessfullPayment;
+use App\Mail\ClientSuccessfullPaymentMail;
+use App\Mail\RestaurantRecivedPaymentMail;
 use App\Order;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class CheckoutController extends Controller
 {
@@ -27,11 +32,14 @@ class CheckoutController extends Controller
 			'payment_method_types' => ['card'],
 		]);
 		$intent = $payment_intent->client_secret;
+        
+        // dd($order);
 
+        
 		return view('checkout.credit-card',compact('intent'));
-
+        
     }
-
+    
     public function afterPayment()
     {  
         
@@ -40,8 +48,14 @@ class CheckoutController extends Controller
         
         $order->save();
         
+        $user = User::where('id', $order['user_id'])->first();
+        
+        Mail::to($order['client_email'])->send(new ClientSuccessfullPaymentMail($order));
+        Mail::to($user['email'])->send(new RestaurantRecivedPaymentMail());
+        
         echo 'Payment Has been Received';
 
-        return redirect('/payments/succesfull');
+
+        return redirect()->to('/payments/succesfull');
     }
 }
