@@ -2337,9 +2337,17 @@ __webpack_require__.r(__webpack_exports__);
     fetchUsers: function fetchUsers() {
       var _this = this;
 
-      axios.get('/api/users').then(function (res) {
+      var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+      axios.get('/api/users', {
+        params: {
+          page: page
+        }
+      }).then(function (res) {
         var users = res.data.users;
-        _this.users = users;
+        var data = users.data,
+            last_page = users.last_page,
+            current_page = users.current_page;
+        _this.users = data;
       })["catch"](function (err) {
         console.warn(err);
       });
@@ -11783,9 +11791,7 @@ var render = function () {
                         },
                         [
                           _c("h3", [
-                            _vm._v(
-                              "\r\n            Dati personali\r\n          "
-                            ),
+                            _vm._v("\n            Dati personali\n          "),
                           ]),
                           _vm._v(" "),
                           _c("validationProvider", {
@@ -11855,9 +11861,9 @@ var render = function () {
                                         },
                                         [
                                           _vm._v(
-                                            "\r\n              " +
+                                            "\n              " +
                                               _vm._s(errors[0]) +
-                                              "\r\n            "
+                                              "\n            "
                                           ),
                                         ]
                                       ),
@@ -11940,9 +11946,9 @@ var render = function () {
                                         },
                                         [
                                           _vm._v(
-                                            "\r\n              " +
+                                            "\n              " +
                                               _vm._s(errors[0]) +
-                                              "\r\n            "
+                                              "\n            "
                                           ),
                                         ]
                                       ),
@@ -12025,9 +12031,9 @@ var render = function () {
                                         },
                                         [
                                           _vm._v(
-                                            "\r\n              " +
+                                            "\n              " +
                                               _vm._s(errors[0]) +
-                                              "\r\n            "
+                                              "\n            "
                                           ),
                                         ]
                                       ),
@@ -12106,9 +12112,9 @@ var render = function () {
                                         },
                                         [
                                           _vm._v(
-                                            "\r\n              " +
+                                            "\n              " +
                                               _vm._s(errors[0]) +
-                                              "\r\n            "
+                                              "\n            "
                                           ),
                                         ]
                                       ),
@@ -12189,9 +12195,9 @@ var render = function () {
                                         },
                                         [
                                           _vm._v(
-                                            "\r\n              " +
+                                            "\n              " +
                                               _vm._s(errors[0]) +
-                                              "\r\n            "
+                                              "\n            "
                                           ),
                                         ]
                                       ),
@@ -12271,9 +12277,9 @@ var render = function () {
                                         },
                                         [
                                           _vm._v(
-                                            "\r\n              " +
+                                            "\n              " +
                                               _vm._s(errors[0]) +
-                                              "\r\n            "
+                                              "\n            "
                                           ),
                                         ]
                                       ),
@@ -12288,7 +12294,7 @@ var render = function () {
                           _vm._v(" "),
                           _c("button", { attrs: { type: "submit" } }, [
                             _vm._v(
-                              "\r\n            Vai al pagamento\r\n          "
+                              "\n            Vai al pagamento\n          "
                             ),
                           ]),
                         ],
@@ -12342,12 +12348,10 @@ var render = function () {
             }),
             _vm._v(" "),
             _c("div", { staticClass: "total" }, [
-              _c("h2", [_vm._v("\r\n          Totale\r\n        ")]),
+              _c("h2", [_vm._v("\n          Totale\n        ")]),
               _vm._v(" "),
               _c("h2", { attrs: { model: _vm.form.totalPrice } }, [
-                _vm._v(
-                  "\r\n          " + _vm._s(_vm.totalPrice) + "€\r\n        "
-                ),
+                _vm._v("\n          " + _vm._s(_vm.totalPrice) + "€\n        "),
               ]),
             ]),
           ],
@@ -28593,7 +28597,7 @@ module.exports = "/images/ios-badge.png?2566899de2c3663e0250b22d1a160aa7";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/jumbo-bkg-svg2.svg?8de0ecba9e591757458db25a3d02de10";
+module.exports = "/images/jumbo-bkg-svg2.svg?ece43a1805da9c592135a025ae78cca8";
 
 /***/ }),
 
@@ -30593,7 +30597,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\matti\Laravel\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! /Users/simonecoszach/Developer/Boolean/Corso/Projects/team-3-deliveBoo/resources/js/front.js */"./resources/js/front.js");
 
 
 /***/ })
