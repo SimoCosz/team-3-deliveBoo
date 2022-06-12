@@ -252,7 +252,7 @@ export default {
     display: block;
     font-size: 13px;
     height: 200px;
-  min-width: 530px;
+  min-width: 420px;
   background-color: #f8fafc;
   padding: 24px;
   margin-right: 24px;
