@@ -4,7 +4,6 @@
 
   <section class="payment_section container">
     <div class="personal_info">
-      <h1>Nome ristorante</h1>
       <p>Tempo di consegna: 15-20 minuti</p>
 
       <!-- INSERITE VALIDAZIONI CON VEEVALIDATE -->

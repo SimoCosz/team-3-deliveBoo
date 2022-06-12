@@ -66,12 +66,11 @@ export default {
     justify-content: center;
 
     .selection-sub-container{
+        padding-top: 50px;
         width: 1140px;
         display: flex;
         flex-direction: column;
         position: relative;
-        margin-top: 50px;
-        margin-bottom: 30px;
 
         .selection-title{
             font-weight: 700;
@@ -79,7 +78,6 @@ export default {
         }
     
         .selection-card-container{
-            margin-bottom: 50px;
             display: flex;
             flex-wrap: wrap;
             gap: 3%;

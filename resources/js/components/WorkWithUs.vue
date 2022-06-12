@@ -1,9 +1,9 @@
 <template>
-    <div class="container">
-        <h1 class="py-3 text-center">
+    <div class="container p-0">
+        <h1 class="py-3 work-title font-weight-bold">
             {{lavoraConDelivebooTitle}}
         </h1>
-        <ul class="card-container w-100 d-flex align-items-center justify-content-between">
+        <ul class="card-container w-100 d-flex align-items-center justify-content-between mb-5 mt-4">
             <li class="cardBox">
                 <div class="card" :style="rider">
                     <h2>Rider</h2>
@@ -163,6 +163,11 @@ h1{
         display: flex;
         flex-direction: column;
         gap: 15px;
+    }
+    @media(max-width: 768px){
+        .work-title{
+            text-align: center;
+        }
     }
 }
 </style>

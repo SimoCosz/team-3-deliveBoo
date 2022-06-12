@@ -13,7 +13,7 @@
                   <p class="r-color">{{product.price}} &#8364;</p>
                 </div>
                 <div>
-                  <div class="image" :style="{ backgroundImage: `url(${product.cover})` }"></div>
+                  <img class="image" :src="`/storage/${ product.cover }`">
                 </div>
               </div>
             </div>
@@ -344,8 +344,8 @@ mounted() {
             .image{
               width: 100px;
               height: 100px;
-              background-size: cover;
-              background-position: center;
+              object-fit: cover;
+              object-position: center;
               border-radius:4px ;
             }
           } 
