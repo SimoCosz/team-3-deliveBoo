@@ -90,15 +90,15 @@
                 </div>
             @endif
 
-            <div class="content">
+             <div class="content">
                 <div class="title m-b-md">
                    <img src="{{asset('img/logo-home.jpg')}}" alt="">
                 </div>
 
-                <h1>Chart</h1>
+                {{-- <h1>Chart</h1>
                 <!-- Chart's container -->
-                <div id="sales-chart" style="height: 300px; width: 200px; border: 1px solid red"></div>
-            </div>
+                <div id="sales-chart" style="height: 300px; width: 200px; border: 1px solid red"></div>--}}
+            </div>  
         </div>
         <!-- Charting library -->
         <script src="https://unpkg.com/echarts/dist/echarts.min.js"></script>
@@ -106,11 +106,11 @@
         <script src="https://unpkg.com/@chartisan/echarts/dist/chartisan_echarts.js"></script>
     
         <!-- Your application script -->
-        <script>
+        {{-- <script>
           const chart = new Chartisan({
             el: '#sales-chart',
             url: "@chart('sales_chart')",
           });
-        </script>    
+        </script>     --}}
     </body>
 </html>
