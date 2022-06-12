@@ -31,7 +31,7 @@ class UserController extends Controller
         }
 
 
-       $users = User::with('products', 'categories')->paginate(9);
+       $users = User::with('products', 'categories')->paginate(6);
 
        return response()->json([
            'users' => $users,

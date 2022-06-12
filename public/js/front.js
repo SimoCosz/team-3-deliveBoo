@@ -10809,7 +10809,7 @@ var render = function () {
     _vm._v(" "),
     _c(
       "ul",
-      { staticClass: "categories_list" },
+      { staticClass: "categories_list px-3" },
       _vm._l(_vm.categories, function (category) {
         return _c("li", { key: category.id, staticClass: "category_name" }, [
           _vm._v("\n            " + _vm._s(category.name) + "\n        "),

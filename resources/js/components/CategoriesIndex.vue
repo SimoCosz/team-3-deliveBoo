@@ -1,7 +1,7 @@
 <template>
     <div class="container categories">
         <h1 class="pt-5 pb-1">{{categoriesTitle}}</h1>
-        <ul class="categories_list">
+        <ul class="categories_list px-3">
             <li class="category_name" v-for="category in categories" :key="category.id">
                 {{category.name}}
             </li>
