@@ -6,7 +6,7 @@
           <!-- CARD CICLE -->
           <router-link tag="a" v-for="(user, i) in users" :key="user.id" v-if="i < 12" :to="{name:'menu.restaurant', params:{slug:user.slug} }" class="favourite-link"  href="">
             <div class="favourite-card">
-              <img class="favourite-img" :src="user.cover" alt="">
+              <img class="favourite-img" :src="`/storage/${ user.cover }`" alt="">
               <h2 class="favourite-name">{{user.name}}</h2>
             </div>
           </router-link>

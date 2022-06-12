@@ -3084,6 +3084,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
@@ -10870,7 +10871,7 @@ var render = function () {
                   _c("div", { staticClass: "favourite-card" }, [
                     _c("img", {
                       staticClass: "favourite-img",
-                      attrs: { src: user.cover, alt: "" },
+                      attrs: { src: "/storage/" + user.cover, alt: "" },
                     }),
                     _vm._v(" "),
                     _c("h2", { staticClass: "favourite-name" }, [
@@ -12650,10 +12651,15 @@ var render = function () {
                         },
                       }),
                       _vm._v(" "),
-                      _c("img", {
-                        staticClass: "product-show_img",
-                        attrs: { src: _vm.selectedProduct.cover, alt: "" },
-                      }),
+                       true
+                        ? _c("img", {
+                            staticClass: "product-show_img",
+                            attrs: {
+                              src: "/storage/" + _vm.selectedProduct.cover,
+                              alt: "",
+                            },
+                          })
+                        : undefined,
                       _vm._v(" "),
                       _c("div", { staticClass: "product-show_info p-4" }, [
                         _c("h4", { staticClass: "title" }, [
@@ -30600,7 +30606,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\matti\Laravel\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\black\Project\Hub Project\LARAVEL\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })

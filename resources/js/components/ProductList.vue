@@ -68,7 +68,8 @@
       <div class="my-modal" @click="closePlateInfo()">
         <div class="product-show" @click.stop>
           <i class="bi bi-x" @click="closePlateInfo()"></i>
-          <img class="product-show_img" :src=selectedProduct.cover alt="">
+          <img class="product-show_img" v-if="`/storage/${ selectedProduct.cover }`" :src="`/storage/${ selectedProduct.cover }`" alt="">
+          <img class="product-show_img" v-else src="../../../public/img/img-default-img.png" alt="">
           <div class="product-show_info p-4">
             <h4 class="title">{{selectedProduct.name}}</h4>
             <p class="description">{{selectedProduct.description}}</p>
