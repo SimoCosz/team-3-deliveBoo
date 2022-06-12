@@ -21,7 +21,8 @@ export default {
 <style lang="scss" scoped>
 
 .logo{
-  width: 300px;
+  width: 500px;
+  height: 150px;
 }
 .box{
   // box-shadow: 0px 0px 20px 11px rgb(0 204 188 / 40%);

@@ -3,7 +3,7 @@
             <h1 class="pt-5 pb-2 text-center display-6">
             {{titoloNews}}
             </h1>
-        <section class="news_section container">
+        <section class="news_section container my-5">
             <div id="card_container">	
                 <div class="product-details">
 	                <h3 class="pb-2">
@@ -63,13 +63,13 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0;
     #card_container{
         box-shadow: 0 15px 30px 1px grey;
         background: rgba(255, 255, 255, 0.90);
         text-align: center;
         border-radius: 5px;
         overflow: hidden;
-        margin: 5em auto;
         height: 350px;
         width: 48%;
         // border: 5px dashed blue;

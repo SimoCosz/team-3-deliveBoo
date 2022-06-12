@@ -2830,7 +2830,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -3516,7 +3515,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".logo[data-v-29feca2e] {\n  width: 300px;\n}\n.box[data-v-29feca2e] {\n  border: 3px solid #D0EB99;\n  border-radius: 10px;\n}\n.box .btn-light[data-v-29feca2e] {\n  background-color: #D0EB99;\n  font-weight: 700;\n}", ""]);
+exports.push([module.i, ".logo[data-v-29feca2e] {\n  width: 500px;\n  height: 150px;\n}\n.box[data-v-29feca2e] {\n  border: 3px solid #D0EB99;\n  border-radius: 10px;\n}\n.box .btn-light[data-v-29feca2e] {\n  background-color: #D0EB99;\n  font-weight: 700;\n}", ""]);
 
 // exports
 
@@ -3650,7 +3649,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".news_section {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n.news_section #card_container {\n  box-shadow: 0 15px 30px 1px grey;\n  background: rgba(255, 255, 255, 0.9);\n  text-align: center;\n  border-radius: 5px;\n  overflow: hidden;\n  margin: 5em auto;\n  height: 350px;\n  width: 48%;\n}\n.news_section #card_container .product-details {\n  position: relative;\n  text-align: left;\n  overflow: hidden;\n  padding: 20px;\n  height: 100%;\n  float: left;\n  width: 40%;\n}\n.news_section #card_container .product-details h3 {\n  display: inline-block;\n  position: relative;\n  font-size: 24px;\n  color: #344055;\n  margin: 0;\n}\n@media (max-width: 991px) {\n.news_section #card_container .product-details h3 {\n    font-size: 20px;\n}\n}\n.news_section #card_container .product-details p {\n  font-size: 18px;\n}\n@media (max-width: 991px) {\n.news_section #card_container .product-details p {\n    font-size: 14px;\n}\n}\n.news_section #card_container .product-details button {\n  font-weight: 700;\n  color: white;\n  font-size: 14px;\n  padding: 10px;\n  background-color: #00c1b2;\n  width: 125px;\n  border: none;\n  border-radius: 5px;\n  opacity: 0.8;\n}\n.news_section #card_container .product-details button:hover {\n  transition: ease-in-out 0.5s;\n  opacity: 1;\n}\n@media (max-width: 991px) {\n.news_section #card_container .product-details button {\n    width: 75px;\n    padding: 5px;\n}\n}\n.news_section #card_container .product-details .download {\n  width: 100%;\n  height: 27%;\n  display: flex;\n  flex-direction: column;\n  gap: 2px;\n}\n.news_section #card_container .product-details .download .download_badge {\n  background-position: center;\n  background-size: cover;\n  width: 69%;\n  height: 40%;\n  border-radius: 5px;\n  cursor: pointer;\n}\n@media (max-width: 1100px) {\n.news_section #card_container .product-details .download .download_badge {\n    height: 37%;\n    width: 100%;\n}\n}\n@media (max-width: 767px) {\n.news_section #card_container .product-details .download .download_badge {\n    height: 38%;\n    width: 80%;\n}\n}\n@media (max-width: 435px) {\n.news_section #card_container .product-details .download .download_badge {\n    height: 35%;\n    width: 78%;\n}\n}\n@media (max-width: 400px) {\n.news_section #card_container .product-details .download .download_badge {\n    height: 35%;\n    width: 90%;\n}\n}\n.news_section #card_container .product-image {\n  transition: all 1s ease-out;\n  display: inline-block;\n  position: relative;\n  overflow: hidden;\n  height: 100%;\n  float: right;\n  width: 45%;\n  display: inline-block;\n}\n.news_section #card_container .product-image img {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n@media (max-width: 767px) {\n.news_section #card_container {\n    width: 100%;\n}\n}\n.news_section .product-image:hover img {\n  transition: all 1s ease-out;\n}\n.news_section .product-image:hover img {\n  transform: scale(1.2, 1.2);\n}\n@media (max-width: 767px) {\n.news_section {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap: 20px;\n}\n}", ""]);
+exports.push([module.i, ".news_section {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 0;\n}\n.news_section #card_container {\n  box-shadow: 0 15px 30px 1px grey;\n  background: rgba(255, 255, 255, 0.9);\n  text-align: center;\n  border-radius: 5px;\n  overflow: hidden;\n  height: 350px;\n  width: 48%;\n}\n.news_section #card_container .product-details {\n  position: relative;\n  text-align: left;\n  overflow: hidden;\n  padding: 20px;\n  height: 100%;\n  float: left;\n  width: 40%;\n}\n.news_section #card_container .product-details h3 {\n  display: inline-block;\n  position: relative;\n  font-size: 24px;\n  color: #344055;\n  margin: 0;\n}\n@media (max-width: 991px) {\n.news_section #card_container .product-details h3 {\n    font-size: 20px;\n}\n}\n.news_section #card_container .product-details p {\n  font-size: 18px;\n}\n@media (max-width: 991px) {\n.news_section #card_container .product-details p {\n    font-size: 14px;\n}\n}\n.news_section #card_container .product-details button {\n  font-weight: 700;\n  color: white;\n  font-size: 14px;\n  padding: 10px;\n  background-color: #00c1b2;\n  width: 125px;\n  border: none;\n  border-radius: 5px;\n  opacity: 0.8;\n}\n.news_section #card_container .product-details button:hover {\n  transition: ease-in-out 0.5s;\n  opacity: 1;\n}\n@media (max-width: 991px) {\n.news_section #card_container .product-details button {\n    width: 75px;\n    padding: 5px;\n}\n}\n.news_section #card_container .product-details .download {\n  width: 100%;\n  height: 27%;\n  display: flex;\n  flex-direction: column;\n  gap: 2px;\n}\n.news_section #card_container .product-details .download .download_badge {\n  background-position: center;\n  background-size: cover;\n  width: 69%;\n  height: 40%;\n  border-radius: 5px;\n  cursor: pointer;\n}\n@media (max-width: 1100px) {\n.news_section #card_container .product-details .download .download_badge {\n    height: 37%;\n    width: 100%;\n}\n}\n@media (max-width: 767px) {\n.news_section #card_container .product-details .download .download_badge {\n    height: 38%;\n    width: 80%;\n}\n}\n@media (max-width: 435px) {\n.news_section #card_container .product-details .download .download_badge {\n    height: 35%;\n    width: 78%;\n}\n}\n@media (max-width: 400px) {\n.news_section #card_container .product-details .download .download_badge {\n    height: 35%;\n    width: 90%;\n}\n}\n.news_section #card_container .product-image {\n  transition: all 1s ease-out;\n  display: inline-block;\n  position: relative;\n  overflow: hidden;\n  height: 100%;\n  float: right;\n  width: 45%;\n  display: inline-block;\n}\n.news_section #card_container .product-image img {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n@media (max-width: 767px) {\n.news_section #card_container {\n    width: 100%;\n}\n}\n.news_section .product-image:hover img {\n  transition: all 1s ease-out;\n}\n.news_section .product-image:hover img {\n  transform: scale(1.2, 1.2);\n}\n@media (max-width: 767px) {\n.news_section {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap: 20px;\n}\n}", ""]);
 
 // exports
 
@@ -11333,7 +11332,7 @@ var render = function () {
       _vm._v("\n            " + _vm._s(_vm.titoloNews) + "\n            "),
     ]),
     _vm._v(" "),
-    _c("section", { staticClass: "news_section container" }, [
+    _c("section", { staticClass: "news_section container my-5" }, [
       _c("div", { attrs: { id: "card_container" } }, [
         _c("div", { staticClass: "product-details" }, [
           _c("h3", { staticClass: "pb-2" }, [
@@ -11449,8 +11448,6 @@ var render = function () {
           "div",
           { staticClass: "personal_info" },
           [
-            _c("h1", [_vm._v("Nome ristorante")]),
-            _vm._v(" "),
             _c("p", [_vm._v("Tempo di consegna: 15-20 minuti")]),
             _vm._v(" "),
             _c("ValidationObserver", {
@@ -11475,7 +11472,9 @@ var render = function () {
                         },
                         [
                           _c("h3", [
-                            _vm._v("\n            Dati personali\n          "),
+                            _vm._v(
+                              "\r\n            Dati personali\r\n          "
+                            ),
                           ]),
                           _vm._v(" "),
                           _c("validationProvider", {
@@ -11545,9 +11544,9 @@ var render = function () {
                                         },
                                         [
                                           _vm._v(
-                                            "\n              " +
+                                            "\r\n              " +
                                               _vm._s(errors[0]) +
-                                              "\n            "
+                                              "\r\n            "
                                           ),
                                         ]
                                       ),
@@ -11630,9 +11629,9 @@ var render = function () {
                                         },
                                         [
                                           _vm._v(
-                                            "\n              " +
+                                            "\r\n              " +
                                               _vm._s(errors[0]) +
-                                              "\n            "
+                                              "\r\n            "
                                           ),
                                         ]
                                       ),
@@ -11715,9 +11714,9 @@ var render = function () {
                                         },
                                         [
                                           _vm._v(
-                                            "\n              " +
+                                            "\r\n              " +
                                               _vm._s(errors[0]) +
-                                              "\n            "
+                                              "\r\n            "
                                           ),
                                         ]
                                       ),
@@ -11796,9 +11795,9 @@ var render = function () {
                                         },
                                         [
                                           _vm._v(
-                                            "\n              " +
+                                            "\r\n              " +
                                               _vm._s(errors[0]) +
-                                              "\n            "
+                                              "\r\n            "
                                           ),
                                         ]
                                       ),
@@ -11879,9 +11878,9 @@ var render = function () {
                                         },
                                         [
                                           _vm._v(
-                                            "\n              " +
+                                            "\r\n              " +
                                               _vm._s(errors[0]) +
-                                              "\n            "
+                                              "\r\n            "
                                           ),
                                         ]
                                       ),
@@ -11961,9 +11960,9 @@ var render = function () {
                                         },
                                         [
                                           _vm._v(
-                                            "\n              " +
+                                            "\r\n              " +
                                               _vm._s(errors[0]) +
-                                              "\n            "
+                                              "\r\n            "
                                           ),
                                         ]
                                       ),
@@ -11978,7 +11977,7 @@ var render = function () {
                           _vm._v(" "),
                           _c("button", { attrs: { type: "submit" } }, [
                             _vm._v(
-                              "\n            Vai al pagamento\n          "
+                              "\r\n            Vai al pagamento\r\n          "
                             ),
                           ]),
                         ],
@@ -12032,10 +12031,12 @@ var render = function () {
             }),
             _vm._v(" "),
             _c("div", { staticClass: "total" }, [
-              _c("h2", [_vm._v("\n          Totale\n        ")]),
+              _c("h2", [_vm._v("\r\n          Totale\r\n        ")]),
               _vm._v(" "),
               _c("h2", { attrs: { model: _vm.form.totalPrice } }, [
-                _vm._v("\n          " + _vm._s(_vm.totalPrice) + "€\n        "),
+                _vm._v(
+                  "\r\n          " + _vm._s(_vm.totalPrice) + "€\r\n        "
+                ),
               ]),
             ]),
           ],
@@ -28247,7 +28248,7 @@ module.exports = "/images/ios-badge.png?2566899de2c3663e0250b22d1a160aa7";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/jumbo-bkg-svg2.svg?ece43a1805da9c592135a025ae78cca8";
+module.exports = "/images/jumbo-bkg-svg2.svg?8de0ecba9e591757458db25a3d02de10";
 
 /***/ }),
 
@@ -30091,7 +30092,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/simonecoszach/Developer/Boolean/Corso/Projects/team-3-deliveBoo/resources/js/front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\black\Project\Hub Project\LARAVEL\team-3-deliveBoo\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })
