@@ -36,7 +36,7 @@ class CheckoutController extends Controller
         // dd($order);
 
         
-		return view('checkout.credit-card',compact('intent'));
+		return view('checkout.credit-card',compact('intent', 'total'));
         
     }
     
