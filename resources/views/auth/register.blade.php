@@ -50,7 +50,7 @@
                         <div class="form-group row">
                             <label for="telephone_number" class="col-md-4 col-form-label text-md-right">{{ __('Numero di telefono') }}*</label>
                             <div class="col-md-6">
-                                <input id="telephone_number" required minlength="6" maxlength="15" type="text" class="form-control @error('telephone_number') is-invalid @enderror" name="telephone_number" value="{{ old('telephone_number') }}" autocomplete="telephone_number" autofocus>
+                                <input id="telephone_number" required maxlength="10" type="tel" pattern="[0-9]{10}" class="form-control @error('telephone_number') is-invalid @enderror" name="telephone_number" value="{{ old('telephone_number') }}" autocomplete="telephone_number" autofocus>
                                 @error('telephone_number')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -62,7 +62,7 @@
                         <div class="form-group row">
                             <label for="p_iva" class="col-md-4 col-form-label text-md-right">{{ __('P. iva') }}*</label>
                             <div class="col-md-6">
-                                <input id="p_iva" required minlength="11" maxlength="11" type="text" class="form-control @error('p_iva') is-invalid @enderror" name="p_iva" value="{{ old('p_iva') }}" autocomplete="p_iva" autofocus>
+                                <input id="p_iva" required minlength="11" maxlength="11" type="text" pattern="[0-9]{11}" class="form-control @error('p_iva') is-invalid @enderror" name="p_iva" value="{{ old('p_iva') }}" autocomplete="p_iva" autofocus>
                                 @error('p_iva')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -74,7 +74,7 @@
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail') }}*</label>
                             <div class="col-md-6">
-                                <input id="email" required type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email">
+                                <input id="email" required type="email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email">
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
