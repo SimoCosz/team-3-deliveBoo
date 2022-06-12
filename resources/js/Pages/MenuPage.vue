@@ -11,7 +11,7 @@
             </figure>
           </div>
           <div class="col-12 col-md-8">
-            <h1>{{user.name}}</h1>
+            <h1 class="text-md-left">{{user.name}}</h1>
             <p>{{user.category}}</p>
             <div class="d-flex align-items-center">
               <i class="bi bi-house-door"></i>
