@@ -3085,6 +3085,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
@@ -12437,10 +12438,18 @@ var render = function () {
                         ]),
                         _vm._v(" "),
                         _c("div", [
-                          _c("img", {
-                            staticClass: "image",
-                            attrs: { src: "/storage/" + product.cover },
-                          }),
+                          product.cover
+                            ? _c("img", {
+                                staticClass: "image",
+                                attrs: { src: "/storage/" + product.cover },
+                              })
+                            : _c("img", {
+                                staticClass: "image",
+                                attrs: {
+                                  src: __webpack_require__(/*! ../../../public/img/img-default-img.png */ "./public/img/img-default-img.png"),
+                                  alt: "",
+                                },
+                              }),
                         ]),
                       ]
                     ),
@@ -12651,7 +12660,7 @@ var render = function () {
                         },
                       }),
                       _vm._v(" "),
-                       true
+                      _vm.selectedProduct.cover
                         ? _c("img", {
                             staticClass: "product-show_img",
                             attrs: {
@@ -12659,7 +12668,13 @@ var render = function () {
                               alt: "",
                             },
                           })
-                        : undefined,
+                        : _c("img", {
+                            staticClass: "product-show_img",
+                            attrs: {
+                              src: __webpack_require__(/*! ../../../public/img/img-default-img.png */ "./public/img/img-default-img.png"),
+                              alt: "",
+                            },
+                          }),
                       _vm._v(" "),
                       _c("div", { staticClass: "product-show_info p-4" }, [
                         _c("h4", { staticClass: "title" }, [

@@ -162,7 +162,7 @@ return[
     'products' => [
       [
         'user_id' => 2,
-        'cover' => 'https://rs-menus-api.roocdn.com/images/7659239f-7b74-4a47-9d95-a1874f8dca9e/image.jpeg?width=98&height=98&auto=webp&format=jpg&fit=crop',
+        'cover' => '',
         'name' => 'Hamburger',
         'description' => 'Hamburger classico',
         'price' => 11.50,
@@ -171,7 +171,7 @@ return[
       ],
       [
         'user_id' => 2,
-        'cover' => 'https://rs-menus-api.roocdn.com/images/f6dee3e6-a034-41de-802d-40076e64b6c8/image.jpeg?width=98&height=98&auto=webp&format=jpg&fit=crop',
+        'cover' => '',
         'name' => 'Cheeseburger',
         'description' => 'Hamburger con formaggio',
         'price' => 13.00,
@@ -180,7 +180,7 @@ return[
       ],
       [
         'user_id' => 2,
-        'cover' => 'https://rs-menus-api.roocdn.com/images/8bede887-9652-4310-be79-339657ebc506/image.jpeg?width=98&height=98&auto=webp&format=jpg&fit=crop',
+        'cover' => '',
         'name' => 'Baconburger',
         'description' => 'Hamburger con bacon',
         'price' => 13.50,
@@ -189,7 +189,7 @@ return[
       ],
       [
         'user_id' => 2,
-        'cover' => 'https://rs-menus-api.roocdn.com/images/5c1ae89e-894f-4d6f-9789-bddce6710d4b/image.jpeg?width=98&height=98&auto=webp&format=jpg&fit=crop',
+        'cover' => '',
         'name' => 'Bacon-cheeseburger',
         'description' => 'Hamburger con bacon e formaggio',
         'price' => 14.50,
@@ -198,7 +198,7 @@ return[
       ],
       [
         'user_id' => 2,
-        'cover' => 'https://rs-menus-api.roocdn.com/images/7aabd144-4c7c-4776-b97f-916bb290ba38/image.jpeg?width=98&height=98&auto=webp&format=jpg&fit=crop',
+        'cover' => '',
         'name' => 'All beef hot dog',
         'description' => 'Hot dog con wurstel e salse',
         'price' => 8.00,
@@ -207,7 +207,7 @@ return[
       ],
       [
         'user_id' => 2,
-        'cover' => 'https://rs-menus-api.roocdn.com/images/2a1640a7-777c-46b4-a47b-bf2a58a6c947/image.jpeg?width=98&height=98&auto=webp&format=jpg&fit=crop',
+        'cover' => '',
         'name' => 'Cheese dog',
         'description' => 'Hot dog con wurstel e formaggio',
         'price' => 9.00,
@@ -216,7 +216,7 @@ return[
       ],
       [
         'user_id' => 2,
-        'cover' => 'https://rs-menus-api.roocdn.com/images/ade42290-691b-418e-9b41-6ef27a8fc8b0/image.jpeg?width=98&height=98&auto=webp&format=jpg&fit=crop',
+        'cover' => '',
         'name' => 'Bacon dog',
         'description' => 'Hot dog con wurstel e bacon',
         'price' => 9.50,
@@ -225,7 +225,7 @@ return[
       ],
       [
         'user_id' => 2,
-        'cover' => 'https://rs-menus-api.roocdn.com/images/2ad1716a-0f8d-459e-85b9-480e7086d944/image.jpeg?width=98&height=98&auto=webp&format=jpg&fit=crop',
+        'cover' => '',
         'name' => 'Bacon-cheese dog',
         'description' => 'Hot dog con wurstel, formaggio e bacon',
         'price' => 10.50,
@@ -234,7 +234,7 @@ return[
       ],
       [
         'user_id' => 2,
-        'cover' => 'https://rs-menus-api.roocdn.com/images/47031d87-73fd-4732-88b8-efcb7495ff24/image.jpeg?width=98&height=98&auto=webp&format=jpg&fit=crop',
+        'cover' => '',
         'name' => 'Fries',
         'description' => '',
         'price' => 5.00,
@@ -243,7 +243,7 @@ return[
       ],
       [
         'user_id' => 2,
-        'cover' => 'https://rs-menus-api.roocdn.com/images/30cf44ec-cd74-4170-903a-32690ce59aa4/image.jpeg?width=98&height=98&auto=webp&format=jpg&fit=crop',
+        'cover' => '',
         'name' => 'Cajun',
         'description' => '',
         'price' => 5.00,
@@ -252,7 +252,7 @@ return[
       ],
       [
         'user_id' => 2,
-        'cover' => 'https://rs-menus-api.roocdn.com/images/7878b838-0ed9-410e-8c0c-210585bf494b/image.jpeg?width=98&height=98&auto=webp&format=jpg&fit=crop',
+        'cover' => '',
         'name' => 'Coca Cola 45cl',
         'description' => '',
         'price' => 4.00,
@@ -261,7 +261,7 @@ return[
       ],
       [
         'user_id' => 2,
-        'cover' => 'https://rs-menus-api.roocdn.com/images/e1a7be3f-9729-4cce-b218-d60bd771159d/image.jpeg?width=98&height=98&auto=webp&format=jpg&fit=crop',
+        'cover' => '',
         'name' => 'Fanta 45cl',
         'description' => '',
         'price' => 4.00,

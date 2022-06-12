@@ -13,7 +13,8 @@
                   <p class="r-color">{{product.price}} &#8364;</p>
                 </div>
                 <div>
-                  <img class="image" :src="`/storage/${ product.cover }`">
+                  <img class="image" v-if="product.cover" :src="`/storage/${ product.cover }`">
+                  <img class="image" v-else src="../../../public/img/img-default-img.png" alt="">
                 </div>
               </div>
             </div>
@@ -68,7 +69,7 @@
       <div class="my-modal" @click="closePlateInfo()">
         <div class="product-show" @click.stop>
           <i class="bi bi-x" @click="closePlateInfo()"></i>
-          <img class="product-show_img" v-if="`/storage/${ selectedProduct.cover }`" :src="`/storage/${ selectedProduct.cover }`" alt="">
+          <img class="product-show_img" v-if="selectedProduct.cover" :src="`/storage/${ selectedProduct.cover }`" alt="">
           <img class="product-show_img" v-else src="../../../public/img/img-default-img.png" alt="">
           <div class="product-show_info p-4">
             <h4 class="title">{{selectedProduct.name}}</h4>
