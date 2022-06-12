@@ -110,8 +110,8 @@ return[
       [
         'user_id' => 1,
         'cover' => 'https://images.fidhouse.com/fidelitynews/wp-content/uploads/sites/6/2014/12/Insalata-greca-71111-2.jpg',
-        'name' => 'Insalata greca con formaggio bianco, olive nere, cetrioli, pomodoro a fette e cipolla',
-        'description' => 'Insalata greca',
+        'name' => 'Insalata greca',
+        'description' => 'Insalata greca con formaggio bianco, olive nere, cetrioli, pomodoro a fette e cipolla',
         'price' => 9.00,
         'visibility' => true,
         'category' => 'Insalate'

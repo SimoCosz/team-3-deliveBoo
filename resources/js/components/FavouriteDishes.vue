@@ -1,5 +1,5 @@
 <template>
-  <section class="favourite-section">
+  <section class="favourite-section py-5">
     <div class="favourite-container">
         <h1 class="favourite-title">I tuoi piatti preferiti, consegnati da noi</h1>
         <div class="favourite-card-container" >
@@ -53,8 +53,6 @@ export default {
     width: 1140px;
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
-    margin-bottom: 20px;
 
     .favourite-title{
       font-weight: 700;
