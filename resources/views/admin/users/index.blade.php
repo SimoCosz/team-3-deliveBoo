@@ -62,16 +62,16 @@
               </td>
 
               <td>
-                <button type="button" class="btn btn-small border-rounder btn-outline-danger" data-toggle="modal" data-target="#exampleModal">
+                <button type="button" class="btn btn-small border-rounder btn-outline-danger" data-toggle="modal" data-target="#exampleModal-{{$product->id}}">
                   Elimina
                 </button>
 
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="exampleModal-{{$product->id}}" tabindex="-1" aria-labelledby="exampleModal-{{$product->id}}" aria-hidden="true">
                   <div class="modal-dialog  modal-dialog-centered">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Sei sicuro di voler eliminare {{$product->name}}</h5>
+                        <h5 class="modal-title" id="exampleModal-{{$product->id}}">Sei sicuro di voler eliminare {{$product->name}}</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
