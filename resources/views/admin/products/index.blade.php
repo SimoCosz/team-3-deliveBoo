@@ -20,7 +20,7 @@
             @foreach($products as $key => $product)
                 <tr>
                     <td>{{ $product->id }}</td>
-                    <td>{{ $product->name }}</td>
+                    <td class="product-image">{{ $product->name }}</td>
                     <td>{{ $product->cover }}</td>
                     <td>{{ $product->category }}</td>
                     <td>{{ $product->description }}</td>

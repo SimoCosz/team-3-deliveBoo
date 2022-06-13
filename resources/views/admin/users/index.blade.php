@@ -22,7 +22,6 @@
           <th scope="col" class="text-center">#</th>
           <th scope="col">Nome</th>
           <th scope="col" class="text-center">Image</th>
-          <th scope="col" class="text-center">Categoria</th>
           <th scope="col">Descrizione</th>
           <th scope="col">Visibilità</th>
           <th scope="col" class="text-center">Prezzo</th>
@@ -35,19 +34,14 @@
             <tr>
               <td class="text-center">{{ $product->id }}</td>
               <td class="">{{ $product->name }}</td>
-              <td class="d-flex align-items-center justify-content-center">
+              <td class="d-flex align-items-center justify-content-center product-img" style="width: 120px; border:none;">
                 @if ($product->cover)
-                <img class="w-75 h-75 rounded-circle" style="aspect-ratio:1/1" src="{{ asset('storage/'.$product->cover)}}" alt="">   
+                <img class="rounded-circle" style="aspect-ratio:1/1" src="{{ asset('storage/'.$product->cover)}}" alt="">   
                 {{-- @elseif($product->cover)
                 <img class="w-75 h-75 rounded-circle" style="aspect-ratio:1/1" src="{{ $product->cover }}" alt="">    --}}
                 @else
-                  <img class="w-75 h-75 rounded-circle mx-auto d-block" style="aspect-ratio:1/1" src="{{URL::asset('img/segna-posto.jpg')}}" alt="">  
+                  <img class="rounded-circle mx-auto d-block" style="aspect-ratio:1/1" src="{{URL::asset('img/segna-posto.jpg')}}" alt="">  
                 @endif
-              </td>
-              <td class="text-capitalize">
-                <span class="badge badge-pill badge-info p-2">
-                  {{ $product->category }}
-                </span>
               </td>
               <td>{{ $product->description }}</td>
               @if($product->visibility === 0)
